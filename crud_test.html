@@ -1,117 +1,9 @@
 <html>
 <head>
-  <style>
-  p{
-    color:#000;
 
-}
-body{
-  background:#ffffff;
-}
-.container-bg{
-  background: #f2f2f2;
-  margin-left: 10px; 
-}
-input[type=submit] {
-  background-color: #0073E6;
-  color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type=button] {
-  background-color: #0073E6;
-  color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type=text], select {
-  padding: 7px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left:10px; 
-}
-label{
-  margin-left: 10px;
-}
-input[type=date]{
-  padding: 7px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left:10px; 
-}
-input[type=tel]{
-  padding: 7px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left:10px; 
-}
-input[type=email]{
-  padding: 7px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left:10px; 
-}
-input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus,input[type=email]:focus{
-  background:#FFFF80;
-}
-
-  </style>
-  <style>
-    table, th, td 
-        {
-            margin:10px 0;
-            border:solid 1px #333;
-            padding:2px 4px;
-            font:15px Verdana;
-        }
-        th {
-            font-weight:bold;
-        }
-		
-#loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid greenyellow;
-  border-bottom: 16px solid blue;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  visibility:hidden;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-strong{
-  text-emphasis-color:blue;
-}
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="edit.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -350,10 +242,10 @@ strong{
 
 </head>
 
-<body bgcolor="#9400D3">
+<body bgcolor="#9400d3">
   <div align="center">
-    <h1><i><strong>Application form for register</strong></i></h1>
-    <p>This is simple application<p>
+    <h1><i><strong style="color:white">Application form for register</strong></i></h1>
+    <p style="color:white">This is simple application<p>
 
       <div class="container-bg" align="left">
         <form>
@@ -395,20 +287,22 @@ strong{
           <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
           <label>Software Package : </label>
           <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
-          </div>
+
           <div class="container-fluid" align="center">
               <div id="loader"></div>
+              <!-- <p id="re"></p> -->
           <input type="submit" id="b1" onClick="insert_value()" value="Insert"></input>
           <input type="button" id="b1" onclick="read_value()" value="Read"></input>
           <input type="submit" id="b1" onclick="update_value()" value="Update"></input>
           <input type="button" id="b1" onclick="delete_value()" value="Delete"></input>
           </div>
+        </div>
         </form>
 
 
 
 
-        <p id="re"></p>
+
 
 
         <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
@@ -419,7 +313,7 @@ strong{
   </div>
 </body>
 <div align="center">
-  <p>Enterprise Computing Services Co., Ltd.</p>
+  <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
 
 </html>
