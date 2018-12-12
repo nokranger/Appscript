@@ -6,8 +6,9 @@ background:;
 } */
 .container-bg{
 background: #ffffff;
-margin-left: 5px; 
-margin-right: 5px;
+margin-left: 10%; 
+margin-right: 10%;
+padding-block-end: 50px;
 }
 input[type=submit] {
 background-color: #0073E6;

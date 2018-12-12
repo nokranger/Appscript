@@ -1,18 +1,19 @@
 <html>
+
 <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link rel="stylesheet" href="edit.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel="stylesheet" href="edit.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
 
     // var script_url = "https://script.google.com/macros/s/AKfycbyGmexktWuU1R9bjIYZL6EUvcuV0EBErhPIwlOJt5c7RwBSyQ/exec";
     // var script_url ="https://script.google.com/macros/s/AKfycbz3ubfjK8ULp9G7MqdxWdLCJqyh4uPIgm-ijVJWxToMe1OUgro/exec";
-    var script_url ="https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
+    var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
 
-    
+
     console.log(script_url);
 
     // Make an AJAX call to Google Script
@@ -23,23 +24,23 @@
       $('#mySpinner').addClass('spinner');
 
       var id1 = $("#id").val();
-      var tn =$("#tn").val();
+      var tn = $("#tn").val();
       var name = $("#name").val();
-      var lname =$("#lname").val();
-      var dob =$("#dob").val();
-      var tel =$("#tel").val();
-      var fb =$("#fb").val();
-      var line =$("#line").val();
-      var ig =$("#ig").val();
-      var aic =$("#aic").val();
-      var ca =$("#ca").val();
-      var ei =$("#ei").val();
-      var gpa =$("#gpa").val();
-      var sp =$("#sp").val();
-      var tfp =$("#tfp").val();
-      var spack =$("#spack").val();
-      var mail =$("#mail").val();
-      
+      var lname = $("#lname").val();
+      var dob = $("#dob").val();
+      var tel = $("#tel").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var ei = $("#ei").val();
+      var gpa = $("#gpa").val();
+      var sp = $("#sp").val();
+      var tfp = $("#tfp").val();
+      var spack = $("#spack").val();
+      var mail = $("#mail").val();
+
       // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
       console.log($("#id").val());
       console.log($("#name").val());
@@ -48,7 +49,7 @@
 
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn="+ tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca="+ ca + "&ei="+ ei + "&gpa="+ gpa + "&sp="+ sp + "&tfp=" + tfp +"&spack="+ spack +"&mail="+ mail +"&action=insert";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=insert";
       console.log(url);
 
 
@@ -65,23 +66,23 @@
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       var id1 = $("#id").val();
-      var tn =$("#tn").val();
+      var tn = $("#tn").val();
       var name = $("#name").val();
-      var lname =$("#lname").val();
-      var dob =$("#dob").val();
-      var tel =$("#tel").val();
-      var fb =$("#fb").val();
-      var line =$("#line").val();
-      var ig =$("#ig").val();
-      var aic =$("#aic").val();
-      var ca =$("#ca").val();
-      var ei =$("#ei").val();
-      var gpa =$("#gpa").val();
-      var sp =$("#sp").val();
-      var tfp =$("#tfp").val();
-      var spack =$("#spack").val();
-      var mail =$("#mail").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn="+ tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca="+ ca + "&ei="+ ei + "&gpa="+ gpa + "&sp="+ sp + "&tfp=" + tfp +"&spack="+ spack +"&mail="+ mail +"&action=update";
+      var lname = $("#lname").val();
+      var dob = $("#dob").val();
+      var tel = $("#tel").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var ei = $("#ei").val();
+      var gpa = $("#gpa").val();
+      var sp = $("#sp").val();
+      var tfp = $("#tfp").val();
+      var spack = $("#spack").val();
+      var mail = $("#mail").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -99,23 +100,23 @@
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
       var id1 = $("#id").val();
-      var tn =$("#tn").val();
+      var tn = $("#tn").val();
       var name = $("#name").val();
-      var lname =$("#lname").val();
-      var dob =$("#dob").val();
-      var tel =$("#tel").val();
-      var fb =$("#fb").val();
-      var line =$("#line").val();
-      var ig =$("#ig").val();
-      var aic =$("#aic").val();
-      var ca =$("#ca").val();
-      var ei =$("#ei").val();
-      var gpa =$("#gpa").val();
-      var sp =$("#sp").val();
-      var tfp =$("#tfp").val();
-      var spack =$("#spack").val();
-      var mail =$("#mail").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn="+ tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca="+ ca + "&ei="+ ei + "&gpa="+ gpa + "&sp="+ sp + "&tfp=" + tfp +"&spack="+ spack +"&mail="+ mail +"&action=delete";
+      var lname = $("#lname").val();
+      var dob = $("#dob").val();
+      var tel = $("#tel").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var ei = $("#ei").val();
+      var gpa = $("#gpa").val();
+      var sp = $("#sp").val();
+      var tfp = $("#tfp").val();
+      var spack = $("#spack").val();
+      var mail = $("#mail").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=delete";
       var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -242,78 +243,78 @@
 
 </head>
 
-<body bgcolor="#9400d3">
+<body bgcolor="#673AB7">
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
 
-      <div class="container-bg" align="left">
-        <form>
-        <label>ID :</label>   
-          <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
-          <label>Title Name : </label>
-          <select name="tn" id="tn" required>
-            <option value="Mr.">Mr.</option>
-            <option value="Ms.">Ms.</option>
-            <option value="Mrs.">Mrs.</option>
-          </select><br>
-          <label>First Name : </label>
-          <input type="text" name="name" id="name" placeholder="Enter your first name" required><br>
-          <label>Last Name : </label>
-          <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
-          <label>Date of birth : </label>
-          <input type="date" name="dob" id="dob" max="2100-12-31"><br>
-          <label>Telephone Number : </label>
-          <input type="tel" name="tel" id="tel" placeholder="0213456789" required><br>
-          <label>Facebook : </label>
-          <input type="text" name="fb" id="fb" placeholder="Enter your facebook name" ><br>
-          <label>Line : </label>
-          <input type="text" name="line" id="line" placeholder="Enter your id line" ><br>
-          <label>Instagram : </label>
-          <input type="text" name="ig" id="ig" placeholder="Enter your Instagram" ><br>
-          <label>Email Address : </label>
-          <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
-          <label>Address in ID Card : </label>
-          <input type="text" name="aic" id="aic" placeholder="Enter your address" ><br>
-          <label>Current Address : </label>
-          <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
-          <label>Educational institution : </label>
-          <input type="text" name="ei" id="ei" placeholder="Enter your first educational" ><br>
-          <label>GPAX : </label>
-          <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" ><br>
-          <label>Skill programming : </label>
-          <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br>
-          <label>Tool for development : </label>
-          <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
-          <label>Software Package : </label>
-          <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
+        <div class="container-bg" align="left">
+          <form>
+            <label>ID :</label>
+            <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
+            <label>Title Name : </label>
+            <select name="tn" id="tn" required>
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+            </select><br>
+            <label>First Name : </label>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" required><br>
+            <label>Last Name : </label>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
+            <label>Date of birth : </label>
+            <input type="date" name="dob" id="dob" max="2100-12-31"><br>
+            <label>Telephone Number : </label>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" required><br>
+            <label>Facebook : </label>
+            <input type="text" name="fb" id="fb" placeholder="Enter your facebook name"><br>
+            <label>Line : </label>
+            <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
+            <label>Instagram : </label>
+            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
+            <label>Email Address : </label>
+            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
+            <label>Address in ID Card : </label>
+            <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
+            <label>Current Address : </label>
+            <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
+            <label>Educational institution : </label>
+            <input type="text" name="ei" id="ei" placeholder="Enter your first educational"><br>
+            <label>GPAX : </label>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
+            <label>Skill programming : </label>
+            <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br>
+            <label>Tool for development : </label>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
+            <label>Software Package : </label>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
 
-          <div class="container-fluid" align="center">
+            <div class="container-fluid" align="center">
               <div id="loader"></div>
               <!-- <p id="re"></p> -->
-          <input type="submit" id="b1" onClick="insert_value()" value="Insert"></input>
-          <input type="button" id="b1" onclick="read_value()" value="Read"></input>
-          <input type="submit" id="b1" onclick="update_value()" value="Update"></input>
-          <input type="button" id="b1" onclick="delete_value()" value="Delete"></input>
-          </div>
+              <input type="submit" id="b1" onClick="insert_value()" value="Insert"></input>
+              <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+              <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
+              <input type="button" id="b4" onclick="delete_value()" value="Delete"></input>
+            </div>
         </div>
         </form>
-
-
-
-
-
-
-
         <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
-        
-          <!-- this for show data in ss after insert or click read -->
+
+        <!-- this for show data in ss after insert or click read -->
         <div id="showData"></div>
   </div>
 </body>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
+<!-- <div align="center">
+    <label style="color:white">Current Update<label  id="Currdate"></label></label> 
+  </div> -->
+<script>
+  var d = new Date();
+  document.getElementById("Currdate").innerHTML = d;
+</script>
 
 </html>
