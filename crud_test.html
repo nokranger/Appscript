@@ -9,9 +9,66 @@ body{
   background:#ffffff;
 }
 .container-bg{
-  background: #ff99cc;
+  background: #f2f2f2;
   margin-left: 10px; 
 }
+input[type=submit] {
+  background-color: #0073E6;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=button] {
+  background-color: #0073E6;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=text], select {
+  padding: 7px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+label{
+  margin-left: 10px;
+}
+input[type=date],{
+  padding: 7px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel]{
+  padding: 7px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email]{
+  padding: 7px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:focus,input[type=tel]:focus,input[type=date]:focus,input[type=email]:focus{
+  background:#FFFF80;
+}
+
   </style>
   <style>
     table, th, td 
@@ -295,57 +352,59 @@ strong{
 
       <div class="container-bg" align="left">
         <form>
-          ID : 
-          <input type="text" name="id" id="id" placeholder="1-100" required><br>
-          <br>Title_Name : 
+        <label>ID :</label>   
+          <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
+          <br><label>Title Name : </label>
           <select name="tn" id="tn" required>
             <option value="Mr.">Mr.</option>
             <option value="Ms.">Ms.</option>
             <option value="Mrs.">Mrs.</option>
           </select><br>
-          <br>First_Name : 
+          <br><label>First Name : </label>
           <input type="text" name="name" id="name" placeholder="Enter your first name" required>
-          Last_Name : 
+          <label>Last Name : </label>
           <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
-          <br>Date_of_birth : 
+          <br><label>Date of birth : </label>
           <input type="date" name="dob" id="dob" max="2100-12-31"><br>
-          <br>Telephone_Number : 
+          <br><label>Telephone Number : </label>
           <input type="tel" name="tel" id="tel" placeholder="0213456789" required><br>
-          <br>Facebook : 
+          <br><label>Facebook : </label>
           <input type="text" name="fb" id="fb" placeholder="Enter your facebook name" >
-          Line : 
+          <label>Line : </label>
           <input type="text" name="line" id="line" placeholder="Enter your id line" >
-          Instagram : 
+          <label>Instagram : </label>
           <input type="text" name="ig" id="ig" placeholder="Enter your Instagram" ><br>
-          <br>Email_Address : 
+          <br><label>Email Address : </label>
           <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
-          <br>Address_in_ID_Card : 
+          <br><label>Address in ID Card : </label>
           <input type="text" name="aic" id="aic" placeholder="Enter your address" ><br>
-          <br>Current_Address : 
+          <br><label>Current Address : </label>
           <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
-          <br>Educational_institution : 
+          <br><label>Educational institution : </label>
           <input type="text" name="ei" id="ei" placeholder="Enter your first educational" ><br>
-          <br>GPAX : 
+          <br><label>GPAX : </label>
           <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" ><br>
-          <br>Skill_programming : 
-          <input type="text" name="sp" id="sp" placeholder="Etc. hardware development" required>
-          Tool_for_development : 
-          <input type="text" name="tfp" id="tfp" placeholder="Etc. vscode" required><br>
-          <br>Software_Package : 
-          <input type="text" name="spack" id="spack" placeholder="Etc. ORACLE" required><br>
-
-
-
+          <br><label>Skill programming : </label>
+          <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required>
+          <label>Tool for development : </label>
+          <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
+          <br><label>Software Package : </label>
+          <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required><br>
+        </div>
+          <div align="center">
+              <div id="loader"></div>
+          <input type="submit" id="b1" onClick="insert_value()" value="Insert"></input>
+          <input type="button" id="b1" onclick="read_value()" value="Read"></input>
+          <input type="submit" id="b1" onclick="update_value()" value="Update"></input>
+          <input type="button" id="b1" onclick="delete_value()" value="Delete"></input>
+          </div>
         </form>
-      </div>
 
-        <div id="loader"></div>
+
+
 
         <p id="re"></p>
-        <input type="button" id="b1" onClick="insert_value()" value="Insert"></input>
-        <input type="button" id="b1" onclick="read_value()" value="Read" />
-        <input type="button" id="b1" onclick="update_value()" value="Update" />
-        <input type="button" id="b1" onclick="delete_value()" value="Delete" />
+
 
         <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
