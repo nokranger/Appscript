@@ -18,6 +18,9 @@
     // console.log(script_url);
     // console.log(deJson);
     var data44 = [];
+    function something(){
+      console.log(data44[1]);
+    }
     $.getJSON(urljson, function(data) {
     // console.log(data.user[1].time_stamp);
     
@@ -42,24 +45,15 @@
             data44[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
             data44[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
             data44[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-            var A =  data.user.filter((userfilter) => userfilter.ID === i)
-          // console.log(JSON.stringify(A))
-          var a1 = JSON.stringify(A);
-          // console.log('aaaaaaaaaaaaaaaaaa');
-          var a2 = []
-          a2 = a1
-          // console.log(a1[i]);
-          // console.log(a2)
-          dataJSON2.push(data.user[i].ID + ','+data.user[i].time_stamp);
           console.log(i)
           console.log(data44[i]);
           // data442[i].push(data44);
 
     }
-    console.log('data442')
+    console.log('data44')
     console.log(i)
-    console.log(data44[0].time_stamp)
-    let a11 = a1
+    console.log(data44)
+    something();
 });
 // console.log(data44[0]);
 // console.log(typeof(data3));
