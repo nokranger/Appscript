@@ -17,31 +17,36 @@
     // var deJson = JSON.parse(urljson);
     // console.log(script_url);
     // console.log(deJson);
-    var data44 = [];
-    $.getJSON(urljson, function(data) {
+    var jq = $.getJSON(urljson, function(data) {
     // console.log(data.user[1].time_stamp);
-    
+    var data44 = [];
     var dataJSON2 = [{}];
-    let data442 = [];
+    var data442 = [];
     for(var i=0;i<data.user.length;i++){
-            data44[i] = [];   
-            data44[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-            data44[i].ID = JSON.stringify(data.user[i].ID);
-            data44[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-            data44[i].First_Name = JSON.stringify(data.user[i].First_Name);
-            data44[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-            data44[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-            data44[i].Facebook = JSON.stringify(data.user[i].Facebook);
-            data44[i].line = JSON.stringify(data.user[i].line);
-            data44[i].Instagram = JSON.stringify(data.user[i].Instagram);
-            data44[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-            data44[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-            data44[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-            data44[i].GPAX = JSON.stringify(data.user[i].GPAX);
-            data44[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-            data44[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-            data44[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-            data44[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+            data44.time_stamp = JSON.stringify(data.user[i].time_stamp);
+            data44.ID = JSON.stringify(data.user[i].ID);
+            data44.Title_Name = JSON.stringify(data.user[i].Title_Name);
+            data44.First_Name = JSON.stringify(data.user[i].First_Name);
+            data44.Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+            data44.Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+            data44.Facebook = JSON.stringify(data.user[i].Facebook);
+            data44.line = JSON.stringify(data.user[i].line);
+            data44.Instagram = JSON.stringify(data.user[i].Instagram);
+            data44.Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+            data44.Current_Address = JSON.stringify(data.user[i].Current_Address);
+            data44.Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+            data44.GPAX = JSON.stringify(data.user[i].GPAX);
+            data44.Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+            data44.Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+            data44.Software_Package = JSON.stringify(data.user[i].Software_Package);
+            data44.Email_Address = JSON.stringify(data.user[i].Email_Address);
+            var data445 = data44.make;
+            var data4456 = [data445];
+            // console.log(data445);
+            // console.log(data44.time_stamp);
+            // console.log(data44.ID);
+            // console.log(data44.type);
+            // console.log(data44.image);
             var A =  data.user.filter((userfilter) => userfilter.ID === i)
           // console.log(JSON.stringify(A))
           var a1 = JSON.stringify(A);
@@ -51,17 +56,29 @@
           // console.log(a1[i]);
           // console.log(a2)
           dataJSON2.push(data.user[i].ID + ','+data.user[i].time_stamp);
-          console.log(i)
-          console.log(data44[i]);
-          // data442[i].push(data44);
+          console.log(data44);
+          data442.push(data44);
 
     }
     console.log('data442')
-    console.log(i)
-    console.log(data44[0].time_stamp)
+    console.log(data442)
+    console.log(data44)
+    // console.log(a1);
     let a11 = a1
+    // console.log(typeof(dataJSON2));
+    // console.log(dataJSON2);
+    // console.log(typeof(data44));
+    // console.log(data44);
+    // console.log(A)
+    var dataJSON = [];
+    dataJSON = data44.time_stamp + data44.ID +data44.Title_Name +data44.First_Name;
+    // console.log(typeof(dataJSON));
+    // console.log(data44.time_stamp);
+    // console.log('data44.make');
+    // console.log(data.user[1].time_stamp);
+
 });
-// console.log(data44[0]);
+
 // console.log(typeof(data3));
 // console.log((data3));
 // console.log((data3.responseJSON));
@@ -69,6 +86,7 @@
 
     // Make an AJAX call to Google Script
     function insert_value() {
+
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
@@ -294,77 +312,8 @@
 </head>
 
 <body bgcolor="#673AB7">
-  <div align="center">
-    <h1><i><strong style="color:white">Application form for register</strong></i></h1>
-    <p style="color:white">This is simple application<p>
 
-        <div class="container-bg" align="left">
-          <form action="javascript:insert_value()" method="POST">
-            <label>ID :</label>
-            <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
-            <label>Title Name : </label>
-            <select name="tn" id="tn" required>
-              <option value="Mr.">Mr.</option>
-              <option value="Ms.">Ms.</option>
-              <option value="Mrs.">Mrs.</option>
-            </select><br>
-            <label>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" required><br>
-            <label>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
-            <label>Date of birth : </label>
-            <input type="date" name="dob" id="dob" max="2100-12-31"><br>
-            <label>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" required><br>
-            <label>Facebook : </label>
-            <input type="text" name="fb" id="fb" placeholder="Enter your facebook name"><br>
-            <label>Line : </label>
-            <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
-            <label>Instagram : </label>
-            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
-            <label>Email Address : </label>
-            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
-            <label>Address in ID Card : </label>
-            <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
-            <label>Current Address : </label>
-            <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
-            <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your first educational"><br>
-            <label>GPAX : </label>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
-            <label>Skill programming : </label>
-            <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br>
-            <label>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
-            <label>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
-
-            <div class="container-fluid" align="center">
-              <div id="loader"></div>
-              <!-- <p id="re"></p> -->
-              <input type="submit" id="b1"  value="Insert"></input>
-              <input type="button" id="b2" onclick="read_value()" value="Read"></input>
-              <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
-              <input type="button" id="b4" onclick="delete_value()" value="Delete"></input>
-            </div>
-        </div>
-        </form>
-        <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
-          target="_blank">Click here to open Spread Sheet </a> -->
-
-        <!-- this for show data in ss after insert or click read -->
-        <div style="overflow: scroll" id="showData"></div>
-  </div>
 </body>
-<div align="center">
-  <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
-</div>
-<div align="center">
-    <label style="color:white">Current Update<label  id="Currdate"></label></label> 
-  </div>
-<script>
-  var d = new Date("December 12 2018");
-  document.getElementById("Currdate").innerHTML = d;
-</script>
+
 
 </html>
