@@ -5,14 +5,14 @@
     <title>Show</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/social.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    
     <script>
     var dataget = [];
     var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
@@ -60,8 +60,16 @@ function something(){
     b{
         margin-bottom: 10px;
     }
+    .img-profile{
+        width: 200px;
+        height: 200px;
+    }
+    .dt-tag{
+        margin-left: 20px;
+    }
 </style>
 <body>
+        <div class="progress-bar" style="width:70%"></div>
     <div class="container" style="border: solid;">
          <div class="container-fluid" >
                 <div class="row">
@@ -78,7 +86,7 @@ function something(){
                     </div>
                     <div class="col">
                         <div class="d-flex justify-content-start" style="margin-top:10px">
-                            <img width="200px" height="200px" src="img/nok.jpg" alt="">
+                            <img class="img-profile"src="img/nok.jpg" alt="">
                         </div>
                 </div>
             </div>
@@ -101,10 +109,11 @@ function something(){
                     </div>
                     <div class="col-6">
                         <div class="d-flex justify-content-start">
-                                <label><b>Education : </b>Walailak University<label><br>
+                                <label><b>Education : </b><label><br>
+                                    <dt class="dt-tag"><b>University : </b><label>Walailak University</label><label></label></dt>
                                     <dd><b>Major : </b><label>Computer Engineering</label></dd>
                                     <dd><b>Minor : </b><label></label></dd>
-                                        <label ><b>GPAX : </b>2.30<label><br>
+                                        <label><b>GPAX : </b>2.30<label><br>
                                         <label><b>Location : </b>Thung-ma-praw, Thai-maung, Phanag-nga</label><br>
                                         <label><b>Reference : </b>Mr.Korakot suwanarat<label><br>
                         </div>
@@ -112,6 +121,4 @@ function something(){
             </div>
     </div>
 </body>
-
-
 </html>
