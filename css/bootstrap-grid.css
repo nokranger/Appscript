@@ -21,8 +21,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1017,6 +1017,7 @@ html {
 .d-flex {
   display: -ms-flexbox !important;
   display: flex !important;
+  /* border-bottom: double; */
 }
 
 .d-inline-flex {
@@ -1247,6 +1248,7 @@ html {
 .justify-content-start {
   -ms-flex-pack: start !important;
   justify-content: flex-start !important;
+  
 }
 
 .justify-content-end {
