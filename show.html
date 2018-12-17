@@ -1,144 +1,57 @@
-<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Show</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/social.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-    <style>
-            .fa {
-              padding: 20px;
-              font-size: 30px;
-              width: 50px;
-              text-align: center;
-              text-decoration: none;
-              margin: 5px 2px;
-            }
-            
-            .fa:hover {
-                opacity: 0.7;
-            }
-            
-            .fa-facebook {
-              background: #3B5998;
-              color: white;
-              width: 50px;
-              height: 50px;
-            }
-            
-            .fa-twitter {
-              background: #55ACEE;
-              color: white;
-            }
-            
-            .fa-google {
-              background: #dd4b39;
-              color: white;
-            }
-            
-            .fa-linkedin {
-              background: #007bb5;
-              color: white;
-            }
-            
-            .fa-youtube {
-              background: #bb0000;
-              color: white;
-            }
-            
-            .fa-instagram {
-              background: #125688;
-              color: white;
-            }
-            
-            .fa-pinterest {
-              background: #cb2027;
-              color: white;
-            }
-            
-            .fa-snapchat-ghost {
-              background: #fffc00;
-              color: white;
-              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            }
-            
-            .fa-skype {
-              background: #00aff0;
-              color: white;
-            }
-            
-            .fa-android {
-              background: #a4c639;
-              color: white;
-            }
-            
-            .fa-dribbble {
-              background: #ea4c89;
-              color: white;
-            }
-            
-            .fa-vimeo {
-              background: #45bbff;
-              color: white;
-            }
-            
-            .fa-tumblr {
-              background: #2c4762;
-              color: white;
-            }
-            
-            .fa-vine {
-              background: #00b489;
-              color: white;
-            }
-            
-            .fa-foursquare {
-              background: #45bbff;
-              color: white;
-            }
-            
-            .fa-stumbleupon {
-              background: #eb4924;
-              color: white;
-            }
-            
-            .fa-flickr {
-              background: #f40083;
-              color: white;
-            }
-            
-            .fa-yahoo {
-              background: #430297;
-              color: white;
-            }
-            
-            .fa-soundcloud {
-              background: #ff5500;
-              color: white;
-            }
-            
-            .fa-reddit {
-              background: #ff5700;
-              color: white;
-            }
-            
-            .fa-rss {
-              background: #ff6600;
-              color: white;
-            }
-            </style> 
+    <script>
+    var dataget = [];
+    var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+    $.getJSON(urljson, function(data) {
+        var dataJSON2 = [{}];
+    for(var i=0;i<data.user.length;i++){
+            dataget[i] = [];   
+            dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+            dataget[i].ID = JSON.stringify(data.user[i].ID);
+            dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+            dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+            dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+            dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+            dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+            dataget[i].line = JSON.stringify(data.user[i].line);
+            dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+            dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+            dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+            dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+            dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+            dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+            dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+            dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+            dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+          console.log(i)
+          console.log(dataget[i]);
+          // data442[i].push(data44);
+
+    }
+    console.log('data')
+    console.log(i)
+    console.log(dataget)
+    something();
+});
+function something(){
+      console.log(dataget[1].time_stamp);
+    }
+    </script>
 </head>
 
 <body>
-    <div class="container">
     <div class="container">
          <div class="container-fluid" >
                 <div class="row">
@@ -162,7 +75,7 @@
         </div>
         <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-6">
                         <div class="d-flex justify-content-start">
                             <label><b>Skill : </b>lyuluilyuiluyluyiliului<label><br>
                             <label ><b>Experiece : </b>hrthrtehrthrthrthrt<label><br>
@@ -171,7 +84,7 @@
                             <label><b>Software package : </b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam deleniti dolor, dolorum officia aliquid, perspiciatis ipsa maxime harum nulla iste adipisci sed quidem sint repudiandae eligendi laboriosam est hic ea!<label><br>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <div class="d-flex justify-content-start">
                                 <label><b>Education : </b>lyuluilyuiluyluyiliului<label><br>
                                         <label ><b>GPAX : </b>hrthrtehrthrthrthrt<label><br>
@@ -181,7 +94,6 @@
                 </div>
             </div>
     </div>
-</div>
 </body>
 
 

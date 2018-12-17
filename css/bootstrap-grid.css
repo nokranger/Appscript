@@ -1017,7 +1017,6 @@ html {
 .d-flex {
   display: -ms-flexbox !important;
   display: flex !important;
-  /* border-bottom: double; */
 }
 
 .d-inline-flex {
