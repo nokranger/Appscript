@@ -14,8 +14,8 @@
   .fa-facebook {
     background: #3B5998;
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
   
   .fa-twitter {
@@ -35,10 +35,8 @@
   .fa-linkedin {
     background: #007bb5;
     color: white;
-    width: 50px;
-    height: 50px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
   
   .fa-youtube {
@@ -164,6 +162,6 @@
   .fa-github{
     background: #808080;
     color:white;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
