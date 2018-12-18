@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="css/edit.css">
+  <link href="css/multiple-select.css" rel="stylesheet"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
 
     // var script_url = "https://script.google.com/macros/s/AKfycbzJYs_28XWTrzLZ2bVLlAdWdAel9ybR9LnISOi0AFUppfh4l6a8/exec";
     // var script_url ="https://script.google.com/macros/s/AKfycbwSjqEJVsHBXWeasMPL94IPbbU0W-AStG4iN7m6rteUwgzd19c/exec";
-    var script_url = "https://script.google.com/macros/s/AKfycbyvpubxf10s296AfbmI_hADcHueRQgENIQImvelsQ/exec";
+    var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
     var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
 
     // var deJson = JSON.parse(urljson);
@@ -54,7 +55,16 @@
 });
 // something();
 function something(){
-      console.log(data44[1].time_stamp);
+      console.log(typeof(data44[15].Skill_programming))
+      console.log(data44[17].Skill_programming);
+      var sl = data44[17].Skill_programming
+      var spl = sl.split(",");
+      console.log(typeof(spl))
+      console.log(spl)
+      data44[17].Skill_programming = spl
+      console.log((data44[17].Skill_programming[0]))
+      console.log((data44[17].Skill_programming[1]))
+      console.log(data44[17]);
     }
 // console.log(typeof(data3));
 // console.log((data3));
@@ -298,6 +308,11 @@ function something(){
             <label>ID :</label>
             <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
             <label>Title Name : </label>
+            <!-- <select name="tn" id="tn" multiple="multiple" placeholder="Select title name">
+                <option value="Mr.">Mr.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+              </select><br> -->
             <select name="tn" id="tn" required>
               <option value="Mr.">Mr.</option>
               <option value="Ms.">Ms.</option>
@@ -328,19 +343,46 @@ function something(){
             <label>GPAX : </label>
             <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
             <label>Skill programming : </label>
-            <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br>
+            <select name="sp" id="sp" multiple="multiple" onchange="console.log(this.value)">
+                <option value='&#80ython'>Python</option>
+                <option value="C&#43;&#43;">C++</option>
+                <option value="Java">Java</option>
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="R">R</option>
+                <option value="Javascript">Javascript</option>
+                <option value="GO">GO</option>
+                <option value="Assembly">Assembly</option>
+                <option value="Matlab">Matlab</option>
+                <option value="Scala">Scala</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Shell">Shell</option>
+                <option value="Perl">Perl</option>
+                <option value="Swift">Swift</option>
+                <option value="Processing">Processing</option>
+                <option value="Objective-C">Objective-C</option>
+                <option value="Lua">Lua</option>
+                <option value="Fortran">Fortran</option>
+                <option value="SQL">SQL</option>
+                <option value="Haskell">Haskell</option>
+                <option value="VHDL">VHDL</option>
+                <option value="Visual Basic">Visual Basic</option>
+              </select><br>
+            <!-- <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br> -->
             <label>Tool for development : </label>
             <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
             <label>Software Package : </label>
             <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
 
-            <div class="container-fluid" align="center">
-              <div id="loader"></div>
+            <div style="margin-left:10px" class="container-fluid" align="left">
+
               <!-- <p id="re"></p> -->
               <input type="submit" id="b1"  value="Insert"></input>
-              <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+              <div id="loader"></div>
+              <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
-              <input type="button" id="b4" onclick="delete_value()" value="Delete"></input>
+              <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
             </div>
         </div>
         </form>
@@ -350,6 +392,10 @@ function something(){
         <!-- this for show data in ss after insert or click read -->
         <div style="overflow: scroll" id="showData"></div>
   </div>
+  <script src="js/multiple-select.js"></script>
+  <script>
+      $('select').multipleSelect();
+  </script>
 </body>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
