@@ -6,6 +6,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="css/edit.css">
   <link href="css/multiple-select.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+  <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
+  <link rel="stylesheet" href="assets/app.css">
+  <style>
+  body {
+  background-color: #673AB7;
+}
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -69,7 +79,6 @@ function something(){
 // console.log(typeof(data3));
 // console.log((data3));
 // console.log((data3.responseJSON));
-    
 
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -298,7 +307,8 @@ function something(){
 
 </head>
 
-<body bgcolor="#673AB7">
+<body >
+    <!-- style="bgcolor:#673AB7" -->
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
@@ -306,13 +316,8 @@ function something(){
         <div class="container-bg" align="left">
           <form action="javascript:insert_value()" method="POST">
             <label>ID :</label>
-            <input type="text" name="id" id="id" placeholder=" 1-100 Etc." required><br>
+            <input type="text" name="id" id="id" required disabled><br>
             <label>Title Name : </label>
-            <!-- <select name="tn" id="tn" multiple="multiple" placeholder="Select title name">
-                <option value="Mr.">Mr.</option>
-                <option value="Ms.">Ms.</option>
-                <option value="Mrs.">Mrs.</option>
-              </select><br> -->
             <select name="tn" id="tn" required>
               <option value="Mr.">Mr.</option>
               <option value="Ms.">Ms.</option>
@@ -325,7 +330,7 @@ function something(){
             <label>Date of birth : </label>
             <input type="date" name="dob" id="dob" max="2100-12-31"><br>
             <label>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" required><br>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" required><br>
             <label>Facebook : </label>
             <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
             <label>Line : </label>
@@ -342,34 +347,13 @@ function something(){
             <input type="text" name="ei" id="ei" placeholder="Enter your first educational"><br>
             <label>GPAX : </label>
             <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
-            <label>Skill programming : </label>
-            <select name="sp" id="sp" multiple="multiple" onchange="console.log(this.value)">
-                <option value='&#80ython'>Python</option>
-                <option value="C&#43;&#43;">C++</option>
-                <option value="Java">Java</option>
-                <option value="C">C</option>
-                <option value="C#">C#</option>
-                <option value="PHP">PHP</option>
-                <option value="R">R</option>
-                <option value="Javascript">Javascript</option>
-                <option value="GO">GO</option>
-                <option value="Assembly">Assembly</option>
-                <option value="Matlab">Matlab</option>
-                <option value="Scala">Scala</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Shell">Shell</option>
-                <option value="Perl">Perl</option>
-                <option value="Swift">Swift</option>
-                <option value="Processing">Processing</option>
-                <option value="Objective-C">Objective-C</option>
-                <option value="Lua">Lua</option>
-                <option value="Fortran">Fortran</option>
-                <option value="SQL">SQL</option>
-                <option value="Haskell">Haskell</option>
-                <option value="VHDL">VHDL</option>
-                <option value="Visual Basic">Visual Basic</option>
-              </select><br>
-            <!-- <input type="text" name="sp" id="sp" placeholder="Hardware development Etc." required><br> -->
+
+            <div class="example example_typeahead">
+              <div class="bs-example">
+                  <label>Skill programming : </label>
+                  <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"><br>
+              </div>
+              </div>
             <label>Tool for development : </label>
             <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
             <label>Software Package : </label>
@@ -392,10 +376,10 @@ function something(){
         <!-- this for show data in ss after insert or click read -->
         <div style="overflow: scroll" id="showData"></div>
   </div>
-  <script src="js/multiple-select.js"></script>
+  <!-- <script src="js/multiple-select.js"></script>
   <script>
       $('select').multipleSelect();
-  </script>
+  </script> -->
 </body>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
@@ -407,5 +391,32 @@ function something(){
   var d = new Date("December 12 2018");
   document.getElementById("Currdate").innerHTML = d;
 </script>
+<script>
+  function getRandomID(min,max) {
+  
+  return Math.floor(Math.random() * (max - min + 1) +min);
+}
+function new_id(){
+  var rndnum = getRandomID(1,99999);
+  var id = ('0000' + rndnum).slice(-5);
+  id = 'UID' + id;
+  document.getElementById("id").value = id;
+  return id;
+}
+console.log(new_id());
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="js/bootstrap-tagsinput.min.js"></script>
+<script src="js/bootstrap-tagsinput-angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/app_bs3.js"></script>
 
 </html>
