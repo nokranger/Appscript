@@ -309,14 +309,15 @@
 
 <body>
   <!-- style="bgcolor:#673AB7" -->
+  <?php require 'PHPMailer/class.phpmailer.php'; ?>
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
 
         <div class="container-bg" align="left">
-          <form action="mailer.php" method="POST" onsubmit="javascript:insert_value()">
+          <form action="javascript:insert_value()" method="POST">
             <label>ID :</label>
-            <input type="text" name="id" id="id" required><br>
+            <input type="text" name="id" id="id" required disabled><br>
             <label>Title Name : </label>
             <select name="tn" id="tn" required>
               <option value="Mr.">Mr.</option>
