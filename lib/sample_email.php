@@ -11,14 +11,14 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 
-$gmail_username = "anusorn.thavornporn@gmail.com"; // gmail ที่ใช้ส่ง
+$gmail_username = ""; // gmail ที่ใช้ส่ง
 $gmail_password = ""; // รหัสผ่าน gmail
 // ตั้งค่าอนุญาตการใช้งานได้ที่นี่ https://myaccount.google.com/lesssecureapps?pli=1
 
 
-$sender = "Anusorn Thavornpon"; // ชื่อผู้ส่ง
+$sender = ""; // ชื่อผู้ส่ง
 $email_sender = "noreply@ibsone.com"; // เมล์ผู้ส่ง 
-$email_receiver = "anusorn.thavornporn@gmail.com"; // เมล์ผู้รับ ***
+$email_receiver = ""; // เมล์ผู้รับ ***
 
 $subject = "ฉันเองมีไรป่าว"; // หัวข้อเมล์
 

@@ -32,8 +32,8 @@ $mail_r = $_POST['mail'];
 // $detail = $_POST['lname'];
 
 
-$gmail_username = "anusorn.thavornporn@gmail.com"; // gmail ที่ใช้ส่ง
-$gmail_password = "n504306027"; // รหัสผ่าน gmail
+$gmail_username = ""; // gmail ที่ใช้ส่ง
+$gmail_password = ""; // รหัสผ่าน gmail
 // ตั้งค่าอนุญาตการใช้งานได้ที่นี่ https://myaccount.google.com/lesssecureapps?pli=1
 
 
