@@ -12,10 +12,9 @@
   }
   
   .fa-facebook {
-    background: #3B5998;
-    color: white;
-    width: 30px;
-    height: 30px;
+    background: white;
+    color:#3B5998;
+    font-size: 50px;
   }
   
   .fa-twitter {
@@ -33,10 +32,9 @@
   }
   
   .fa-linkedin {
-    background: #007bb5;
-    color: white;
-    width: 30px;
-    height: 30px;
+    background: white;
+    color: #007bb5;
+    font-size: 50px;
   }
   
   .fa-youtube {
@@ -160,8 +158,12 @@
     height: 50px;
   }
   .fa-github{
-    background: #808080;
-    color:white;
-    width: 30px;
-    height: 30px;
+    background: white;
+    color:#000000;
+    font-size: 50px;
+  }
+  .fa-line{
+    background: white;
+    color:#00c300;
+    font-size: 50px;
   }
