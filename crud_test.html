@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
   <link rel="stylesheet" href="assets/app.css">
+  <title>Form register</title>
   <style>
-    body {
-  background-color: #673AB7;
-}
+    body{
+        background-color: #673AB7;
+        }
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -316,6 +317,7 @@
           <form action="mailer.php" method="POST" onsubmit="javascript:insert_value()">
             <label>ID :</label>
             <input type="text" name="id" id="id" required><br>
+            <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
             <select name="tn" id="tn" required>
               <option value="Mr.">Mr.</option>
@@ -400,6 +402,7 @@
     var id = ('0000' + rndnum).slice(-5);
     id = 'UID' + id;
     document.getElementById("id").value = id;
+    // document.getElementById("id").innerHTML = id;
     return id;
   }
   console.log(new_id());

@@ -37,7 +37,7 @@ $gmail_password = ""; // รหัสผ่าน gmail
 // ตั้งค่าอนุญาตการใช้งานได้ที่นี่ https://myaccount.google.com/lesssecureapps?pli=1
 
 
-$sender = "Anusorn Thavornpon"; // ชื่อผู้ส่ง
+$sender = ""; // ชื่อผู้ส่ง
 $email_sender = "noreply@ibsone.com"; // เมล์ผู้ส่ง 
 $email_receiver = $mail_r; // เมล์ผู้รับ ***
 

@@ -16,44 +16,46 @@
         crossorigin='anonymous'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-    <!-- <script>
-    var dataget = [];
-    var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-    $.getJSON(urljson, function(data) {
-        var dataJSON2 = [{}];
-    for(var i=0;i<data.user.length;i++){
-            dataget[i] = [];   
-            dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-            dataget[i].ID = JSON.stringify(data.user[i].ID);
-            dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-            dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-            dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-            dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-            dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-            dataget[i].Line = JSON.stringify(data.user[i].Line);
-            dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-            dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-            dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-            dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-            dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-            dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-            dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-            dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-            dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-          console.log(i)
-          console.log(dataget[i]);
-          // data442[i].push(data44);
+    <script>
+        var dataget = [];
+        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+        $.getJSON(urljson, function (data) {
+            var dataJSON2 = [{}];
+            for (var i = 0; i < data.user.length; i++) {
+                dataget[i] = [];
+                dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+                dataget[i].ID = JSON.stringify(data.user[i].ID);
+                dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+                dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+                dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+                dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+                dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+                dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+                dataget[i].Line = JSON.stringify(data.user[i].Line);
+                dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+                dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+                dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+                dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+                dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+                dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+                dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+                dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+                dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+                //   console.log(i)
+                //   console.log(dataget[i].ID);
+                // data442[i].push(data44);
 
-    }
-    console.log('data')
-    console.log(i)
-    console.log(dataget)
-    something();
-});
-function something(){
-      console.log(dataget[51].Address_in_ID_Card);
-    }
-    </script> -->
+            }
+            // console.log('data')
+            // console.log(i)
+            // console.log(dataget[0])
+            something();
+            set();
+        });
+        function something() {
+            console.log(dataget[51].Address_in_ID_Card);
+        }
+    </script>
 </head>
 <style>
     label {
@@ -89,7 +91,7 @@ function something(){
                     <div style="border-bottom: solid;">
                         <div class="d-flex justify-content-start">
                             <div>
-                                <b>Rank : </b><label id="uid">1</label>
+                                <b>Rank : </b><label id="uid"></label>
                                 <b>Name : </b><label id="tn"></label>&nbsp;<label id="name"></label>&nbsp;
                                 <label id="lname"></label>&nbsp;
                             </div>
@@ -107,8 +109,7 @@ function something(){
                 </div>
                 <div class="col">
                     <div class="d-flex justify-content-start" style="margin-top:10px">
-                        <img id="pic" class="img-profile" src=""
-                            alt="">
+                        <img id="pic" class="img-profile" src="" alt="">
                     </div>
                 </div>
             </div>
@@ -128,11 +129,10 @@ function something(){
                                     <dd><b>2017</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop about Predictive
                                         Monitoring Systems in Thai-Nichi Institute of Technology with
                                         Team BNT</dd> -->
-                                    <b>Social : </b><label></label><a id="fb" href=""
-                                        target="_blank" class="fab fa-facebook"></a><a id="ln" href=""
-                                        target="_blank" class="fab fa-linkedin"></a><a id="git" href=""
-                                        target="_blank" class="fab fa-github"></a><a id="line" href=""
-                                        target="_blank" class="fab fa-line"></a><br>
+                                    <b>Social : </b><label></label><a id="fb" href="" target="_blank" class="fab fa-facebook"></a><a
+                                        id="ln" href="" target="_blank" class="fab fa-linkedin"></a><a id="git" href=""
+                                        target="_blank" class="fab fa-github"></a><a id="line" href="" target="_blank"
+                                        class="fab fa-line"></a><br>
                                     <b>Tool for development : </b><label id="tfp"></label><br>
                                     <b>Software package : </b><label id="spack"></label><br>
                                 </div>
@@ -145,7 +145,7 @@ function something(){
                                 <div>
                                     <label><b>Education : </b><label><br>
                                             <dt class="dt-tag">
-                                            <b>University : </b><label id="university"></label></dt>
+                                                <b>University : </b><label id="university"></label></dt>
                                             <dd><b>Major : </b><label id="major"></label></dd>
                                             <dd><b>Minor : </b><label id="minor"></label></dd>
                                             <b>GPAX : </b><label id="gpa"></label><br>
@@ -158,60 +158,97 @@ function something(){
                 </div>
             </div>
             <script>
-                var urlf,urlg,urlln,urlline,urldrive,face,git,link,line,drive;
-                urlf = "https://www.facebook.com/";
-                urlg = "https://www.github.com/";
-                urlln = "https://www.linkedin.com/in/";
-                urlline = "https://line.me/ti/p/~";
-                urldrive = "https://drive.google.com/uc?id="
-                face = "anusornthavornpon";
+                var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
+
+                // face = "anusornthavornpon";
                 git = "nokranger";
                 link = "anusornthavornponcomen";
-                line = "nokranger"
+                // line = "nokranger"
                 drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
-                face = urlf + face;
-                git = urlg + git;
-                link = urlln + link;
-                line = urlline + line;
-                drive = urldrive + drive;
+                // face = urlf + face;
+                // git = urlg + git;
+                // link = urlln + link;
+                // line = urlline + line;
+                // drive = urldrive + drive;
                 university = "Walailak University"
                 major = "Computer Engineering";
-                minor = "";
-                gpa = "2.30";
-                tfp = "vscode";
-                sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
-                spack = "vscode"
+                minor = "1";
+                // gpa = "2.30";
+                // tfp = "vscode";
+                // sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
+                // spack = "vscode"
                 reference = "Mr.Korakot Suwannarat"
                 locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
-                mail = "Anusorn.thavornporn@gmail.com";
+                // mail = "Anusorn.thavornporn@gmail.com";
                 about = "I'm newbie Programmer";
-                console.log(face)
-                document.getElementById("uid").innerHTML = "1234546";
-                document.getElementById("tn").innerHTML = "Mr.";
-                document.getElementById("name").innerHTML = "Anusorn";
-                document.getElementById("lname").innerHTML = "Thavornporn";
-                // document.getElementById("dob").innerHTML = "";
-                document.getElementById("tel").innerHTML = "0981265683";
-                document.getElementById("fb").href = face;
-                document.getElementById("line").href = line;
-                // document.getElementById("ig").innerHTML = ;
-                document.getElementById("ln").href = link;
-                document.getElementById("git").href = git;
-                // document.getElementById("aic").innerHTML = "";
-                // document.getElementById("ca").innerHTML = "";
-                // document.getElementById("ei").innerHTML = "";
-                document.getElementById("gpa").innerHTML = gpa;
-                document.getElementById("sp").innerHTML = sp;
-                document.getElementById("tfp").innerHTML = tfp;
-                document.getElementById("spack").innerHTML = spack ;
-                document.getElementById("mail").innerHTML = mail;
-                document.getElementById("pic").src = drive;
-                document.getElementById("university").innerHTML = university;
-                document.getElementById("major").innerHTML = major;
-                document.getElementById("minor").innerHTML = minor;
-                document.getElementById("ref").innerHTML = reference;
-                document.getElementById("location").innerHTML = locations;
-                document.getElementById("about").innerHTML = about; 
+                // console.log(face)
+                function set() {
+                    console.log(typeof (dataget[50].ID))
+                    console.log(dataget[50].ID)
+                    console.log(typeof (dataget[56].Last_Name))
+                    console.log(dataget[56].Last_Name)
+                    console.log(minor + JSON.parse(dataget[1].Last_Name))
+                    console.log(JSON.parse(dataget[50].ID))
+                    // console.log(getURL('id'))
+                    // console.log(face)
+                    for (var i = 0; i < dataget.length; i++) {
+                        if (JSON.parse(dataget[i].ID) == getURL('id')) {
+                            urlf = "https://www.facebook.com/";
+                            urlg = "https://www.github.com/";
+                            urlln = "https://www.linkedin.com/in/";
+                            urlline = "https://line.me/ti/p/~";
+                            urldrive = "https://drive.google.com/uc?id=";
+                            face = urlf + JSON.parse(dataget[i].Facebook)
+                            git = urlg + git;
+                            link = urlln + link;
+                            line = urlline + JSON.parse(dataget[i].Line);
+                            drive = urldrive + drive;
+                            // drive = urldrive + drive;
+                            document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
+                            document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
+                            document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
+                            document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
+                            // document.getElementById("dob").innerHTML = "";
+                            document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
+                            document.getElementById("fb").href = face;
+                            document.getElementById("line").href = line;
+                            // document.getElementById("ig").innerHTML = ;
+                            document.getElementById("ln").href = link;
+                            document.getElementById("git").href = git;
+                            // document.getElementById("aic").innerHTML = "";
+                            // document.getElementById("ca").innerHTML = "";
+                            // document.getElementById("ei").innerHTML = "";
+                            document.getElementById("gpa").innerHTML = dataget[i].GPAX;
+                            document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
+                            document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
+                            document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
+                            document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
+                            document.getElementById("pic").src = drive;
+                            document.getElementById("university").innerHTML = university;
+                            document.getElementById("major").innerHTML = major;
+                            document.getElementById("minor").innerHTML = minor;
+                            document.getElementById("ref").innerHTML = reference;
+                            document.getElementById("location").innerHTML = locations;
+                            document.getElementById("about").innerHTML = about;
+                            break;
+                        }
+                    }
+                }
+                function getURL(objN) {
+                    if (objN == null) {
+                        return window.location.href;
+                    } else {
+                        objN = objN.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+                        var regexS = "[\\?&]" + objN + "=([^&#]*)";
+                        var regex = new RegExp(regexS);
+                        var results = regex.exec(window.location.href);
+                        if (results == null)
+                            return "";
+                        else
+                            return results[1];
+                    }
+                }
             </script>
 </body>
+
 </html>
