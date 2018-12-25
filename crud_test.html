@@ -23,7 +23,9 @@
 
     // var script_url = "https://script.google.com/macros/s/AKfycbzJYs_28XWTrzLZ2bVLlAdWdAel9ybR9LnISOi0AFUppfh4l6a8/exec";
     // var script_url ="https://script.google.com/macros/s/AKfycbwSjqEJVsHBXWeasMPL94IPbbU0W-AStG4iN7m6rteUwgzd19c/exec";
-    var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
+
+    var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";//11
+    // var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
     // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
 
     // var deJson = JSON.parse(urljson);
@@ -103,6 +105,14 @@
       var tfp = $("#tfp").val();
       var spack = $("#spack").val();
       var mail = $("#mail").val();
+      var git = $("#git").val();
+      var link = $("#link").val();
+      var major = $("#major").val();
+      var minor = $("#minor").val();
+      var about = $("#about").val();
+      var pic = $("#pic").val();
+      var exp = $("#exp").val();
+      var ref = $("#ref").val();
 
       // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
       console.log($("#id").val());
@@ -113,7 +123,7 @@
 
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=insert";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
       console.log(url);
 
 
@@ -146,7 +156,15 @@
       var tfp = $("#tfp").val();
       var spack = $("#spack").val();
       var mail = $("#mail").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=update";
+      var git = $("#git").val();
+      var link = $("#link").val();
+      var major = $("#major").val();
+      var minor = $("#minor").val();
+      var about = $("#about").val();
+      var pic = $("#pic").val();
+      var exp = $("#exp").val();
+      var ref = $("#ref").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -180,7 +198,15 @@
       var tfp = $("#tfp").val();
       var spack = $("#spack").val();
       var mail = $("#mail").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&action=delete";
+      var git = $("#git").val();
+      var link = $("#link").val();
+      var major = $("#major").val();
+      var minor = $("#minor").val();
+      var about = $("#about").val();
+      var pic = $("#pic").val();
+      var exp = $("#exp").val();
+      var ref = $("#ref").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
       var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -231,6 +257,14 @@
         var cell15 = row.insertCell(14);
         var cell16 = row.insertCell(15);
         var cell17 = row.insertCell(16);
+        var cell18 = row.insertCell(17);
+        var cell19 = row.insertCell(18);
+        var cell20 = row.insertCell(19);
+        var cell21 = row.insertCell(20);
+        var cell22 = row.insertCell(21);
+        var cell23 = row.insertCell(22);
+        var cell24 = row.insertCell(23);
+        var cell25 = row.insertCell(24);
 
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
@@ -249,6 +283,14 @@
         cell15.innerHTML = "<b>Tool_for_development</b>";
         cell16.innerHTML = "<b>Software_Package</b>";
         cell17.innerHTML = "<b>Email_Address</b>";
+        cell18.innerHTML = "<b>Github</b>";
+        cell19.innerHTML = "<b>Linkedin</b>";
+        cell20.innerHTML = "<b>Major</b>";
+        cell21.innerHTML = "<b>Minor</b>";
+        cell22.innerHTML = "<b>About_you</b>";
+        cell23.innerHTML = "<b>Picture</b>";
+        cell24.innerHTML = "<b>Experiece</b>";
+        cell25.innerHTML = "<b>Reference</b>";
 
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
@@ -288,6 +330,22 @@
           tabCell.innerHTML = json.records[i].Software_Package;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Email_Address;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Github;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Linkedin;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Major;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Minor;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].About_you;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Picture;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Experiece;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Reference;
 
 
 
@@ -314,7 +372,7 @@
     <p style="color:white">This is simple application<p>
 
         <div class="container-bg" align="left">
-          <form action="mailer.php" method="POST" onsubmit="javascript:insert_value()">
+          <form action="" method="POST" onsubmit="javascript:insert_value()">
             <label>ID :</label>
             <input type="text" name="id" id="id" required><br>
             <!-- <label id="id" name="id"></label><br> -->
@@ -338,6 +396,10 @@
             <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
             <label>Instagram : </label>
             <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
+            <label>Github: </label>
+            <input type="text" name="git" id="git" placeholder="Enter your Github"><br>
+            <label>Linkedin: </label>
+            <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
             <label>Email Address : </label>
             <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
             <label>Address in ID Card : </label>
@@ -345,10 +407,13 @@
             <label>Current Address : </label>
             <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
             <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your first educational"><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University"><br>
+            <label>Major : </label>
+            <input type="text" name="major" id="major" placeholder="Enter your Major"><br>
+            <label>Minor : </label>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor"><br>
             <label>GPAX : </label>
             <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
-
             <div class="example example_typeahead">
               <div class="bs-example">
                 <label>Skill programming : </label>
@@ -358,8 +423,15 @@
             <label>Tool for development : </label>
             <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
             <label>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required>
-
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required><br>
+            <label>About you : </label>
+            <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
+            <label>Your picture : </label>
+            <input type="text" name="pic" id="pic" placeholder="Enter your url from google drive"><br>
+            <label>Experiece : </label>
+            <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
+            <label>Reference : </label>
+            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"><br>
             <div style="margin-left:10px" class="container-fluid" align="left">
 
               <!-- <p id="re"></p> -->
