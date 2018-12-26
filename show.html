@@ -18,7 +18,8 @@
 
     <script>
         var dataget = [];
-        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
         $.getJSON(urljson, function (data) {
             var dataJSON2 = [{}];
             for (var i = 0; i < data.user.length; i++) {
@@ -41,14 +42,23 @@
                 dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
                 dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
                 dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+                dataget[i].Github = JSON.stringify(data.user[i].Github);
+                dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
+                dataget[i].Major = JSON.stringify(data.user[i].Major);
+                dataget[i].Minor = JSON.stringify(data.user[i].Minor);
+                dataget[i].About_you = JSON.stringify(data.user[i].About_you);
+                dataget[i].Picture = JSON.stringify(data.user[i].Picture);
+                dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
+                dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+
                 //   console.log(i)
-                //   console.log(dataget[i].ID);
+                console.log(dataget[i]);
                 // data442[i].push(data44);
 
             }
             // console.log('data')
             // console.log(i)
-            // console.log(dataget[0])
+            // console.log(dataget[i])
             something();
             set();
         });
@@ -87,7 +97,7 @@
     <div class="container">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-9">
+                <div class="colsm-12 col-md-12 col-lg-9 col-xl-9">
                     <div style="border-bottom: solid;">
                         <div class="d-flex justify-content-start">
                             <div>
@@ -107,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="colsm-3 col-md-3 col-lg-3 col-xl-3">
                     <div class="d-flex justify-content-start" style="margin-top:10px">
                         <img id="pic" class="img-profile" src="" alt="">
                     </div>
@@ -115,7 +125,7 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div>
                             <div class="d-flex justify-content-start">
                                 <div>
@@ -139,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div>
                             <div class="d-flex justify-content-start">
                                 <div>
@@ -184,7 +194,7 @@
                 // console.log(face)
                 function set() {
                     console.log(typeof (dataget[50].ID))
-                    console.log(dataget[50].ID)
+                    console.log(dataget[59].ID)
                     console.log(typeof (dataget[56].Last_Name))
                     console.log(dataget[56].Last_Name)
                     console.log(minor + JSON.parse(dataget[1].Last_Name))
@@ -199,11 +209,11 @@
                             urlline = "https://line.me/ti/p/~";
                             urldrive = "https://drive.google.com/uc?id=";
                             face = urlf + JSON.parse(dataget[i].Facebook)
-                            git = urlg + git;
-                            link = urlln + link;
+                            git = urlg + JSON.parse(dataget[i].Github);
+                            link = urlln + JSON.parse(dataget[i].Linkedin);
                             line = urlline + JSON.parse(dataget[i].Line);
-                            drive = urldrive + drive;
-                            // drive = urldrive + drive;
+                            drive = urldrive + JSON.parse(dataget[i].Picture);
+                            console.log(dataget[i])
                             document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
                             document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
                             document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
@@ -215,24 +225,23 @@
                             // document.getElementById("ig").innerHTML = ;
                             document.getElementById("ln").href = link;
                             document.getElementById("git").href = git;
-                            // document.getElementById("aic").innerHTML = "";
-                            // document.getElementById("ca").innerHTML = "";
-                            // document.getElementById("ei").innerHTML = "";
                             document.getElementById("gpa").innerHTML = dataget[i].GPAX;
                             document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
                             document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
                             document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
                             document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
                             document.getElementById("pic").src = drive;
-                            document.getElementById("university").innerHTML = university;
-                            document.getElementById("major").innerHTML = major;
-                            document.getElementById("minor").innerHTML = minor;
-                            document.getElementById("ref").innerHTML = reference;
-                            document.getElementById("location").innerHTML = locations;
-                            document.getElementById("about").innerHTML = about;
+                            document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
+                            document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
+                            document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
+                            document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
+                            document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
+                            document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
                             break;
                         }
                     }
+                    console.log(i)
+
                 }
                 function getURL(objN) {
                     if (objN == null) {
