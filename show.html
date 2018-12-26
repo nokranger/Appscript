@@ -19,7 +19,8 @@
     <script>
         var dataget = [];
         // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
+        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
+        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
             var dataJSON2 = [{}];
             for (var i = 0; i < data.user.length; i++) {
@@ -63,7 +64,7 @@
             set();
         });
         function something() {
-            console.log(dataget[51].Address_in_ID_Card);
+            // console.log(dataget[51].Address_in_ID_Card);
         }
     </script>
 </head>
@@ -71,17 +72,20 @@
     label {
         margin-bottom: 10px;
         font-family: 'Lora', serif;
+        color: #696969;
     }
 
     b {
         margin-bottom: 10px;
         font-family: 'Lora', serif;
         margin-left: 10px;
+        color: white;
     }
 
     .img-profile {
         width: 200px;
         height: 200px;
+        border-radius: 8px;
     }
 
     .dt-tag {
@@ -90,36 +94,137 @@
 
     dd {
         font-family: 'Lora', serif;
+        color: #696969;
+    }
+
+    a {
+        font-family: 'Lora', serif;
+        color: #696969;
+    }
+
+    /* .colorful {
+  background:
+    -webkit-linear-gradient(315deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
+    -webkit-linear-gradient(135deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
+    linear-gradient(315deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(245deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
+  } */
+    /* .colorful {
+  background:
+    -webkit-linear-gradient(315deg, hsla(61.13, 95%, 55%, 1) 0%, hsla(61.13, 95%, 55%, 0) 70%),
+    -webkit-linear-gradient(135deg, hsla(176.6, 89.13%, 65.68%, 1) 15%, hsla(176.6, 89.13%, 65.68%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(312.45, 100%, 67.34%, 1) 100%, hsla(312.45, 100%, 67.34%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(61.13, 95%, 55%, 1) 0%, hsla(61.13, 95%, 55%, 0) 70%),
+    linear-gradient(315deg, hsla(176.6, 89.13%, 65.68%, 1) 15%, hsla(176.6, 89.13%, 65.68%, 0) 80%),
+    linear-gradient(245deg, hsla(312.45, 100%, 67.34%, 1) 100%, hsla(312.45, 100%, 67.34%, 0) 70%);
+  } */
+    .colorful-2 {
+        background:
+            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+        background:
+            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+    }
+
+    .colorful {
+        background:
+            -webkit-linear-gradient(255deg, hsla(160.59, 100%, 60%, 1) 0%, hsla(160.59, 100%, 60%, 0) 65%),
+            -webkit-linear-gradient(220deg, hsla(130.59, 100%, 60%, 1) 0%, hsla(130.59, 100%, 60%, 0) 65%),
+            -webkit-linear-gradient(315deg, hsla(100.59, 100%, 60%, 1) 0%, hsla(100.59, 100%, 60%, 0) 70%),
+            -webkit-linear-gradient(65deg, hsla(70.59, 100%, 60%, 1) 10%, hsla(70.59, 100%, 60%, 0) 80%),
+            -webkit-linear-gradient(135deg, hsla(40.59, 100%, 60%, 1) 15%, hsla(40.59, 100%, 60%, 0) 80%),
+            -webkit-linear-gradient(205deg, hsla(10.59, 100%, 60%, 1) 100%, hsla(10.59, 100%, 60%, 0) 70%);
+        background:
+            linear-gradient(195deg, hsla(160.59, 100%, 60%, 1) 0%, hsla(160.59, 100%, 60%, 0) 65%),
+            linear-gradient(230deg, hsla(130.59, 100%, 60%, 1) 0%, hsla(130.59, 100%, 60%, 0) 65%),
+            linear-gradient(135deg, hsla(100.59, 100%, 60%, 1) 0%, hsla(100.59, 100%, 60%, 0) 70%),
+            linear-gradient(25deg, hsla(70.59, 100%, 60%, 1) 10%, hsla(70.59, 100%, 60%, 0) 80%),
+            linear-gradient(315deg, hsla(40.59, 100%, 60%, 1) 15%, hsla(40.59, 100%, 60%, 0) 80%),
+            linear-gradient(245deg, hsla(10.59, 100%, 60%, 1) 100%, hsla(10.59, 100%, 60%, 0) 70%);
+    }
+
+    .container2 {
+        position: relative;
+        width: 50%;
+    }
+
+    .image {
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        width: 200px;
+        opacity: 0;
+        transition: .5s ease;
+        background:
+            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+        background:
+            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
     }
 </style>
 
 <body>
     <div class="container">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="colsm-12 col-md-12 col-lg-9 col-xl-9">
-                    <div style="border-bottom: solid;">
-                        <div class="d-flex justify-content-start">
-                            <div>
-                                <b>Rank : </b><label id="uid"></label>
-                                <b>Name : </b><label id="tn"></label>&nbsp;<label id="name"></label>&nbsp;
-                                <label id="lname"></label>&nbsp;
+        <div class="colorful-2" style="margin:10px;border: solid;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="colsm-12 col-md-12 col-lg-9 col-xl-9">
+                        <div style="border-bottom: solid;">
+                            <div class="d-flex justify-content-start">
+                                <div>
+                                    <b>Rank : </b><label id="uid"></label>
+                                    <b>Name : </b><label id="tn"></label>&nbsp;<label id="name"></label>&nbsp;
+                                    <label id="lname"></label>&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: solid;">
+                            <div class="d-flex justify-content-start">
+                                <div>
+                                    <b>Tel. : </b><a id="tel" href="tel:0981265683"></a><br>
+                                    <b>E-mail : </b><label id="mail"></label><br>
+                                    <b>About you : </b><label id="about"></label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div style="border-bottom: solid;">
-                        <div class="d-flex justify-content-start">
-                            <div>
-                                <b>Tel. : </b><a id="tel" href="tel:0981265683"></a><br>
-                                <b>E-mail. : </b><label id="mail"></label><br>
-                                <b>About you : </b><label id="about"></label>
-                            </div>
+                    <div class="colsm-3 col-md-3 col-lg-3 col-xl-3">
+                        <div class="d-flex justify-content-start" style="margin-top:10px">
+                            <img id="pic" class="img-profile" src="" alt="">
                         </div>
-                    </div>
-                </div>
-                <div class="colsm-3 col-md-3 col-lg-3 col-xl-3">
-                    <div class="d-flex justify-content-start" style="margin-top:10px">
-                        <img id="pic" class="img-profile" src="" alt="">
                     </div>
                 </div>
             </div>
@@ -167,97 +272,90 @@
                     </div>
                 </div>
             </div>
-            <script>
-                var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
+        </div>
+        <script>
+            var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
 
-                // face = "anusornthavornpon";
-                git = "nokranger";
-                link = "anusornthavornponcomen";
-                // line = "nokranger"
-                drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
-                // face = urlf + face;
-                // git = urlg + git;
-                // link = urlln + link;
-                // line = urlline + line;
-                // drive = urldrive + drive;
-                university = "Walailak University"
-                major = "Computer Engineering";
-                minor = "1";
-                // gpa = "2.30";
-                // tfp = "vscode";
-                // sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
-                // spack = "vscode"
-                reference = "Mr.Korakot Suwannarat"
-                locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
-                // mail = "Anusorn.thavornporn@gmail.com";
-                about = "I'm newbie Programmer";
-                // console.log(face)
-                function set() {
-                    console.log(typeof (dataget[50].ID))
-                    console.log(dataget[59].ID)
-                    console.log(typeof (dataget[56].Last_Name))
-                    console.log(dataget[56].Last_Name)
-                    console.log(minor + JSON.parse(dataget[1].Last_Name))
-                    console.log(JSON.parse(dataget[50].ID))
-                    // console.log(getURL('id'))
-                    // console.log(face)
-                    for (var i = 0; i < dataget.length; i++) {
-                        if (JSON.parse(dataget[i].ID) == getURL('id')) {
-                            urlf = "https://www.facebook.com/";
-                            urlg = "https://www.github.com/";
-                            urlln = "https://www.linkedin.com/in/";
-                            urlline = "https://line.me/ti/p/~";
-                            urldrive = "https://drive.google.com/uc?id=";
-                            face = urlf + JSON.parse(dataget[i].Facebook)
-                            git = urlg + JSON.parse(dataget[i].Github);
-                            link = urlln + JSON.parse(dataget[i].Linkedin);
-                            line = urlline + JSON.parse(dataget[i].Line);
-                            drive = urldrive + JSON.parse(dataget[i].Picture);
-                            console.log(dataget[i])
-                            document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
-                            document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
-                            document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
-                            document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
-                            // document.getElementById("dob").innerHTML = "";
-                            document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
-                            document.getElementById("fb").href = face;
-                            document.getElementById("line").href = line;
-                            // document.getElementById("ig").innerHTML = ;
-                            document.getElementById("ln").href = link;
-                            document.getElementById("git").href = git;
-                            document.getElementById("gpa").innerHTML = dataget[i].GPAX;
-                            document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
-                            document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
-                            document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
-                            document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
-                            document.getElementById("pic").src = drive;
-                            document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
-                            document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
-                            document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
-                            document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
-                            document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
-                            document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
-                            break;
-                        }
-                    }
-                    console.log(i)
-
-                }
-                function getURL(objN) {
-                    if (objN == null) {
-                        return window.location.href;
-                    } else {
-                        objN = objN.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-                        var regexS = "[\\?&]" + objN + "=([^&#]*)";
-                        var regex = new RegExp(regexS);
-                        var results = regex.exec(window.location.href);
-                        if (results == null)
-                            return "";
-                        else
-                            return results[1];
+            // face = "anusornthavornpon";
+            git = "nokranger";
+            link = "anusornthavornponcomen";
+            // line = "nokranger"
+            drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
+            // face = urlf + face;
+            // git = urlg + git;
+            // link = urlln + link;
+            // line = urlline + line;
+            // drive = urldrive + drive;
+            university = "Walailak University"
+            major = "Computer Engineering";
+            minor = "1";
+            // gpa = "2.30";
+            // tfp = "vscode";
+            // sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
+            // spack = "vscode"
+            reference = "Mr.Korakot Suwannarat"
+            locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
+            // mail = "Anusorn.thavornporn@gmail.com";
+            about = "I'm newbie Programmer";
+            // console.log(face)
+            function set() {
+                for (var i = 0; i < dataget.length; i++) {
+                    if (JSON.parse(dataget[i].ID) == getURL('id')) {
+                        urlf = "https://www.facebook.com/";
+                        urlg = "https://www.github.com/";
+                        urlln = "https://www.linkedin.com/in/";
+                        urlline = "https://line.me/ti/p/~";
+                        urldrive = "https://drive.google.com/uc?id=";
+                        face = urlf + JSON.parse(dataget[i].Facebook)
+                        git = urlg + JSON.parse(dataget[i].Github);
+                        link = urlln + JSON.parse(dataget[i].Linkedin);
+                        line = urlline + JSON.parse(dataget[i].Line);
+                        drive = urldrive + JSON.parse(dataget[i].Picture);
+                        console.log(dataget[i])
+                        document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
+                        document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
+                        document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
+                        document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
+                        // document.getElementById("dob").innerHTML = "";
+                        document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
+                        document.getElementById("fb").href = face;
+                        document.getElementById("line").href = line;
+                        // document.getElementById("ig").innerHTML = ;
+                        document.getElementById("ln").href = link;
+                        document.getElementById("git").href = git;
+                        document.getElementById("gpa").innerHTML = dataget[i].GPAX;
+                        document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
+                        document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
+                        document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
+                        document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
+                        document.getElementById("pic").src = drive;
+                        document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
+                        document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
+                        document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
+                        document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
+                        document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
+                        document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
+                        break;
                     }
                 }
-            </script>
+                console.log(i)
+
+            }
+            function getURL(objN) {
+                if (objN == null) {
+                    return window.location.href;
+                } else {
+                    objN = objN.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+                    var regexS = "[\\?&]" + objN + "=([^&#]*)";
+                    var regex = new RegExp(regexS);
+                    var results = regex.exec(window.location.href);
+                    if (results == null)
+                        return "";
+                    else
+                        return results[1];
+                }
+            }
+        </script>
 </body>
 
 </html>

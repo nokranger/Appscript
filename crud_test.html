@@ -1,5 +1,4 @@
 <html>
-
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,74 +13,21 @@
   <title>Form register</title>
   <style>
     body{
-        background-color: #673AB7;
+      background:
+            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+      background:
+            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
+            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
+            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
         }
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
-
-    // var script_url = "https://script.google.com/macros/s/AKfycbzJYs_28XWTrzLZ2bVLlAdWdAel9ybR9LnISOi0AFUppfh4l6a8/exec";
-    // var script_url ="https://script.google.com/macros/s/AKfycbwSjqEJVsHBXWeasMPL94IPbbU0W-AStG4iN7m6rteUwgzd19c/exec";
-
-    var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";//11
-    // var script_url = "https://script.google.com/macros/s/AKfycbytiV42RbmsesNrHEFS8VGONExFfKZbmva6FH-UdnX7sdzE3g6-/exec";
-    // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-
-    // var deJson = JSON.parse(urljson);
-    // console.log(script_url);
-    // console.log(deJson);
-    // var data44 = [];
-    // $.getJSON(urljson, function (data) {
-    //   // console.log(data.user[1].time_stamp);
-
-    //   var dataJSON2 = [{}];
-    //   let data442 = [];
-    //   for (var i = 0; i < data.user.length; i++) {
-    //     data44[i] = [];
-    //     data44[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-    //     data44[i].ID = JSON.stringify(data.user[i].ID);
-    //     data44[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-    //     data44[i].First_Name = JSON.stringify(data.user[i].First_Name);
-    //     data44[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-    //     data44[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-    //     data44[i].Facebook = JSON.stringify(data.user[i].Facebook);
-    //     data44[i].Line = JSON.stringify(data.user[i].Line);
-    //     data44[i].Instagram = JSON.stringify(data.user[i].Instagram);
-    //     data44[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-    //     data44[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-    //     data44[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-    //     data44[i].GPAX = JSON.stringify(data.user[i].GPAX);
-    //     data44[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-    //     data44[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-    //     data44[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-    //     data44[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-    //     console.log(i)
-    //     console.log(data44[i]);
-    //     // data442[i].push(data44);
-
-    //   }
-    //   console.log('data44')
-    //   console.log(i)
-    //   console.log(data44)
-    //   something();
-    // });
-    // // something();
-    // function something() {
-    //   console.log(typeof (data44[15].Skill_programming))
-    //   console.log(data44[17].Skill_programming);
-    //   var sl = data44[17].Skill_programming
-    //   var spl = sl.split(",");
-    //   console.log(typeof (spl))
-    //   console.log(spl)
-    //   data44[17].Skill_programming = spl
-    //   console.log((data44[17].Skill_programming[0]))
-    //   console.log((data44[17].Skill_programming[1]))
-    //   console.log(data44[17]);
-    // }
-    // console.log(typeof(data3));
-    // console.log((data3));
-    // console.log((data3.responseJSON));
+    // var script_url = "https://script.google.com/macros/s/AKfycbxK2iIUDRl0why8RquQ1gCDH9qYQBHxXMRQADkGqAqcz6DXOwwT/exec";//11
+    var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
 
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -126,8 +72,6 @@
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
       console.log(url);
 
-
-
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -171,11 +115,6 @@
         method: "GET",
         dataType: "jsonp"
       });
-      console.log($("#id").val());
-      console.log($("#name").val());
-      console.log($("#lname").val());
-
-
     }
     function delete_value() {
       $("#re").css("visibility", "hidden");
@@ -207,7 +146,7 @@
       var exp = $("#exp").val();
       var ref = $("#ref").val();
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
-      var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
+      // var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -347,10 +286,6 @@
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Reference;
 
-
-
-          // console.log(json.records[i].LNAME);
-
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -372,7 +307,7 @@
     <p style="color:white">This is simple application<p>
 
         <div class="container-bg" align="left">
-          <form action="mailer.php" method="POST" onsubmit="javascript:insert_value()">
+          <form action="javascript:insert_value()" method="POST">
             <label>ID :</label>
             <input type="text" name="id" id="id" required><br>
             <!-- <label id="id" name="id"></label><br> -->
@@ -447,23 +382,12 @@
           target="_blank">Click here to open Spread Sheet </a> -->
 
         <!-- this for show data in ss after insert or click read -->
-        <div style="overflow: scroll" id="showData"></div>
+        <!-- <div style="overflow: scroll" id="showData"></div> -->
   </div>
-  <!-- <script src="js/multiple-select.js"></script>
-  <script>
-      $('select').multipleSelect();
-  </script> -->
 </body>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
-<div align="center">
-  <label style="color:white">Current Update<label id="Currdate"></label></label>
-</div>
-<script>
-  var d = new Date("December 12 2018");
-  document.getElementById("Currdate").innerHTML = d;
-</script>
 <script>
   function getRandomID(min, max) {
 
@@ -474,7 +398,6 @@
     var id = ('0000' + rndnum).slice(-5);
     id = 'UID' + id;
     document.getElementById("id").value = id;
-    // document.getElementById("id").innerHTML = id;
     return id;
   }
   console.log(new_id());

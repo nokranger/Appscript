@@ -15,6 +15,7 @@
     background: white;
     color:#3B5998;
     font-size: 50px;
+    margin:3px;
   }
   
   .fa-twitter {
@@ -35,6 +36,7 @@
     background: white;
     color: #007bb5;
     font-size: 50px;
+    margin:3px;
   }
   
   .fa-youtube {
@@ -161,9 +163,11 @@
     background: white;
     color:#000000;
     font-size: 50px;
+    margin:3px;
   }
   .fa-line{
     background: white;
     color:#00c300;
     font-size: 50px;
+    margin:3px;
   }
