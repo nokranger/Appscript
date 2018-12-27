@@ -52,7 +52,7 @@
                 dataget[i].Reference = JSON.stringify(data.user[i].Reference);
 
                 //   console.log(i)
-                console.log(dataget[i]);
+                // console.log(dataget[i]);
                 // data442[i].push(data44);
 
             }
@@ -222,16 +222,28 @@
     tr:hover {
             background-color: #ddd;
     }
+    input[type=text], select {
+            /* width: 100%; */
+            padding: 8px 20px;
+            /* margin: 8px 0; */
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* box-sizing: border-box; */
+            font-family: 'Lora', serif;
+    }
+    p{
+        margin:10px;
+    }
 </style>
 
 <body>
     <div class="container">
         <div style="margin:10px;">
             <form onsubmit="return getValue('commands')">
-                <b style="color:#696969">Search : </b><input type="text" name="commands" size="60" id="commands" />
+                <b style="color:#696969">Search : </b><input type="text" name="commands" size="12" maxlength="8" id="commands" />
             </form>
         </div>
-
         <div class="colorful-2" style="margin:10px;border: solid;">
             <div class="container-fluid">
                 <div class="row">
@@ -239,7 +251,7 @@
                         <div style="border-bottom: solid;">
                             <div class="d-flex justify-content-start">
                                 <div>
-                                    <b>Rank : </b><label id="uid"></label>
+                                    <b>ID : </b><label id="uid"></label>
                                     <b>Name : </b><label id="tn"></label>&nbsp;<label id="name"></label>&nbsp;
                                     <label id="lname"></label>&nbsp;
                                 </div>
@@ -314,26 +326,26 @@
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
 
             // face = "anusornthavornpon";
-            git = "nokranger";
-            link = "anusornthavornponcomen";
+            // git = "nokranger";
+            // link = "anusornthavornponcomen";
             // line = "nokranger"
-            drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
+            // drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
             // face = urlf + face;
             // git = urlg + git;
             // link = urlln + link;
             // line = urlline + line;
             // drive = urldrive + drive;
-            university = "Walailak University"
-            major = "Computer Engineering";
-            minor = "1";
+            // university = "Walailak University"
+            // major = "Computer Engineering";
+            // minor = "1";
             // gpa = "2.30";
             // tfp = "vscode";
             // sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
             // spack = "vscode"
-            reference = "Mr.Korakot Suwannarat"
-            locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
+            // reference = "Mr.Korakot Suwannarat"
+            // locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
             // mail = "Anusorn.thavornporn@gmail.com";
-            about = "I'm newbie Programmer";
+            // about = "I'm newbie Programmer";
             // console.log(face)
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
@@ -348,7 +360,7 @@
                         link = urlln + JSON.parse(dataget[i].Linkedin);
                         line = urlline + JSON.parse(dataget[i].Line);
                         drive = urldrive + JSON.parse(dataget[i].Picture);
-                        console.log(dataget[i])
+                        // console.log(dataget[i])
                         document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
                         document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
                         document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
@@ -375,7 +387,7 @@
                         break;
                     }
                 }
-                console.log(i)
+                // console.log(i)
 
             }
             function getURL(objN) {
@@ -411,21 +423,21 @@
                     jsonget[i] = [];
                     // jsonget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
                     jsonget[i].ID = JSON.stringify(data.user[i].ID);
-                    jsonget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-                    jsonget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-                    jsonget[i].Telephone_Number = '0' + JSON.stringify(data.user[i].Telephone_Number);
+                    // jsonget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+                    // jsonget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+                    // jsonget[i].Telephone_Number = '0' + JSON.stringify(data.user[i].Telephone_Number);
                     jsonget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-                    jsonget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+                    // jsonget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
 
 
                     jsonget[i].ID = JSON.stringify(jsonget[i].ID)
                     jsonget[i].ID = JSON.parse(jsonget[i].ID)
-                    jsonget[i].First_Name = JSON.parse(jsonget[i].First_Name)
-                    jsonget[i].Last_Name = JSON.parse(jsonget[i].Last_Name)
+                    // jsonget[i].First_Name = JSON.parse(jsonget[i].First_Name)
+                    // jsonget[i].Last_Name = JSON.parse(jsonget[i].Last_Name)
                     jsonget[i].Skill_programming = JSON.parse(jsonget[i].Skill_programming)
-                    jsonget[i].Email_Address = JSON.parse(jsonget[i].Email_Address)
+                    // jsonget[i].Email_Address = JSON.parse(jsonget[i].Email_Address)
                     //   console.log(i)
-                    console.log(jsonget[i]);
+                    // console.log(jsonget[i]);
                     // data442[i].push(data44);
 
                 }
@@ -442,8 +454,8 @@
 
         <script>
             function CreateTableFromJSON() {
-                console.log(JSON.parse(jsonget[1].ID))
-                console.log(jsonget)
+                // console.log(JSON.parse(jsonget[1].ID))
+                // console.log(jsonget)
                 // jsonget = JSON.parse(jsonget); 
                 var tabletget = [];
                 // EXTRACT VALUE FOR HTML HEADER. 

@@ -23,12 +23,50 @@
             linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
         }
   </style>
-
+<style>
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+    </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     // var script_url = "https://script.google.com/macros/s/AKfycbxK2iIUDRl0why8RquQ1gCDH9qYQBHxXMRQADkGqAqcz6DXOwwT/exec";//11
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
-
     // Make an AJAX call to Google Script
     function insert_value() {
       $("#re").css("visibility", "hidden");
@@ -59,19 +97,15 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-
       // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
       console.log($("#id").val());
       console.log($("#name").val());
       console.log($("#lname").val());
       // console.log(data44[1].time_stamp);
-
-
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
       console.log(url);
-
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -79,7 +113,6 @@
         dataType: "jsonp"
       });
     }
-
     function update_value() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
@@ -153,31 +186,24 @@
         method: "GET",
         dataType: "jsonp"
       });
-
     }
     // print the returned data
     function ctrlq(e) {
       $("#re").html(e.result);
       $("#re").css("visibility", "visible");
       read_value();
-
     }
     function read_value() {
-
       $("#re").css("visibility", "hidden");
-
       document.getElementById("loader").style.visibility = "visible";
       var url = script_url + "?action=read";
-
       $.getJSON(url, function (json) {
-
         // Set the variables from the results array
         // CREATE DYNAMIC TABLE.
         var table = document.createElement("table");
         var header = table.createTHead();
         var row = header.insertRow(0);
         // for(var k =0;k<16;k++){
-
         // }
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
@@ -204,7 +230,6 @@
         var cell23 = row.insertCell(22);
         var cell24 = row.insertCell(23);
         var cell25 = row.insertCell(24);
-
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
         cell3.innerHTML = "<b>First_Name</b>";
@@ -230,10 +255,8 @@
         cell23.innerHTML = "<b>Picture</b>";
         cell24.innerHTML = "<b>Experiece</b>";
         cell25.innerHTML = "<b>Reference</b>";
-
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
-
           tr = table.insertRow(-1);
           var tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].ID;
@@ -285,7 +308,6 @@
           tabCell.innerHTML = json.records[i].Experiece;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Reference;
-
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -295,7 +317,6 @@
         $("#re").css("visibility", "visible");
       });
     }
-
   </script>
 
 </head>
@@ -305,7 +326,16 @@
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
-
+        <div align="left" style="margin-left:10%">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="http://192.168.1.28:5500/insert.html">Register</a>
+                  <a href="http://192.168.1.28:5500/update.html">Edit</a>
+                  <a href="http://192.168.1.28:5500/delete.html">Delete</a>
+                </div>
+              </div>
+            </div>
         <div class="container-bg" align="left">
           <form action="javascript:delete_value()" method="POST">
             <label>ID :</label>
@@ -385,12 +415,32 @@
         <!-- <div style="overflow: scroll" id="showData"></div> -->
   </div>
 </body>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
 <script>
   function getRandomID(min, max) {
-
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
   function new_id() {
