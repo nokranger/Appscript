@@ -22,7 +22,6 @@
         // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
-            var dataJSON2 = [{}];
             for (var i = 0; i < data.user.length; i++) {
                 dataget[i] = [];
                 dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
@@ -194,10 +193,45 @@
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
+    th, td, p, input {
+            font:14px Verdana;
+        }
+        table, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+            font-family: 'Lora', serif;
+            
+        }
+    th {
+        background:
+            -webkit-linear-gradient(22deg, hsla(133.04, 100%, 86.47%, 1) 0%, hsla(133.04, 100%, 86.47%, 0) 65%),
+            -webkit-linear-gradient(205deg, hsla(206.09, 100%, 86.47%, 1) 100%, hsla(206.09, 100%, 86.47%, 0) 70%);
+        background:
+            linear-gradient(68deg, hsla(133.04, 100%, 86.47%, 1) 0%, hsla(133.04, 100%, 86.47%, 0) 65%),
+            linear-gradient(245deg, hsla(206.09, 100%, 86.47%, 1) 100%, hsla(206.09, 100%, 86.47%, 0) 70%);
+        padding: 8px;
+        font-family: 'Lora', serif;
+        }
+    tr:nth-child(even){
+            background-color: #f2f2f2;
+    }
+
+    tr:hover {
+            background-color: #ddd;
+    }
 </style>
 
 <body>
     <div class="container">
+        <div style="margin:10px;">
+            <form onsubmit="return getValue('commands')">
+                <b style="color:#696969">Search : </b><input type="text" name="commands" size="60" id="commands" />
+            </form>
+        </div>
+
         <div class="colorful-2" style="margin:10px;border: solid;">
             <div class="container-fluid">
                 <div class="row">
@@ -214,7 +248,7 @@
                         <div style="border-bottom: solid;">
                             <div class="d-flex justify-content-start">
                                 <div>
-                                    <b>Tel. : </b><a id="tel" href="tel:0981265683"></a><br>
+                                    <b>Tel. : </b><a id="tel" href="tel:0981265683" style="color: #696969"></a><br>
                                     <b>E-mail : </b><label id="mail"></label><br>
                                     <b>About you : </b><label id="about"></label>
                                 </div>
@@ -272,6 +306,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <p id="showData"></p>
         </div>
         <script>
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
@@ -354,6 +391,100 @@
                     else
                         return results[1];
                 }
+            }
+        </script>
+        <script>
+            function getValue(id) {
+                text = document.getElementById(id).value; //value of the text input
+                // alert(text);
+                window.location.href = 'show.html?id=' + document.getElementById(id).value;
+                return false;
+            }
+        </script>
+        <script>
+            var jsonget = [];
+            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
+            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
+            $.getJSON(urljson, function (data) {
+                for (var i = 0; i < data.user.length; i++) {
+                    jsonget[i] = [];
+                    // jsonget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+                    jsonget[i].ID = JSON.stringify(data.user[i].ID);
+                    jsonget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+                    jsonget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+                    jsonget[i].Telephone_Number = '0' + JSON.stringify(data.user[i].Telephone_Number);
+                    jsonget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+                    jsonget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+
+
+                    jsonget[i].ID = JSON.stringify(jsonget[i].ID)
+                    jsonget[i].ID = JSON.parse(jsonget[i].ID)
+                    jsonget[i].First_Name = JSON.parse(jsonget[i].First_Name)
+                    jsonget[i].Last_Name = JSON.parse(jsonget[i].Last_Name)
+                    jsonget[i].Skill_programming = JSON.parse(jsonget[i].Skill_programming)
+                    jsonget[i].Email_Address = JSON.parse(jsonget[i].Email_Address)
+                    //   console.log(i)
+                    console.log(jsonget[i]);
+                    // data442[i].push(data44);
+
+                }
+                // console.log('data')
+                // console.log(i)
+                // console.log(jsonget[i])
+                something();
+                CreateTableFromJSON();
+            });
+            function something() {
+                // console.log(jsonget[51].Address_in_ID_Card);
+            }
+        </script>
+
+        <script>
+            function CreateTableFromJSON() {
+                console.log(JSON.parse(jsonget[1].ID))
+                console.log(jsonget)
+                // jsonget = JSON.parse(jsonget); 
+                var tabletget = [];
+                // EXTRACT VALUE FOR HTML HEADER. 
+                // ('Book ID', 'Book Name', 'Category' and 'Price')
+                var col = [];
+                for (var i = 0; i < jsonget.length; i++) {
+                    for (var key in jsonget[i]) {
+                        if (col.indexOf(key) === -1) {
+                            col.push(key);
+                        }
+                    }
+                }
+
+                // CREATE DYNAMIC TABLE.
+                var table = document.createElement("table");
+
+                // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+                var tr = table.insertRow(-1);                   // TABLE ROW.
+
+                for (var i = 0; i < col.length; i++) {
+                    var th = document.createElement("th");      // TABLE HEADER.
+                    th.innerHTML = col[i];
+                    tr.appendChild(th);
+                }
+
+                // ADD JSON DATA TO THE TABLE AS ROWS.
+                for (var i = 0; i < jsonget.length; i++) {
+
+                    tr = table.insertRow(-1);
+
+                    for (var j = 0; j < col.length; j++) {
+                        var tabCell = tr.insertCell(-1);
+                        tabCell.innerHTML = jsonget[i][col[j]];
+                    }
+                }
+
+                // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+                var divContainer = document.getElementById("showData");
+                divContainer.innerHTML = "";
+                divContainer.appendChild(table);
             }
         </script>
 </body>

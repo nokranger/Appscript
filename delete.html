@@ -307,24 +307,24 @@
     <p style="color:white">This is simple application<p>
 
         <div class="container-bg" align="left">
-          <form action="javascript:update_value()" method="POST">
+          <form action="javascript:delete_value()" method="POST">
             <label>ID :</label>
-            <input type="text" name="id" id="id" required><br>
+            <input type="text" name="id" id="id"><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
-            <select name="tn" id="tn" required>
+            <select name="tn" id="tn">
               <option value="Mr.">Mr.</option>
               <option value="Ms.">Ms.</option>
               <option value="Mrs.">Mrs.</option>
             </select><br>
             <label>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" required><br>
+            <input type="text" name="name" id="name" placeholder="Enter your first name"><br>
             <label>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name"><br>
             <label>Date of birth : </label>
             <input type="date" name="dob" id="dob" max="2100-12-31"><br>
             <label>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" required><br>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10"><br>
             <label>Facebook : </label>
             <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
             <label>Line : </label>
@@ -336,11 +336,11 @@
             <label>Linkedin: </label>
             <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
             <label>Email Address : </label>
-            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
+            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address"><br>
             <label>Address in ID Card : </label>
             <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
             <label>Current Address : </label>
-            <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
+            <input type="text" name="ca" id="ca" placeholder="Enter your address"><br>
             <label>Educational institution : </label>
             <input type="text" name="ei" id="ei" placeholder="Enter your University"><br>
             <label>Major : </label>
@@ -356,9 +356,9 @@
               </div>
             </div>
             <label>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc."><br>
             <label>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required><br>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc."><br>
             <label>About you : </label>
             <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
             <label>Your picture : </label>
@@ -370,7 +370,7 @@
             <div style="margin-left:10px" class="container-fluid" align="left">
 
               <!-- <p id="re"></p> -->
-              <input type="submit" id="b1" value="Update"></input>
+              <input type="submit" id="b1" value="Delete"></input>
               <div id="loader"></div>
               <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
