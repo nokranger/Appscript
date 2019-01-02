@@ -341,8 +341,17 @@
             </div>
         <div class="container-bg" align="left">
           <form action="javascript:update_value()" method="POST">
+              <!-- <div>
+                  <form>
+                      <label><b style="color:red">* </b>ID :</label>
+                      <input type="text" name="id2" id="id2" required>
+                      <button onclick="getValue()">Try it</button>
+                      <p id="demo2"></p>
+                  </form>
+              </div> -->
             <label><b style="color:red">* </b>ID :</label>
-            <input type="text" name="id" id="id" required><br>
+            <input type="text" name="id" id="id" required>
+            <button onclick="getValue()">Try it</button><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
             <select name="tn" id="tn">
@@ -484,6 +493,106 @@
         return false;
     }    
     </script>
+    <script>
+        var dataget = [];
+        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
+        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
+        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
+        $.getJSON(urljson, function (data) {
+            for (var i = 0; i < data.user.length; i++) {
+                dataget[i] = [];
+                dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+                dataget[i].ID = JSON.stringify(data.user[i].ID);
+                dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+                dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+                dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+                dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+                dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+                dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+                dataget[i].Line = JSON.stringify(data.user[i].Line);
+                dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+                dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+                dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+                dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+                dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+                dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+                dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+                dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+                dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+                dataget[i].Github = JSON.stringify(data.user[i].Github);
+                dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
+                dataget[i].Major = JSON.stringify(data.user[i].Major);
+                dataget[i].Minor = JSON.stringify(data.user[i].Minor);
+                dataget[i].About_you = JSON.stringify(data.user[i].About_you);
+                dataget[i].Picture = JSON.stringify(data.user[i].Picture);
+                dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
+                dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+
+                //   console.log(i)
+                // console.log(dataget[i]);
+                // data442[i].push(data44);
+
+            }
+            // console.log('data')
+            // console.log(i)
+            // console.log(dataget[i])
+            getValue();
+        });
+    </script>
+        <script>
+            function getValue() {
+              var check = document.getElementById('id').value;
+              for (var i = 0; i < dataget.length; i++) {
+                if (JSON.parse(dataget[i].ID) == check){
+                  // urlf = "https://www.facebook.com/";
+                  //       urlg = "https://www.github.com/";
+                  //       urlln = "https://www.linkedin.com/in/";
+                  //       urlline = "https://line.me/ti/p/~";
+                  //       urldrive = "https://drive.google.com/uc?id=";
+                  //       face = urlf + JSON.parse(dataget[i].Facebook)
+                  //       git = urlg + JSON.parse(dataget[i].Github);
+                  //       link = urlln + JSON.parse(dataget[i].Linkedin);
+                  //       line = urlline + JSON.parse(dataget[i].Line);
+                  //       drive = urldrive + JSON.parse(dataget[i].Picture);
+                        document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
+                        document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
+                        document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
+                        // document.getElementById("dob").value = JSON.parse(dataget[i].Date_of_birth);                       
+                        // document.getElementById("dob").value = "";
+                        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
+                        document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
+                        document.getElementById("line").value = JSON.parse(dataget[i].Line);
+                        document.getElementById("ig").value = JSON.parse(dataget[i].Instagram);
+                        document.getElementById("git").value = JSON.parse(dataget[i].Github);
+                        document.getElementById("link").value = JSON.parse(dataget[i].Linkedin);
+                        document.getElementById("mail").value = JSON.parse(dataget[i].Email_Address);
+                        document.getElementById("aic").value = JSON.parse(dataget[i].Address_in_ID_Card);
+                        document.getElementById("ca").value = JSON.parse(dataget[i].Current_Address);
+                        document.getElementById("ei").value = JSON.parse(dataget[i].Educational_institution);
+                        document.getElementById("major").value = JSON.parse(dataget[i].Major);
+                        document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
+                        document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
+                        document.getElementById("sp").value = JSON.parse(dataget[i].Skill_programming);
+                        document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
+                        document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
+                        document.getElementById("about").value = JSON.parse(dataget[i].About_you);
+                        document.getElementById("pic").value = JSON.parse(dataget[i].Picture);
+                        document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
+                        document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
+
+                  // document.getElementById("id").value = '123465';
+                }
+              }
+              // document.getElementById("demo2").innerHTML = JSON.parse(dataget[1].ID);
+              console.log(JSON.parse(dataget[0].ID))
+              console.log(JSON.parse(dataget[1].Last_Name))
+              // text = document.getElementById(id).value; //value of the text input
+                        // alert(text);
+              // window.location.value = 'show.html?id=' + document.getElementById(id).value;
+              // getValue('id')
+              return false;
+              }
+          </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
