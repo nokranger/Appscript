@@ -1,4 +1,5 @@
 <html>
+
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,14 +25,16 @@
             linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
         }
   </style>
-<style>
+  <style>
     .dropbtn {
       background-color: #3498DB;
       color: white;
-      padding: 16px;
+      padding: 10px;
       font-size: 16px;
       border: none;
       cursor: pointer;
+      font-family: 'Lora', serif;
+      margin:5px;
     }
     
     .dropbtn:hover, .dropbtn:focus {
@@ -51,6 +54,7 @@
       overflow: auto;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
+      font-family: 'Lora', serif;
     }
     
     .dropdown-content a {
@@ -105,7 +109,7 @@
       // console.log(data44[1].time_stamp);
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
       console.log(url);
       var request = jQuery.ajax({
         crossDomain: true,
@@ -142,7 +146,7 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -179,7 +183,7 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
       // var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -327,8 +331,8 @@
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
-      <div align="left" style="margin-left:10%">
-        <div class="dropdown">
+        <div align="left" style="margin-left:10%">
+          <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="http://192.168.1.28:5500/insert.html">Register</a>
@@ -339,65 +343,65 @@
         </div>
         <div class="container-bg" align="left">
           <form action="javascript:insert_value()" method="POST">
-            <label>ID :</label>
-            <input type="text" name="id" id="id" required><br>
+            <!-- <label>ID :</label> -->
+            <input type="hidden" name="id" id="id" required><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
-            <select name="tn" id="tn" required>
+            <select name="tn" id="tn">
               <option value="Mr.">Mr.</option>
               <option value="Ms.">Ms.</option>
               <option value="Mrs.">Mrs.</option>
             </select><br>
-            <label>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" required><br>
-            <label>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required><br>
+            <label><b style="color:red">* </b>First Name : </label>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" required><br>
+            <label><b style="color:red">* </b>Last Name : </label>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" required><br>
             <label>Date of birth : </label>
             <input type="date" name="dob" id="dob" max="2100-12-31"><br>
-            <label>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" required><br>
+            <label><b style="color:red">* </b>Telephone Number : </label>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)" required><br>
             <label>Facebook : </label>
             <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
             <label>Line : </label>
             <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
             <label>Instagram : </label>
             <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
-            <label>Github: </label>
+            <label><b style="color:red">* </b>Github: </label>
             <input type="text" name="git" id="git" placeholder="Enter your Github"><br>
             <label>Linkedin: </label>
             <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
-            <label>Email Address : </label>
+            <label><b style="color:red">* </b>Email Address : </label>
             <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
             <label>Address in ID Card : </label>
             <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
-            <label>Current Address : </label>
+            <label><b style="color:red">* </b>Current Address : </label>
             <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
             <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your University"><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"><br>
             <label>Major : </label>
-            <input type="text" name="major" id="major" placeholder="Enter your Major"><br>
+            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"><br>
             <label>Minor : </label>
-            <input type="text" name="minor" id="minor" placeholder="Enter your Minor"><br>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"><br>
             <label>GPAX : </label>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA"><br>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"><br>
             <div class="example example_typeahead">
               <div class="bs-example">
                 <label>Skill programming : </label>
                 <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"><br>
               </div>
             </div>
-            <label>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." required><br>
-            <label>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." required><br>
+            <label><b style="color:red">* </b>Tool for development : </label>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" required><br>
+            <label><b style="color:red">* </b>Software Package : </label>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" required><br>
             <label>About you : </label>
             <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
             <label>Your picture : </label>
-            <input type="text" name="pic" id="pic" placeholder="Enter your url from google drive"><br>
+            <input type="text" name="pic" id="pic" placeholder="Enter your Picture"><br>
             <label>Experiece : </label>
             <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
             <label>Reference : </label>
-            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"><br>
+            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"><br>
             <div style="margin-left:10px" class="container-fluid" align="left">
 
               <!-- <p id="re"></p> -->
@@ -417,26 +421,26 @@
   </div>
 </body>
 <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
         }
       }
     }
-    </script>
+  }
+</script>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
@@ -453,6 +457,35 @@
   }
   console.log(new_id());
 </script>
+<script>
+  function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
+
+  console.log(makeid());
+</script>
+<script>
+  function isNumberKey(evt){
+      var charCode = (evt.which) ? evt.which : event.keyCode
+      if (charCode > 31 && (charCode < 46 || charCode > 57))
+          return false;
+      return true;
+  }    
+  </script>
+  <script>
+    function isCharKey(evt){
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 41 || charCode > 57))
+            return true;
+        return false;
+    }    
+    </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -466,4 +499,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
+
 </html>

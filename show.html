@@ -148,6 +148,14 @@
             linear-gradient(315deg, hsla(40.59, 100%, 60%, 1) 15%, hsla(40.59, 100%, 60%, 0) 80%),
             linear-gradient(245deg, hsla(10.59, 100%, 60%, 1) 100%, hsla(10.59, 100%, 60%, 0) 70%);
     }
+    .colorful-3 {
+  background:
+    -webkit-linear-gradient(135deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
+  background:
+    linear-gradient(315deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
+    linear-gradient(245deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
+  }
 
     .container2 {
         position: relative;
@@ -430,7 +438,7 @@
                     // jsonget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
 
 
-                    jsonget[i].ID = JSON.stringify(jsonget[i].ID)
+                    // jsonget[i].ID = JSON.stringify(jsonget[i].ID)
                     jsonget[i].ID = JSON.parse(jsonget[i].ID)
                     // jsonget[i].First_Name = JSON.parse(jsonget[i].First_Name)
                     // jsonget[i].Last_Name = JSON.parse(jsonget[i].Last_Name)
@@ -498,7 +506,7 @@
                 divContainer.innerHTML = "";
                 divContainer.appendChild(table);
             }
-        </script>
+        </script>     
 </body>
 
 </html>
