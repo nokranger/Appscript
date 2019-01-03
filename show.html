@@ -28,8 +28,6 @@
 
     <script>
         var dataget = [];
-        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
             for (var i = 0; i < data.user.length; i++) {
@@ -61,19 +59,12 @@
                 dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
                 dataget[i].Reference = JSON.stringify(data.user[i].Reference);
 
-                //   console.log(i)
-                // console.log(dataget[i]);
-                // data442[i].push(data44);
 
             }
-            // console.log('data')
-            // console.log(i)
-            // console.log(dataget[i])
             something();
             set();
         });
         function something() {
-            // console.log(dataget[51].Address_in_ID_Card);
         }
     </script>
     <script>
@@ -265,35 +256,16 @@
         </script>
         <script>
             var jsonget = [];
-            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
-            // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
             $.getJSON(urljson, function (data) {
                 for (var i = 0; i < data.user.length; i++) {
                     jsonget[i] = [];
-                    // jsonget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
                     jsonget[i].ID = JSON.stringify(data.user[i].ID);
-                    // jsonget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-                    // jsonget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-                    // jsonget[i].Telephone_Number = '0' + JSON.stringify(data.user[i].Telephone_Number);
                     jsonget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-                    // jsonget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
 
-
-                    // jsonget[i].ID = JSON.stringify(jsonget[i].ID)
                     jsonget[i].ID = JSON.parse(jsonget[i].ID)
-                    // jsonget[i].First_Name = JSON.parse(jsonget[i].First_Name)
-                    // jsonget[i].Last_Name = JSON.parse(jsonget[i].Last_Name)
                     jsonget[i].Skill_programming = JSON.parse(jsonget[i].Skill_programming)
-                    // jsonget[i].Email_Address = JSON.parse(jsonget[i].Email_Address)
-                    //   console.log(i)
-                    // console.log(jsonget[i]);
-                    // data442[i].push(data44);
 
                 }
-                // console.log('data')
-                // console.log(i)
-                // console.log(jsonget[i])
                 something();
                 CreateTableFromJSON();
             });
@@ -304,12 +276,8 @@
 
         <script>
             function CreateTableFromJSON() {
-                // console.log(JSON.parse(jsonget[1].ID))
-                // console.log(jsonget)
-                // jsonget = JSON.parse(jsonget); 
                 var tabletget = [];
                 // EXTRACT VALUE FOR HTML HEADER. 
-                // ('Book ID', 'Book Name', 'Category' and 'Price')
                 var col = [];
                 for (var i = 0; i < jsonget.length; i++) {
                     for (var key in jsonget[i]) {

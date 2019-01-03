@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="css/edit.css">
   <link href="css/multiple-select.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
   <link rel="stylesheet" href="assets/app.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
   <title>Form register</title>
   <style>
     body{
@@ -70,7 +68,6 @@
     </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
-    // var script_url = "https://script.google.com/macros/s/AKfycbxK2iIUDRl0why8RquQ1gCDH9qYQBHxXMRQADkGqAqcz6DXOwwT/exec";//11
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -102,15 +99,9 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
-      console.log($("#id").val());
-      console.log($("#name").val());
-      console.log($("#lname").val());
-      // console.log(data44[1].time_stamp);
-      // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
-      // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
+
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
-      console.log(url);
+
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -184,7 +175,6 @@
       var exp = $("#exp").val();
       var ref = $("#ref").val();
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
-      // var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -316,8 +306,6 @@
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
-        // divContainer.innerHTML = "";
-        // divContainer.appendChild(table);
         document.getElementById("loader").style.visibility = "hidden";
         $("#re").css("visibility", "visible");
       });
@@ -353,13 +341,16 @@
               <option value="Mrs.">Mrs.</option>
             </select><br>
             <label><b style="color:red">* </b>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" maxlength="30" required><br>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+              maxlength="30" required><br>
             <label><b style="color:red">* </b>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" maxlength="30" required><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+              maxlength="30" required><br>
             <label>Date of birth : </label>
             <input type="date" name="dob" id="dob" max="2100-12-31"><br>
             <label><b style="color:red">* </b>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)" required><br>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+              required><br>
             <label>Facebook : </label>
             <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
             <label>Line : </label>
@@ -377,13 +368,17 @@
             <label><b style="color:red">* </b>Current Address : </label>
             <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
             <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)" maxlength="40"><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
+              maxlength="40"><br>
             <label>Major : </label>
-            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)" maxlength="40"><br>
+            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
+              maxlength="40"><br>
             <label>Minor : </label>
-            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)" maxlength="40"><br>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
+              maxlength="40"><br>
             <label>GPAX : </label>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)" maxlength="5"><br>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+              maxlength="5"><br>
             <div class="example example_typeahead">
               <div class="bs-example">
                 <label>Skill programming : </label>
@@ -391,9 +386,11 @@
               </div>
             </div>
             <label><b style="color:red">* </b>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" maxlength="40" required><br>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+              maxlength="40" required><br>
             <label><b style="color:red">* </b>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" maxlength="40" required><br>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+              maxlength="40" required><br>
             <label>About you : </label>
             <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
             <label>Your picture : </label>
@@ -471,39 +468,21 @@
   console.log(makeid());
 </script>
 <script>
-  function isNumberKey(evt){
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 46 || charCode > 57))
-          return false;
-      return true;
+  function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 46 || charCode > 57))
+      return false;
+    return true;
   }    
-  </script>
-  <script>
-    function isCharKey(evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 41 || charCode > 57))
-            return true;
-        return false;
-    }    
-    </script>
-    <script>
-      function pic(){
-let formData = new FormData();
-let req = new XMLHttpRequest();
-let photo = document.getElementById("pic").files[0];  // file from input
-
-formData.append("photo", photo);                                
-req.open("POST", '/upload/image');
-req.send(formData);
-console.log(formData);
-console.log(req);
-console.log(photo);
-console.log(formData.append("photo", photo));
-console.log(req.open("POST", '/upload/image'));
-console.log(req.send(formData));
-      }
-        </script>
-        
+</script>
+<script>
+  function isCharKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 41 || charCode > 57))
+      return true;
+    return false;
+  }    
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>

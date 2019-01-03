@@ -1,4 +1,5 @@
 <html>
+
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,9 +7,7 @@
   <link rel="stylesheet" href="css/edit.css">
   <link href="css/multiple-select.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
   <link rel="stylesheet" href="assets/app.css">
   <title>Form register</title>
   <style>
@@ -23,7 +22,7 @@
             linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
         }
   </style>
-<style>
+  <style>
     .dropbtn {
       background-color: #3498DB;
       color: white;
@@ -65,10 +64,19 @@
     .dropdown a:hover {background-color: #ddd;}
     
     .show {display: block;}
+    button{
+    margin:10px;
+    padding: 8px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+    font-family: 'Lora', serif;
+}
     </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
-    // var script_url = "https://script.google.com/macros/s/AKfycbxK2iIUDRl0why8RquQ1gCDH9qYQBHxXMRQADkGqAqcz6DXOwwT/exec";//11
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -100,15 +108,7 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
-      console.log($("#id").val());
-      console.log($("#name").val());
-      console.log($("#lname").val());
-      // console.log(data44[1].time_stamp);
-      // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
-      // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
-      console.log(url);
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -144,7 +144,7 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -181,8 +181,7 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git="+ git + "&link="+ link + "&major="+ major+ "&minor="+ minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
-      // var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -314,8 +313,6 @@
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
-        // divContainer.innerHTML = "";
-        // divContainer.appendChild(table);
         document.getElementById("loader").style.visibility = "hidden";
         $("#re").css("visibility", "visible");
       });
@@ -330,125 +327,121 @@
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
         <div align="left" style="margin-left:10%">
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Menu</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="http://192.168.1.28:5500/insert.html">Register</a>
-                  <a href="http://192.168.1.28:5500/update.html">Edit</a>
-                  <a href="http://192.168.1.28:5500/delete.html">Delete</a>
-                </div>
-              </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="http://192.168.1.28:5500/insert.html">Register</a>
+              <a href="http://192.168.1.28:5500/update.html">Edit</a>
+              <a href="http://192.168.1.28:5500/delete.html">Delete</a>
             </div>
+          </div>
+        </div>
         <div class="container-bg" align="left">
           <form action="javascript:update_value()" method="POST">
-              <!-- <div>
-                  <form>
-                      <label><b style="color:red">* </b>ID :</label>
-                      <input type="text" name="id2" id="id2" required>
-                      <button onclick="getValue()">Try it</button>
-                      <p id="demo2"></p>
-                  </form>
-              </div> -->
             <div>
-            <label><b style="color:red">* </b>ID :</label>
-            <input type="text" name="id" id="id" required>
-            <button type="button" onclick="getValue()">Try it</button><br>
-            <!-- <label id="id" name="id"></label><br> -->
-            <label>Title Name : </label>
-            <select name="tn" id="tn">
-              <option value="Mr.">Mr.</option>
-              <option value="Ms.">Ms.</option>
-              <option value="Mrs.">Mrs.</option>
-            </select><br>
-            <label><b style="color:red">* </b>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" required><br>
-            <label><b style="color:red">* </b>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" required><br>
-            <label>Date of birth : </label>
-            <input type="date" name="dob" id="dob" max="2100-12-31"><br>
-            <label><b style="color:red">* </b>Telephone Number : </label>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)" required><br>
-            <label>Facebook : </label>
-            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
-            <label>Line : </label>
-            <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
-            <label>Instagram : </label>
-            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
-            <label>Github: </label>
-            <input type="text" name="git" id="git" placeholder="Enter your Github"><br>
-            <label>Linkedin: </label>
-            <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
-            <label><b style="color:red">* </b>Email Address : </label>
-            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
-            <label>Address in ID Card : </label>
-            <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
-            <label><b style="color:red">* </b>Current Address : </label>
-            <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
-            <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"><br>
-            <label>Major : </label>
-            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)" ><br>
-            <label>Minor : </label>
-            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)" ><br>
-            <label>GPAX : </label>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"><br>
-            <div class="example example_typeahead">
-              <div class="bs-example">
-                <label>Skill programming : </label>
-                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"><br>
+              <label><b style="color:red">* </b>ID :</label>
+              <input type="text" name="id" id="id" required>
+              <button type="button" onclick="getValue()">Try it</button><br>
+              <label>Title Name : </label>
+              <select name="tn" id="tn">
+                <option value="Mr.">Mr.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+              </select><br>
+              <label><b style="color:red">* </b>First Name : </label>
+              <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+                required><br>
+              <label><b style="color:red">* </b>Last Name : </label>
+              <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+                required><br>
+              <label>Date of birth : </label>
+              <input type="date" name="dob" id="dob" max="2100-12-31"><br>
+              <label><b style="color:red">* </b>Telephone Number : </label>
+              <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+                required><br>
+              <label>Facebook : </label>
+              <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
+              <label>Line : </label>
+              <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
+              <label>Instagram : </label>
+              <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
+              <label>Github: </label>
+              <input type="text" name="git" id="git" placeholder="Enter your Github"><br>
+              <label>Linkedin: </label>
+              <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
+              <label><b style="color:red">* </b>Email Address : </label>
+              <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
+              <label>Address in ID Card : </label>
+              <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
+              <label><b style="color:red">* </b>Current Address : </label>
+              <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
+              <label>Educational institution : </label>
+              <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"><br>
+              <label>Major : </label>
+              <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"><br>
+              <label>Minor : </label>
+              <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"><br>
+              <label>GPAX : </label>
+              <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"><br>
+              <div class="example example_typeahead">
+                <div class="bs-example">
+                  <label>Skill programming : </label>
+                  <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"><br>
+                </div>
               </div>
-            </div>
-            <label><b style="color:red">* </b>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" required><br>
-            <label><b style="color:red">* </b>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" required><br>
-            <label>About you : </label>
-            <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
-            <label>Your picture : </label>
-            <input type="text" name="pic" id="pic" placeholder="Enter your Picture"><br>
-            <label>Experiece : </label>
-            <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
-            <label>Reference : </label>
-            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"><br>
-            <div style="margin-left:10px" class="container-fluid" align="left">
+              <label><b style="color:red">* </b>Tool for development : </label>
+              <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+                required><br>
+              <label><b style="color:red">* </b>Software Package : </label>
+              <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+                required><br>
+              <label>About you : </label>
+              <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
+              <label>Your picture : </label>
+              <input type="text" name="pic" id="pic" placeholder="Enter your Picture"><br>
+              <label>Experiece : </label>
+              <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
+              <label>Reference : </label>
+              <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"><br>
+              <div style="margin-left:10px" class="container-fluid" align="left">
 
-              <!-- <p id="re"></p> -->
-              <input type="submit" id="b1" value="Update"></input>
-              <div id="loader"></div>
-              <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+                <!-- <p id="re"></p> -->
+                <input type="submit" id="b1" value="Update"></input>
+                <div id="loader"></div>
+                <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
               <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
+              </div>
             </div>
-        </div>
-        </form>
-        <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
+          </form>
+          <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
 
-        <!-- this for show data in ss after insert or click read -->
-        <!-- <div style="overflow: scroll" id="showData"></div> -->
-  </div>
+          <!-- this for show data in ss after insert or click read -->
+          <!-- <div style="overflow: scroll" id="showData"></div> -->
+        </div>
 </body>
 <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
         }
       }
     }
-    </script>
+  }
+</script>
 <div align="center">
   <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
 </div>
@@ -479,137 +472,98 @@
   console.log(makeid());
 </script>
 <script>
-  function isNumberKey(evt){
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 46 || charCode > 57))
-          return false;
-      return true;
+  function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 46 || charCode > 57))
+      return false;
+    return true;
   }    
-  </script>
-  <script>
-    function isCharKey(evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 41 || charCode > 57))
-            return true;
-        return false;
-    }    
-    </script>
-    <script>
-        var dataget = [];
-        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=MM3e1D0APl1h3NBDmwtGWvyYkIvqr2vBEM2Kj56_h08nKCKO8Lnnfas0guS5_nnFUlswMbPOVtF0GDCPmOhf8Tsodpt69HxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5";
-        // var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YxtdOojbzl5htgi1LNUXFW_QkjRTQUi2_ypguv0EoiH0t4ol2JumB_7oGfQBxnTo7ILSmJxJhJOGEOMWT8QdK1C5IfgakZptm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIW7h2wDpYxUydCzfHveGaVZ2bug2r9Dj_xhxf0mbOST_4iE_GS4YTRsWWZ0DgnP9Kln04wCMZad&lib=MVDbopYd8tbNMsyufcdaoDM4C9y1VNee5"
-        var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
-        $.getJSON(urljson, function (data) {
-            for (var i = 0; i < data.user.length; i++) {
-                dataget[i] = [];
-                dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-                dataget[i].ID = JSON.stringify(data.user[i].ID);
-                dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-                dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-                dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-                dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-                dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-                dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-                dataget[i].Line = JSON.stringify(data.user[i].Line);
-                dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-                dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-                dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-                dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-                dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-                dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-                dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-                dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-                dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-                dataget[i].Github = JSON.stringify(data.user[i].Github);
-                dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
-                dataget[i].Major = JSON.stringify(data.user[i].Major);
-                dataget[i].Minor = JSON.stringify(data.user[i].Minor);
-                dataget[i].About_you = JSON.stringify(data.user[i].About_you);
-                dataget[i].Picture = JSON.stringify(data.user[i].Picture);
-                dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
-                dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+</script>
+<script>
+  function isCharKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 41 || charCode > 57))
+      return true;
+    return false;
+  }    
+</script>
+<script>
+  var dataget = [];
+  var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
+  $.getJSON(urljson, function (data) {
+    for (var i = 0; i < data.user.length; i++) {
+      dataget[i] = [];
+      dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+      dataget[i].ID = JSON.stringify(data.user[i].ID);
+      dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+      dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+      dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+      dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+      dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+      dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+      dataget[i].Line = JSON.stringify(data.user[i].Line);
+      dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+      dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+      dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+      dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+      dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+      dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+      dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+      dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+      dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+      dataget[i].Github = JSON.stringify(data.user[i].Github);
+      dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
+      dataget[i].Major = JSON.stringify(data.user[i].Major);
+      dataget[i].Minor = JSON.stringify(data.user[i].Minor);
+      dataget[i].About_you = JSON.stringify(data.user[i].About_you);
+      dataget[i].Picture = JSON.stringify(data.user[i].Picture);
+      dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
+      dataget[i].Reference = JSON.stringify(data.user[i].Reference);
 
-                //   console.log(i)
-                // console.log(dataget[i]);
-                // data442[i].push(data44);
 
-            }
-            // console.log('data')
-            // console.log(i)
-            // console.log(dataget[i])
-            getValue();
-        });
-    </script>
-        <script>
-            function getValue() {
-              var check = document.getElementById('id').value;
-              for (var i = 0; i < dataget.length; i++) {
-                if (JSON.parse(dataget[i].ID) == check){
-                  // urlf = "https://www.facebook.com/";
-                  //       urlg = "https://www.github.com/";
-                  //       urlln = "https://www.linkedin.com/in/";
-                  //       urlline = "https://line.me/ti/p/~";
-                  //       urldrive = "https://drive.google.com/uc?id=";
-                  //       face = urlf + JSON.parse(dataget[i].Facebook)
-                  //       git = urlg + JSON.parse(dataget[i].Github);
-                  //       link = urlln + JSON.parse(dataget[i].Linkedin);
-                  //       line = urlline + JSON.parse(dataget[i].Line);
-                  //       drive = urldrive + JSON.parse(dataget[i].Picture);
-                        document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
-                        document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
-                        document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
-                        localtime = moment(JSON.parse(dataget[i].Date_of_birth)).format('YYYY-MM-DD')
-                        document.getElementById("dob").value = localtime;                       
-                        // document.getElementById("dob").value = "";
-                        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
-                        document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
-                        document.getElementById("line").value = JSON.parse(dataget[i].Line);
-                        document.getElementById("ig").value = JSON.parse(dataget[i].Instagram);
-                        document.getElementById("git").value = JSON.parse(dataget[i].Github);
-                        document.getElementById("link").value = JSON.parse(dataget[i].Linkedin);
-                        document.getElementById("mail").value = JSON.parse(dataget[i].Email_Address);
-                        document.getElementById("aic").value = JSON.parse(dataget[i].Address_in_ID_Card);
-                        document.getElementById("ca").value = JSON.parse(dataget[i].Current_Address);
-                        document.getElementById("ei").value = JSON.parse(dataget[i].Educational_institution);
-                        document.getElementById("major").value = JSON.parse(dataget[i].Major);
-                        document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
-                        document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
-                        // document.getElementById("sp").value = JSON.parse(dataget[i].Skill_programming);
-                        document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
-                        document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
-                        document.getElementById("about").value = JSON.parse(dataget[i].About_you);
-                        document.getElementById("pic").value = JSON.parse(dataget[i].Picture);
-                        document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
-                        document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
+    }
+    getValue();
+  });
+</script>
+<script>
+  function getValue() {
+    var check = document.getElementById('id').value;
+    for (var i = 0; i < dataget.length; i++) {
+      if (JSON.parse(dataget[i].ID) == check) {
 
-                  // document.getElementById("id").value = '123465';
-                  var elt = $('.example_typeahead > > input');
-                  elt.tagsinput('add',JSON.parse(dataget[i].Skill_programming));
-                }
-              }
-              // document.getElementById("demo2").innerHTML = JSON.parse(dataget[1].ID);
-              // console.log(JSON.parse(dataget[0].ID))
-              // console.log(JSON.parse(dataget[1].Last_Name))
-              // console.log(JSON.parse(dataget[0].Date_of_birth))
-              // res =   JSON.parse(dataget[0].Date_of_birth).split("-");
-              // console.log(typeof(res))
-              // console.log(res)
-              // console.log(res[0])
-              // console.log(res[1])
-              // console.log(res[2])
-              // res2 = res[1] + '-' + res[2] + '-' + res[0]
-              // console.log(res2)
-              // localtime = moment(JSON.parse(dataget[0].Date_of_birth)).format('MM-DD-YYYY')
-              // propos = localtime;
-              // console.log('date')
-              // console.log(localtime)
-              // text = document.getElementById(id).value; //value of the text input
-                        // alert(text);
-              // window.location.value = 'show.html?id=' + document.getElementById(id).value;
-              // getValue('id')
-              return false;
-              }
-          </script>
+        document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
+        document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
+        document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
+        localtime = moment(JSON.parse(dataget[i].Date_of_birth)).format('YYYY-MM-DD')
+        document.getElementById("dob").value = localtime;
+        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
+        document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
+        document.getElementById("line").value = JSON.parse(dataget[i].Line);
+        document.getElementById("ig").value = JSON.parse(dataget[i].Instagram);
+        document.getElementById("git").value = JSON.parse(dataget[i].Github);
+        document.getElementById("link").value = JSON.parse(dataget[i].Linkedin);
+        document.getElementById("mail").value = JSON.parse(dataget[i].Email_Address);
+        document.getElementById("aic").value = JSON.parse(dataget[i].Address_in_ID_Card);
+        document.getElementById("ca").value = JSON.parse(dataget[i].Current_Address);
+        document.getElementById("ei").value = JSON.parse(dataget[i].Educational_institution);
+        document.getElementById("major").value = JSON.parse(dataget[i].Major);
+        document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
+        document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
+        document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
+        document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
+        document.getElementById("about").value = JSON.parse(dataget[i].About_you);
+        document.getElementById("pic").value = JSON.parse(dataget[i].Picture);
+        document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
+        document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
+
+        // document.getElementById("id").value = '123465';
+        var elt = $('.example_typeahead > > input');
+        elt.tagsinput('add', JSON.parse(dataget[i].Skill_programming));
+      }
+    }
+    return false;
+  }
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -624,4 +578,5 @@
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
 <script src="js/moment.js"></script>
+
 </html>
