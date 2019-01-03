@@ -15,6 +15,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
         crossorigin='anonymous'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/show.css">
 
     <script>
         var dataget = [];
@@ -67,190 +68,29 @@
         }
     </script>
 </head>
-<style>
-    label {
-        margin-bottom: 10px;
-        font-family: 'Lora', serif;
-        color: #696969;
-    }
-
-    b {
-        margin-bottom: 10px;
-        font-family: 'Lora', serif;
-        margin-left: 10px;
-        color: white;
-    }
-
-    .img-profile {
-        width: 200px;
-        height: 200px;
-        border-radius: 8px;
-    }
-
-    .dt-tag {
-        margin-left: 20px;
-    }
-
-    dd {
-        font-family: 'Lora', serif;
-        color: #696969;
-    }
-
-    a {
-        font-family: 'Lora', serif;
-        color: #696969;
-    }
-
-    /* .colorful {
-  background:
-    -webkit-linear-gradient(315deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
-    -webkit-linear-gradient(135deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
-    -webkit-linear-gradient(205deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
-  background:
-    linear-gradient(135deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
-    linear-gradient(315deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
-    linear-gradient(245deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
-  } */
-    /* .colorful {
-  background:
-    -webkit-linear-gradient(315deg, hsla(61.13, 95%, 55%, 1) 0%, hsla(61.13, 95%, 55%, 0) 70%),
-    -webkit-linear-gradient(135deg, hsla(176.6, 89.13%, 65.68%, 1) 15%, hsla(176.6, 89.13%, 65.68%, 0) 80%),
-    -webkit-linear-gradient(205deg, hsla(312.45, 100%, 67.34%, 1) 100%, hsla(312.45, 100%, 67.34%, 0) 70%);
-  background:
-    linear-gradient(135deg, hsla(61.13, 95%, 55%, 1) 0%, hsla(61.13, 95%, 55%, 0) 70%),
-    linear-gradient(315deg, hsla(176.6, 89.13%, 65.68%, 1) 15%, hsla(176.6, 89.13%, 65.68%, 0) 80%),
-    linear-gradient(245deg, hsla(312.45, 100%, 67.34%, 1) 100%, hsla(312.45, 100%, 67.34%, 0) 70%);
-  } */
-    .colorful-2 {
-        background:
-            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-        background:
-            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-    }
-
-    .colorful {
-        background:
-            -webkit-linear-gradient(255deg, hsla(160.59, 100%, 60%, 1) 0%, hsla(160.59, 100%, 60%, 0) 65%),
-            -webkit-linear-gradient(220deg, hsla(130.59, 100%, 60%, 1) 0%, hsla(130.59, 100%, 60%, 0) 65%),
-            -webkit-linear-gradient(315deg, hsla(100.59, 100%, 60%, 1) 0%, hsla(100.59, 100%, 60%, 0) 70%),
-            -webkit-linear-gradient(65deg, hsla(70.59, 100%, 60%, 1) 10%, hsla(70.59, 100%, 60%, 0) 80%),
-            -webkit-linear-gradient(135deg, hsla(40.59, 100%, 60%, 1) 15%, hsla(40.59, 100%, 60%, 0) 80%),
-            -webkit-linear-gradient(205deg, hsla(10.59, 100%, 60%, 1) 100%, hsla(10.59, 100%, 60%, 0) 70%);
-        background:
-            linear-gradient(195deg, hsla(160.59, 100%, 60%, 1) 0%, hsla(160.59, 100%, 60%, 0) 65%),
-            linear-gradient(230deg, hsla(130.59, 100%, 60%, 1) 0%, hsla(130.59, 100%, 60%, 0) 65%),
-            linear-gradient(135deg, hsla(100.59, 100%, 60%, 1) 0%, hsla(100.59, 100%, 60%, 0) 70%),
-            linear-gradient(25deg, hsla(70.59, 100%, 60%, 1) 10%, hsla(70.59, 100%, 60%, 0) 80%),
-            linear-gradient(315deg, hsla(40.59, 100%, 60%, 1) 15%, hsla(40.59, 100%, 60%, 0) 80%),
-            linear-gradient(245deg, hsla(10.59, 100%, 60%, 1) 100%, hsla(10.59, 100%, 60%, 0) 70%);
-    }
-    .colorful-3 {
-  background:
-    -webkit-linear-gradient(135deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
-    -webkit-linear-gradient(205deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
-  background:
-    linear-gradient(315deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
-    linear-gradient(245deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
-  }
-
-    .container2 {
-        position: relative;
-        width: 50%;
-    }
-
-    .image {
-        display: block;
-        width: 200px;
-        height: 200px;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 200px;
-        width: 200px;
-        opacity: 0;
-        transition: .5s ease;
-        background:
-            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-        background:
-            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-    }
-
-    .container:hover .overlay {
-        opacity: 1;
-    }
-
-    .text {
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
-    th, td, p, input {
-            font:14px Verdana;
-        }
-        table, td 
-        {
-            border: solid 1px #DDD;
-            border-collapse: collapse;
-            padding: 8px;
-            text-align: center;
-            font-family: 'Lora', serif;
-            
-        }
-    th {
-        background:
-            -webkit-linear-gradient(22deg, hsla(133.04, 100%, 86.47%, 1) 0%, hsla(133.04, 100%, 86.47%, 0) 65%),
-            -webkit-linear-gradient(205deg, hsla(206.09, 100%, 86.47%, 1) 100%, hsla(206.09, 100%, 86.47%, 0) 70%);
-        background:
-            linear-gradient(68deg, hsla(133.04, 100%, 86.47%, 1) 0%, hsla(133.04, 100%, 86.47%, 0) 65%),
-            linear-gradient(245deg, hsla(206.09, 100%, 86.47%, 1) 100%, hsla(206.09, 100%, 86.47%, 0) 70%);
-        padding: 8px;
-        font-family: 'Lora', serif;
-        }
-    tr:nth-child(even){
-            background-color: #f2f2f2;
-    }
-
-    tr:hover {
-            background-color: #ddd;
-    }
-    input[type=text], select {
-            /* width: 100%; */
-            padding: 8px 20px;
-            /* margin: 8px 0; */
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            /* box-sizing: border-box; */
-            font-family: 'Lora', serif;
-    }
-    p{
-        margin:10px;
-    }
-</style>
 
 <body>
     <div class="container">
-        <div style="margin:10px;">
-            <form onsubmit="return getValue('commands')">
-                <b style="color:#696969">Search : </b><input type="text" name="commands" size="12" maxlength="8" id="commands" />
-            </form>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <div class="d-flex justify-content-start">
+                        <div style="margin:10px;">
+                            <form onsubmit="return getValue('commands')">
+                                <b style="color:#696969">Search : </b><input type="text" name="commands" size="12"
+                                    maxlength="8" id="commands" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" id="logout" onclick="logout()" value="logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="colorful-2" style="margin:10px;border: solid;">
             <div class="container-fluid">
@@ -331,30 +171,18 @@
             <p id="showData"></p>
         </div>
         <script>
-            var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
+            function logout() {
+                x = document.getElementById("logout").value
+                if (x == "logout") {
+                    alert("Logout successfully");
+                    window.location = "login.html"; // Redirecting to other page.
+                    return false;
 
-            // face = "anusornthavornpon";
-            // git = "nokranger";
-            // link = "anusornthavornponcomen";
-            // line = "nokranger"
-            // drive = "15XAHE-g15iy3VQAh-VGS5-iRQxXs8gBZ";
-            // face = urlf + face;
-            // git = urlg + git;
-            // link = urlln + link;
-            // line = urlline + line;
-            // drive = urldrive + drive;
-            // university = "Walailak University"
-            // major = "Computer Engineering";
-            // minor = "1";
-            // gpa = "2.30";
-            // tfp = "vscode";
-            // sp = "C in Embedded systems, Linux OS, Keil for develop STM32";
-            // spack = "vscode"
-            // reference = "Mr.Korakot Suwannarat"
-            // locations = "Thung-ma-praw, Thai-maung, Phanag-nga";
-            // mail = "Anusorn.thavornporn@gmail.com";
-            // about = "I'm newbie Programmer";
-            // console.log(face)
+                }
+            }
+        </script>
+        <script>
+            var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
                     if (JSON.parse(dataget[i].ID) == getURL('id')) {
@@ -488,16 +316,23 @@
                     var th = document.createElement("th");      // TABLE HEADER.
                     th.innerHTML = col[i];
                     tr.appendChild(th);
+                    console.log(th.innerHTML = col[i])
+                    console.log(tr.appendChild(th))
                 }
 
                 // ADD JSON DATA TO THE TABLE AS ROWS.
                 for (var i = 0; i < jsonget.length; i++) {
 
                     tr = table.insertRow(-1);
+                    console.log(tr)
 
                     for (var j = 0; j < col.length; j++) {
                         var tabCell = tr.insertCell(-1);
                         tabCell.innerHTML = jsonget[i][col[j]];
+                        // console.log(tabCell)
+                        console.log(typeof (tabCell.innerHTML))
+                        console.log(tabCell.innerHTML)
+                        console.log(jsonget[i].ID)
                     }
                 }
 
@@ -506,7 +341,7 @@
                 divContainer.innerHTML = "";
                 divContainer.appendChild(table);
             }
-        </script>     
+        </script>
 </body>
 
 </html>
