@@ -16,6 +16,15 @@
         crossorigin='anonymous'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/show.css">
+    <script type="text/javascript" src="js/session.js"></script>
+    <script>
+     if(Session.get("status") != 1){
+      window.location.href='login.html';
+     }
+    </script>
+    <script>
+    
+    </script>
 
     <script>
         var dataget = [];
@@ -67,9 +76,14 @@
             // console.log(dataget[51].Address_in_ID_Card);
         }
     </script>
+    <script>
+        function timeout(){
+        setTimeout(function(){ window.location = "login.html"; }, 900000);
+        }
+    </script>
 </head>
 
-<body>
+<body onload="timeout()">
     <div class="container">
 
         <div class="container-fluid">
