@@ -349,9 +349,10 @@
                       <p id="demo2"></p>
                   </form>
               </div> -->
+            <div>
             <label><b style="color:red">* </b>ID :</label>
             <input type="text" name="id" id="id" required>
-            <button onclick="getValue()">Try it</button><br>
+            <button type="button" onclick="getValue()">Try it</button><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
             <select name="tn" id="tn">
@@ -557,7 +558,8 @@
                         document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
                         document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
                         document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
-                        // document.getElementById("dob").value = JSON.parse(dataget[i].Date_of_birth);                       
+                        localtime = moment(JSON.parse(dataget[i].Date_of_birth)).format('YYYY-MM-DD')
+                        document.getElementById("dob").value = localtime;                       
                         // document.getElementById("dob").value = "";
                         document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
                         document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
@@ -572,7 +574,7 @@
                         document.getElementById("major").value = JSON.parse(dataget[i].Major);
                         document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
                         document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
-                        document.getElementById("sp").value = JSON.parse(dataget[i].Skill_programming);
+                        // document.getElementById("sp").value = JSON.parse(dataget[i].Skill_programming);
                         document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
                         document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
                         document.getElementById("about").value = JSON.parse(dataget[i].About_you);
@@ -581,11 +583,26 @@
                         document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
 
                   // document.getElementById("id").value = '123465';
+                  var elt = $('.example_typeahead > > input');
+                  elt.tagsinput('add',JSON.parse(dataget[i].Skill_programming));
                 }
               }
               // document.getElementById("demo2").innerHTML = JSON.parse(dataget[1].ID);
-              console.log(JSON.parse(dataget[0].ID))
-              console.log(JSON.parse(dataget[1].Last_Name))
+              // console.log(JSON.parse(dataget[0].ID))
+              // console.log(JSON.parse(dataget[1].Last_Name))
+              // console.log(JSON.parse(dataget[0].Date_of_birth))
+              // res =   JSON.parse(dataget[0].Date_of_birth).split("-");
+              // console.log(typeof(res))
+              // console.log(res)
+              // console.log(res[0])
+              // console.log(res[1])
+              // console.log(res[2])
+              // res2 = res[1] + '-' + res[2] + '-' + res[0]
+              // console.log(res2)
+              // localtime = moment(JSON.parse(dataget[0].Date_of_birth)).format('MM-DD-YYYY')
+              // propos = localtime;
+              // console.log('date')
+              // console.log(localtime)
               // text = document.getElementById(id).value; //value of the text input
                         // alert(text);
               // window.location.value = 'show.html?id=' + document.getElementById(id).value;
@@ -606,4 +623,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
+<script src="js/moment.js"></script>
 </html>

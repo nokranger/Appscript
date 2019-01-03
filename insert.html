@@ -342,7 +342,7 @@
           </div>
         </div>
         <div class="container-bg" align="left">
-          <form action="javascript:insert_value()" method="POST">
+          <form action="javascript:insert_value()" method="POST" enctype="multipart/form-data">
             <!-- <label>ID :</label> -->
             <input type="hidden" name="id" id="id" required><br>
             <!-- <label id="id" name="id"></label><br> -->
@@ -353,9 +353,9 @@
               <option value="Mrs.">Mrs.</option>
             </select><br>
             <label><b style="color:red">* </b>First Name : </label>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" required><br>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" maxlength="30" required><br>
             <label><b style="color:red">* </b>Last Name : </label>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" required><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" maxlength="30" required><br>
             <label>Date of birth : </label>
             <input type="date" name="dob" id="dob" max="2100-12-31"><br>
             <label><b style="color:red">* </b>Telephone Number : </label>
@@ -377,13 +377,13 @@
             <label><b style="color:red">* </b>Current Address : </label>
             <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
             <label>Educational institution : </label>
-            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)" maxlength="40"><br>
             <label>Major : </label>
-            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"><br>
+            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)" maxlength="40"><br>
             <label>Minor : </label>
-            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"><br>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)" maxlength="40"><br>
             <label>GPAX : </label>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"><br>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)" maxlength="5"><br>
             <div class="example example_typeahead">
               <div class="bs-example">
                 <label>Skill programming : </label>
@@ -391,13 +391,13 @@
               </div>
             </div>
             <label><b style="color:red">* </b>Tool for development : </label>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" required><br>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" maxlength="40" required><br>
             <label><b style="color:red">* </b>Software Package : </label>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" required><br>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" maxlength="40" required><br>
             <label>About you : </label>
             <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
             <label>Your picture : </label>
-            <input type="text" name="pic" id="pic" placeholder="Enter your Picture"><br>
+            <input type="file" name="pic" id="pic" placeholder="Enter your Picture" onload="pic()"><br>
             <label>Experiece : </label>
             <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
             <label>Reference : </label>
@@ -486,6 +486,24 @@
         return false;
     }    
     </script>
+    <script>
+      function pic(){
+let formData = new FormData();
+let req = new XMLHttpRequest();
+let photo = document.getElementById("pic").files[0];  // file from input
+
+formData.append("photo", photo);                                
+req.open("POST", '/upload/image');
+req.send(formData);
+console.log(formData);
+console.log(req);
+console.log(photo);
+console.log(formData.append("photo", photo));
+console.log(req.open("POST", '/upload/image'));
+console.log(req.send(formData));
+      }
+        </script>
+        
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
