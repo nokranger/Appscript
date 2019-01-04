@@ -27,6 +27,15 @@ $sp = $_POST['sp'];
 $tfp = $_POST['tfp'];
 $spack = $_POST['spack'];
 $mail_r = $_POST['mail'];
+$git = $_POST['git']; 
+$link = $_POST['link'];
+$major = $_POST['major'];
+$minor = $_POST['minor'];
+$about = $_POST['about'];
+$pic = $_POST['pic'];
+$exp = $_POST['exp'];
+$ref = $_POST['ref'];
+$token = $_POST['token'];
 // $email_r = $_POST['mail'];
 // $subject = $_POST['name'];
 // $detail = $_POST['lname'];
@@ -37,11 +46,11 @@ $gmail_password = ""; // รหัสผ่าน gmail
 // ตั้งค่าอนุญาตการใช้งานได้ที่นี่ https://myaccount.google.com/lesssecureapps?pli=1
 
 
-$sender = ""; // ชื่อผู้ส่ง
-$email_sender = "noreply@ibsone.com"; // เมล์ผู้ส่ง 
+$sender = "Admin@ecs"; // ชื่อผู้ส่ง
+$email_sender = "noreply@mail.com"; // เมล์ผู้ส่ง 
 $email_receiver = $mail_r; // เมล์ผู้รับ ***
 
-$subject = "ข้อมูลการสมัครของคุณ"; // หัวข้อเมล์
+$subject = "ํYour information"; // หัวข้อเมล์
 
 
 $mail->Username = $gmail_username;
@@ -74,6 +83,15 @@ $email_content = "
         Skill programming : <label>$sp</label><br>
         Tool for development : <label>$tfp</label><br>
         Software Package : <label>$spack</label><br>
+        github : <label>$git </label><br>
+        linkedin : <label>$link</label><br>
+        major : <label>$major</label><br>
+        minor : <label>$minor</label><br>
+        about you : <label>$about</label><br>
+        picture : <label>$pic</label><br>
+        experience : <label>$exp</label><br>
+        reference : <label>$ref</label><br>
+        token for edit you information : <label>$token</label><br>
 	</body>
 </html>
 ";

@@ -74,6 +74,12 @@
     /* box-sizing: border-box; */
     font-family: 'Lora', serif;
 }
+.img-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin: 10px;
+}
     </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -398,7 +404,10 @@
                 <label>About you : </label><br>
                 <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea><br>
               <label>Your picture : </label>
-              <input type="text" name="pic" id="pic" placeholder="Enter your Picture"><br>
+              <div>
+              <img id="picbefore" class="img-profile" src="" alt="">
+              </div>
+              <input type="file" name="files[]" id="pic" multiple></input>
               <label>Experiece : </label><br>
               <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
               <label>Reference : </label>
@@ -487,6 +496,7 @@
     return false;
   }    
 </script>
+
 <script>
   var dataget = [];
   var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
@@ -552,7 +562,10 @@
         document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
         document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
         document.getElementById("about").value = JSON.parse(dataget[i].About_you);
-        document.getElementById("pic").value = JSON.parse(dataget[i].Picture);
+        splitpath= JSON.parse(dataget[i].Picture).split("\\");
+        console.log(splitpath[2])
+        document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
+        console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
         document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
 
@@ -563,6 +576,32 @@
     }
     return false;
   }
+</script>
+<script>
+  const url = 'process.php';
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const files = document.querySelector('[type=file]').files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+      let file = files[i];
+
+      formData.append('files[]', file);
+    }
+
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    }).then(response => {
+      // insert_value();
+      update_value();
+      console.log(response);
+    });
+  });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

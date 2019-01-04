@@ -17,6 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
+    // var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec";
     // Make an AJAX call to Google Script
     function insert_value() {
       $("#re").css("visibility", "hidden");
@@ -47,8 +48,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=insert";
 
       var request = jQuery.ajax({
         crossDomain: true,
@@ -85,7 +86,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -122,7 +124,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -173,6 +176,7 @@
         var cell23 = row.insertCell(22);
         var cell24 = row.insertCell(23);
         var cell25 = row.insertCell(24);
+        var cell26 = row.insertCell(25);
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
         cell3.innerHTML = "<b>First_Name</b>";
@@ -198,6 +202,7 @@
         cell23.innerHTML = "<b>Picture</b>";
         cell24.innerHTML = "<b>Experiece</b>";
         cell25.innerHTML = "<b>Reference</b>";
+        cell26.innerHTML = "<b>Token</b>";
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
           tr = table.insertRow(-1);
@@ -251,6 +256,8 @@
           tabCell.innerHTML = json.records[i].Experiece;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Reference;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Token;
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -281,6 +288,7 @@
           <form action="javascript:insert_value()" method="POST" enctype="multipart/form-data">
             <!-- <label>ID :</label> -->
             <input type="hidden" name="id" id="id" required></input><br>
+            <input type="hidden" name="token" id="token" required></input><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
             <select name="tn" id="tn">
@@ -342,8 +350,10 @@
             <label>About you : </label><br>
             <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea><br>
             <label>Your picture : </label>
-            <input type="file" name="files" id="pic"placeholder="Enter your Picture"></input>
+            <input type="file" name="files[]" id="pic" multiple></input>
             <!-- <input type="hidden" name="pic" id="pic" placeholder="Enter your Picture"></input> -->
+            <!-- <input type="file" name="files[]" multiple> -->
+            <!-- <input type="submit" value="Upload File" name="submit"> -->
             <label>Experiece : </label><br>
             <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
             <label>Reference : </label>
@@ -410,11 +420,12 @@
 
     for (var i = 0; i < 5; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
-
+    console.log(text);
+    document.getElementById("token").value = text;
+    console.log(document.getElementById("token"));
     return text;
   }
-
-  console.log(makeid());
+  document.getElementById("token").value = makeid();
 </script>
 <script>
   function isNumberKey(evt) {
@@ -433,29 +444,29 @@
   }    
 </script>
 <script>
-const url = 'process.php';
-const form = document.querySelector('form');
+  const url = 'process.php';
+  const form = document.querySelector('form');
 
-form.addEventListener('submit', e => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
 
     const files = document.querySelector('[type=file]').files;
     const formData = new FormData();
 
     for (let i = 0; i < files.length; i++) {
-        let file = files[i];
+      let file = files[i];
 
-        formData.append('files', file);
+      formData.append('files[]', file);
     }
 
     fetch(url, {
-        method: 'POST',
-        body: formData
+      method: 'POST',
+      body: formData
     }).then(response => {
       insert_value();
-        console.log(response);
+      console.log(response);
     });
-});
+  });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -470,6 +481,6 @@ form.addEventListener('submit', e => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
-<!-- <script src="upload.js"></script> -->
+<!-- <script src="js/upload.js"></script> -->
 
 </html>

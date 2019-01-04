@@ -18,6 +18,7 @@ form.addEventListener('submit', e => {
         method: 'POST',
         body: formData
     }).then(response => {
+        insert_value();
         console.log(response);
     });
 });
