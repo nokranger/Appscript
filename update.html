@@ -114,7 +114,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -150,7 +151,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -187,7 +189,8 @@
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
+      var token = $("#token").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -238,6 +241,7 @@
         var cell23 = row.insertCell(22);
         var cell24 = row.insertCell(23);
         var cell25 = row.insertCell(24);
+        var cell26 = row.insertCell(25);
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
         cell3.innerHTML = "<b>First_Name</b>";
@@ -263,6 +267,7 @@
         cell23.innerHTML = "<b>Picture</b>";
         cell24.innerHTML = "<b>Experiece</b>";
         cell25.innerHTML = "<b>Reference</b>";
+        cell26.innerHTML = "<b>Token</b>";
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
           tr = table.insertRow(-1);
@@ -316,6 +321,8 @@
           tabCell.innerHTML = json.records[i].Experiece;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Reference;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Token;
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -343,10 +350,12 @@
           </div>
         </div>
         <div class="container-bg" align="left">
-          <form action="javascript:update_value()" method="POST">
+          <form action="javascript:update_value()" method="POST" enctype="multipart/form-data">
             <div>
               <label><b style="color:red">* </b>ID :</label>
-              <input type="text" name="id" id="id" required>
+              <input type="text" name="id" id="id" required><br>
+              <label><b style="color:red">* </b>Token :</label>
+              <input type="text" name="token" id="token" required></input>
               <button type="button" onclick="getValue()">Try it</button><br>
               <label>Title Name : </label>
               <select name="tn" id="tn">
@@ -529,6 +538,7 @@
       dataget[i].Picture = JSON.stringify(data.user[i].Picture);
       dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
       dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+      dataget[i].Token = JSON.stringify(data.user[i].Token);
 
 
     }
@@ -538,9 +548,11 @@
 <script>
   function getValue() {
     var check = document.getElementById('id').value;
+    var token = document.getElementById('token').value;
+    
     for (var i = 0; i < dataget.length; i++) {
-      if (JSON.parse(dataget[i].ID) == check) {
-
+      if (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token) {
+        console.log(JSON.parse(dataget[i].Token))
         document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
         document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
         document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);

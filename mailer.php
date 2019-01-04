@@ -91,7 +91,7 @@ $email_content = "
         picture : <label>$pic</label><br>
         experience : <label>$exp</label><br>
         reference : <label>$ref</label><br>
-        token for edit you information : <label>$token</label><br>
+        token for edit && delete you information : <label>$token</label><br>
 	</body>
 </html>
 ";
