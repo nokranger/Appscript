@@ -180,6 +180,7 @@
                 x = document.getElementById("logout").value
                 if (x == "logout") {
                     alert("Logout successfully");
+                    Session.set("status", '0');
                     window.location = "login.html"; // Redirecting to other page.
                     return false;
 
@@ -196,21 +197,19 @@
                         urlln = "https://www.linkedin.com/in/";
                         urlline = "https://line.me/ti/p/~";
                         urldrive = "https://drive.google.com/uc?id=";
+                        splitpath = JSON.parse(dataget[i].Picture).split("\\");
                         face = urlf + JSON.parse(dataget[i].Facebook)
                         git = urlg + JSON.parse(dataget[i].Github);
                         link = urlln + JSON.parse(dataget[i].Linkedin);
                         line = urlline + JSON.parse(dataget[i].Line);
                         drive = urldrive + JSON.parse(dataget[i].Picture);
-                        // console.log(dataget[i])
                         document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
                         document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
                         document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
                         document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
-                        // document.getElementById("dob").innerHTML = "";
                         document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
                         document.getElementById("fb").href = face;
                         document.getElementById("line").href = line;
-                        // document.getElementById("ig").innerHTML = ;
                         document.getElementById("ln").href = link;
                         document.getElementById("git").href = git;
                         document.getElementById("gpa").innerHTML = dataget[i].GPAX;
@@ -218,7 +217,7 @@
                         document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
                         document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
                         document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
-                        document.getElementById("pic").src = drive;
+                        document.getElementById("pic").src = 'uploads/' + splitpath[2];
                         document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
                         document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
                         document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
@@ -228,8 +227,6 @@
                         break;
                     }
                 }
-                // console.log(i)
-
             }
             function getURL(objN) {
                 if (objN == null) {
@@ -249,7 +246,7 @@
         <script>
             function getValue(id) {
                 text = document.getElementById(id).value; //value of the text input
-                // alert(text);
+
                 window.location.href = 'show.html?id=' + document.getElementById(id).value;
                 return false;
             }
@@ -270,7 +267,7 @@
                 CreateTableFromJSON();
             });
             function something() {
-                // console.log(jsonget[51].Address_in_ID_Card);
+
             }
         </script>
 
@@ -298,23 +295,20 @@
                     var th = document.createElement("th");      // TABLE HEADER.
                     th.innerHTML = col[i];
                     tr.appendChild(th);
-                    console.log(th.innerHTML = col[i])
-                    console.log(tr.appendChild(th))
+                    // console.log(th.innerHTML = col[i])
+                    // console.log(tr.appendChild(th))
                 }
 
                 // ADD JSON DATA TO THE TABLE AS ROWS.
                 for (var i = 0; i < jsonget.length; i++) {
 
                     tr = table.insertRow(-1);
-                    console.log(tr)
+                    // console.log(tr)
 
                     for (var j = 0; j < col.length; j++) {
                         var tabCell = tr.insertCell(-1);
                         tabCell.innerHTML = jsonget[i][col[j]];
-                        // console.log(tabCell)
-                        console.log(typeof (tabCell.innerHTML))
-                        console.log(tabCell.innerHTML)
-                        console.log(jsonget[i].ID)
+
                     }
                 }
 

@@ -12,60 +12,8 @@
 
   <title>Form register</title>
   <style>
-    body{
-      background:
-            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-      background:
-            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-        }
+
   </style>
-  <style>
-    .dropbtn {
-      background-color: #3498DB;
-      color: white;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      font-family: 'Lora', serif;
-      margin:5px;
-    }
-    
-    .dropbtn:hover, .dropbtn:focus {
-      background-color: #2980B9;
-    }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      overflow: auto;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      font-family: 'Lora', serif;
-    }
-    
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .dropdown a:hover {background-color: #ddd;}
-    
-    .show {display: block;}
-    </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
@@ -332,7 +280,7 @@
         <div class="container-bg" align="left">
           <form action="javascript:insert_value()" method="POST" enctype="multipart/form-data">
             <!-- <label>ID :</label> -->
-            <input type="hidden" name="id" id="id" required><br>
+            <input type="hidden" name="id" id="id" required></input><br>
             <!-- <label id="id" name="id"></label><br> -->
             <label>Title Name : </label>
             <select name="tn" id="tn">
@@ -342,63 +290,64 @@
             </select><br>
             <label><b style="color:red">* </b>First Name : </label>
             <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
-              maxlength="30" required><br>
+              maxlength="30" required></input><br>
             <label><b style="color:red">* </b>Last Name : </label>
             <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
-              maxlength="30" required><br>
+              maxlength="30" required></input><br>
             <label>Date of birth : </label>
-            <input type="date" name="dob" id="dob" max="2100-12-31"><br>
+            <input type="date" name="dob" id="dob" max="2100-12-31"></input><br>
             <label><b style="color:red">* </b>Telephone Number : </label>
             <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
-              required><br>
+              required></input><br>
             <label>Facebook : </label>
-            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"><br>
+            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id"></input><br>
             <label>Line : </label>
-            <input type="text" name="line" id="line" placeholder="Enter your id line"><br>
+            <input type="text" name="line" id="line" placeholder="Enter your id line"></input><br>
             <label>Instagram : </label>
-            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"><br>
+            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram"></input><br>
             <label><b style="color:red">* </b>Github: </label>
-            <input type="text" name="git" id="git" placeholder="Enter your Github"><br>
+            <input type="text" name="git" id="git" placeholder="Enter your Github"></input><br>
             <label>Linkedin: </label>
-            <input type="text" name="link" id="link" placeholder="Enter your Linkedin"><br>
+            <input type="text" name="link" id="link" placeholder="Enter your Linkedin"></input><br>
             <label><b style="color:red">* </b>Email Address : </label>
-            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required><br>
+            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required></input><br>
             <label>Address in ID Card : </label>
-            <input type="text" name="aic" id="aic" placeholder="Enter your address"><br>
+            <input type="text" name="aic" id="aic" placeholder="Enter your address"></input><br>
             <label><b style="color:red">* </b>Current Address : </label>
-            <input type="text" name="ca" id="ca" placeholder="Enter your address" required><br>
+            <input type="text" name="ca" id="ca" placeholder="Enter your address" required></input><br>
             <label>Educational institution : </label>
             <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
-              maxlength="40"><br>
+              maxlength="40"></input><br>
             <label>Major : </label>
             <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
-              maxlength="40"><br>
+              maxlength="40"></input><br>
             <label>Minor : </label>
             <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
-              maxlength="40"><br>
+              maxlength="40"></input><br>
             <label>GPAX : </label>
             <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
-              maxlength="5"><br>
+              maxlength="5"></input><br>
             <div class="example example_typeahead">
               <div class="bs-example">
                 <label>Skill programming : </label>
-                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"><br>
+                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"></input><br>
               </div>
             </div>
             <label><b style="color:red">* </b>Tool for development : </label>
             <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-              maxlength="40" required><br>
+              maxlength="40" required></input><br>
             <label><b style="color:red">* </b>Software Package : </label>
             <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-              maxlength="40" required><br>
-            <label>About you : </label>
-            <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer"><br>
+              maxlength="40" required></input><br>
+            <label>About you : </label><br>
+            <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea><br>
             <label>Your picture : </label>
-            <input type="file" name="pic" id="pic" placeholder="Enter your Picture" onload="pic()"><br>
-            <label>Experiece : </label>
-            <input type="text" name="exp" id="exp" placeholder="Enter your Experiece"><br>
+            <input type="file" name="files" id="pic"placeholder="Enter your Picture"></input>
+            <!-- <input type="hidden" name="pic" id="pic" placeholder="Enter your Picture"></input> -->
+            <label>Experiece : </label><br>
+            <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
             <label>Reference : </label>
-            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"><br>
+            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"></input><br>
             <div style="margin-left:10px" class="container-fluid" align="left">
 
               <!-- <p id="re"></p> -->
@@ -483,6 +432,31 @@
     return false;
   }    
 </script>
+<script>
+const url = 'process.php';
+const form = document.querySelector('form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const files = document.querySelector('[type=file]').files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+        let file = files[i];
+
+        formData.append('files', file);
+    }
+
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    }).then(response => {
+      insert_value();
+        console.log(response);
+    });
+});
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -496,5 +470,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
+<!-- <script src="upload.js"></script> -->
 
 </html>
