@@ -67,7 +67,7 @@ $email_content = "
 		<title>ทดสอบการส่ง Email</title>
 	</head>
     <body>
-    <h3>Your data for register</h3>
+    <h3>Your information</h3>
         ID : <label>$id1</label><br>
         <label>$tn&nbsp;</label><label>$name&nbsp;&nbsp;</label><label>$lname </label><br>
         Date of birth : <label>$dob</label><br>
