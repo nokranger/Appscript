@@ -20,9 +20,10 @@
     border-radius: 8px;
     margin: 10px;
 }
-.aa{
-  margin-left: 8px;
-}
+b{
+  font-family: 'Lora', serif;
+
+  }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -284,13 +285,20 @@
   <div align="center">
     <h1><i><strong style="color:white">Application form for register</strong></i></h1>
     <p style="color:white">This is simple application<p>
-        <div align="left" style="margin-left:10%">
-          <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="http://192.168.1.28:5500/insert.html">Register</a>
-              <a href="http://192.168.1.28:5500/update.html">Edit</a>
-              <a href="http://192.168.1.28:5500/delete.html">Delete</a>
+        <div align="left">
+          <div class="container" style="border: solid #E0e0e0;background-color: white;">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Menu</button>
+
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="http://192.168.1.28:5500/insert.html">Register</a>
+                    <a href="http://192.168.1.28:5500/update.html">Edit</a>
+                    <a href="http://192.168.1.28:5500/delete.html">Delete</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -301,15 +309,15 @@
             <input type="hidden" name="id" id="id" required></input><br>
             <input type="hidden" name="token" id="token" required></input><br>
             <!-- <label id="id" name="id"></label><br> -->
-            <div class="container" style="border: solid #E0e0e0;background-color: white;">
+            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                   <br>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid #E0e0e0;">
-                        <b>Personal Information</b>
-                      </div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                    <b style="font-size: 20px;">Personal Information</b>
+                  </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                   <br>
@@ -405,34 +413,34 @@
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                   <label>About you : </label><br>
                   <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea>
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                   <label>Experiece : </label><br>
                   <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
                 </div>
               </div>
             </div>
             <div class="container">
-                <div class="row">
-                  <div>
-                      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <br>
-                      </div>
+              <div class="row">
+                <div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <br>
                   </div>
-                  </div>
-                </div>  
-            <div class="container" style="border: solid #E0e0e0;background-color: white;">
+                </div>
+              </div>
+            </div>
+            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                   <br>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid #E0e0e0;">
-                        <b >Social</b>
-                      </div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                    <b style="font-size: 20px;">Social</b>
+                  </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                   <br>
@@ -463,27 +471,35 @@
               </div>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><br>
-                      <div class="container-fluid" align="left">
-
-                          <!-- <p id="re"></p> -->
-                          <input type="submit" id="b1" value="Insert"></input>
-                          <div id="loader"></div>
-                          <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+              <div class="row">
+                <div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
+                  <div class="container-fluid" align="center">
+                    <!-- <p id="re"></p> -->
+                    <input type="submit" id="b1" value="Insert"></input>
+                    <input type="button" id="c1" value="Cancle"></input>
+                    <div id="loader"></div>
+                    <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
                           <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
                           <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
-                        </div>
-                    </div>
-                    </div>
-
-        </form>
-        <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
+                  </div>
+                </div>
+              </div>
+          </form>
+          <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
 
-        <!-- this for show data in ss after insert or click read -->
-        <!-- <div style="overflow: scroll" id="showData"></div> -->
-  </div>
+          <!-- this for show data in ss after insert or click read -->
+          <!-- <div style="overflow: scroll" id="showData"></div> -->
+        </div>
 </body>
 <script>
   /* When the user clicks on the button, 
