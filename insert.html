@@ -68,6 +68,7 @@ b{
         method: "GET",
         dataType: "jsonp"
       });
+      // document.getElementById("myForm").action = "/mailer.php";
     }
     function update_value() {
       $("#re").css("visibility", "hidden");
@@ -293,9 +294,9 @@ b{
                   <button onclick="myFunction()" class="dropbtn">Menu</button>
 
                   <div id="myDropdown" class="dropdown-content">
-                    <a href="http://192.168.1.28:5500/insert.html">Register</a>
-                    <a href="http://192.168.1.28:5500/update.html">Edit</a>
-                    <a href="http://192.168.1.28:5500/delete.html">Delete</a>
+                    <a href="http://192.168.1.28/appscript/insert.html">Register</a>
+                    <a href="http://192.168.1.28/appscript/update.html">Edit</a>
+                    <a href="http://192.168.1.28/appscript/delete.html">Delete</a>
                   </div>
                 </div>
               </div>
@@ -304,7 +305,7 @@ b{
         </div>
         <div align="left">
           <!-- //class="container-bg" -->
-          <form action="javascript:insert_value()" method="POST" enctype="multipart/form-data">
+          <form id="myForm" name="myForm" action="mailer.php" method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
             <!-- <label>ID :</label> -->
             <input type="hidden" name="id" id="id" required></input><br>
             <input type="hidden" name="token" id="token" required></input><br>
@@ -322,8 +323,8 @@ b{
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                   <br>
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label><b style="color:red">* </b>Your picture : </label><br>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+                  <label><b style="color:red">* </b>Your picture  </label><br>
                   <!-- <div>
                         <img id="picbefore" class="img-profile" src="" alt="">
                       </div> -->
@@ -368,16 +369,7 @@ b{
                   <label><b style="color:red">* </b>Current Address : </label><br>
                   <input type="text" name="ca" id="ca" placeholder="Enter your address" required></input>
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label><b style="color:red">* </b>Tool for development : </label><br>
-                  <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-                    maxlength="40" required></input>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label><b style="color:red">* </b>Software Package : </label><br>
-                  <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-                    maxlength="40" required></input>
-                </div>
+
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <label>Educational institution : </label><br>
                   <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
@@ -410,6 +402,16 @@ b{
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <label><b style="color:red">* </b>Tool for development : </label><br>
+                    <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+                      maxlength="40" required></input>
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <label><b style="color:red">* </b>Software Package : </label><br>
+                    <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+                      maxlength="40" required></input>
+                  </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
                 </div>
@@ -598,8 +600,12 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
       method: 'POST',
       body: formData
     }).then(response => {
-      insert_value();
+      // insert_value();
+      document.myForm.submit();
+
+      // document.getElementById("myForm").action = "mailer.php";
       console.log(response);
+
     });
   });
 </script>

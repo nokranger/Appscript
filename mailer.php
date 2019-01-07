@@ -32,7 +32,7 @@ $link = $_POST['link'];
 $major = $_POST['major'];
 $minor = $_POST['minor'];
 $about = $_POST['about'];
-$pic = $_POST['pic'];
+// $pic = $_POST['pic'];
 $exp = $_POST['exp'];
 $ref = $_POST['ref'];
 $token = $_POST['token'];
@@ -88,7 +88,6 @@ $email_content = "
         major : <label>$major</label><br>
         minor : <label>$minor</label><br>
         about you : <label>$about</label><br>
-        picture : <label>$pic</label><br>
         experience : <label>$exp</label><br>
         reference : <label>$ref</label><br>
         token for edit && delete you information : <label>$token</label><br>
