@@ -485,6 +485,9 @@ b{
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Current Address : </label><br>
                   <input type="text" name="ca" id="ca" placeholder="Enter your address">
                 </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
+                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you">
+                </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Educational institution : </label><br>
                   <input type="text" name="ei" id="ei" placeholder="Enter your University">
                 </div>
@@ -511,14 +514,15 @@ b{
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Software Package : </label><br>
                   <input type="text" name="spack" id="spack" placeholder="ORACLE Etc.">
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>About you : </label><br>
-                  <input type="text" name="about" id="about" placeholder="such as I'm newbie programmer">
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Experiece : </label><br>
-                  <input type="text" name="exp" id="exp" placeholder="Enter your Experiece">
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
-                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>About you : </label><br>
+                  <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>Experiece : </label><br>
+                  <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea>
                 </div>
               </div>
             </div>
@@ -565,7 +569,6 @@ b{
                   <input type="text" name="link" id="link" placeholder="Enter your Linkedin">
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
                 </div>
               </div>
             </div>
@@ -624,7 +627,7 @@ b{
   }
 </script>
 <div align="center">
-    <p style="color:white">Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
+  <p style="color:white">Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
 </div>
 <script>
   function getRandomID(min, max) {
@@ -640,119 +643,119 @@ b{
   console.log(new_id());
 </script>
 <script>
-    function makeid() {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  
-      for (var i = 0; i < 5; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-  
-      return text;
-    }
-  
-    console.log(makeid());
-  </script>
-  <script>
-    function isNumberKey(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 46 || charCode > 57))
-        return false;
+  function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
+
+  console.log(makeid());
+</script>
+<script>
+  function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 46 || charCode > 57))
+      return false;
+    return true;
+  }    
+</script>
+<script>
+  function isCharKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 41 || charCode > 57))
       return true;
-    }    
-  </script>
-  <script>
-    function isCharKey(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 41 || charCode > 57))
-        return true;
-      return false;
-    }    
-  </script>
-  
-  <script>
-    var dataget = [];
-    var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
-    $.getJSON(urljson, function (data) {
-      for (var i = 0; i < data.user.length; i++) {
-        dataget[i] = [];
-        dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-        dataget[i].ID = JSON.stringify(data.user[i].ID);
-        dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-        dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-        dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-        dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-        dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-        dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-        dataget[i].Line = JSON.stringify(data.user[i].Line);
-        dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-        dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-        dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-        dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-        dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-        dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-        dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-        dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-        dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-        dataget[i].Github = JSON.stringify(data.user[i].Github);
-        dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
-        dataget[i].Major = JSON.stringify(data.user[i].Major);
-        dataget[i].Minor = JSON.stringify(data.user[i].Minor);
-        dataget[i].About_you = JSON.stringify(data.user[i].About_you);
-        dataget[i].Picture = JSON.stringify(data.user[i].Picture);
-        dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
-        dataget[i].Reference = JSON.stringify(data.user[i].Reference);
-        dataget[i].Token = JSON.stringify(data.user[i].Token);
-  
-  
-      }
-      getValue();
-    });
-  </script>
-  <script>
-    function getValue() {
-      var check = document.getElementById('id').value;
-      var token = document.getElementById('token').value;
-  
-      for (var i = 0; i < dataget.length; i++) {
-        if (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token) {
-          console.log(JSON.parse(dataget[i].Token))
-          document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
-          document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
-          document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
-          localtime = moment(JSON.parse(dataget[i].Date_of_birth)).format('YYYY-MM-DD')
-          document.getElementById("dob").value = localtime;
-          document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
-          document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
-          document.getElementById("line").value = JSON.parse(dataget[i].Line);
-          document.getElementById("ig").value = JSON.parse(dataget[i].Instagram);
-          document.getElementById("git").value = JSON.parse(dataget[i].Github);
-          document.getElementById("link").value = JSON.parse(dataget[i].Linkedin);
-          document.getElementById("mail").value = JSON.parse(dataget[i].Email_Address);
-          document.getElementById("aic").value = JSON.parse(dataget[i].Address_in_ID_Card);
-          document.getElementById("ca").value = JSON.parse(dataget[i].Current_Address);
-          document.getElementById("ei").value = JSON.parse(dataget[i].Educational_institution);
-          document.getElementById("major").value = JSON.parse(dataget[i].Major);
-          document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
-          document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
-          document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
-          document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
-          document.getElementById("about").value = JSON.parse(dataget[i].About_you);
-          splitpath = JSON.parse(dataget[i].Picture).split("\\");
-          console.log(splitpath[2])
-          document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
-          console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
-          document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
-          document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
-  
-          // document.getElementById("id").value = '123465';
-          var elt = $('.example_typeahead > > input');
-          elt.tagsinput('add', JSON.parse(dataget[i].Skill_programming));
-        }
-      }
-      return false;
+    return false;
+  }    
+</script>
+
+<script>
+  var dataget = [];
+  var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
+  $.getJSON(urljson, function (data) {
+    for (var i = 0; i < data.user.length; i++) {
+      dataget[i] = [];
+      dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+      dataget[i].ID = JSON.stringify(data.user[i].ID);
+      dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+      dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+      dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+      dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+      dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+      dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+      dataget[i].Line = JSON.stringify(data.user[i].Line);
+      dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+      dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+      dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+      dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+      dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+      dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+      dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+      dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+      dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+      dataget[i].Github = JSON.stringify(data.user[i].Github);
+      dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
+      dataget[i].Major = JSON.stringify(data.user[i].Major);
+      dataget[i].Minor = JSON.stringify(data.user[i].Minor);
+      dataget[i].About_you = JSON.stringify(data.user[i].About_you);
+      dataget[i].Picture = JSON.stringify(data.user[i].Picture);
+      dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
+      dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+      dataget[i].Token = JSON.stringify(data.user[i].Token);
+
+
     }
-  </script>
-  <!-- <script>
+    getValue();
+  });
+</script>
+<script>
+  function getValue() {
+    var check = document.getElementById('id').value;
+    var token = document.getElementById('token').value;
+
+    for (var i = 0; i < dataget.length; i++) {
+      if (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token) {
+        console.log(JSON.parse(dataget[i].Token))
+        document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
+        document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
+        document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
+        localtime = moment(JSON.parse(dataget[i].Date_of_birth)).format('YYYY-MM-DD')
+        document.getElementById("dob").value = localtime;
+        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
+        document.getElementById("fb").value = JSON.parse(dataget[i].Facebook);
+        document.getElementById("line").value = JSON.parse(dataget[i].Line);
+        document.getElementById("ig").value = JSON.parse(dataget[i].Instagram);
+        document.getElementById("git").value = JSON.parse(dataget[i].Github);
+        document.getElementById("link").value = JSON.parse(dataget[i].Linkedin);
+        document.getElementById("mail").value = JSON.parse(dataget[i].Email_Address);
+        document.getElementById("aic").value = JSON.parse(dataget[i].Address_in_ID_Card);
+        document.getElementById("ca").value = JSON.parse(dataget[i].Current_Address);
+        document.getElementById("ei").value = JSON.parse(dataget[i].Educational_institution);
+        document.getElementById("major").value = JSON.parse(dataget[i].Major);
+        document.getElementById("minor").value = JSON.parse(dataget[i].Minor);
+        document.getElementById("gpa").value = JSON.parse(dataget[i].GPAX);
+        document.getElementById("tfp").value = JSON.parse(dataget[i].Tool_for_development);
+        document.getElementById("spack").value = JSON.parse(dataget[i].Software_Package);
+        document.getElementById("about").value = JSON.parse(dataget[i].About_you);
+        splitpath = JSON.parse(dataget[i].Picture).split("\\");
+        console.log(splitpath[2])
+        document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
+        console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
+        document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
+        document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
+
+        // document.getElementById("id").value = '123465';
+        var elt = $('.example_typeahead > > input');
+        elt.tagsinput('add', JSON.parse(dataget[i].Skill_programming));
+      }
+    }
+    return false;
+  }
+</script>
+<!-- <script>
     const url = 'process.php';
     const form = document.querySelector('form');
   

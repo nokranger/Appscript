@@ -498,19 +498,12 @@ b{
                   <input type="text" name="ca" id="ca" placeholder="Enter your address" required>
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label><b style="color:red">* </b>Tool for development : </label><br>
-                  <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-                    required>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label><b style="color:red">* </b>Software Package : </label><br>
-                  <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-                    required>
+                  <label>Reference : </label><br>
+                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)">
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <label>Educational institution : </label><br>
                   <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)">
-
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <label>Major : </label><br>
@@ -525,10 +518,6 @@ b{
                   <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)">
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Reference : </label><br>
-                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)">
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <div class="example example_typeahead">
                     <div class="bs-example">
                       <label><b style="color:red">* </b>Skill programming : </label><br>
@@ -538,10 +527,18 @@ b{
                   </div>
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
+                  <label><b style="color:red">* </b>Tool for development : </label><br>
+                  <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+                    required>
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
+                  <label><b style="color:red">* </b>Software Package : </label><br>
+                  <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                   <label>About you : </label><br>
@@ -613,7 +610,6 @@ b{
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
                   <div class="container-fluid" align="center">
-
                     <!-- <p id="re"></p> -->
                     <input type="submit" id="b1" value="Update"></input>
                     <input type="button" id="c1" value="Cancle"></input>
@@ -654,7 +650,7 @@ b{
   }
 </script>
 <div align="center">
-    <p style="color:white">Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
+  <p style="color:white">Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
 </div>
 <script>
   function getRandomID(min, max) {
