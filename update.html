@@ -380,16 +380,16 @@ b{
                   </div>
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                      <b style="font-size: 20px;">Personal Information</b>
+                      <b style="font-size: 20px;">Check your Information</b>
                     </div>
                   </div>
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     <label><b style="color:red">* </b>ID :</label><br>
-                    <input type="text" name="id" id="id" required>
+                    <input type="text" name="id" id="id" maxlength="8" required>
                   </div>
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     <label><b style="color:red">* </b>Token :</label><br>
-                    <input type="text" name="token" id="token" required></input>
+                    <input type="text" name="token" id="token" maxlength="5" required></input>
                     <button type="button" onclick="getValue()">Click</button>
                   </div>
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -398,9 +398,6 @@ b{
                   </div>
                 </div>
               </div>
-
-
-
               <div class="container">
                 <div class="row">
                   <div>
@@ -417,186 +414,216 @@ b{
                   </div>
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                      <b style="font-size: 20px;">Personal Information</b>
+                      <b style="font-size: 20px;">Picture</b>
                     </div>
                   </div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+                    <br>
+                    <div>
+                      <img id="picbefore" class="img-profile" src="" alt="">
+                    </div>
+                    <label><b style="color:red">* </b>Your picture</label>
+                    <input type="file" name="files[]" id="pic" multiple required></input>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div>
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <br>
                   </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+                </div>
+              </div>
+            </div>
+            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <br>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                    <b style="font-size: 20px;">Personal Information</b>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <br>
+                </div>
+                <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
 
                     <div>
                       <img id="picbefore" class="img-profile" src="" alt="">
                     </div>
                     <label>Your picture</label>
                     <input type="file" name="files[]" id="pic" multiple></input>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Title Name : </label><br>
-                    <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
-                      <option value="Mr.">Mr.</option>
-                      <option value="Ms.">Ms.</option>
-                      <option value="Mrs.">Mrs.</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>First Name : </label><br>
-                    <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
-                      required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Last Name : </label><br>
-                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
-                      required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Date of birth : </label><br>
-                    <input type="date" name="dob" id="dob" max="2100-12-31">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Telephone Number : </label><br>
-                    <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
-                      required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Email Address : </label><br>
-                    <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Address in ID Card : </label><br>
-                    <input type="text" name="aic" id="aic" placeholder="Enter your address">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Current Address : </label><br>
-                    <input type="text" name="ca" id="ca" placeholder="Enter your address" required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Tool for development : </label><br>
-                    <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-                      required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Software Package : </label><br>
-                    <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-                      required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Educational institution : </label><br>
-                    <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)">
-
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Major : </label><br>
-                    <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Minor : </label><br>
-                    <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>GPAX : </label><br>
-                    <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Reference : </label><br>
-                    <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <div class="example example_typeahead">
-                      <div class="bs-example">
-                        <label><b style="color:red">* </b>Skill programming : </label><br>
-                        <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"
-                          required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                    <label>About you : </label><br>
-                    <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                    <label>Experiece : </label><br>
-                    <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea>
-                  </div>
+                  </div> -->
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Title Name : </label><br>
+                  <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                  </select>
                 </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>First Name : </label><br>
+                  <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Last Name : </label><br>
+                  <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Date of birth : </label><br>
+                  <input type="date" name="dob" id="dob" max="2100-12-31">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Telephone Number : </label><br>
+                  <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Email Address : </label><br>
+                  <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Address in ID Card : </label><br>
+                  <input type="text" name="aic" id="aic" placeholder="Enter your address">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Current Address : </label><br>
+                  <input type="text" name="ca" id="ca" placeholder="Enter your address" required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Tool for development : </label><br>
+                  <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Software Package : </label><br>
+                  <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+                    required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Educational institution : </label><br>
+                  <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)">
+
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Major : </label><br>
+                  <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Minor : </label><br>
+                  <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>GPAX : </label><br>
+                  <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Reference : </label><br>
+                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <div class="example example_typeahead">
+                    <div class="bs-example">
+                      <label><b style="color:red">* </b>Skill programming : </label><br>
+                      <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"
+                        required>
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <label>About you : </label><br>
+                  <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <label>Experiece : </label><br>
+                  <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea>
+                </div>
               </div>
-              <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-                <div class="row">
+            </div>
+            <div class="container">
+              <div class="row">
+                <div>
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <br>
                   </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                      <b style="font-size: 20px;">Social</b>
-                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <br>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                    <b style="font-size: 20px;">Social</b>
                   </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <br>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Facebook : </label><br>
+                  <input type="text" name="fb" id="fb" placeholder="Enter your facebook id">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Line : </label><br>
+                  <input type="text" name="line" id="line" placeholder="Enter your id line">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Instagram : </label><br>
+                  <input type="text" name="ig" id="ig" placeholder="Enter your Instagram">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label><b style="color:red">* </b>Github: </label><br>
+                  <input type="text" name="git" id="git" placeholder="Enter your Github" required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Linkedin: </label><br>
+                  <input type="text" name="link" id="link" placeholder="Enter your Linkedin">
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div>
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <br>
                   </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Facebook : </label><br>
-                    <input type="text" name="fb" id="fb" placeholder="Enter your facebook id">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Line : </label><br>
-                    <input type="text" name="line" id="line" placeholder="Enter your id line">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Instagram : </label><br>
-                    <input type="text" name="ig" id="ig" placeholder="Enter your Instagram">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Github: </label><br>
-                    <input type="text" name="git" id="git" placeholder="Enter your Github">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label>Linkedin: </label><br>
-                    <input type="text" name="link" id="link" placeholder="Enter your Linkedin">
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-
-                  </div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md<br>-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
-                    <div class="container-fluid" align="center">
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
+                  <div class="container-fluid" align="center">
 
-                      <!-- <p id="re"></p> -->
-                      <input type="submit" id="b1" value="Update"></input>
-                      <input type="button" id="c1" value="Cancle"></input>
-                      <div id="loader"></div>
-                      <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+                    <!-- <p id="re"></p> -->
+                    <input type="submit" id="b1" value="Update"></input>
+                    <input type="button" id="c1" value="Cancle"></input>
+                    <div id="loader"></div>
+                    <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
               <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
-                    </div>
                   </div>
                 </div>
+              </div>
           </form>
           <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
@@ -627,7 +654,7 @@ b{
   }
 </script>
 <div align="center">
-  <p style="color:white">Enterprise Computing Services Co., Ltd.</p>
+    <p style="color:white">Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
 </div>
 <script>
   function getRandomID(min, max) {
