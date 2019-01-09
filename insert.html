@@ -69,6 +69,7 @@ b{
         dataType: "jsonp"
       });
       // document.getElementById("myForm").action = "/mailer.php";
+      // document.getElementById("myForm").reset(); 
     }
     function update_value() {
       $("#re").css("visibility", "hidden");
@@ -284,8 +285,8 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-    <h1><i><strong style="color:white">Application form for register</strong></i></h1>
-    <p style="color:white">This is simple application<p>
+    <h1><strong style="color:white">Application form for register</strong></h1>
+    <!-- <p style="color:white">This is simple application<p> -->
         <div align="left">
           <div class="container" style="border: solid #E0e0e0;background-color: white;">
             <div class="row">
@@ -325,9 +326,10 @@ b{
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
                   <label><b style="color:red">* </b>Your picture  </label><br>
-                  <!-- <div>
-                        <img id="picbefore" class="img-profile" src="" alt="">
-                      </div> -->
+                  <div>
+                        <img id="picpreview" class="img-profile" src="#" alt="">
+                        <!-- <img id="blah" src="#" alt="your image" class="img-profile" /> -->
+                      </div>
                   <input type="file" name="files[]" id="pic" multiple required></input>
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -487,7 +489,7 @@ b{
                   <div class="container-fluid" align="center">
                     <!-- <p id="re"></p> -->
                     <input type="submit" id="b1" value="Insert"></input>
-                    <input type="button" id="c1" value="Cancle"></input>
+                    <input type="button" id="c1" value="Cancle" onclick="back()"></input>
                     <div id="loader"></div>
                     <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
                           <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
@@ -503,6 +505,29 @@ b{
           <!-- <div style="overflow: scroll" id="showData"></div> -->
         </div>
 </body>
+<script>
+function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#picpreview').attr('src', e.target.result);
+  }
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#pic").change(function() {
+readURL(this);
+});
+</script>
+<script>
+function back(){
+  window.location.reload();
+}
+</script>
 <script>
   /* When the user clicks on the button, 
   toggle between hiding and showing the dropdown content */
@@ -604,6 +629,7 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
       document.myForm.submit();
 
       // document.getElementById("myForm").action = "mailer.php";
+      // back()
       console.log(response);
 
     });

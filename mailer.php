@@ -41,8 +41,8 @@ $token = $_POST['token'];
 // $detail = $_POST['lname'];
 
 
-$gmail_username = ""; // gmail ที่ใช้ส่ง
-$gmail_password = ""; // รหัสผ่าน gmail
+$gmail_username = "appecs.ecs@gmail.com"; // gmail ที่ใช้ส่ง
+$gmail_password = "ecs12345"; // รหัสผ่าน gmail
 // ตั้งค่าอนุญาตการใช้งานได้ที่นี่ https://myaccount.google.com/lesssecureapps?pli=1
 
 
@@ -107,8 +107,13 @@ if($email_receiver){
 		echo $mail->ErrorInfo; // ข้อความ รายละเอียดการ error
 	}else{
 		// กรณีส่ง email สำเร็จ
-		echo "ระบบได้ส่งข้อความไปเรียบร้อย";
-	}	
+        // echo "ระบบได้ส่งข้อความไปเรียบร้อย";
+        echo '<script language="javascript">';
+        echo 'alert("Send mail successfully")';
+        echo '</script>';
+        $yourURL="http://localhost/appscript/insert.html";
+        echo ("<script>location.href='$yourURL'</script>");
+	}	 
 }
 
 

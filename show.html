@@ -27,40 +27,42 @@
     </script>
 
     <script>
-        var dataget = [];
+        var dataget ;
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
-            for (var i = 0; i < data.user.length; i++) {
-                dataget[i] = [];
-                dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-                dataget[i].ID = JSON.stringify(data.user[i].ID);
-                dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-                dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-                dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-                dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-                dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-                dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-                dataget[i].Line = JSON.stringify(data.user[i].Line);
-                dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-                dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-                dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-                dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-                dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-                dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-                dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-                dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-                dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-                dataget[i].Github = JSON.stringify(data.user[i].Github);
-                dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
-                dataget[i].Major = JSON.stringify(data.user[i].Major);
-                dataget[i].Minor = JSON.stringify(data.user[i].Minor);
-                dataget[i].About_you = JSON.stringify(data.user[i].About_you);
-                dataget[i].Picture = JSON.stringify(data.user[i].Picture);
-                dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
-                dataget[i].Reference = JSON.stringify(data.user[i].Reference);
+            dataget = data.user
+            // for (var i = 0; i < data.user.length; i++) {
+            //     dataget[i] = [];
+            //     dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
+            //     dataget[i].ID = JSON.stringify(data.user[i].ID);
+            //     dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
+            //     dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
+            //     dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
+            //     dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
+            //     dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
+            //     dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
+            //     dataget[i].Line = JSON.stringify(data.user[i].Line);
+            //     dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
+            //     dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
+            //     dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
+            //     dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
+            //     dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
+            //     dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
+            //     dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
+            //     dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
+            //     dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
+            //     dataget[i].Github = JSON.stringify(data.user[i].Github);
+            //     dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
+            //     dataget[i].Major = JSON.stringify(data.user[i].Major);
+            //     dataget[i].Minor = JSON.stringify(data.user[i].Minor);
+            //     dataget[i].About_you = JSON.stringify(data.user[i].About_you);
+            //     dataget[i].Picture = JSON.stringify(data.user[i].Picture);
+            //     dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
+            //     dataget[i].Reference = JSON.stringify(data.user[i].Reference);
 
 
-            }
+            // }
+            console.log('dd', dataget[0].time_stamp)
             something();
             set();
         });
@@ -191,39 +193,74 @@
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
-                    if (JSON.parse(dataget[i].ID) == getURL('id')) {
+                    // if (JSON.parse(dataget[i].ID) == getURL('id')) {
+                    //     urlf = "https://www.facebook.com/";
+                    //     urlg = "https://www.github.com/";
+                    //     urlln = "https://www.linkedin.com/in/";
+                    //     urlline = "https://line.me/ti/p/~";
+                    //     urldrive = "https://drive.google.com/uc?id=";
+                    //     splitpath = JSON.parse(dataget[i].Picture).split("\\");
+                    //     face = urlf + JSON.parse(dataget[i].Facebook)
+                    //     git = urlg + JSON.parse(dataget[i].Github);
+                    //     link = urlln + JSON.parse(dataget[i].Linkedin);
+                    //     line = urlline + JSON.parse(dataget[i].Line);
+                    //     drive = urldrive + JSON.parse(dataget[i].Picture);
+                    //     document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
+                    //     document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
+                    //     document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
+                    //     document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
+                    //     document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
+                    //     document.getElementById("fb").href = face;
+                    //     document.getElementById("line").href = line;
+                    //     document.getElementById("ln").href = link;
+                    //     document.getElementById("git").href = git;
+                    //     document.getElementById("gpa").innerHTML = dataget[i].GPAX;
+                    //     document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
+                    //     document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
+                    //     document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
+                    //     document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
+                    //     document.getElementById("pic").src = 'uploads/' + splitpath[2];
+                    //     document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
+                    //     document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
+                    //     document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
+                    //     document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
+                    //     document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
+                    //     document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
+                    //     break;
+                    // }
+                    if ((dataget[i].ID) == getURL('id')) {
                         urlf = "https://www.facebook.com/";
                         urlg = "https://www.github.com/";
                         urlln = "https://www.linkedin.com/in/";
                         urlline = "https://line.me/ti/p/~";
                         urldrive = "https://drive.google.com/uc?id=";
-                        splitpath = JSON.parse(dataget[i].Picture).split("\\");
-                        face = urlf + JSON.parse(dataget[i].Facebook)
-                        git = urlg + JSON.parse(dataget[i].Github);
-                        link = urlln + JSON.parse(dataget[i].Linkedin);
-                        line = urlline + JSON.parse(dataget[i].Line);
-                        drive = urldrive + JSON.parse(dataget[i].Picture);
-                        document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
-                        document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
-                        document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
-                        document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
+                        splitpath = (dataget[i].Picture).split("\\");
+                        face = urlf + (dataget[i].Facebook)
+                        git = urlg + (dataget[i].Github);
+                        link = urlln + (dataget[i].Linkedin);
+                        line = urlline + (dataget[i].Line);
+                        drive = urldrive + (dataget[i].Picture);
+                        document.getElementById("uid").innerHTML = (dataget[i].ID);
+                        document.getElementById("tn").innerHTML = (dataget[i].Title_Name);
+                        document.getElementById("name").innerHTML = (dataget[i].First_Name);
+                        document.getElementById("lname").innerHTML = (dataget[i].Last_Name);
                         document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
                         document.getElementById("fb").href = face;
                         document.getElementById("line").href = line;
                         document.getElementById("ln").href = link;
                         document.getElementById("git").href = git;
                         document.getElementById("gpa").innerHTML = dataget[i].GPAX;
-                        document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
-                        document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
-                        document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
-                        document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
+                        document.getElementById("sp").innerHTML = (dataget[i].Skill_programming);
+                        document.getElementById("tfp").innerHTML = (dataget[i].Tool_for_development);
+                        document.getElementById("spack").innerHTML = (dataget[i].Software_Package);
+                        document.getElementById("mail").innerHTML = (dataget[i].Email_Address);
                         document.getElementById("pic").src = 'uploads/' + splitpath[2];
-                        document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
-                        document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
-                        document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
-                        document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
-                        document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
-                        document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
+                        document.getElementById("university").innerHTML = (dataget[i].Educational_institution);
+                        document.getElementById("major").innerHTML = (dataget[i].Major);
+                        document.getElementById("minor").innerHTML = (dataget[i].Minor);
+                        document.getElementById("ref").innerHTML = (dataget[i].Reference);
+                        document.getElementById("location").innerHTML = (dataget[i].Current_Address);
+                        document.getElementById("about").innerHTML = (dataget[i].About_you);
                         break;
                     }
                 }
