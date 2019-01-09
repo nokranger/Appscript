@@ -83,6 +83,7 @@
     height: 200px;
     border-radius: 8px;
     margin: 10px;
+    border: solid 2px #E0e0e0;
 }
 b{
   font-family: 'Lora', serif;
@@ -212,6 +213,7 @@ b{
         method: "GET",
         dataType: "jsonp"
       });
+      document.getElementById("myForm").reset();
     }
     // print the returned data
     function ctrlq(e) {
@@ -350,7 +352,7 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-    <h1><i><strong style="color:white">Application form for register</strong></i></h1>
+    <h1><strong style="color:white">Application form for register</strong></h1>
     <!-- <p style="color:white">This is simple application<p> -->
         <div align="left">
           <div class="container" style="border: solid #E0e0e0;background-color: white;">
@@ -369,7 +371,7 @@ b{
           </div>
         </div>
         <div align="left">
-          <form action="javascript:delete_value()" method="POST">
+          <form id="myForm" action="javascript:delete_value()" method="POST">
             <div>
               <div class="container">
                 <div class="row">
@@ -427,7 +429,7 @@ b{
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
                     <br>
                     <div>
-                      <img id="picbefore" class="img-profile" src="" alt="">
+                      <img id="picbefore" class="img-profile" src="uploads/asdasd.PNG" alt="">
                     </div>
                     <label>Your picture</label>
                     <!-- <input type="file" name="files[]" id="pic" multiple></input> -->
