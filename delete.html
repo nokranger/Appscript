@@ -402,8 +402,9 @@ b{
                     <button type="button" onclick="getValue()">Click</button>
                   </div>
                   <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <br>
-
+                      <label style="color: white">T</label><br>
+                      <button type="button" onclick="back()">Reset id</button>
+                      <label id="alert"></label>
                   </div>
                 </div>
               </div>
@@ -431,7 +432,7 @@ b{
                     <div>
                       <img id="picbefore" class="img-profile" src="uploads/asdasd.PNG" alt="">
                     </div>
-                    <label>Your picture</label>
+                    <label>Your picture</label><br>
                     <!-- <input type="file" name="files[]" id="pic" multiple></input> -->
                   </div>
                 </div>
@@ -722,10 +723,11 @@ b{
   function getValue() {
     var check = document.getElementById('id').value;
     var token = document.getElementById('token').value;
-
+    document.getElementById("b1").disabled = true; 
     for (var i = 0; i < dataget.length; i++) {
       if (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token) {
         console.log(JSON.parse(dataget[i].Token))
+        document.getElementById("b1").disabled = false; 
         document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
         document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
         document.getElementById("lname").value = JSON.parse(dataget[i].Last_Name);
@@ -753,41 +755,49 @@ b{
         console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
         document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
+        document.getElementById("alert").innerHTML = 'Your id and token is correct';
+        document.getElementById("alert").style.color = "green";
 
         // document.getElementById("id").value = '123465';
         var elt = $('.example_typeahead > > input');
         elt.tagsinput('add', JSON.parse(dataget[i].Skill_programming));
+      }else{
+        if (check != '' && token != '' || (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token)){
+          // document.getElementById("alert").style.visibility = 'hidden';
+            document.getElementById("alert").innerHTML = 'Your id and token is incorrect';
+            document.getElementById("alert").style.color = "red";
+        }
       }
     }
     return false;
   }
 </script>
-<!-- <script>
-    const url = 'process.php';
-    const form = document.querySelector('form');
+// <!-- <script>
+//     const url = 'process.php';
+//     const form = document.querySelector('form');
   
-    form.addEventListener('submit', e => {
-      e.preventDefault();
+//     form.addEventListener('submit', e => {
+//       e.preventDefault();
   
-      const files = document.querySelector('[type=file]').files;
-      const formData = new FormData();
+//       const files = document.querySelector('[type=file]').files;
+//       const formData = new FormData();
   
-      for (let i = 0; i < files.length; i++) {
-        let file = files[i];
+//       for (let i = 0; i < files.length; i++) {
+//         let file = files[i];
   
-        formData.append('files[]', file);
-      }
+//         formData.append('files[]', file);
+//       }
   
-      fetch(url, {
-        method: 'POST',
-        body: formData
-      }).then(response => {
-        // insert_value();
-        // update_value();
-        console.log(response);
-      });
-    });
-  </script> -->
+//       fetch(url, {
+//         method: 'POST',
+//         body: formData
+//       }).then(response => {
+//         // insert_value();
+//         // update_value();
+//         console.log(response);
+//       });
+//     });
+//   </script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>

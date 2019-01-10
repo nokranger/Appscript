@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+	function hello() {
+		//
+        var kk = "show.html?id="
+        var json;
+        urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
+		$.getJSON(urljson, function(data) {
+            json = data.user
+            console.log('dataget')
+            console.log(json)
+			$('#jsonTable').css("visibility", "visible").css("border", "1px solid green");
+			$('#jsonTable').append("<tbody>");
+			for (var counter = 0; counter < json.length; counter++) {
+				$('#jsonTable').append("<tr><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].ID + '</a>'+"</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].Skill_programming + "</td></tr>");
+			}
+			$('#jsonTable').append("</tbody>");
+			$('th').css("border", "1px solid green");
+		});
+	}
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+</head>
+<body onload="return hello()">
+	<!-- <input type="button" value="Render JSON" id="Render JSON" onclick="return hello();"/> -->
+	<br/>
+	<table id="jsonTable" style="visibility:hidden">
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+				<th>UID</th>
+				<th>Skill programming</th>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

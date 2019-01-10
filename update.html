@@ -364,7 +364,7 @@ b{
       </div>
     </div>
     <div align="left">
-      <form id="document.getElementById(" myForm"action="javascript:update_value()" method="POST" enctype="multipart/form-data">
+      <form id="myForm" method="POST" enctype="multipart/form-data">
         <div>
           <div class="container">
             <div class="row">
@@ -395,8 +395,10 @@ b{
                 <button type="button" onclick="getValue()">Click</button>
               </div>
               <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <br>
-
+                  <label style="color: white">T</label><br>
+                <button type="button" onclick="back()">Reset id</button>
+                <label id="alert"></label>
+                <!-- <input type="button" value="Reset" onclick="back()"></input> -->
               </div>
             </div>
           </div>
@@ -761,11 +763,15 @@ b{
 </script>
 <script>
   function getValue() {
+    var ses = 0;
     var check = document.getElementById('id').value;
     var token = document.getElementById('token').value;
-
+    document.getElementById("b1").disabled = true; 
     for (var i = 0; i < dataget.length; i++) {
       if (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token) {
+        ses = 1;
+        
+        document.getElementById("b1").disabled = false; 
         console.log(JSON.parse(dataget[i].Token))
         document.getElementById("tn").value = JSON.parse(dataget[i].Title_Name);
         document.getElementById("name").value = JSON.parse(dataget[i].First_Name);
@@ -794,10 +800,32 @@ b{
         console.log(document.getElementById("picpreview").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = JSON.parse(dataget[i].Experiece);
         document.getElementById("ref").value = JSON.parse(dataget[i].Reference);
-
+        // document.getElementById("alert").style.visibility = 'hidden';
+        document.getElementById("alert").innerHTML = 'Your id and token is correct';
+        document.getElementById("alert").style.color = "green";
+        // $( document ).ready(function(){
+        //     $('#alert').fadeIn('slow', function(){
+        //        $('#alert').delay(5000).fadeOut(); 
+        //     });
+        // });
+        // alert("Hello! I am an alert box!!");
+        
         // document.getElementById("id").value = '123465';
         var elt = $('.example_typeahead > > input');
         elt.tagsinput('add', JSON.parse(dataget[i].Skill_programming));
+      }else{
+        if (check != '' && token != '' || (JSON.parse(dataget[i].ID) == check && JSON.parse(dataget[i].Token) == token)){
+          // document.getElementById("alert").style.visibility = 'hidden';
+            document.getElementById("alert").innerHTML = 'Your id and token is incorrect';
+            document.getElementById("alert").style.color = "red";
+        //     $( document ).ready(function(){
+        //     $('#alert').fadeIn('slow', function(){
+        //        $('#alert').delay(5000).fadeOut(); 
+        //     });
+        // });
+            // window.location.reload();
+            // alert("Hello! I am an alert box!!");
+        }
       }
     }
     return false;
@@ -829,7 +857,7 @@ b{
     });
   });
 </script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>

@@ -8,7 +8,7 @@ b {
     margin-bottom: 10px;
     font-family: 'Lora', serif;
     margin-left: 10px;
-    color: white;
+    color: #696969;
 }
 
 .img-profile {
@@ -85,6 +85,9 @@ background:
 background:
 linear-gradient(315deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
 linear-gradient(245deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
+}
+.colorful-4 {
+background: white;
 }
 
 .container2 {
