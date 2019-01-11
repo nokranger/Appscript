@@ -26,7 +26,6 @@
 }
 b{
   font-family: 'Lora', serif;
-
   }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -65,7 +64,6 @@ b{
       var ref = $("#ref").val();
       var token = $("#token").val();
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&action=insert";
-
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -299,9 +297,9 @@ b{
               <button onclick="myFunction()" class="dropbtn">Menu</button>
 
               <div id="myDropdown" class="dropdown-content">
-                <a href="http://192.168.1.28/appscript/insert.html">Register</a>
-                <a href="http://192.168.1.28/appscript/update.html">Edit</a>
-                <a href="http://192.168.1.28/appscript/delete.html">Delete</a>
+                <a href="insert.html">Register</a>
+                <a href="update.html">Edit</a>
+                <a href="delete.html">Delete</a>
               </div>
             </div>
           </div>
@@ -346,12 +344,12 @@ b{
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>First Name : </label><br>
-              <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+              <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" onchange="return checkName()"
                 maxlength="30" required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Last Name : </label><br>
-              <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+              <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" onchange="return checkLname()"
                 maxlength="30" required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -360,12 +358,12 @@ b{
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Telephone Number : </label><br>
-              <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+              <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)" onchange="return checktel()"
                 required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Email Address : </label><br>
-              <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" required></input>
+              <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onchange="return checkmail()" required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Address in ID Card : </label><br>
@@ -375,31 +373,32 @@ b{
               <label><b style="color:red">* </b>Current Address : </label><br>
               <input type="text" name="ca" id="ca" placeholder="Enter your address" required></input>
             </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Reference : </label><br>
+              <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)" onchange="return checkref()"></input><br>
+            </div>
 
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Educational institution : </label><br>
-              <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
+              <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)" onchange="return checku()"
                 maxlength="40"></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Major : </label><br>
-              <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
+              <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)" onchange="return checkmajor()"
                 maxlength="40"></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Minor : </label><br>
-              <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
+              <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)" onchange="return checkminor()"
                 maxlength="40"></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>GPAX : </label><br>
               <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
-                maxlength="5"></input>
+                maxlength="4"></input>
             </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Reference : </label><br>
-              <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"></input><br>
-            </div>
+
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <div class="example example_typeahead">
                 <div class="bs-example">
@@ -410,12 +409,12 @@ b{
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Tool for development : </label><br>
-              <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+              <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" onchange="return checktool()"
                 maxlength="40" required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Software Package : </label><br>
-              <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+              <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" onchange="return checkpack()"
                 maxlength="40" required></input>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -423,11 +422,11 @@ b{
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label>About you : </label><br>
-              <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"></textarea>
+              <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer" onchange="return checkabout()"></textarea>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label>Experiece : </label><br>
-              <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
+              <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" onchange="return checkexp()"></textarea><br>
             </div>
           </div>
         </div>
@@ -511,18 +510,14 @@ b{
 </body>
 <script>
   function readURL(input) {
-
     if (input.files && input.files[0]) {
       var reader = new FileReader();
-
       reader.onload = function (e) {
         $('#picpreview').attr('src', e.target.result);
       }
-
       reader.readAsDataURL(input.files[0]);
     }
   }
-
   $("#pic").change(function () {
     readURL(this);
   });
@@ -538,7 +533,6 @@ b{
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-
   // Close the dropdown if the user clicks outside of it
   window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
@@ -583,7 +577,6 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
   function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
     for (var i = 0; i < 5; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     console.log(text);
@@ -612,30 +605,23 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
 <script>
   const url = 'process.php';
   const form = document.querySelector('form');
-
   form.addEventListener('submit', e => {
     e.preventDefault();
-
     const files = document.querySelector('[type=file]').files;
     const formData = new FormData();
-
     for (let i = 0; i < files.length; i++) {
       let file = files[i];
-
       formData.append('files[]', file);
     }
-
     fetch(url, {
       method: 'POST',
       body: formData
     }).then(response => {
       // insert_value();
       document.myForm.submit();
-
       // document.getElementById("myForm").action = "mailer.php";
       // back()
       console.log(response);
-
     });
   });
 </script>
@@ -652,6 +638,7 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
+<script src="js/checkvalidate.js"></script>
 <!-- <script src="js/upload.js"></script> -->
 
 </html>

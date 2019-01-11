@@ -69,6 +69,7 @@ $email_content = "
     <body>
     <h3>Your information</h3>
         ID : <label>$id1</label><br>
+        token for edit && delete you information : <label>$token</label><br>
         <label>$tn&nbsp;</label><label>$name&nbsp;&nbsp;</label><label>$lname </label><br>
         Date of birth : <label>$dob</label><br>
         Telephone number :<label>$tel</label><br>
@@ -90,7 +91,6 @@ $email_content = "
         about you : <label>$about</label><br>
         experience : <label>$exp</label><br>
         reference : <label>$ref</label><br>
-        token for edit && delete you information : <label>$token</label><br>
 	</body>
 </html>
 ";
