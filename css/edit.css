@@ -19,7 +19,7 @@ linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%
 linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
 }
 input[type=submit] {
-background-color: #0073E6;
+background-color: #668cff;
 color: white;
 padding: 10px 20px;
 margin: 8px 0;
@@ -30,7 +30,7 @@ max-width: 60%;
 font-family: 'Lora', serif;
 }
 input[type=button] {
-background-color: #0073E6;
+background-color: #668cff;
 color: white;
 padding: 10px 20px;
 margin: 8px 0;
