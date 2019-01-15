@@ -6,8 +6,9 @@
     <title>Show</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap_1.css">
     <!-- <link rel="stylesheet" href="css/social.css"> -->
+    
     <link rel="stylesheet" href="css/social_2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="google" content="notranslate" />
@@ -114,11 +115,11 @@ overflow-y: auto;
             </div>
 
         </div>
-        <div class="colorful-4" style="margin:10px;border: solid;">
+        <div class="colorful-4" style="margin:10px;border: solid 2px #E0e0e0;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="colsm-12 col-md-12 col-lg-9 col-xl-9">
-                        <div style="border-bottom: solid;">
+                        <div style="border-bottom: solid 2px #E0e0e0;">
                             <div class="d-flex justify-content-start">
                                 <div>
                                     <b>ID : </b><label id="uid"></label>
@@ -127,7 +128,7 @@ overflow-y: auto;
                                 </div>
                             </div>
                         </div>
-                        <div style="border-bottom: solid;">
+                        <div style="border-bottom: solid 2px #E0e0e0;">
                             <div class="d-flex justify-content-start">
                                 <div>
                                     <b>Tel. : </b><a id="tel" href="" style="color: #696969"></a><br>
@@ -151,15 +152,8 @@ overflow-y: auto;
                             <div class="d-flex justify-content-start">
                                 <div>
                                     <b>Skill : </b><label id="sp"></label><br>
-                                    <!-- <label><b>Experiece : </b></label><br>
-                                    <dd><b>2018</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop about Auto specific
-                                        gravity meter</dd>
-                                    <dd><b>2018</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop about Smart National
-                                        Park 4.0 in Khao Yai National Park with Team Autumn in the
-                                        Winter</dd>
-                                    <dd><b>2017</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop about Predictive
-                                        Monitoring Systems in Thai-Nichi Institute of Technology with
-                                        Team BNT</dd> -->
+                                    <label><b>Experiece : </b></label>
+                                    <label>Develop about Auto specificgravity meter</label><br>
                                     <b>Social : </b><label></label><a id="fb" href="" target="_blank" class="fa fa-facebook-official"></a><a
                                         id="ln" href="" target="_blank" class="fa fa-linkedin-square"></a><a id="git" href=""
                                         target="_blank" class="fa fa-github"></a><a id="line" href="" target="_blank"
@@ -214,6 +208,7 @@ overflow-y: auto;
             }
         </script>
         <script>
+            var datagett = []
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
@@ -252,7 +247,13 @@ overflow-y: auto;
                     //     document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
                     //     break;
                     // }
-                    if ((dataget[i].ID) == getURL('id')) {
+                    datagett[i] = dataget[i].ID.split('UID')
+                    console.log('datagett[0]')
+                    // console.log(datagett)
+                    console.log('datagett[1]')
+                    console.log(datagett[i][1])
+                    datagetsplit = 'uid' + datagett[i][1]
+                    if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
                         urlf = "https://www.facebook.com/";
                         urlg = "https://www.github.com/";
                         urlln = "https://www.linkedin.com/in/";

@@ -7,17 +7,57 @@
   <link rel="stylesheet" href="css/edit.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/multiple-select.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"> -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
   <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <title>Form register</title>
   <style>
+    /* .dropdown{
+      position: relative;
+      display: inline-block;
+    } */
+    /* .dropbtn{
+      background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    } */
+    .dropdown-menu{
+      display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    }
+    .dropdown-menu a{
+      color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+    }
+    .dropdown-menu a:hover {
+      background-color: #c2c2a3;
+    }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* .dropdown:hover .dropdown-toggle {background-color: #c2c2a3;} */
     body{
       background:
             -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
@@ -243,15 +283,15 @@ b{
       document.getElementById("picbefore").src = "uploads/asdasd.PNG";
       // document.getElementById("sp").value = '';
       var elt = $('.example_typeahead > > input');
-          elt.tagsinput('destroy');
-          // piccheck  = document.getElementById('pic').value
+      elt.tagsinput('destroy');
+      // piccheck  = document.getElementById('pic').value
       document.getElementById("myForm").reset();
       // document.getElementById("alert").innerHTML = '';
       // document.getElementById("alert2").innerHTML = '';
 
-          $("#re").css("visibility", "hidden");
-          document.getElementById("loader").style.visibility = "visible";
-          back();
+      $("#re").css("visibility", "hidden");
+      document.getElementById("loader").style.visibility = "visible";
+      back();
     }
     // print the returned data
     function ctrlq(e) {
@@ -390,19 +430,19 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-      <article>
-          <header>
-    <h1><strong style="color:white">Application form for register</strong></h1>
-  </header>
-</article>
-    </div>
+    <article>
+      <header>
+        <h1><strong style="color:white">Application form for register</strong></h1>
+      </header>
+    </article>
+  </div>
 
-    <!-- <p style="color:white">This is simple application<p> -->
-        <!-- <div align="right"> -->
-          <!-- <div class="container" style="border: solid #E0e0e0;">
+  <!-- <p style="color:white">This is simple application<p> -->
+  <!-- <div align="right"> -->
+  <!-- <div class="container" style="border: solid #E0e0e0;">
             <div class="row"> -->
-              <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> -->
-                  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -431,7 +471,7 @@ b{
                 </div>
                 </nav> -->
 
-                <!-- <div class="dropdown">
+  <!-- <div class="dropdown">
                   <button onclick="myFunction()" class="dropbtn">Menu</button>
                   <div id="myDropdown" class="dropdown-content">
                     <a href="insert.html">Register</a>
@@ -439,44 +479,46 @@ b{
                     <a href="delete.html">Delete</a>
                   </div>
                 </div> -->
-              <!-- </div> -->
-            <!-- </div> -->
-          <!-- </div>
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div>
         </div> -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="insert.html">ECS</a>
-              </div>
-          
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="insert.html">Home <span class="sr-only">(current)</span></a></li>
-                  <!-- <li><a href="#">Link</a></li> -->
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="insert.html">Register</a></li>
-                      <li><a href="update.html">Edit</a></li>
-                      <li><a href="delete.html">Delete</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <!-- <form class="navbar-form navbar-left" role="search">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="insert.html">ECS</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+          <!-- <li><a href="#">Link</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="insert.html">Register</a></li>
+              <li><a href="update.html">Edit</a></li>
+              <li><a href="delete.html">Delete</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="navbar-form navbar-left" role="search">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </form> -->
-                <!-- <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Link</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -487,34 +529,34 @@ b{
                       <li role="separator" class="divider"></li>
                       <li><a href="#">Separated link</a></li>
                     </ul> -->
-                  </li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-        <div align="left">
-          <form id="myForm" action="javascript:delete_value()" method="POST">
+        </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div align="left">
+    <form id="myForm" action="javascript:delete_value()" method="POST">
+      <div>
+        <div class="container">
+          <div class="row">
             <div>
-              <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
               </div>
-              <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                      <b style="font-size: 20px;">Check your Information</b>
-                      <label style="text-align:right"  id="alert"></label>
-                      <label style="text-align:right" id="alert2"></label>
-                      <!-- <div id="alert" class="alert success">
+            </div>
+          </div>
+        </div>
+        <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                <b style="font-size: 20px;">Check your Information</b>
+                <label style="text-align:right" id="alert"></label>
+                <label style="text-align:right" id="alert2"></label>
+                <!-- <div id="alert" class="alert success">
                           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                           <strong>success!</strong> Your id and token is correct
                         </div>
@@ -522,225 +564,226 @@ b{
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                         <strong>Danger!</strong> Your id and token is incorrect
                       </div> -->
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>ID :</label><br>
-                    <input type="text" name="id" id="id" maxlength="8" required>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <label><b style="color:red">* </b>Token :</label><br>
-                    <input type="text" name="token" id="token" maxlength="5" required></input>
-                    <button type="button" onclick="getValue()">Click</button>
-                  </div>
-                  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                      <label style="color: white">T</label><br>
-                      <button type="button" onclick="back()">Reset id</button>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                      <b style="font-size: 20px;">Picture</b>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
-                    <br>
-                    <div>
-                      <img id="picbefore" class="img-profile" src="uploads/asdasd.PNG" alt="">
-                    </div>
-                    <label>Your picture</label><br>
-                    <!-- <input type="file" name="files[]" id="pic" multiple></input> -->
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br>
-                  </div>
-                </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label><b style="color:red">* </b>ID :</label><br>
+              <input type="text" name="id" id="id" maxlength="8" required>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label><b style="color:red">* </b>Token :</label><br>
+              <input type="text" name="token" id="token" maxlength="5" required></input>
+              <button type="button" onclick="getValue()">Click</button>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label style="color: white">T</label><br>
+              <button type="button" onclick="back()">Reset id</button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
               </div>
             </div>
-            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                    <b style="font-size: 20px;">Personal Information</b>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Title Name : </label><br>
-                  <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
-                    <option value="Mr.">Mr.</option>
-                    <option value="Ms.">Ms.</option>
-                    <option value="Mrs.">Mrs.</option>
-                  </select>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>First Name : </label><br>
-                  <input type="text" name="name" id="name" placeholder="Enter your first name" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Last Name : </label><br>
-                  <input type="text" name="lname" id="lname" placeholder="Enter your last name" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Date of birth : </label><br>
-                  <input type="date" name="dob" id="dob" max="2100-12-31">
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Telephone Number : </label><br>
-                  <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Email Address : </label><br>
-                  <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Address in ID Card : </label><br>
-                  <input type="text" name="aic" id="aic" placeholder="Enter your address" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Current Address : </label><br>
-                  <input type="text" name="ca" id="ca" placeholder="Enter your address" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
-                  <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Educational institution : </label><br>
-                  <input type="text" name="ei" id="ei" placeholder="Enter your University" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Major : </label><br>
-                  <input type="text" name="major" id="major" placeholder="Enter your Major" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Minor : </label><br>
-                  <input type="text" name="minor" id="minor" placeholder="Enter your Minor" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>GPAX : </label><br>
-                  <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <div class="example example_typeahead">
-                    <div class="bs-example">
-                      <label>Skill programming : </label>
-                      <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Tool for development : </label><br>
-                  <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Software Package : </label><br>
-                  <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>About you : </label><br>
-                  <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer" readonly></textarea>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>Experiece : </label><br>
-                  <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" readonly></textarea>
-                </div>
+          </div>
+        </div>
+        <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                <b style="font-size: 20px;">Picture</b>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br>
-                  </div>
-                </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+              <br>
+              <div>
+                <img id="picbefore" class="img-profile" src="uploads/asdasd.PNG" alt="">
+              </div>
+              <label>Your picture</label><br>
+              <!-- <input type="file" name="files[]" id="pic" multiple></input> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+              <b style="font-size: 20px;">Personal Information</b>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Title Name : </label><br>
+            <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>First Name : </label><br>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Last Name : </label><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Date of birth : </label><br>
+            <input type="date" name="dob" id="dob" max="2100-12-31">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Telephone Number : </label><br>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Email Address : </label><br>
+            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Address in ID Card : </label><br>
+            <input type="text" name="aic" id="aic" placeholder="Enter your address" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Current Address : </label><br>
+            <input type="text" name="ca" id="ca" placeholder="Enter your address" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
+            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Educational institution : </label><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Major : </label><br>
+            <input type="text" name="major" id="major" placeholder="Enter your Major" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Minor : </label><br>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>GPAX : </label><br>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="example example_typeahead">
+              <div class="bs-example">
+                <label>Skill programming : </label>
+                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
               </div>
             </div>
-            <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                    <b style="font-size: 20px;">Social</b>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Facebook : </label><br>
-                  <input type="text" name="fb" id="fb" placeholder="Enter your facebook id" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Line : </label><br>
-                  <input type="text" name="line" id="line" placeholder="Enter your id line" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Instagram : </label><br>
-                  <input type="text" name="ig" id="ig" placeholder="Enter your Instagram" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Github: </label><br>
-                  <input type="text" name="git" id="git" placeholder="Enter your Github" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label>Linkedin: </label><br>
-                  <input type="text" name="link" id="link" placeholder="Enter your Linkedin" readonly>
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                </div>
-              </div>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Tool for development : </label><br>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Software Package : </label><br>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>About you : </label><br>
+            <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+              readonly></textarea>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>Experiece : </label><br>
+            <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" readonly></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
             </div>
-            <div class="container">
-              <div class="row">
-                <div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+              <b style="font-size: 20px;">Social</b>
             </div>
-            <div class="container" align="center">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
-                      <!-- <p id="re"></p> -->
-                      <input style="margin-right: 15px;" type="submit" id="b1" value="Delete"></input>
-                      <input style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"></input><br><br>
-                      <div id="loader" hidden></div>
-                      <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Facebook : </label><br>
+            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Line : </label><br>
+            <input type="text" name="line" id="line" placeholder="Enter your id line" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Instagram : </label><br>
+            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Github: </label><br>
+            <input type="text" name="git" id="git" placeholder="Enter your Github" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Linkedin: </label><br>
+            <input type="text" name="link" id="link" placeholder="Enter your Linkedin" readonly>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" align="center">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
+            <!-- <p id="re"></p> -->
+            <input style="margin-right: 15px;" type="submit" id="b1" value="Delete"></input>
+            <input style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"></input><br><br>
+            <div id="loader" hidden></div>
+            <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
               <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
-                    </div>
-                  </div>
-                </div>
-          </form>
-          <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
 
-          <!-- this for show data in ss after insert or click read -->
-          <!-- <div style="overflow: scroll" id="showData"></div> -->
-        </div>
+    <!-- this for show data in ss after insert or click read -->
+    <!-- <div style="overflow: scroll" id="showData"></div> -->
+  </div>
 </body>
 <script>
-  function back(){
+  function back() {
     window.location.reload();
   }
-  </script>
+</script>
 <script>
   /* When the user clicks on the button, 
   toggle between hiding and showing the dropdown content */
@@ -762,20 +805,21 @@ b{
     }
   }
 </script>
-            <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<div class="container">
+  <div class="row">
+    <div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
 <div align="center">
-    <footer>
-      <br>
-  <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
-  <br>
+  <footer>
+    <br>
+    <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
+      (Thailand) Co.,Ltd All rights reserved</p>
+    <br>
   </footer>
 </div>
 <script>
@@ -862,29 +906,29 @@ b{
   });
 </script>
 <script>
-  function showhide(){
+  function showhide() {
     x = document.getElementById("alert2")
-        x.style.display = "none";
-        showhide2()
+    x.style.display = "none";
+    showhide2()
   }
 
 </script>
 <script>
-    function showhide2(){
-      y = document.getElementById("alert")
-          y.style.display = "none";
-    }
-  
-  </script>
+  function showhide2() {
+    y = document.getElementById("alert")
+    y.style.display = "none";
+  }
+
+</script>
 <script>
   function getValue() {
     var check = document.getElementById('id').value;
     var token = document.getElementById('token').value;
-    document.getElementById("b1").disabled = true; 
+    document.getElementById("b1").disabled = true;
     for (var i = 0; i < dataget.length; i++) {
       if ((dataget[i].ID) == check && (dataget[i].Token) == token) {
         console.log((dataget[i].Token))
-        document.getElementById("b1").disabled = false; 
+        document.getElementById("b1").disabled = false;
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
         document.getElementById("lname").value = (dataget[i].Last_Name);
@@ -926,49 +970,49 @@ b{
         elt.tagsinput('add', (dataget[i].Skill_programming));
 
 
-      }else{
-        if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)){
+      } else {
+        if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)) {
           // document.getElementById("alert").style.visibility = 'hidden';
-            document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-            document.getElementById("alert2").style.color = "red";
+          document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
+          document.getElementById("alert2").style.color = "red";
         }
       }
-        // if(check !== (dataget[i].ID) && token !== (dataget[i].Token)){
+      // if(check !== (dataget[i].ID) && token !== (dataget[i].Token)){
 
-        // }else{
-        //     document.getElementById("alert").style.visibility = 'hidden';
-        //     document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-        //     document.getElementById("alert2").style.color = "red";
-        //     console.log('fasfas')
-        // }
+      // }else{
+      //     document.getElementById("alert").style.visibility = 'hidden';
+      //     document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
+      //     document.getElementById("alert2").style.color = "red";
+      //     console.log('fasfas')
+      // }
 
-            // x = document.getElementById("alert2")
-            // x.style.display = "block";
-            // y = document.getElementById("alert")
-            // y.style.display = "none";
+      // x = document.getElementById("alert2")
+      // x.style.display = "block";
+      // y = document.getElementById("alert")
+      // y.style.display = "none";
     }
     return false;
   }
 </script>
 <script>
-  function a(){
+  function a() {
 
     document.getElementById("alert2").style.visibility = 'hidden';
     document.getElementById("alert").innerHTML = 'Your id and token is correct';
     document.getElementById("alert").style.color = "green";
   }
-  function b(){
-  document.getElementById("alert").style.visibility = 'hidden';
-  document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-  document.getElementById("alert2").style.color = "red";
+  function b() {
+    document.getElementById("alert").style.visibility = 'hidden';
+    document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
+    document.getElementById("alert2").style.color = "red";
   }
 </script>
 <script>
-          function mm(){
-          alert('no')
-        }
+  function mm() {
+    alert('no')
+  }
 </script>
- <!-- <script>
+<!-- <script>
 //     const url = 'process.php';
 //     const form = document.querySelector('form');
   
@@ -996,7 +1040,7 @@ b{
 //   </script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
 <script src="js/bootstrap-tagsinput.min.js"></script>
@@ -1008,6 +1052,7 @@ b{
 <script src="assets/app.js"></script>
 <script src="assets/app_bs3.js"></script>
 <script src="js/moment.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
