@@ -427,14 +427,14 @@ b{
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+                  <li style="margin-left:20px"><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
                   <!-- <li><a href="#">Link</a></li> -->
-                  <li class="dropdown">
+                  <li style="margin-left:20px" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="insert.html">Register</a></li>
-                      <li><a href="update.html">Edit</a></li>
-                      <li><a href="delete.html">Delete</a></li>
+                    <ul style="margin-left:20px" class="dropdown-menu">
+                        <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
+                        <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
+                        <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -507,7 +507,7 @@ b{
               <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 <label><b style="color:red">* </b>Token :</label><br>
                 <input type="text" name="token" id="token" maxlength="5" required></input>
-                <button type="button" onclick="getValue()">Click</button>
+                <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
               </div>
               <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <label style="color: white">T</label><br>
@@ -728,9 +728,9 @@ b{
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
               <div class="container-fluid" align="center">
                 <!-- <p id="re"></p> -->
-                <input style="margin-right: 15px;" type="submit" id="b1" value="Update"></input>
-                <input style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"></input>
-                <div id="loader"></div>
+                <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px" class="fa fa-edit"></i>Update</button>
+                <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
+                <!-- <div id="loader"></div> -->
                 <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
               <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->

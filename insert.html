@@ -53,6 +53,16 @@
 .img-profile::before{
   background-color: white;
 }
+button{
+    margin:10px;
+    padding: 8px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+    font-family: 'Lora', serif;
+}
 b{
   font-family: 'Lora', serif;
   }
@@ -340,15 +350,15 @@ b{
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+                  <li style="margin-left:20px" class="active"><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
                   <!-- <li><a href="#">Link</a></li> -->
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span
+                    <a style="margin-left:20px" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span
                         class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="insert.html">Register</a></li>
-                      <li><a href="update.html">Edit</a></li>
-                      <li><a href="delete.html">Delete</a></li>
+                    <ul style="margin-left:20px" class="dropdown-menu">
+                      <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
+                      <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
+                      <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -393,11 +403,13 @@ b{
     </div> -->
     <div align="left">
       <!-- //class="container-bg" -->
-      <form id="myForm" name="myForm" action="mailer.php" method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
+      <form id="myForm" name="myForm" action="mailer.php" method="POST" style="margin-left:20px" enctype="multipart/form-data">
         <!-- <label>ID :</label> -->
-        <input type="hidden" name="id" id="id" required></input><br>
-        <input type="hidden" name="token" id="token" required></input><br>
+        <input type="hidden" name="id" id="id" required></input>
+        <input type="hidden" name="token" id="token" required></input>
+        <label type="hidden"></label>
         <!-- <label id="id" name="id"></label><br> -->
+        </div>
         <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -579,9 +591,9 @@ b{
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
               <div class="container-fluid" align="center">
                 <!-- <p id="re"></p> -->
-                <input style="margin-right: 15px;" type="submit" id="b1" value="Insert"></input>
-                <input style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"></input><br><br>
-                <div id="loader" hidden></div>
+                <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Insert"><i style="margin-right:5px" class="fa fa-edit"></i>Insert</button>
+                <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
+                <!-- <div id="loader" hidden></div> -->
                 <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
                           <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
                           <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
