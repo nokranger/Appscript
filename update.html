@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/multiple-select.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"> -->
@@ -21,7 +22,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <title>Form update</title>
   <style>
-        .dropdown-menu{
+    .dropdown-menu{
       display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -183,22 +184,22 @@ b{
       var major = $("#major").val();
       var minor = $("#minor").val();
       var about = $("#about").val();
-      piccheck  = document.getElementById('pic').value
+      piccheck = document.getElementById('pic').value
       console.log('aaaaaa')
-          console.log(piccheck)
-          console.log('preview')
-          console.log(document.getElementById("picpreview").src)
-          bb = document.getElementById("picpreview").src
-          cc = bb.split("//")
-          dd = cc[1].split("/")
-          ee = "C:\\fakepath\\" + dd[3]
-        console.log('preview2')
-      if(piccheck == ""){
+      console.log(piccheck)
+      console.log('preview')
+      console.log(document.getElementById("picpreview").src)
+      bb = document.getElementById("picpreview").src
+      cc = bb.split("//")
+      dd = cc[1].split("/")
+      ee = "C:\\fakepath\\" + dd[3]
+      console.log('preview2')
+      if (piccheck == "") {
         console.log('nulllllllllllllll')
         var pic = ee;
         console.log('aaaaanulllllllllllllll')
         console.log(pic)
-      }else{
+      } else {
         var pic = $("#pic").val();
         console.log('notnulllllllllllllll')
         console.log(pic)
@@ -216,16 +217,17 @@ b{
       document.getElementById("myForm").reset();
       // document.getElementById("picpreview").reset();
       console.log('fasfasfa')
-      document.getElementById("alert").innerHTML = '';
-      document.getElementById("alert2").innerHTML = '';
+      // document.getElementById("alert").innerHTML = '';
+      // document.getElementById("alert2").innerHTML = '';
       document.getElementById("picpreview").src = "uploads/asdasd.PNG";
       document.getElementById("sp").value = '';
       var elt = $('.example_typeahead > > input');
-          elt.tagsinput('destroy');
-          piccheck  = document.getElementById('pic').value
-          $("#re").css("visibility", "hidden");
-          document.getElementById("loader").style.visibility = "visible";
-        // back();
+      elt.tagsinput('destroy');
+      piccheck = document.getElementById('pic').value
+      $("#re").css("visibility", "hidden");
+      document.getElementById("loader").style.visibility = "visible";
+      back();
+      document.getElementById("loader").style.visibility = "visible";
     }
     function delete_value() {
       $("#re").css("visibility", "hidden");
@@ -404,47 +406,50 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-      <article>
-          <header>
-    <h1><strong style="color:white">Application form for register</strong></h1>
-  </header>
-</article>
-</div>
-    <!-- <p style="color:white">This is simple application<p> -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="insert.html">ECS</a>
-              </div>
-          
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li style="margin-left:20px"><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
-                  <!-- <li><a href="#">Link</a></li> -->
-                  <li style="margin-left:20px" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
-                    <ul style="margin-left:20px" class="dropdown-menu">
-                        <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
-                        <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
-                        <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <!-- <form class="navbar-form navbar-left" role="search">
+    <article>
+      <header>
+        <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1>
+      </header>
+    </article>
+  </div>
+  <!-- <p style="color:white">This is simple application<p> -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="insert.html">ECS</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home
+              <span class="sr-only">(current)</span></a></li>
+          <!-- <li><a href="#">Link</a></li> -->
+          <li  class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
+                style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
+            <ul  class="dropdown-menu">
+              <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
+              <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
+              <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="navbar-form navbar-left" role="search">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </form> -->
-                <!-- <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Link</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -455,12 +460,12 @@ b{
                       <li role="separator" class="divider"></li>
                       <li><a href="#">Separated link</a></li>
                     </ul> -->
-                  </li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-    <!-- <div align="left">
+        </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- <div align="left">
       <div class="container" style="border: solid #E0e0e0;background-color: white;">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -476,73 +481,43 @@ b{
         </div>
       </div>
     </div> -->
-    <div align="left">
-      <form id="myForm" method="POST" enctype="multipart/form-data">
-        <div>
-          <div class="container">
-            <div class="row">
-              <div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-            <div class="row">
+  <div align="left">
+    <form id="myForm" method="POST" enctype="multipart/form-data">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div>
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <br>
               </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                  <b style="font-size: 20px;">Check your Information</b>
-                  <label id="alert"></label>
-                  <label id="alert2"></label>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label><b style="color:red">* </b>ID :</label><br>
-                <input type="text" name="id" id="id" maxlength="8" required>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label><b style="color:red">* </b>Token :</label><br>
-                <input type="text" name="token" id="token" maxlength="5" required></input>
-                <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <label style="color: white">T</label><br>
-                <button type="button" onclick="back()">Reset id</button>
-                <!-- <input type="button" value="Reset" onclick="back()"></input> -->
-              </div>
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                  <br>
-                </div>
+        </div>
+        <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+                <b style="font-size: 20px;">Check your Information</b>
+                <!-- <label id="alert"></label> -->
+                <!-- <label id="alert2"></label> -->
               </div>
             </div>
-          </div>
-          <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <br>
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                  <b style="font-size: 20px;">Picture</b>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
-                <br>
-                <div id="aa">
-                  <img id="picpreview" class="img-profile" src="uploads/asdasd.PNG" alt="">
-                </div>
-                <label>Your picture</label>
-                <input type="file" name="files[]" id="pic" multiple></input>
-              </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label><b style="color:red">* </b>ID :</label><br>
+              <input type="text" name="id" id="id" maxlength="8" required>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label><b style="color:red">* </b>Token :</label><br>
+              <input type="text" name="token" id="token" maxlength="5" required></input>
+              <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label style="color: white">T</label><br>
+              <button type="button" onclick="back()">Reset id</button>
+              <!-- <input type="button" value="Reset" onclick="back()"></input> -->
             </div>
           </div>
         </div>
@@ -562,188 +537,227 @@ b{
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                <b style="font-size: 20px;">Personal Information</b>
+                <b style="font-size: 20px;">Picture</b>
               </div>
             </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+              <br>
+              <div id="aa">
+                <img id="picpreview" class="img-profile" src="uploads/asdasd.PNG" alt="">
+              </div>
+              <label>Your picture</label>
+              <input type="file" name="files[]" id="pic" multiple></input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <br>
             </div>
-            <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+          </div>
+        </div>
+      </div>
+      <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+              <b style="font-size: 20px;">Personal Information</b>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
                     <div>
                       <img id="picbefore" class="img-profile" src="" alt="">
                     </div>
                     <label>Your picture</label>
                     <input type="file" name="files[]" id="pic" multiple></input>
                   </div> -->
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Title Name : </label><br>
-              <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
-                <option value="Mr.">Mr.</option>
-                <option value="Ms.">Ms.</option>
-                <option value="Mrs.">Mrs.</option>
-              </select>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>First Name : </label><br>
-              <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)" onchange="return checkName()"
-                required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Last Name : </label><br>
-              <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)" onchange="return checkLname()"
-                required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Date of birth : </label><br>
-              <input type="date" name="dob" id="dob" max="2100-12-31">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Telephone Number : </label><br>
-              <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)" onchange="return checktel()"
-                required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Email Address : </label><br>
-              <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onkeypress="return isCharKey(event)" onchange="return checkmail()" required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Address in ID Card : </label><br>
-              <input type="text" name="aic" id="aic" placeholder="Enter your address">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Current Address : </label><br>
-              <input type="text" name="ca" id="ca" placeholder="Enter your address" required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Reference : </label><br>
-              <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)" onchange="return checkref()">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Educational institution : </label><br>
-              <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)" onchange="return checku()">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Major : </label><br>
-              <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)" onchange="return checkmajor()">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Minor : </label><br>
-              <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)" onchange="return checkminor()">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>GPAX : </label><br>
-              <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)" maxlength="4"></input>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <div class="example example_typeahead">
-                <div class="bs-example">
-                  <label><b style="color:red">* </b>Skill programming : </label><br>
-                  <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"
-                    required>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Tool for development : </label><br>
-              <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)" onchange="return checktool()"
-                required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Software Package : </label><br>
-              <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)" onchange="return checkskill()"
-                required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <label>About you : </label><br>
-              <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer" onchange="return checkabout()"></textarea>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <label>Experiece : </label><br>
-              <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" onchange="return checkexp()"></textarea>
-            </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Title Name : </label><br>
+            <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+            </select>
           </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <br>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>First Name : </label><br>
+            <input type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+              onchange="return checkName()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Last Name : </label><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+              onchange="return checkLname()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Date of birth : </label><br>
+            <input type="date" name="dob" id="dob" max="2100-12-31">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Telephone Number : </label><br>
+            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+              onchange="return checktel()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Email Address : </label><br>
+            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onkeypress="return isCharKey(event)"
+              onchange="return checkmail()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Address in ID Card : </label><br>
+            <input type="text" name="aic" id="aic" placeholder="Enter your address">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Current Address : </label><br>
+            <input type="text" name="ca" id="ca" placeholder="Enter your address" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Reference : </label><br>
+            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"
+              onchange="return checkref()">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Educational institution : </label><br>
+            <input type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
+              onchange="return checku()">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Major : </label><br>
+            <input type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
+              onchange="return checkmajor()">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Minor : </label><br>
+            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
+              onchange="return checkminor()">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>GPAX : </label><br>
+            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+              maxlength="4"></input>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="example example_typeahead">
+              <div class="bs-example">
+                <label><b style="color:red">* </b>Skill programming : </label><br>
+                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language"
+                  required>
               </div>
             </div>
           </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Tool for development : </label><br>
+            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+              onchange="return checktool()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Software Package : </label><br>
+            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+              onchange="return checkskill()" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <label>About you : </label><br>
+            <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+              onchange="return checkabout()"></textarea>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <label>Experiece : </label><br>
+            <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" onchange="return checkexp()"></textarea>
+          </div>
         </div>
-        <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-          <div class="row">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <br>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                <b style="font-size: 20px;">Social</b>
-              </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+              <b style="font-size: 20px;">Social</b>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <br>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Facebook : </label><br>
-              <input type="text" name="fb" id="fb" placeholder="Enter your facebook id">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Line : </label><br>
-              <input type="text" name="line" id="line" placeholder="Enter your id line">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Instagram : </label><br>
-              <input type="text" name="ig" id="ig" placeholder="Enter your Instagram">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Github: </label><br>
-              <input type="text" name="git" id="git" placeholder="Enter your Github" required>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Linkedin: </label><br>
-              <input type="text" name="link" id="link" placeholder="Enter your Linkedin">
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <br>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Facebook : </label><br>
+            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Line : </label><br>
+            <input type="text" name="line" id="line" placeholder="Enter your id line">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Instagram : </label><br>
+            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label><b style="color:red">* </b>Github: </label><br>
+            <input type="text" name="git" id="git" placeholder="Enter your Github" required>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Linkedin: </label><br>
+            <input type="text" name="link" id="link" placeholder="Enter your Linkedin">
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
-              <div class="container-fluid" align="center">
-                <!-- <p id="re"></p> -->
-                <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px" class="fa fa-edit"></i>Update</button>
-                <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
-                <!-- <div id="loader"></div> -->
-                <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
+            <div class="container-fluid" align="center">
+              <!-- <p id="re"></p> -->
+              <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px"
+                  class="fa fa-edit"></i>Update</button>
+              <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
+                  style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
+              <div id="loader" hidden></div>
+              <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
               <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
-              </div>
             </div>
           </div>
-      </form>
-      <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
+        </div>
+    </form>
+    <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
           target="_blank">Click here to open Spread Sheet </a> -->
 
-      <!-- this for show data in ss after insert or click read -->
-      <!-- <div style="overflow: scroll" id="showData"></div> -->
-    </div>
+    <!-- this for show data in ss after insert or click read -->
+    <!-- <div style="overflow: scroll" id="showData"></div> -->
+  </div>
 </body>
 <script>
   function readURL(input) {
@@ -784,20 +798,21 @@ b{
     }
   }
 </script>
-            <div class="container">
-                <div class="row">
-                  <div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<div class="container">
+  <div class="row">
+    <div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
 <div align="center">
-    <footer>
-      <br>
-  <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services (Thailand) Co.,Ltd All rights reserved</p>
-  <br>
+  <footer>
+    <br>
+    <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
+      (Thailand) Co.,Ltd All rights reserved</p>
+    <br>
   </footer>
 </div>
 <script>
@@ -883,12 +898,12 @@ b{
     var ses = 0;
     var check = document.getElementById('id').value;
     var token = document.getElementById('token').value;
-    document.getElementById("b1").disabled = true; 
+    document.getElementById("b1").disabled = true;
     for (var i = 0; i < dataget.length; i++) {
       if ((dataget[i].ID) == check && (dataget[i].Token) == token) {
         ses = 1;
-        
-        document.getElementById("b1").disabled = false; 
+
+        document.getElementById("b1").disabled = false;
         console.log((dataget[i].Token))
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
@@ -917,18 +932,19 @@ b{
         console.log(document.getElementById("picpreview").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = (dataget[i].Experiece);
         document.getElementById("ref").value = (dataget[i].Reference);
-        document.getElementById("alert2").style.visibility = 'hidden';
-        document.getElementById("alert").innerHTML = 'Your id and token is correct';
-        document.getElementById("alert").style.color = "green";
+        // document.getElementById("alert2").style.visibility = 'hidden';
+        // document.getElementById("alert").innerHTML = 'Your id and token is correct';
+        // document.getElementById("alert").style.color = "green";
         var elt = $('.example_typeahead > > input');
         elt.tagsinput('add', (dataget[i].Skill_programming));
-      }else{
-        if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)){
-          // document.getElementById("alert").style.visibility = 'hidden';
-            document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-            document.getElementById("alert2").style.color = "red";
-        }
       }
+      // else{
+      //   if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)){
+      //     // document.getElementById("alert").style.visibility = 'hidden';
+      //       document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
+      //       document.getElementById("alert2").style.color = "red";
+      //   }
+      // }
     }
     return false;
   }

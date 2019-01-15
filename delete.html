@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/multiple-select.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"> -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
@@ -292,6 +293,7 @@ b{
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       back();
+      document.getElementById("loader").style.visibility = "visible";
     }
     // print the returned data
     function ctrlq(e) {
@@ -417,8 +419,6 @@ b{
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
-        // divContainer.innerHTML = "";
-        // divContainer.appendChild(table);
         document.getElementById("loader").style.visibility = "hidden";
         $("#re").css("visibility", "visible");
       });
@@ -432,7 +432,7 @@ b{
   <div align="center">
     <article>
       <header>
-        <h1><strong style="color:white">Application form for register</strong></h1>
+        <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1>
       </header>
     </article>
   </div>
@@ -484,7 +484,7 @@ b{
   <!-- </div>
         </div> -->
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -500,12 +500,14 @@ b{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li style="margin-left:20px"><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home
+              <span class="sr-only">(current)</span></a></li>
           <!-- <li><a href="#">Link</a></li> -->
           <li class="dropdown">
-            <a style="margin-left:20px" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
-                style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
-            <ul style="margin-left:20px" class="dropdown-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
               <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
               <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
               <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
@@ -554,8 +556,8 @@ b{
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
                 <b style="font-size: 20px;">Check your Information</b>
-                <label style="text-align:right" id="alert"></label>
-                <label style="text-align:right" id="alert2"></label>
+                <!-- <label style="text-align:right" id="alert"></label> -->
+                <!-- <label style="text-align:right" id="alert2"></label> -->
                 <!-- <div id="alert" class="alert success">
                           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                           <strong>success!</strong> Your id and token is correct
@@ -762,8 +764,10 @@ b{
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
             <!-- <p id="re"></p> -->
-            <button class="btn-danger" style="margin-right: 15px;" type="submit" id="b1" value="Delete"><i style="margin-right:5px" class="fa fa-remove"></i>Delete</button>
-            <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
+            <button class="btn-danger" style="margin-right: 15px;" type="submit" id="b1" value="Delete"><i style="margin-right:5px"
+                class="fa fa-remove"></i>Delete</button>
+            <button class="btn-success" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
+                style="margin-right:5px" class="fa fa-refresh"></i>Cancle</button><br><br>
             <div id="loader" hidden></div>
             <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
               <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
@@ -905,7 +909,7 @@ b{
     getValue();
   });
 </script>
-<script>
+<!-- <script>
   function showhide() {
     x = document.getElementById("alert2")
     x.style.display = "none";
@@ -919,7 +923,7 @@ b{
     y.style.display = "none";
   }
 
-</script>
+</script> -->
 <script>
   function getValue() {
     var check = document.getElementById('id').value;
@@ -960,9 +964,9 @@ b{
         // x.style.display = "none";
         // y = document.getElementById("alert")
         //     y.style.display = "block";
-        document.getElementById("alert2").style.visibility = 'hidden';
-        document.getElementById("alert").innerHTML = 'Your id and token is correct';
-        document.getElementById("alert").style.color = "green";
+        // document.getElementById("alert2").style.visibility = 'hidden';
+        // document.getElementById("alert").innerHTML = 'Your id and token is correct';
+        // document.getElementById("alert").style.color = "green";
 
         // document.getElementById("id").value = '123465';
         // alert('yes')
@@ -970,13 +974,14 @@ b{
         elt.tagsinput('add', (dataget[i].Skill_programming));
 
 
-      } else {
-        if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)) {
-          // document.getElementById("alert").style.visibility = 'hidden';
-          document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-          document.getElementById("alert2").style.color = "red";
-        }
       }
+      // else {
+      //   if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)) {
+      //     // document.getElementById("alert").style.visibility = 'hidden';
+      //     document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
+      //     document.getElementById("alert2").style.color = "red";
+      //   }
+      // }
       // if(check !== (dataget[i].ID) && token !== (dataget[i].Token)){
 
       // }else{
@@ -994,7 +999,7 @@ b{
     return false;
   }
 </script>
-<script>
+<!-- <script>
   function a() {
 
     document.getElementById("alert2").style.visibility = 'hidden';
@@ -1011,7 +1016,7 @@ b{
   function mm() {
     alert('no')
   }
-</script>
+</script> -->
 <!-- <script>
 //     const url = 'process.php';
 //     const form = document.querySelector('form');

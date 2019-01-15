@@ -219,7 +219,8 @@ text-emphasis-color:blue;
             /* background-color: #f8f8f8; */
             font-size: 16px;
             resize: none;
-            margin: 10px;
+            margin: 20px 0;
+            font-family: 'Lora', serif;
           }
           h2{
             font-family: 'Lora', serif;
