@@ -155,14 +155,7 @@ text-emphasis-color:blue;
         color: white;
       }
       body{
-        background:
-              -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-              -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-              -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-        background:
-              linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-              linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-              linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
+  background:#808080
           }
           .dropbtn {
             background-color: #3498DB;

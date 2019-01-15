@@ -20,10 +20,254 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css"> -->
   <link rel="stylesheet" href="assets/app.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+    crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-  <title>Form register</title>
+  <title>Form delete</title>
+  <style>
+                                    header{
+                                    background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+  background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+                                }
+                                footer{
+                                    background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+  background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+                                }
+    textarea {
+              width: 60%;
+              height: 150px;
+              padding: 12px 20px;
+              box-sizing: border-box;
+              /* border: 2px solid #ccc; */
+              border-radius: 4px;
+              /* background-color: #f8f8f8; */
+              font-size: 16px;
+              resize: none;
+              margin: 20px 0;
+              font-family: 'Lora', serif;
+            }
+        .input[type="text"] {
+          width: 100%;
+          /* border: 2px solid #aaa; */
+          border-radius: 4px;
+          margin: 8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: 0.3s;
+          font-family: 'Lora', serif;
+          
+        }
+        
+        .input[type="text"]:focus {
+          border-color: dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+        
+        .inputWithIcon .input[type="text"] {
+          padding-left: 40px;
+        }
+        
+        .inputWithIcon {
+          position: relative;
+        }
+        
+        .inputWithIcon i {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          padding: 9px 8px;
+          color: #aaa;
+          transition: 0.3s;
+        }
+        
+        .inputWithIcon .input[type="text"]:focus + i {
+          color: dodgerBlue;
+        }
+        
+        .inputWithIcon.inputIconBg i {
+          background-color: #aaa;
+          color: #fff;
+          padding: 9px 4px;
+          border-radius: 4px 0 0 4px;
+        }
+        
+        .inputWithIcon.inputIconBg .input[type="text"]:focus + i {
+          color: #fff;
+          background-color: dodgerBlue;
+        }
+        /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+  
+              .input[type="tel"] {
+          width: 100%;
+          /* border: 2px solid #aaa; */
+          border-radius: 4px;
+          margin: 8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: 0.3s;
+          font-family: 'Lora', serif;
+          
+        }
+        
+        .input[type="tel"]:focus {
+          border-color: dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+        
+        .inputWithIcon .input[type="tel"] {
+          padding-left: 40px;
+        }
+        
+        .inputWithIcon {
+          position: relative;
+        }
+        
+        .inputWithIcon i {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          padding: 9px 8px;
+          color: #aaa;
+          transition: 0.3s;
+        }
+        
+        .inputWithIcon .input[type="tel"]:focus + i {
+          color: dodgerBlue;
+        }
+        
+        .inputWithIcon.inputIconBg i {
+          background-color: #aaa;
+          color: #fff;
+          padding: 9px 4px;
+          border-radius: 4px 0 0 4px;
+        }
+        
+        .inputWithIcon.inputIconBg .input[type="tel"]:focus + i {
+          color: #fff;
+          background-color: dodgerBlue;
+        }
+        /*bbbbbbbbbbbbbbbbbb*/
+  
+        .input[type="email"] {
+          width: 100%;
+          /* border: 2px solid #aaa; */
+          border-radius: 4px;
+          margin: 8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: 0.3s;
+          font-family: 'Lora', serif;
+          
+        }
+        
+        .input[type="email"]:focus {
+          border-color: dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+        
+        .inputWithIcon .input[type="email"] {
+          padding-left: 40px;
+        }
+        
+        .inputWithIcon {
+          position: relative;
+        }
+        
+        .inputWithIcon i {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          padding: 9px 8px;
+          color: #aaa;
+          transition: 0.3s;
+        }
+        
+        .inputWithIcon .input[type="email"]:focus + i {
+          color: dodgerBlue;
+        }
+        
+        .inputWithIcon.inputIconBg i {
+          background-color: #aaa;
+          color: #fff;
+          padding: 9px 4px;
+          border-radius: 4px 0 0 4px;
+        }
+        
+        .inputWithIcon.inputIconBg .input[type="email"]:focus + i {
+          color: #fff;
+          background-color: dodgerBlue;
+        }
+        /*cccccccccc*/
+  
+        .input[type="date"] {
+          width: 100%;
+          /* border: 2px solid #aaa; */
+          border-radius: 4px;
+          margin: 8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: 0.3s;
+          font-family: 'Lora', serif;
+          
+        }
+        
+        .input[type="date"]:focus {
+          border-color: dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+        
+        .inputWithIcon .input[type="date"] {
+          padding-left: 40px;
+        }
+        
+        .inputWithIcon {
+          position: relative;
+        }
+        
+        .inputWithIcon i {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          padding: 9px 8px;
+          color: #aaa;
+          transition: 0.3s;
+        }
+        
+        .inputWithIcon .input[type="date"]:focus + i {
+          color: dodgerBlue;
+        }
+        
+        .inputWithIcon.inputIconBg i {
+          background-color: #aaa;
+          color: #fff;
+          padding: 9px 4px;
+          border-radius: 4px 0 0 4px;
+        }
+        
+        .inputWithIcon.inputIconBg .input[type="date"]:focus + i {
+          color: #fff;
+          background-color: dodgerBlue;
+        }
+          </style>
   <style>
     /* .dropdown{
       position: relative;
@@ -60,15 +304,8 @@
 
 /* .dropdown:hover .dropdown-toggle {background-color: #c2c2a3;} */
     body{
-      background:
-            -webkit-linear-gradient(315deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            -webkit-linear-gradient(135deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            -webkit-linear-gradient(205deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-      background:
-            linear-gradient(135deg, hsla(200, 100%, 70%, 1) 0%, hsla(200, 100%, 70%, 0) 70%),
-            linear-gradient(315deg, hsla(270, 100%, 80%, 1) 15%, hsla(270, 100%, 80%, 0) 80%),
-            linear-gradient(245deg, hsla(300, 100%, 80%, 1) 100%, hsla(300, 100%, 80%, 0) 70%);
-        }
+      background:	#f4f5f7;
+    }
   </style>
   <style>
     .dropbtn {
@@ -292,8 +529,8 @@ b{
 
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
-      back();
-      document.getElementById("loader").style.visibility = "visible";
+      // back();
+      // document.getElementById("loader").style.visibility = "visible";
     }
     // print the returned data
     function ctrlq(e) {
@@ -430,60 +667,16 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-    <article>
-      <header>
-        <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1>
-      </header>
-    </article>
-  </div>
-
-  <!-- <p style="color:white">This is simple application<p> -->
-  <!-- <div align="right"> -->
-  <!-- <div class="container" style="border: solid #E0e0e0;">
-            <div class="row"> -->
-  <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="container" align="left">
-                          <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                          <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                          </li>
-
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Menu
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="insert.html">Register</a>
-                              <a class="dropdown-item" href="update.html">Edit</a>
-                              <a class="dropdown-item" href="delete.html">Delete</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </nav> -->
-
-  <!-- <div class="dropdown">
-                  <button onclick="myFunction()" class="dropbtn">Menu</button>
-                  <div id="myDropdown" class="dropdown-content">
-                    <a href="insert.html">Register</a>
-                    <a href="update.html">Edit</a>
-                    <a href="delete.html">Delete</a>
-                  </div>
-                </div> -->
-  <!-- </div> -->
-  <!-- </div> -->
-  <!-- </div>
-        </div> -->
-  <nav class="navbar navbar-default">
+      <article>
+        <header>
+          <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
+          <br>
+          <h1><p style="color:white"><strong style="color:white">Application form for register</strong></p></h1>
+          <br>
+        </header>
+      </article>
+    </div>
+  <nav style="background:white;border: none;box-shadow: 0px 15px 20px -15px rgba(0,0,0,0.3);" class="navbar navbar-default">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -492,7 +685,7 @@ b{
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span cl ass="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="insert.html">ECS</a>
       </div>
@@ -504,13 +697,13 @@ b{
               <span class="sr-only">(current)</span></a></li>
           <!-- <li><a href="#">Link</a></li> -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-              aria-haspopup="true" aria-expanded="false"><i style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span
-                class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
+                style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
               <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
               <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
+              <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login</a></li>
             </ul>
           </li>
         </ul>
@@ -570,16 +763,23 @@ b{
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>ID :</label><br>
-              <input type="text" name="id" id="id" maxlength="8" required>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="id" id="id" maxlength="8" required>
+                <i class="fa fa-id-card fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Token :</label><br>
-              <input type="text" name="token" id="token" maxlength="5" required></input>
-              <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="token" id="token" maxlength="5" required></input>
+                <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
+              </div>
+
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label style="color: white">T</label><br>
-              <button type="button" onclick="back()">Reset id</button>
+              <!-- <label style="color: white">T</label><br>
+              <button type="button" onclick="back()">Reset id</button> -->
             </div>
           </div>
         </div>
@@ -594,7 +794,7 @@ b{
         </div>
         <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-1 class=" input"2 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <br>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -636,72 +836,118 @@ b{
             <br>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Title Name : </label><br>
-            <select name="tn" id="tn" style="margin: 8px 0;margin-left: 10px;">
+            <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;">
               <option value="Mr.">Mr.</option>
               <option value="Ms.">Ms.</option>
               <option value="Mrs.">Mrs.</option>
             </select>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>First Name : </label><br>
-            <input type="text" name="name" id="name" placeholder="Enter your first name" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="name" id="name" placeholder="Enter your first name" readonly>
+              <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Last Name : </label><br>
-            <input type="text" name="lname" id="lname" placeholder="Enter your last name" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="lname" id="lname" placeholder="Enter your last name" readonly>
+              <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Date of birth : </label><br>
-            <input type="date" name="dob" id="dob" max="2100-12-31">
+            <div class="inputWithIcon">
+              <input class="input" type="date" name="dob" id="dob" max="2100-12-31">
+              <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Telephone Number : </label><br>
-            <input type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" readonly>
+              <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Email Address : </label><br>
-            <input type="email" name="mail" id="mail" placeholder="Enter E-mail  address" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="email" name="mail" id="mail" placeholder="Enter E-mail  address" readonly>
+              <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Address in ID Card : </label><br>
-            <input type="text" name="aic" id="aic" placeholder="Enter your address" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="aic" id="aic" placeholder="Enter your address" readonly>
+              <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Current Address : </label><br>
-            <input type="text" name="ca" id="ca" placeholder="Enter your address" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address" readonly>
+              <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
-            <input type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"
+                readonly>
+              <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Educational institution : </label><br>
-            <input type="text" name="ei" id="ei" placeholder="Enter your University" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="ei" id="ei" placeholder="Enter your University" readonly>
+              <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Major : </label><br>
-            <input type="text" name="major" id="major" placeholder="Enter your Major" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="major" id="major" placeholder="Enter your Major" readonly>
+              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Minor : </label><br>
-            <input type="text" name="minor" id="minor" placeholder="Enter your Minor" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="minor" id="minor" placeholder="Enter your Minor" readonly>
+              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>GPAX : </label><br>
-            <input type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly>
+              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="example example_typeahead">
-              <div class="bs-example">
+            <div class="example example_typeahead inputWithIcon ">
+              
                 <label>Skill programming : </label>
-                <input style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
+                <div class="inputWithIcon bs-example">
+                <input class="input" style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
+                <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Tool for development : </label><br>
-            <input type="text" name="tfp" id="tfp" placeholder="Vscode Etc." readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="tfp" id="tfp" placeholder="Vscode Etc." readonly>
+              <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Software Package : </label><br>
-            <input type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
+              <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           </div>
           <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>About you : </label><br>
-            <textarea style="margin: 10px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+            <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
               readonly></textarea>
           </div>
           <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>Experiece : </label><br>
-            <textarea style="margin: 10px;" name="exp" id="exp" placeholder="Enter your Experiece" readonly></textarea>
+            <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
+              readonly></textarea>
           </div>
         </div>
       </div>
@@ -729,23 +975,38 @@ b{
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Facebook : </label><br>
-            <input type="text" name="fb" id="fb" placeholder="Enter your facebook id" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id" readonly>
+              <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Line : </label><br>
-            <input type="text" name="line" id="line" placeholder="Enter your id line" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="line" id="line" placeholder="Enter your id line" readonly>
+              <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Instagram : </label><br>
-            <input type="text" name="ig" id="ig" placeholder="Enter your Instagram" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram" readonly>
+              <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Github: </label><br>
-            <input type="text" name="git" id="git" placeholder="Enter your Github" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github" readonly>
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Linkedin: </label><br>
-            <input type="text" name="link" id="link" placeholder="Enter your Linkedin" readonly>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin" readonly>
+              <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           </div>

@@ -1,3 +1,6 @@
+body{
+    background:	#f4f5f7;
+}
 label {
     margin-bottom: 10px;
     font-family: 'Lora', serif;
@@ -31,16 +34,16 @@ a {
     color: #696969;
 }
 
-/* .colorful {
-background:
--webkit-linear-gradient(315deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
--webkit-linear-gradient(135deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
--webkit-linear-gradient(205deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
-background:
-linear-gradient(135deg, hsla(35, 95%, 55%, 1) 0%, hsla(35, 95%, 55%, 0) 70%),
-linear-gradient(315deg, hsla(225, 95%, 50%, 1) 15%, hsla(225, 95%, 50%, 0) 80%),
-linear-gradient(245deg, hsla(340, 100%, 55%, 1) 100%, hsla(340, 100%, 55%, 0) 70%);
-} */
+.colorful-4 {
+    background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+  background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);;
+}
 /* .colorful {
 background:
 -webkit-linear-gradient(315deg, hsla(61.13, 95%, 55%, 1) 0%, hsla(61.13, 95%, 55%, 0) 70%),
@@ -86,9 +89,9 @@ background:
 linear-gradient(315deg, hsla(225, 72.48%, 80.56%, 1) 15%, hsla(225, 72.48%, 80.56%, 0) 80%),
 linear-gradient(245deg, hsla(220.65, 44.08%, 41.37%, 1) 100%, hsla(220.65, 44.08%, 41.37%, 0) 70%);
 }
-.colorful-4 {
+/* .colorful-4 {
 background: white;
-}
+} */
 
 .container2 {
     position: relative;

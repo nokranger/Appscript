@@ -26,6 +26,26 @@
 
   <title>Form register</title>
   <style>
+                                    header{
+                                    background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+  background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+                                }
+                                footer{
+                                    background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+  background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+                                }
     textarea {
             width: 60%;
             height: 150px;
@@ -291,6 +311,9 @@ button{
 b{
   font-family: 'Lora', serif;
   }
+  body{
+  background:	#f4f5f7;
+          }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -551,17 +574,17 @@ b{
 <body>
   <!-- style="bgcolor:#673AB7" -->
   <div align="center">
-    <article>
-      <header>
-        <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1>
-      </header>
-    </article>
-  </div>
+      <article>
+        <header>
+          <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
+          <br>
+          <h1><p style="color:white"><strong style="color:white">Application form for register</strong></p></h1>
+          <br>
+        </header>
+      </article>
+    </div>
   <!-- <p style="color:white">This is simple application<p> -->
-  <div class="container">
-
-  </div>
-  <nav class="navbar navbar-default">
+  <nav style="background:white;border: none;box-shadow: 0px 15px 20px -15px rgba(0,0,0,0.3);" class="navbar navbar-default">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -588,6 +611,7 @@ b{
               <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register</a></li>
               <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit</a></li>
               <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete</a></li>
+              <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login</a></li>
             </ul>
           </li>
         </ul>
@@ -897,6 +921,7 @@ b{
     <!-- this for show data in ss after insert or click read -->
     <!-- <div style="overflow: scroll" id="showData"></div> -->
   </div>
+  
 </body>
 <script>
   function readURL(input) {
