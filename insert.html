@@ -1000,7 +1000,7 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
     document.getElementById("id").value = id;
     return id;
   }
-  console.log(new_id());
+  // console.log(new_id());
 </script>
 <script>
   function makeid() {
@@ -1008,9 +1008,9 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     for (var i = 0; i < 5; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
-    console.log(text);
+    // console.log(text);
     document.getElementById("token").value = text;
-    console.log(document.getElementById("token"));
+    // console.log(document.getElementById("token"));
     return text;
   }
   document.getElementById("token").value = makeid();
@@ -1050,7 +1050,7 @@ console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2]
       document.myForm.submit();
       // document.getElementById("myForm").action = "mailer.php";
       // back()
-      console.log(response);
+      // console.log(response);
     });
   });
 </script>

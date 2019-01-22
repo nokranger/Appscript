@@ -1098,7 +1098,7 @@ b{
     // document.getElementById("id").value = id;
     return id;
   }
-  console.log(new_id());
+  // console.log(new_id());
 </script>
 <script>
   function makeid() {
@@ -1111,7 +1111,7 @@ b{
     return text;
   }
 
-  console.log(makeid());
+  // console.log(makeid());
 </script>
 <script>
   function isNumberKey(evt) {
@@ -1192,7 +1192,7 @@ b{
     document.getElementById("b1").disabled = true;
     for (var i = 0; i < dataget.length; i++) {
       if ((dataget[i].ID) == check && (dataget[i].Token) == token) {
-        console.log((dataget[i].Token))
+        // console.log((dataget[i].Token))
         document.getElementById("b1").disabled = false;
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
@@ -1216,9 +1216,9 @@ b{
         document.getElementById("spack").value = (dataget[i].Software_Package);
         document.getElementById("about").value = (dataget[i].About_you);
         splitpath = (dataget[i].Picture).split("\\");
-        console.log(splitpath[2])
+        // console.log(splitpath[2])
         document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
-        console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
+        // console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = (dataget[i].Experiece);
         document.getElementById("ref").value = (dataget[i].Reference);
         // x = document.getElementById("alert2")

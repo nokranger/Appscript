@@ -422,24 +422,24 @@ b{
       var minor = $("#minor").val();
       var about = $("#about").val();
       piccheck = document.getElementById('pic').value
-      console.log('aaaaaa')
-      console.log(piccheck)
-      console.log('preview')
-      console.log(document.getElementById("picpreview").src)
+      // console.log('aaaaaa')
+      // console.log(piccheck)
+      // console.log('preview')
+      // console.log(document.getElementById("picpreview").src)
       bb = document.getElementById("picpreview").src
       cc = bb.split("//")
       dd = cc[1].split("/")
       ee = "C:\\fakepath\\" + dd[3]
-      console.log('preview2')
+      // console.log('preview2')
       if (piccheck == "") {
-        console.log('nulllllllllllllll')
+        // console.log('nulllllllllllllll')
         var pic = ee;
-        console.log('aaaaanulllllllllllllll')
-        console.log(pic)
+        // console.log('aaaaanulllllllllllllll')
+        // console.log(pic)
       } else {
         var pic = $("#pic").val();
-        console.log('notnulllllllllllllll')
-        console.log(pic)
+        // console.log('notnulllllllllllllll')
+        // console.log(pic)
       }
       var exp = $("#exp").val();
       var ref = $("#ref").val();
@@ -1132,7 +1132,7 @@ b{
     // document.getElementById("id").value = id;
     return id;
   }
-  console.log(new_id());
+  // console.log(new_id());
 </script>
 <script>
   function makeid() {
@@ -1142,7 +1142,7 @@ b{
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
   }
-  console.log(makeid());
+  // console.log(makeid());
 </script>
 <script>
   function isNumberKey(evt) {
@@ -1210,7 +1210,7 @@ b{
         ses = 1;
 
         document.getElementById("b1").disabled = false;
-        console.log((dataget[i].Token))
+        // console.log((dataget[i].Token))
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
         document.getElementById("lname").value = (dataget[i].Last_Name);
@@ -1233,9 +1233,9 @@ b{
         document.getElementById("spack").value = (dataget[i].Software_Package);
         document.getElementById("about").value = (dataget[i].About_you);
         splitpath = (dataget[i].Picture).split("\\");
-        console.log(splitpath[2])
+        // console.log(splitpath[2])
         document.getElementById("picpreview").src = 'uploads/' + splitpath[2];
-        console.log(document.getElementById("picpreview").src = 'uploads/' + splitpath[2])
+        // console.log(document.getElementById("picpreview").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = (dataget[i].Experiece);
         document.getElementById("ref").value = (dataget[i].Reference);
         // document.getElementById("alert2").style.visibility = 'hidden';
@@ -1272,7 +1272,7 @@ b{
     }).then(response => {
       // insert_value();
       update_value();
-      console.log(response);
+      // console.log(response);
     });
   });
 </script>

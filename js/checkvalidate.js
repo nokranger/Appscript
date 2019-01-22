@@ -1,8 +1,8 @@
 function checkName()
 {
     var elem1 = document.getElementById('name').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -20,8 +20,8 @@ function checkName()
 function checkLname()
 {
     var elem1 = document.getElementById('lname').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -38,8 +38,8 @@ function checkLname()
 function checktel()
 {
     var elem1 = document.getElementById('tel').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -56,8 +56,8 @@ function checktel()
 function checkmail()
 {
     var elem1 = document.getElementById('mail').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -74,8 +74,8 @@ function checkmail()
 function checkskill()
 {
     var elem1 = document.getElementById('sp').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -92,8 +92,8 @@ function checkskill()
 function checktool()
 {
     var elem1 = document.getElementById('tfp').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -110,8 +110,8 @@ function checktool()
 function checkpack()
 {
     var elem1 = document.getElementById('spack').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z0-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -128,8 +128,8 @@ function checkpack()
 function checkexp()
 {
     var elem1 = document.getElementById('exp').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -146,8 +146,8 @@ function checkexp()
 function checkref()
 {
     var elem1 = document.getElementById('ref').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -164,8 +164,8 @@ function checkref()
 function checku()
 {
     var elem1 = document.getElementById('ei').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -182,8 +182,8 @@ function checku()
 function checkmajor()
 {
     var elem1 = document.getElementById('major').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -200,8 +200,8 @@ function checkmajor()
 function checkminor()
 {
     var elem1 = document.getElementById('minor').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
@@ -218,8 +218,8 @@ function checkminor()
 function checkabout()
 {
     var elem1 = document.getElementById('about').value;
-    console.log('fasfafasf')
-    console.log(elem1)
+    // console.log('fasfafasf')
+    // console.log(elem1)
     if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");

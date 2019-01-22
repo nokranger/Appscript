@@ -100,8 +100,8 @@ overflow-y: auto;
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
             dataget = data.user
-            console.log('dataget')
-            console.log(dataget)
+            // console.log('dataget')
+            // console.log(dataget)
             // for (var i = 0; i < data.user.length; i++) {
             //     dataget[i] = [];
             //     dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
@@ -133,7 +133,7 @@ overflow-y: auto;
 
 
             // }
-            console.log('dd', dataget[0].time_stamp)
+            // console.log('dd', dataget[0].time_stamp)
             something();
             set();
         });
@@ -211,7 +211,7 @@ overflow-y: auto;
                                 <div>
                                     <b>Skill : </b><label id="sp"></label><br>
                                     <label><b>Experiece : </b></label>
-                                    <label>Develop about Auto specificgravity meter</label><br>
+                                    <label name="exp" id="exp"></label><br>
                                     <b>Social : </b><label></label><a id="fb" href="" target="_blank" class="fa fa-facebook-official"></a><a
                                         id="ln" href="" target="_blank" class="fa fa-linkedin-square"></a><a id="git"
                                         href="" target="_blank" class="fa fa-github"></a><a id="line" href="" target="_blank"
@@ -306,10 +306,10 @@ overflow-y: auto;
                     //     break;
                     // }
                     datagett[i] = dataget[i].ID.split('UID')
-                    console.log('datagett[0]')
+                    // console.log('datagett[0]')
                     // console.log(datagett)
-                    console.log('datagett[1]')
-                    console.log(datagett[i][1])
+                    // console.log('datagett[1]')
+                    // console.log(datagett[i][1])
                     datagetsplit = 'uid' + datagett[i][1]
                     if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
                         urlf = "https://www.facebook.com/";
@@ -347,6 +347,7 @@ overflow-y: auto;
                         document.getElementById("ref").innerHTML = (dataget[i].Reference);
                         document.getElementById("location").innerHTML = (dataget[i].Current_Address);
                         document.getElementById("about").innerHTML = (dataget[i].About_you);
+                        document.getElementById("exp").innerHTML = (dataget[i].Experiece);
                         break;
                     }
                 }
@@ -456,8 +457,8 @@ overflow-y: auto;
                 urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
                 $.getJSON(urljson, function (data) {
                     json = data.user
-                    console.log('dataget')
-                    console.log(json)
+                    // console.log('dataget')
+                    // console.log(json)
                     $('#jsonTable').css("visibility", "visible").css("border", "1px solid green");
                     $('#jsonTable').append("<tbody>");
                     for (var counter = 0; counter < json.length; counter++) {
