@@ -130,7 +130,7 @@ function checkexp()
     var elem1 = document.getElementById('exp').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('exp').value = "";
@@ -220,7 +220,7 @@ function checkabout()
     var elem1 = document.getElementById('about').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('about').value = "";
