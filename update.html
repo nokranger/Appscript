@@ -1072,6 +1072,34 @@ b{
   </div>
 </body>
 <script>
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+  
+  function validate() {
+    var $result = $("#result");
+    var email = $("#mail").val();
+    $result.text("");
+  
+    if (validateEmail(email)) {
+      // alert(email + " is valid :)")
+      
+      // $result.text(email + " is valid :)");
+      // $result.css("color", "green");
+    } else {
+      // $result.text(email + " is not valid :(");
+      // $result.css("color", "red");
+      alert("your " + email + " is invalid !!!!!!!!!")
+      document.getElementById('mail').value = "";
+      $("#mail").focus();
+    }
+    return false;
+  }
+  
+  $("#mail").bind("change", validate);
+  </script>
+<script>
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();

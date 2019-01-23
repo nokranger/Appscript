@@ -380,11 +380,14 @@ overflow-y: auto;
             $.getJSON(urljson, function (data) {
                 for (var i = 0; i < data.user.length; i++) {
                     jsonget[i] = [];
+                    // jsonget[i].ID = JSON.stringify(data.user[i].time_stamp);
                     jsonget[i].ID = JSON.stringify(data.user[i].ID);
                     jsonget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
 
+                    // jsonget[i].ID = JSON.parse(data.user[i].time_stamp);
                     jsonget[i].ID = JSON.parse(jsonget[i].ID)
                     jsonget[i].Skill_programming = JSON.parse(jsonget[i].Skill_programming)
+                    // console.log(jsonget[i].ID = JSON.parse(data.user[i].time_stamp))
 
                 }
                 something();
