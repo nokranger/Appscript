@@ -5,6 +5,7 @@
     <!-- Include CSS File Here -->
     <!-- Include JS File Here -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -19,6 +20,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
     crossorigin='anonymous'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    
 
     <style>
         input[type="text"] {
@@ -204,13 +206,13 @@
                           </style>
 </head>
 
-<body align="center">
+<body>
         <div align="center">
                 <article>
                   <header>
                     <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
                     <br>
-                    <h1><p style="color:white"><strong style="color:white">Application form for register</strong></p></h1>
+                    <h1><p style="color:white;margin-left:-18px;"><strong style="color:white">Application form for register</strong></p></h1>
                     <br>
                   </header>
                 </article>
@@ -230,16 +232,22 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="insert.html">ECS</a>
+                    <!-- <a class="navbar-brand" href="insert.html">ECS</a> -->
                   </div>
             
                   <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <div style="margin-left:-9px;" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                      <li><a href="insert.html"><i style="margin-right:10px" class="fa fa-home"></i>Home
-                          <span class="sr-only">(current)</span></a></li>
+                      <li ><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+                          </a></li>
+                          <li ><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
+                            </a></li>
+                            <li ><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete
+                              </a></li>
+                              <li class="active"><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
+                                </a></li>
                       <!-- <li><a href="#">Link</a></li> -->
-                      <li class="dropdown">
+                      <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
                             style="margin-right:10px" class="fa fa-align-justify"></i>Menu<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -249,7 +257,7 @@
                           <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login</a></li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> -->
                     <!-- <form class="navbar-form navbar-left" role="search">
                                       <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Search">
@@ -400,5 +408,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.js"></script>
+
 
 </html>
