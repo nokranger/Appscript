@@ -1,169 +1,121 @@
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="translate.js is a jQuery plugin to translate text in the client side">
-    <meta name="keywords" content="javascript, jquery, translate, translation, internationalization, language, i18n, localization">
-    <meta name="author" content="Manuel Fernandes">
-
-    <title>translate.js</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/translatejs.css" rel="stylesheet">
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Suggestags Tagging System Bootstrap Examples</title>
+<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!-- CDN links -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/flatly/bootstrap.min.css"> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" type="text/css" href="css/amsify.suggestags.css">
 
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+<!-- Amsify Plugin -->
+<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+<script type="text/javascript" src="js/jquery.amsify.suggestags.js"></script>
 
-  <body>
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link rel="stylesheet" href="css/edit.css">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/multiple-select.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"> -->
+<link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+  crossorigin='anonymous'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<style>
+body { background-color: #fafafa; font-family: 'Roboto'; }
+header { margin: 150px auto 30px auto; }
+</style>
+</head>
+<body>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<header>
+	<div class="container">
+		<h1 class="text-center">jQuery Suggestags Tagging System Bootstrap Examples</h1>
+	</div>
+</header>
+<div class="container" style="min-height:360px;">
+	<div class="col-md-3"></div>
+	<div class="col-md-6 text-center">
+		<div class="form-group">
+			<input type="text" class="form-control" name="country"/>
+		</div>
 
-  <!-- NAVBAR
-================================================== -->
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only trn">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">translate.js</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#" class="trn">Home</a></li>
-          <li><a href="#" class="trn" data-toggle="modal" data-target="#modal_about">About</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="trn">Language</span> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" class="lang_selector" data-value="pt"><img src="imgs/pt.png"/> Portugu&ecirc;s</a></li>
-              <li _class="active"><a href="#" class="lang_selector" data-value="en"><img src="imgs/en.png"/> English</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More components <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="http://www.openxrest.com/gloss/" title="jQuery plugin that transforms any image into a beautiful and colourful glossy sphere">glossify.js</a></li>
-              <li><a href="http://www.openxrest.com/polaroidjs/" title="jQuery plugin that transforms any image into a polaroid photo">polaroid.js</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+		<h4>Already Selected</h4>
+		<div class="form-group">
+			<input type="text" class="form-control" name="color" value="Orange,Black"/>
+		</div>
 
+		<h4>WhiteList</h4>
+		<div class="form-group">
+			<input type="text" class="form-control" name="planets" value="" onchange="console.log(document.getElementsByName('planets').value)"/>
+		</div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>translate.js</h1>
-        <p class="trn" data-trn-key="subtitle_key">translate.js is a jQuery plugin to translate text in the client side.</p>
-        <p><a class="btn btn-primary btn-lg trn" role="button" href="https://github.com/tinoni/translate.js" target="_blank">Download translate.js v0.9.1</a></p>
-      </div>
-    </div>
+		<h4>Custom Classes</h4>
+		<div class="form-group">
+			<input type="text" class="form-control" name="fruits" value="Apple"/>
+		</div>
+	</div>
+	<div class="col-md-3"></div>
+</div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="trn">Usage: translate entire page</h2>
-          <p><strong><span class="trn">Step</span> 1</strong>: <span class="trn" data-trn-key="step1">include JQuery and translate.js in your page</span></p>
-          <pre>&lt;script src="jquery.js"/&gt;
-&lt;script src="jquery.translate.js"/&gt;</pre>
+<!-- -->
+<script>
+ console.log(document.getElementsByName('planets').value)
+</script>
+<script>
+	$('input[name="country"]').amsifySuggestags();
+	$('input[name="color"]').amsifySuggestags({
+		suggestions: ['Black', 'White', 'Red', 'Blue', 'Green', 'Orange']
+	});
+	$('input[name="planets"]').amsifySuggestags({
+		suggestions: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Uranus', 'Neptune', 'Pluto'],
+		whiteList: true
+	});
 
-          <p><strong><span class="trn">Step</span> 2</strong>: <span class="trn" data-trn-key="step2">every text you want translated include the <code>trn</code> class</span></p>
-          <pre>&lt;span class="trn"&gt;text to translate&lt;/span&gt;</pre>
+	$('input[name="fruits"]').amsifySuggestags({
+		suggestions: ['Apple', 'Banana', 'Cherries', 'Dates', 'Guava'],
+		classes: ['bg-primary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info'],
+		whiteList: true,
+		afterAdd : function(value) {
+			console.info(value);
+		},
+		afterRemove : function(value) {
+			console.info(value);
+		},
+	});
+</script>
+<!-- <script type="text/javascript">
 
-          <p><strong><span class="trn">Step</span> 3</strong>: <span class="trn" data-trn-key="step3">create your dictionary</span></p>
-          <pre>var dict = {
-  "Home": {
-    pt: "Início"
-  },
-  "Download plugin": {
-    pt: "Descarregar plugin",
-    en: "Download plugin"
-  }
-}</pre>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
-          <p><strong><span class="trn">Step</span> 4</strong>: <span class="trn" data-trn-key="step4">initialize the plugin and translate the entire page body</span></p>
-          <pre>var translator = $('body').translate({lang: "en", t: dict}); //use English</pre>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-          <p><strong><span class="trn">Step</span> 5</strong>: <span class="trn" data-trn-key="step5">change to another language</span></p>
-          <pre>translator.lang("pt"); //change to Portuguese</pre>
+</script> -->
 
-          <p><strong><span class="trn">Step</span> 6</strong>: <span class="trn" data-trn-key="step6">try it</span></p>
-          <p>
-            <a class="btn btn-default lang_selector trn" href="#" role="button" data-value="en">translate to English</a>
-            <a class="btn btn-default lang_selector trn" href="#" role="button"  data-value="pt">translate to Portuguese</a>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h2 class="trn">Usage: translate a string</h2>
-          <p class="trn" data-trn-key="string_translate_key">After you initialize the component you can translate a string</p>
-          <pre>var translation = translator.get("Home"); //returns "Início"</pre>
-
-       </div>
-
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Manuel Fernandes 2013</p>
-      </footer>
-    </div> <!-- /container -->
-
-
-
-
-    <!-- Modal About-->
-    <div class="modal fade" id="modal_about" tabindex="-1" role="dialog" aria-labelledby="modal_about_label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title trn" id="modal_about_label">About</h4>
-          </div>
-          <div class="modal-body">
-            <p><a href="http://www.openxrest.com/contact/" target="_blank">by Manuel Fernandes</a></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal  -->
-
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-45896419-2', 'openxrest.com');
-      ga('send', 'pageview');
-
-    </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.translate.js"></script>
-    <script src="main.js"></script>
-  </body>
+</body>
 </html>

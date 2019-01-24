@@ -20,5 +20,6 @@
     { "value": "SQL" , "text": "SQL" },
     { "value": "Haskell" , "text": "Haskell" },
     { "value": "VHDL" , "text": "VHDL" },
-    { "value": "Visual Basic" , "text": "Visual Basic" }
+    { "value": "COBOL" , "text": "COBOL" },
+    { "value": "Pascal" , "text": "Pascal" }
   ]
