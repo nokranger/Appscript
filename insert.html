@@ -645,7 +645,7 @@ b{
           <img id="picpreview" class="img-profile" src="uploads/asdasd.PNG" alt="">
           <!-- <img id="blah" src="#" alt="your image" class="img-profile" /> -->
         </div>
-        <input type="file" name="files[]" id="pic" multiple required></input>
+        <input type="file" name="files[]" id="pic" multiple></input>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Title Name : </label><br>
@@ -678,6 +678,46 @@ b{
           <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <label>Height : </label><br>
+          <div class="inputWithIcon">
+            <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " onkeypress="return isCharKey(event)"
+              onchange="return checkLname()" maxlength="30" ></input>
+            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Weight : </label><br>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" onkeypress="return isCharKey(event)"
+                onchange="return checkLname()" maxlength="30" ></input>
+              <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Age : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" onkeypress="return isCharKey(event)"
+                  onchange="return checkLname()" maxlength="30" ></input>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Position : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
+                    onchange="return checkLname()" maxlength="30" ></input>
+                  <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Salary : </label><br>
+                  <div class="inputWithIcon">
+                    <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" onkeypress="return isCharKey(event)"
+                      onchange="return checkLname()" maxlength="30" ></input>
+                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                  </div>
+                </div>
     </div>
   </div>
   <div class="container">
@@ -851,10 +891,22 @@ b{
           <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
-
-
-
-
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <label>Database : </label><br>
+          <div class="inputWithIcon">
+            <input class="input" type="text" name="db" id="db" placeholder="MongoDB Etc." onkeypress="return isCharKey(event)"
+              onchange="return checktool()" maxlength="40" ></input>
+            <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Operating System  : </label><br>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="db" id="db" placeholder="Windows Etc." onkeypress="return isCharKey(event)"
+                onchange="return checktool()" maxlength="40" ></input>
+              <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
+          </div>
     </div>
   </div>
 
@@ -938,12 +990,49 @@ b{
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-          <b style="font-size: 20px;">About you</b>
+          <b style="font-size: 20px;">Work Experiece</b>
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <br>
       </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <label>Your current enterprise: </label><br>
+          <div class="inputWithIcon">
+              <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Linkedin"></input>
+              <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Working position : </label><br>
+            <div class="inputWithIcon">
+                <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
+                <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+          </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Start work date : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="date" name="swd" id="swd" max="2100-12-31"></input>
+                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Date of departure : </label><br>
+                  <div class="inputWithIcon">
+                    <input class="input" type="date" name="dop" id="dop" max="2100-12-31"></input>
+                    <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                  </div>
+                </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label>Current salary : </label><br>
+                  <div class="inputWithIcon">
+                      <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Linkedin"></input>
+                      <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <label>About you : </label><br>
         <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
@@ -958,10 +1047,6 @@ b{
 
     </div>
   </div>
-
-
-
-
   <div class="container">
     <div class="row">
       <div>
@@ -981,18 +1066,10 @@ b{
           <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
               style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
           <div id="loader" hidden></div>
-          <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
-                          <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
-                          <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
         </div>
       </div>
     </div>
     </form>
-    <!-- <a href="https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing"
-          target="_blank">Click here to open Spread Sheet </a> -->
-
-    <!-- this for show data in ss after insert or click read -->
-    <!-- <div style="overflow: scroll" id="showData"></div> -->
   </div>
 
 </body>
@@ -1111,11 +1188,17 @@ b{
   form.addEventListener('submit', e => {
     e.preventDefault();
     const files = document.querySelector('[type=file]').files;
+    // const files2 = document.querySelector('[type=file]').files;
     const formData = new FormData();
+    // const formData2 = new FormData();
     for (let i = 0; i < files.length; i++) {
       let file = files[i];
       formData.append('files[]', file);
     }
+    // for (let j = 0; j < files2.length; j++) {
+    //   let file44 = files2[j];
+    //   formData.append('files[]', file44);
+    // }
     fetch(url, {
       method: 'POST',
       body: formData
