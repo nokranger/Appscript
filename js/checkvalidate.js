@@ -148,7 +148,7 @@ function checkref()
     var elem1 = document.getElementById('ref').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('ref').value = "";
@@ -166,7 +166,7 @@ function checku()
     var elem1 = document.getElementById('ei').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('ei').value = "";
@@ -184,7 +184,7 @@ function checkmajor()
     var elem1 = document.getElementById('major').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('major').value = "";
@@ -202,7 +202,7 @@ function checkminor()
     var elem1 = document.getElementById('minor').value;
     // console.log('fasfafasf')
     // console.log(elem1)
-    if(!elem1.match(/^([@-Za-z!-9_.])+$/i)&&!elem1=="")
+    if(!elem1.match(/^([@-Za-z -9_.])+$/i)&&!elem1=="")
     {
 //                alert("\"ข้อมูลผิดพลาด\" กรุณากรอกชื่อให้ถูกต้อง");
         document.getElementById('minor').value = "";

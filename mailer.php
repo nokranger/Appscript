@@ -36,6 +36,18 @@ $about = $_POST['about'];
 $exp = $_POST['exp'];
 $ref = $_POST['ref'];
 $token = $_POST['token'];
+$height = $_POST['height'];
+$weight = $_POST['weight'];
+$age = $_POST['age'];
+$job = $_POST['job'];
+$sal = $_POST['sal'];
+$db = $_POST['db'];
+$os = $_POST['os'];
+$cen = $_POST['cen'];
+$job_l = $_POST['job_l'];
+$swd = $_POST['swd'];
+$dop = $_POST['dop'];
+$cs = $_POST['cs'];
 // $email_r = $_POST['mail'];
 // $subject = $_POST['name'];
 // $detail = $_POST['lname'];
@@ -72,6 +84,11 @@ $email_content = "
         token for edit && delete you information : <label>$token</label><br>
         <label>$tn&nbsp;</label><label>$name&nbsp;&nbsp;</label><label>$lname </label><br>
         Date of birth : <label>$dob</label><br>
+        Height : <label>$height</label><br>
+        Weight : <label>$weight</label><br>
+        Age : <label>$age</label><br>
+        Position : <label>$job</label><br>
+        Salary : <label>$sal</label><br>
         Telephone number :<label>$tel</label><br>
         Email Address : <label>$mail_r</label><br>
         Facebook : <label>$fb</label><br>
@@ -84,10 +101,17 @@ $email_content = "
         Skill programming : <label>$sp</label><br>
         Tool for development : <label>$tfp</label><br>
         Software Package : <label>$spack</label><br>
+        Database : <label>dbk</label><br>
+        Operating System : <label>osk</label><br>
         github : <label>$git </label><br>
         linkedin : <label>$link</label><br>
         major : <label>$major</label><br>
         minor : <label>$minor</label><br>
+        Current enterprise : <label>$cen</label><br>
+        Working position : <label>$job_l</label><br>
+        Start work date : <label>$swd</label><br>
+        Date of departure : <label>$dop</label><br>
+        Current salary : <label>$cs</label><br>
         about you : <label>$about</label><br>
         experience : <label>$exp</label><br>
         reference : <label>$ref</label><br>
