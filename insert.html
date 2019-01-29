@@ -355,7 +355,8 @@ b{
       var swd = $("#swd").val();
       var dop = $("#dop").val();
       var cs = $("#cs").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&action=insert";
+      var port = $("#port").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -406,7 +407,8 @@ b{
       var swd = $("#swd").val();
       var dop = $("#dop").val();
       var cs = $("#cs").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&action=update";
+      var port = $("#port").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -456,7 +458,8 @@ b{
       var swd = $("#swd").val();
       var dop = $("#dop").val();
       var cs = $("#cs").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&action=delete";
+      var port = $("#port").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -480,8 +483,6 @@ b{
         var table = document.createElement("table");
         var header = table.createTHead();
         var row = header.insertRow(0);
-        // for(var k =0;k<16;k++){
-        // }
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
@@ -520,6 +521,7 @@ b{
         var cell36 = row.insertCell(35);
         var cell37 = row.insertCell(36);
         var cell38 = row.insertCell(37);
+        var cell39 = row.insertCell(38);
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
         cell3.innerHTML = "<b>First_Name</b>";
@@ -558,6 +560,7 @@ b{
         cell36.innerHTML = "<b>Start_work_date</b>";
         cell37.innerHTML = "<b>Date_of_departure</b>";
         cell38.innerHTML = "<b>Current_salary</b>";
+        cell39.innerHTML = "<b>Portfolio</b>";
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
           tr = table.insertRow(-1);
@@ -637,6 +640,8 @@ b{
           tabCell.innerHTML = json.records[i].Date_of_departure;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Current_salary;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Portfolio;
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -1115,6 +1120,8 @@ b{
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <label>Portfolio : </label><br>
+          <input type="file" name="file" id="port" multiple></input>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <label>About you : </label><br>
@@ -1239,7 +1246,7 @@ b{
   function dynamicdropdown_db(listindexs) {
     var html = '';
     html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-    html = html + '<option value="">Select </option>';
+    html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_db.length; i++) {
       html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
     }
@@ -1255,7 +1262,7 @@ b{
   });
   var html = '';
   html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-  html = html + '<option value="">Select </option>';
+  html = html + '<option value="0">Select </option>';
   for (var i = 0; i < dataget_os.os.length; i++) {
     html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
   }
@@ -1267,7 +1274,7 @@ b{
   function dynamicdropdown_job(listindexs) {
     var html = '';
     html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="">Select </option>';
+    html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
     }
@@ -1279,7 +1286,7 @@ b{
   function dynamicdropdown_job_l(listindexs) {
     var html = '';
     html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="">Select </option>';
+    html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
     }
@@ -1353,27 +1360,27 @@ b{
   const form = document.querySelector('form');
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const files = document.querySelector('[type=file]').files;
-    // const files2 = document.querySelector('[type=file]').files;
+    const files = document.getElementById('pic').files;
     const formData = new FormData();
-    // const formData2 = new FormData();
+
     for (let i = 0; i < files.length; i++) {
       let file = files[i];
       formData.append('files[]', file);
     }
-    // for (let j = 0; j < files2.length; j++) {
-    //   let file44 = files2[j];
-    //   formData.append('files[]', file44);
+    // const files2 = document.getElementById('port').files;
+    // const formData2 = new FormData();
+
+    // for (let i = 0; i < files2.length; i++) {
+    //   let file = files2[i];
+    //   formData2.append('file', file);
     // }
     fetch(url, {
       method: 'POST',
       body: formData
     }).then(response => {
-      // insert_value();
+ 
       document.myForm.submit();
-      // document.getElementById("myForm").action = "mailer.php";
-      // back()
-      // console.log(response);
+
     });
   });
 </script>

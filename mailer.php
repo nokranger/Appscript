@@ -135,8 +135,8 @@ if($email_receiver){
         echo '<script language="javascript">';
         echo 'alert("Send mail successfully")';
         echo '</script>';
-        $yourURL="http://jobdis.ecsspace.com/insert.html";
-        echo ("<script>location.href='$yourURL'</script>");
+        // $yourURL="http://jobdis.ecsspace.com/insert.html";
+        // echo ("<script>location.href='$yourURL'</script>");
 	}	 
 }
 

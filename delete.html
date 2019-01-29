@@ -429,14 +429,26 @@ b{
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
+      var token = $("#token").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
+      var port = $("#port").val();
       // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
-      console.log($("#id").val());
-      console.log($("#name").val());
-      console.log($("#lname").val());
+
       // console.log(data44[1].time_stamp);
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=insert";
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
       console.log(url);
       var request = jQuery.ajax({
         crossDomain: true,
@@ -473,7 +485,21 @@ b{
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=update";
+      var token = $("#token").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
+      var port = $("#port").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -510,7 +536,21 @@ b{
       var pic = $("#pic").val();
       var exp = $("#exp").val();
       var ref = $("#ref").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&action=delete";
+      var token = $("#token").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
+      var port = $("#port").val();
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
       // var sss = "https://docs.google.com/spreadsheets/d/1duiJZGrAchzeMIbKzbsa5pM8T2-lkfbJJtZtTE5evTk/edit?usp=sharing";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -575,6 +615,20 @@ b{
         var cell23 = row.insertCell(22);
         var cell24 = row.insertCell(23);
         var cell25 = row.insertCell(24);
+        var cell26 = row.insertCell(25);
+        var cell27 = row.insertCell(26);
+        var cell28 = row.insertCell(27);
+        var cell29 = row.insertCell(28);
+        var cell30 = row.insertCell(29);
+        var cell31 = row.insertCell(30);
+        var cell32 = row.insertCell(31);
+        var cell33 = row.insertCell(32);
+        var cell34 = row.insertCell(33);
+        var cell35 = row.insertCell(34);
+        var cell36 = row.insertCell(35);
+        var cell37 = row.insertCell(36);
+        var cell38 = row.insertCell(37);
+        var cell39 = row.insertCell(38);
         cell1.innerHTML = "<b>ID</b>";
         cell2.innerHTML = "<b>Title_Name</b>";
         cell3.innerHTML = "<b>First_Name</b>";
@@ -600,6 +654,20 @@ b{
         cell23.innerHTML = "<b>Picture</b>";
         cell24.innerHTML = "<b>Experiece</b>";
         cell25.innerHTML = "<b>Reference</b>";
+        cell26.innerHTML = "<b>Token</b>";
+        cell27.innerHTML = "<b>Height</b>";
+        cell28.innerHTML = "<b>Weight</b>";
+        cell29.innerHTML = "<b>Position</b>";
+        cell30.innerHTML = "<b>Age</b>";
+        cell31.innerHTML = "<b>Salary</b>";
+        cell32.innerHTML = "<b>Database</b>";
+        cell33.innerHTML = "<b>Operating_System</b>";
+        cell34.innerHTML = "<b>Current_enterprise</b>";
+        cell35.innerHTML = "<b>Working_position</b>";
+        cell36.innerHTML = "<b>Start_work_date</b>";
+        cell37.innerHTML = "<b>Date_of_departure</b>";
+        cell38.innerHTML = "<b>Current_salary</b>";
+        cell39.innerHTML = "<b>Portfolio</b>";
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
           tr = table.insertRow(-1);
@@ -653,6 +721,34 @@ b{
           tabCell.innerHTML = json.records[i].Experiece;
           tabCell = tr.insertCell(-1);
           tabCell.innerHTML = json.records[i].Reference;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Token;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Height;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Weight;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Position;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Age;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Salary;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Database;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Operating_System;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Current_enterprise;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Working_position;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Start_work_date;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Date_of_departure;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Current_salary;
+          tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = json.records[i].Portfolio;
         }
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
         var divContainer = document.getElementById("showData");
@@ -806,95 +902,41 @@ b{
               <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
-          <!-- <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Telephone Number : </label><br>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Height : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" readonly>
-              <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Email Address : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="email" name="mail" id="mail" placeholder="Enter E-mail  address" readonly>
-              <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Address in ID Card : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="aic" id="aic" placeholder="Enter your address" readonly>
-              <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Current Address : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address" readonly>
-              <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Reference : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"
-                readonly>
-              <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Educational institution : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="ei" id="ei" placeholder="Enter your University" readonly>
-              <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Major : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="major" id="major" placeholder="Enter your Major" readonly>
-              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Minor : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="minor" id="minor" placeholder="Enter your Minor" readonly>
-              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>GPAX : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly>
-              <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+              <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " readonly></input>
+              <i class="fa fa-text-height fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="example example_typeahead inputWithIcon " style="margin-left:-8px;">
-              
-                <label>Skill programming : </label>
-                <div class="inputWithIcon bs-example" >
-                <input class="input" style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
-                <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Tool for development : </label><br>
+            <label>Weight : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="tfp" id="tfp" placeholder="Vscode Etc." readonly>
-              <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Software Package : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
-              <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
+              <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" readonly></input>
+              <i class="fas fa-weight fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Age : </label><br>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" readonly></input>
+              <i class="fas fa-birthday-cake fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Position : </label><br>
+            <div class="inputWithIcon">
+
+              <div id="mySelect_job" name="mySelect_job"></div>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>About you : </label><br>
-            <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
-              readonly></textarea>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <label>Salary : </label><br>
+            <div class="inputWithIcon">
+              <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" readonly></input>
+              <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"><label>Experiece : </label><br>
-            <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
-              readonly></textarea>
-          </div> -->
         </div>
       </div>
       <div class="container">
@@ -1030,8 +1072,8 @@ b{
                 <div class="example example_typeahead inputWithIcon " style="margin-left:-8px;">
                   
                     <label>Programming language : </label>
-                    <div class="inputWithIcon bs-example" >
-                    <input class="input" style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language">
+                    <div class="inputWithIcon bs-example" readonly>
+                    <input class="input" style="padding: 14px 15px;" type="text" name="sp" id="sp" placeholder="Programming language" readonly>
                     <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -1047,6 +1089,19 @@ b{
                   <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." readonly>
                   <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
                 </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Database : </label><br>
+                <div class="inputWithIcon">
+                  <div id="mySelect_db" name="mySelect_db"></div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Operating System : </label><br>
+                <div class="inputWithIcon">
+                  <div id="mySelect_os" name="mySelect_os"></div>
+                </div>
+        
               </div>
 
           </div>
@@ -1078,35 +1133,35 @@ b{
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Facebook : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id">
+              <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id"readonly>
               <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Line : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="line" id="line" placeholder="Enter your id line">
+              <input class="input" type="text" name="line" id="line" placeholder="Enter your id line"readonly>
               <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Instagram : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram">
+              <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram"readonly>
               <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label><b style="color:red">* </b>Github: </label><br>
+            <label></b>Github: </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github" required>
+              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github" readonly>
               <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Linkedin: </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin">
+              <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin"readonly>
               <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
@@ -1131,88 +1186,61 @@ b{
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                <b style="font-size: 20px;">About you</b>
+                <b style="font-size: 20px;">Work Experiece</b>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <br>
             </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Current enterprise: </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise" readonly></input>
+                <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Working position : </label><br>
+              <div class="inputWithIcon">
+                <div id="mySelect_job_l" name="mySelect_job_l"></div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Start work date : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="swd" id="swd" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Date of departure : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="dop" id="dop" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Current salary : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Salary" readonly></input>
+                <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label>About you : </label><br>
-              <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
-                onchange="return checkabout()"></textarea>
+              <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="Enter About you" readonly></textarea>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label>Experiece : </label><br>
-              <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
-                onchange="return checkexp()"></textarea><br>
+              <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"></textarea><br>
             </div>
       
       
           </div>
         </div>
 
-      <!-- <div class="container">
-        <div class="row">
-          <div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <br>
-          </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-              <b style="font-size: 20px;">Social</b>
-            </div>
-          </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <br>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label>Facebook : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id" readonly>
-              <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label>Line : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="line" id="line" placeholder="Enter your id line" readonly>
-              <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label>Instagram : </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram" readonly>
-              <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label>Github: </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github" readonly>
-              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label>Linkedin: </label><br>
-            <div class="inputWithIcon">
-              <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin" readonly>
-              <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-          </div>
-        </div>
-      </div> -->
       <div class="container">
         <div class="row">
           <div>
@@ -1231,9 +1259,6 @@ b{
             <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
                 style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
             <div id="loader" hidden></div>
-            <!-- <input type="button" id="b2" onclick="read_value()" value="Read"></input>
-              <input type="submit" id="b3" onclick="update_value()" value="Update"></input>
-              <input type="button" id="b4" onclick="delete_value()" value="Delete"></input> -->
           </div>
         </div>
       </div>
@@ -1271,6 +1296,90 @@ b{
     }
   }
 </script>
+<script>
+  dataget_db = [];
+  fetch('json/db.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_db = myJson.database
+      dataget_db.sort(function (a, b) {
+        var sort_db = a.name < b.name ? -1 : 1;
+        return sort_db
+      });
+      dynamicdropdown_db()
+    });
+</script>
+<script>
+  dataget_job = [];
+  fetch('json/position.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_job = myJson.job
+      dataget_job.sort(function (a, b) {
+        var sort_job = a.name < b.name ? -1 : 1;
+        return sort_job
+      });
+      dynamicdropdown_job()
+      dynamicdropdown_job_l()
+    });
+</script>
+<script>
+  function dynamicdropdown_db(listindexs) {
+    var html = '';
+    html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
+    html = html + '<option value="">Select </option>';
+    for (var i = 0; i < dataget_db.length; i++) {
+      html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_db').html(html)
+  }
+</script>
+<script>
+  dataget_os = { "os": [{ "id": "1", "name": "Windows" }, { "id": "2", "name": "MacOS" }, { "id": "3", "name": "LinuxOS" }] }
+  dataget_os.os.sort(function (a, b) {
+    var sort_os = a.name < b.name ? -1 : 1;
+    return sort_os
+  });
+  var html = '';
+  html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
+  html = html + '<option value="">Select </option>';
+  for (var i = 0; i < dataget_os.os.length; i++) {
+    html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
+  }
+  html = html + '</select>';
+  $('#mySelect_os').html(html)
+
+</script>
+<script>
+  function dynamicdropdown_job(listindexs) {
+    var html = '';
+    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<option value="">Select </option>';
+    for (var i = 0; i < dataget_job.length; i++) {
+      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_job').html(html)
+  }
+</script>
+<script>
+  function dynamicdropdown_job_l(listindexs) {
+    var html = '';
+    html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<option value="">Select </option>';
+    for (var i = 0; i < dataget_job.length; i++) {
+      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_job_l').html(html)
+  }
+</script>
+
 <div class="container">
   <div class="row">
     <div>
@@ -1371,21 +1480,6 @@ b{
     getValue();
   });
 </script>
-<!-- <script>
-  function showhide() {
-    x = document.getElementById("alert2")
-    x.style.display = "none";
-    showhide2()
-  }
-
-</script>
-<script>
-  function showhide2() {
-    y = document.getElementById("alert")
-    y.style.display = "none";
-  }
-
-</script> -->
 <script>
   function getValue() {
     var check = document.getElementById('id').value;
@@ -1416,96 +1510,34 @@ b{
         document.getElementById("tfp").value = (dataget[i].Tool_for_development);
         document.getElementById("spack").value = (dataget[i].Software_Package);
         document.getElementById("about").value = (dataget[i].About_you);
+        document.getElementById("height").value = (dataget[i].Height);
+        document.getElementById("weight").value = (dataget[i].Weight);
+        document.getElementById("age").value = (dataget[i].Position);
+        document.getElementById("job").value = (dataget[i].Age);
+        document.getElementById("sal").value = (dataget[i].Salary);
+        document.getElementById("db").value = (dataget[i].Database);
+        document.getElementById("os").value = (dataget[i].Operating_System);
+        document.getElementById("cen").value = (dataget[i].Current_enterprise);
+        document.getElementById("job_l").value = (dataget[i].Working_position);
+        document.getElementById("swd").value = (dataget[i].Start_work_date);
+        document.getElementById("dop").value = (dataget[i].Date_of_departure);
+        document.getElementById("cs").value = (dataget[i].Current_salary);
         splitpath = (dataget[i].Picture).split("\\");
         // console.log(splitpath[2])
         document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
         // console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
         document.getElementById("exp").value = (dataget[i].Experiece);
         document.getElementById("ref").value = (dataget[i].Reference);
-        // x = document.getElementById("alert2")
-        // x.style.display = "none";
-        // y = document.getElementById("alert")
-        //     y.style.display = "block";
-        // document.getElementById("alert2").style.visibility = 'hidden';
-        // document.getElementById("alert").innerHTML = 'Your id and token is correct';
-        // document.getElementById("alert").style.color = "green";
-
-        // document.getElementById("id").value = '123465';
-        // alert('yes')
         var elt = $('.example_typeahead > > input');
         elt.tagsinput('add', (dataget[i].Skill_programming));
 
 
       }
-      // else {
-      //   if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)) {
-      //     // document.getElementById("alert").style.visibility = 'hidden';
-      //     document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-      //     document.getElementById("alert2").style.color = "red";
-      //   }
-      // }
-      // if(check !== (dataget[i].ID) && token !== (dataget[i].Token)){
 
-      // }else{
-      //     document.getElementById("alert").style.visibility = 'hidden';
-      //     document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-      //     document.getElementById("alert2").style.color = "red";
-      //     console.log('fasfas')
-      // }
-
-      // x = document.getElementById("alert2")
-      // x.style.display = "block";
-      // y = document.getElementById("alert")
-      // y.style.display = "none";
     }
     return false;
   }
 </script>
-<!-- <script>
-  function a() {
-
-    document.getElementById("alert2").style.visibility = 'hidden';
-    document.getElementById("alert").innerHTML = 'Your id and token is correct';
-    document.getElementById("alert").style.color = "green";
-  }
-  function b() {
-    document.getElementById("alert").style.visibility = 'hidden';
-    document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-    document.getElementById("alert2").style.color = "red";
-  }
-</script>
-<script>
-  function mm() {
-    alert('no')
-  }
-</script> -->
-<!-- <script>
-//     const url = 'process.php';
-//     const form = document.querySelector('form');
-  
-//     form.addEventListener('submit', e => {
-//       e.preventDefault();
-  
-//       const files = document.querySelector('[type=file]').files;
-//       const formData = new FormData();
-  
-//       for (let i = 0; i < files.length; i++) {
-//         let file = files[i];
-  
-//         formData.append('files[]', file);
-//       }
-  
-//       fetch(url, {
-//         method: 'POST',
-//         body: formData
-//       }).then(response => {
-//         // insert_value();
-//         // update_value();
-//         console.log(response);
-//       });
-//     });
-//   </script> -->
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
