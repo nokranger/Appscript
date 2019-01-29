@@ -20,6 +20,7 @@
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
     crossorigin='anonymous'>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
@@ -649,7 +650,8 @@ b{
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Title Name : </label><br>
-        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;">
+        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Lora', serif;">
+          <option value="">Select</option>
           <option value="Mr.">Mr.</option>
           <option value="Ms.">Ms.</option>
           <option value="Mrs.">Mrs.</option>
@@ -683,7 +685,7 @@ b{
           <div class="inputWithIcon">
             <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " onkeypress="return isCharKey(event)"
               onchange="return checkLname()" maxlength="30" ></input>
-            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+            <i class="fa fa-text-height fa-lg fa-fw" aria-hidden="true"></i>
           </div>
         </div>
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -691,7 +693,7 @@ b{
             <div class="inputWithIcon">
               <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" onkeypress="return isCharKey(event)"
                 onchange="return checkLname()" maxlength="30" ></input>
-              <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+              <i class="fas fa-weight fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -699,15 +701,16 @@ b{
               <div class="inputWithIcon">
                 <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" onkeypress="return isCharKey(event)"
                   onchange="return checkLname()" maxlength="30" ></input>
-                <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                <i class="fas fa-birthday-cake fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Position : </label><br>
+                <label><b style="color:red">* </b>Position : </label><br>
                 <div class="inputWithIcon">
-                  <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
+                  <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
                     onchange="return checkLname()" maxlength="30" ></input>
-                  <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                  <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
+                  <div id="mySelect_job" name="mySelect_job"></div>
                 </div>
               </div>
               <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -715,7 +718,7 @@ b{
                   <div class="inputWithIcon">
                     <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" onkeypress="return isCharKey(event)"
                       onchange="return checkLname()" maxlength="30" ></input>
-                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
                   </div>
                 </div>
     </div>
@@ -827,9 +830,9 @@ b{
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label><b style="color:red">* </b>Current Address : </label><br>
+        <label>Current Address : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address" required></input>
+          <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address"></input>
           <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -868,44 +871,48 @@ b{
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <div class="example example_typeahead inputWithIcon " style="margin-left:-8px;">
-          <label><b style="color:red">* </b>Programing language : </label><br>
+          <label>Programing language : </label><br>
           <div class="inputWithIcon bs-example">
-            <input class="input" type="text" name="sp" id="sp"  required></input><br>
+            <input class="input" type="text" name="sp" id="sp"></input><br>
             <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label><b style="color:red">* </b>Software Package : </label><br>
+        <label>Software Package : </label><br>
         <div class="inputWithIcon">
           <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-            onchange="return checkpack()" maxlength="40" required></input>
+            onchange="return checkpack()" maxlength="40"></input>
           <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label><b style="color:red">* </b>Tool for development : </label><br>
+        <label>Tool for development : </label><br>
         <div class="inputWithIcon">
           <input class="input" type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-            onchange="return checktool()" maxlength="40" required></input>
+            onchange="return checktool()" maxlength="40"></input>
           <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           <label>Database : </label><br>
           <div class="inputWithIcon">
-            <input class="input" type="text" name="db" id="db" placeholder="MongoDB Etc." onkeypress="return isCharKey(event)"
-              onchange="return checktool()" maxlength="40" ></input>
-            <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+            <!-- <input class="input" type="text" name="db" id="db" placeholder="MongoDB Etc." onkeypress="return isCharKey(event)"
+              onchange="return checktool()" maxlength="40" ></input> -->
+          <!-- <input class="input" data-list="CSS, JavaScript, HTML, SVG, ARIA, MathML" id="bb" name="bb" onchange="javascript: cc(this.value);"
+           data-multiple="" data-minchars="1" autocomplete="off" aria-expanded="false" aria-owns="awesomplete_list_2" role="combobox" ></input> -->
+           <div id="mySelect_db" name="mySelect_db"></div>
+            <!-- <i class="fa fa-database fa-lg fa-fw" aria-hidden="true"></i> -->
           </div>
+          <!-- <div id="mySelect_db" name="mySelect_db"></div> -->
         </div>
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Operating System  : </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="db" id="db" placeholder="Windows Etc." onkeypress="return isCharKey(event)"
-                onchange="return checktool()" maxlength="40" ></input>
-              <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+                <div id="mySelect_os" name="mySelect_os"></div>
+              <!-- <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i> -->
             </div>
+
           </div>
     </div>
   </div>
@@ -997,17 +1004,18 @@ b{
         <br>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-          <label>Your current enterprise: </label><br>
+          <label>Current enterprise: </label><br>
           <div class="inputWithIcon">
-              <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Linkedin"></input>
-              <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+              <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise"></input>
+              <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
             </div>
         </div>
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             <label>Working position : </label><br>
             <div class="inputWithIcon">
-                <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
-                <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+                <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
+                <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
+                <div id="mySelect_job_l" name="mySelect_job_l"></div>
               </div>
           </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -1027,8 +1035,8 @@ b{
               <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                   <label>Current salary : </label><br>
                   <div class="inputWithIcon">
-                      <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Linkedin"></input>
-                      <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+                      <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Salary"></input>
+                      <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
@@ -1120,6 +1128,89 @@ b{
   function back() {
     window.location.reload();
   }
+</script>
+<script>
+    dataget_db = [];
+    fetch('js/db.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            dataget_db = myJson.database
+            dataget_db.sort(function(a,b){
+              var sort_db = a.name < b.name? -1:1;
+              return sort_db
+            });
+            dynamicdropdown_db()
+        });
+</script>
+<script>
+    dataget_job = [];
+    fetch('js/position.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            dataget_job = myJson.job
+            dataget_job.sort(function(a,b){
+              var sort_job = a.name < b.name? -1:1;
+              return sort_job
+            });
+            dynamicdropdown_job()
+            dynamicdropdown_job_l()
+        });
+</script>
+<script>
+    function dynamicdropdown_db(listindexs) {
+        var html = '';
+        html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: '+'Lora'+', serif;" required>';
+        html = html + '<option value="">Select </option>';
+        for (var i = 0; i < dataget_db.length; i++) {
+                html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
+        }
+        html = html + '</select>';
+        $('#mySelect_db').html(html)
+    }
+</script>
+<script>
+  dataget_os = {"os":[{"id":"1","name":"Windows"},{"id":"2","name":"MacOS"},{"id":"3","name":"LinuxOS"}]}
+  dataget_os.os.sort(function(a,b){
+              var sort_os = a.name < b.name? -1:1;
+              return sort_os
+            });
+        var html = '';
+        html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: '+'Lora'+', serif;">';
+        html = html + '<option value="">Select </option>';
+        for (var i = 0; i < dataget_os.os.length; i++) {
+                html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
+        }
+        html = html + '</select>';
+        $('#mySelect_os').html(html)
+
+</script>
+<script>
+    function dynamicdropdown_job(listindexs) {
+        var html = '';
+        html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: '+'Lora'+', serif;" required>';
+        html = html + '<option value="">Select </option>';
+        for (var i = 0; i < dataget_job.length; i++) {
+                html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+        }
+        html = html + '</select>';
+        $('#mySelect_job').html(html)
+    }
+</script>
+<script>
+    function dynamicdropdown_job_l(listindexs) {
+        var html = '';
+        html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: '+'Lora'+', serif;" required>';
+        html = html + '<option value="">Select </option>';
+        for (var i = 0; i < dataget_job.length; i++) {
+                html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+        }
+        html = html + '</select>';
+        $('#mySelect_job_l').html(html)
+    }
 </script>
 
 <div class="container">

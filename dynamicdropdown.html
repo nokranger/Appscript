@@ -35,6 +35,10 @@
         })
         .then(function (myJson) {
             dataget_s = myJson.subdistricts
+            dataget_s.sort(function(a,b){
+            var sort_s = a.name_in_english < b.name_in_english? -1:1;
+            return sort_s
+            });
             dynamicdropdown_sub()
         });
 </script>
@@ -57,13 +61,17 @@
         })
         .then(function (myJson) {
             dataget_d = myJson.districts
+            dataget_d.sort(function(a,b){
+            var sort_d = a.d_name_in_english < b.d_name_in_english? -1:1;
+            return sort_d;
+            })
             dynamicdropdown()
         });
 </script>
 <script>
     function dynamicdropdown(listindex) {
         var html = '';
-        html = html + '<select id="dis" name="dis" onchange="javascript: dynamicdropdown_sub(this.value);">';
+        html = html + '<select id="dis" name="dis" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_sub(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_d.length; i++) {
             if (listindex == dataget_d[i].province_id) {
@@ -77,7 +85,7 @@
 <script>
     function dynamicdropdown_sub(listindexs) {
         var html = '';
-        html = html + '<select id="sub" name="sub" onchange="javascript: dynamicdropdown_zip(this.value);">';
+        html = html + '<select id="sub" name="sub" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_zip(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_s.length; i++) {
             if (listindexs == dataget_s[i].district_id) {
@@ -112,6 +120,10 @@
         })
         .then(function (myJson) {
             dataget_p = myJson.provinces
+            dataget_p.sort(function(a,b){
+                var sort_p = a.p_name_in_english < b.p_name_in_english? -1:1;
+                return sort_p
+            });
             dynamicdropdown_pro()
         });
 
@@ -119,7 +131,7 @@
 <script>
     function dynamicdropdown_pro(listindexp) {
         var html = '';
-        html = html + '<select id="pro" name="pro" onchange="javascript: dynamicdropdown(this.value);">';
+        html = html + '<select id="pro" name="pro" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_p.length; i++) {
             html = html + '<option value="' + dataget_p[i].province_id + '">' + dataget_p[i].p_name_in_english + '</option>'
