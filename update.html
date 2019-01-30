@@ -357,6 +357,7 @@ b{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
+    var script_url2 = "https://script.google.com/macros/s/AKfycbyuLdS2D5vjfZZsCx4PybAu9em3GSeVod4dSrKYELWG-UJDj8E/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
       $("#re").css("visibility", "hidden");
@@ -401,7 +402,8 @@ b{
       var dop = $("#dop").val();
       var cs = $("#cs").val();
       var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+      var status = "update"
+      var url = script_url2 + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
       
       var request = jQuery.ajax({
         crossDomain: true,
@@ -409,6 +411,7 @@ b{
         method: "GET",
         dataType: "jsonp"
       });
+      update_value()
     }
     function update_value() {
       $("#re").css("visibility", "hidden");
@@ -1269,7 +1272,7 @@ b{
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
             <div class="container-fluid" align="center">
               <!-- <p id="re"></p> -->
-              <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px"
+              <button class="btn-primary" style="margin-right: 15px;" type="button" id="b1" value="Update" onclick="javascript:insert_value()"><i style="margin-right:5px"
                   class="fa fa-edit"></i>Update</button>
               <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
                   style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
@@ -1579,7 +1582,7 @@ b{
       body: formData
     }).then(response => {
       // insert_value();
-      update_value();
+      // insert_value();
       // console.log(response);
     });
   });

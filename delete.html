@@ -399,6 +399,7 @@ b{
   <script>
     // var script_url = "https://script.google.com/macros/s/AKfycbxK2iIUDRl0why8RquQ1gCDH9qYQBHxXMRQADkGqAqcz6DXOwwT/exec";//11
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
+    var script_url2 = "https://script.google.com/macros/s/AKfycbyNVN4IkiSTcyN6v9Srqn5r7WsUXaSGqYYYhJ7-R8krcBejeds/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
       $("#re").css("visibility", "hidden");
@@ -443,19 +444,22 @@ b{
       var dop = $("#dop").val();
       var cs = $("#cs").val();
       var port = $("#port").val();
+      var port = $("#status").val();
+      var status = "delete"
       // var sum = $("#id").val(); + $("#name").val(); + $("#lname").val();
 
       // console.log(data44[1].time_stamp);
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname +"&action=insert";
       // var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
-      console.log(url);
+      var url = script_url2 + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
+      // console.log(url);
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
         method: "GET",
         dataType: "jsonp"
       });
+      delete_value();
     }
     function update_value() {
       $("#re").css("visibility", "hidden");
@@ -803,7 +807,7 @@ b{
     </div><!-- /.container-fluid -->
   </nav>
   <div align="left">
-    <form id="myForm" action="javascript:delete_value()" method="POST">
+    <form id="myForm" method="POST">
       <div>
         <div class="container">
           <div class="row">
@@ -1254,7 +1258,7 @@ b{
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
             <!-- <p id="re"></p> -->
-            <button class="btn-danger" style="margin-right: 15px;" type="submit" id="b1" value="Delete"><i style="margin-right:5px"
+            <button class="btn-danger" style="margin-right: 15px;" type="button" id="b1" value="Delete" onclick="javascript:insert_value()"><i style="margin-right:5px"
                 class="fa fa-remove"></i>Delete</button>
             <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
                 style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
@@ -1358,7 +1362,7 @@ b{
 <script>
   function dynamicdropdown_job(listindexs) {
     var html = '';
-    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" >';
     html = html + '<option value="">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
@@ -1370,7 +1374,7 @@ b{
 <script>
   function dynamicdropdown_job_l(listindexs) {
     var html = '';
-    html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" >';
     html = html + '<option value="">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'

@@ -311,6 +311,7 @@ b{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
+    var script_url2 = "https://script.google.com/macros/s/AKfycbyNVN4IkiSTcyN6v9Srqn5r7WsUXaSGqYYYhJ7-R8krcBejeds/exec"; //app form
     // var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec";
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -356,7 +357,8 @@ b{
       var dop = $("#dop").val();
       var cs = $("#cs").val();
       var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+      var status = "insert"
+      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -366,6 +368,7 @@ b{
       // document.getElementById("myForm").action = "/mailer.php";
       // document.getElementById("myForm").reset(); 
     }
+
     function update_value() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";

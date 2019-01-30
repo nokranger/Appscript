@@ -21,6 +21,12 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="css/show.css">
     <script type="text/javascript" src="js/session.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    
     <style>
         body{
     background:	#f4f5f7;
@@ -85,6 +91,11 @@ max-height: 200px;
 overflow-y: auto;
 -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+.cardP{
+    width:100%;
+    height:200px;
+    /* border: solid 2px black; */
+}
     </style>
     <script>
         if (Session.get("status") != 1) {
@@ -100,40 +111,6 @@ overflow-y: auto;
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
             dataget = data.user
-            // console.log('dataget')
-            // console.log(dataget)
-            // for (var i = 0; i < data.user.length; i++) {
-            //     dataget[i] = [];
-            //     dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-            //     dataget[i].ID = JSON.stringify(data.user[i].ID);
-            //     dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-            //     dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-            //     dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-            //     dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-            //     dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-            //     dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-            //     dataget[i].Line = JSON.stringify(data.user[i].Line);
-            //     dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-            //     dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-            //     dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-            //     dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-            //     dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-            //     dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-            //     dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-            //     dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-            //     dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-            //     dataget[i].Github = JSON.stringify(data.user[i].Github);
-            //     dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
-            //     dataget[i].Major = JSON.stringify(data.user[i].Major);
-            //     dataget[i].Minor = JSON.stringify(data.user[i].Minor);
-            //     dataget[i].About_you = JSON.stringify(data.user[i].About_you);
-            //     dataget[i].Picture = JSON.stringify(data.user[i].Picture);
-            //     dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
-            //     dataget[i].Reference = JSON.stringify(data.user[i].Reference);
-
-
-            // }
-            // console.log('dd', dataget[0].time_stamp)
             something();
             set();
         });
@@ -154,14 +131,14 @@ overflow-y: auto;
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
-                    <div class="d-flex justify-content-start">
+                    <!-- <div class="d-flex justify-content-start">
                         <div style="margin:10px;">
                             <form onsubmit="return getValue('commands')">
                                 <b style="color:#696969">Search : </b><input type="text" name="commands" size="12"
                                     maxlength="8" id="commands" />
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-4">
                     <div class="d-flex justify-content-end">
@@ -171,8 +148,107 @@ overflow-y: auto;
                     </div>
                 </div>
             </div>
+            
 
         </div>
+        <div style="margin:10px;border: solid 2px #E0e0e0;">
+                <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex no-block align-items-center">
+                                            <div>
+                                                <h3><i class="icon-screen-desktop"></i></h3>
+                                                <p class="text-muted">All USER</p>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <h2 class="counter text-primary">23</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <!-- Column -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex no-block align-items-center">
+                                            <div>
+                                                <h3><i class="icon-note"></i></h3>
+                                                <p class="text-muted">NEW USER</p>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <h2 class="counter text-warning">169</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <!-- Column -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex no-block align-items-center">
+                                            <div>
+                                                <h3><i class="icon-doc"></i></h3>
+                                                <p class="text-muted">MISSING USER</p>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <h2 class="counter text-info">157</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <!-- Column -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex no-block align-items-center">
+                                            <div>
+                                                <h3><i class="icon-bag"></i></h3>
+                                                <p class="text-muted">LATEST USER</p>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <h2 class="counter text-success">431</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         <div class="colorful-4" style="margin:10px;border: solid 2px #E0e0e0;">
             <div class="container-fluid">
                 <div class="row">
@@ -241,18 +317,44 @@ overflow-y: auto;
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-end">
+                            <div style="margin:10px;">
+                                <!-- <form onsubmit="return getValue('commands')"> -->
+                                    <b style="color:#696969">Search : </b>
+                                    <input type="text" name="commands" id="commands" size="12" maxlength="8"  />
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="table-wrapper-scroll-y" style=" margin:10px;">
             <!-- <p id="showData"></p> -->
             <table id="jsonTable" style="visibility:hidden;width: 100%;">
                 <thead>
                     <tr>
                         <!-- The JSON downloaded from the URL above provides four attributes.-->
+                        <th>Picture</th>
                         <th>UID</th>
-                        <th>Skill programming</th>
+                        <th>Position</th>
+                        <th>Detail</th>
                     </tr>
                 </thead>
             </table>
         </div>
+        <script>
+                $(document).ready(function(){
+                  $("#commands").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#jsonTable tr").filter(function() {
+                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                  });
+                });
+                </script>
         <script>
             function logout() {
                 x = document.getElementById("logout").value
@@ -265,51 +367,13 @@ overflow-y: auto;
                 }
             }
         </script>
+
         <script>
             var datagett = []
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive;
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
-                    // if (JSON.parse(dataget[i].ID) == getURL('id')) {
-                    //     urlf = "https://www.facebook.com/";
-                    //     urlg = "https://www.github.com/";
-                    //     urlln = "https://www.linkedin.com/in/";
-                    //     urlline = "https://line.me/ti/p/~";
-                    //     urldrive = "https://drive.google.com/uc?id=";
-                    //     splitpath = JSON.parse(dataget[i].Picture).split("\\");
-                    //     face = urlf + JSON.parse(dataget[i].Facebook)
-                    //     git = urlg + JSON.parse(dataget[i].Github);
-                    //     link = urlln + JSON.parse(dataget[i].Linkedin);
-                    //     line = urlline + JSON.parse(dataget[i].Line);
-                    //     drive = urldrive + JSON.parse(dataget[i].Picture);
-                    //     document.getElementById("uid").innerHTML = JSON.parse(dataget[i].ID);
-                    //     document.getElementById("tn").innerHTML = JSON.parse(dataget[i].Title_Name);
-                    //     document.getElementById("name").innerHTML = JSON.parse(dataget[i].First_Name);
-                    //     document.getElementById("lname").innerHTML = JSON.parse(dataget[i].Last_Name);
-                    //     document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
-                    //     document.getElementById("fb").href = face;
-                    //     document.getElementById("line").href = line;
-                    //     document.getElementById("ln").href = link;
-                    //     document.getElementById("git").href = git;
-                    //     document.getElementById("gpa").innerHTML = dataget[i].GPAX;
-                    //     document.getElementById("sp").innerHTML = JSON.parse(dataget[i].Skill_programming);
-                    //     document.getElementById("tfp").innerHTML = JSON.parse(dataget[i].Tool_for_development);
-                    //     document.getElementById("spack").innerHTML = JSON.parse(dataget[i].Software_Package);
-                    //     document.getElementById("mail").innerHTML = JSON.parse(dataget[i].Email_Address);
-                    //     document.getElementById("pic").src = 'uploads/' + splitpath[2];
-                    //     document.getElementById("university").innerHTML = JSON.parse(dataget[i].Educational_institution);
-                    //     document.getElementById("major").innerHTML = JSON.parse(dataget[i].Major);
-                    //     document.getElementById("minor").innerHTML = JSON.parse(dataget[i].Minor);
-                    //     document.getElementById("ref").innerHTML = JSON.parse(dataget[i].Reference);
-                    //     document.getElementById("location").innerHTML = JSON.parse(dataget[i].Current_Address);
-                    //     document.getElementById("about").innerHTML = JSON.parse(dataget[i].About_you);
-                    //     break;
-                    // }
                     datagett[i] = dataget[i].ID.split('UID')
-                    // console.log('datagett[0]')
-                    // console.log(datagett)
-                    // console.log('datagett[1]')
-                    // console.log(datagett[i][1])
                     datagetsplit = 'uid' + datagett[i][1]
                     if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
                         urlf = "https://www.facebook.com/";
@@ -391,14 +455,14 @@ overflow-y: auto;
 
                 }
                 something();
-                CreateTableFromJSON();
+                // CreateTableFromJSON();
             });
             function something() {
 
             }
         </script>
 
-        <script>
+        <!-- <script>
             function CreateTableFromJSON() {
                 var tabletget = [];
                 // EXTRACT VALUE FOR HTML HEADER. 
@@ -436,22 +500,10 @@ overflow-y: auto;
                     for (var j = 0; j < col.length; j++) {
                         var tabCell = tr.insertCell(-1);
                         tabCell.innerHTML = jsonget[i][col[j]];
-                        // console.log(typeof(jsonget[i][col[0]]))
-                        // console.log(jsonget[i][col[0]])
-                        // document.write('<a href="index.html">')
-                        // document.write(jsonget[i].ID)
-                        // document.write('</a>')
-                        // console.log(jsonget[i].ID)
-
                     }
                 }
-
-                // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-                // var divContainer = document.getElementById("showData");
-                // divContainer.innerHTML = "";
-                // divContainer.appendChild(table);
             }
-        </script>
+        </script> -->
         <script type="text/javascript">
             function hello() {
                 //+
@@ -465,7 +517,9 @@ overflow-y: auto;
                     $('#jsonTable').css("visibility", "visible").css("border", "1px solid green");
                     $('#jsonTable').append("<tbody>");
                     for (var counter = 0; counter < json.length; counter++) {
-                        $('#jsonTable').append("<tr><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].ID + '</a>' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].Skill_programming + "</td></tr>");
+                        var splitpath = (json[counter].Picture).split("\\");
+                        // console.log('uploads/' + splitpath[2])
+                        $('#jsonTable').append("<tr><td>" + '<img style="width:90px;height110px;border-radius:50%;" src="' + 'uploads/' + splitpath[2] + '">' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].ID + '</a>' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].Position + '</a>' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + 'Viewmore...' + '</a>' + "</td></tr>");
                     }
                     $('#jsonTable').append("</tbody>");
                     $('th').css("border", "1px solid green");
