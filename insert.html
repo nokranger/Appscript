@@ -313,6 +313,7 @@ b{
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
+    var a,b,c,d = "";
     function insert_value() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
@@ -355,8 +356,17 @@ b{
       var swd = $("#swd").val();
       var dop = $("#dop").val();
       var cs = $("#cs").val();
-      var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+
+      var port = "";
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+      a =os;
+      b=db;
+      c=job;
+      d=job_l;
+      document.getElementById("database").value = a
+      document.getElementById("oper").value = b
+      document.getElementById("cur_job").value = c
+      document.getElementById("job_lawa").value = d
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -409,7 +419,7 @@ b{
       var cs = $("#cs").val();
       var port = $("#port").val();
       var status = "insert"
-      var url = script_url2 + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
+      var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -472,6 +482,10 @@ b{
       <!-- <label>ID :</label> -->
       <input type="hidden" name="id" id="id" required></input>
       <input type="hidden" name="token" id="token" required></input>
+      <input type="hidden" name="cur_job" id="cur_job" ></input>
+      <input type="hidden" name="database" id="database" ></input>
+      <input type="hidden" name="oper" id="oper" ></input>
+      <input type="hidden" name="job_lawa" id="job_lawa" ></input>
       <label type="hidden"></label>
       <!-- <label id="id" name="id"></label><br> -->
   </div>
@@ -852,7 +866,7 @@ b{
         <br>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Current enterprise: </label><br>
+        <label>Current enterprise : </label><br>
         <div class="inputWithIcon">
           <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise"></input>
           <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
@@ -887,10 +901,10 @@ b{
           <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
-      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <!-- <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           <label>Portfolio : </label><br>
           <input type="file" name="file" id="port" multiple></input>
-      </div>
+      </div> -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
         <label>About you : </label><br>
         <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
@@ -1013,6 +1027,7 @@ b{
 <script>
   function dynamicdropdown_db(listindexs) {
     var html = '';
+    
     html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
     html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_db.length; i++) {
@@ -1029,7 +1044,7 @@ b{
     return sort_os
   });
   var html = '';
-  html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
+  html = html + '<select id="os" name="op" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
   html = html + '<option value="0">Select </option>';
   for (var i = 0; i < dataget_os.os.length; i++) {
     html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
@@ -1041,7 +1056,7 @@ b{
 <script>
   function dynamicdropdown_job(listindexs) {
     var html = '';
-    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
     html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
@@ -1053,7 +1068,7 @@ b{
 <script>
   function dynamicdropdown_job_l(listindexs) {
     var html = '';
-    html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
+    html = html + '<select id="job_l" name="job_lawa" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
     html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'

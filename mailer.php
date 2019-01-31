@@ -12,6 +12,7 @@ $mail->SMTPAuth = true;
 
 $id1 = $_POST['id'];
 $tn = $_POST['tn'];
+// echo $tn;
 $name = $_POST['name'];
 $lname = $_POST['lname'];
 $dob = $_POST['dob'];
@@ -39,12 +40,12 @@ $token = $_POST['token'];
 $height = $_POST['height'];
 $weight = $_POST['weight'];
 $age = $_POST['age'];
-$job = $_POST['job'];
+$job = $_POST['cur_job'];
 $sal = $_POST['sal'];
-$db = $_POST['db'];
-$os = $_POST['os'];
+$db = $_POST['database'];
+$os = $_POST['oper'];
 $cen = $_POST['cen'];
-$job_l = $_POST['job_l'];
+$job_l = $_POST['job_lawa'];
 $swd = $_POST['swd'];
 $dop = $_POST['dop'];
 $cs = $_POST['cs'];
@@ -76,7 +77,7 @@ $email_content = "
 <html>
 	<head>
 		<meta charset=utf-8'/>
-		<title>ทดสอบการส่ง Email</title>
+		// <title>ทดสอบการส่ง Email</title>
 	</head>
     <body>
     <h3>Your information</h3>
@@ -101,8 +102,8 @@ $email_content = "
         Skill programming : <label>$sp</label><br>
         Tool for development : <label>$tfp</label><br>
         Software Package : <label>$spack</label><br>
-        Database : <label>dbk</label><br>
-        Operating System : <label>osk</label><br>
+        Database : <label>$db</label><br>
+        Operating System : <label>$os</label><br>
         github : <label>$git </label><br>
         linkedin : <label>$link</label><br>
         major : <label>$major</label><br>
@@ -135,8 +136,8 @@ if($email_receiver){
         echo '<script language="javascript">';
         echo 'alert("Send mail successfully")';
         echo '</script>';
-        // $yourURL="http://jobdis.ecsspace.com/insert.html";
-        // echo ("<script>location.href='$yourURL'</script>");
+        $yourURL="insert.html";
+        echo ("<script>location.href='$yourURL'</script>");
 	}	 
 }
 
