@@ -357,7 +357,7 @@ b{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
-    var script_url2 = "https://script.google.com/macros/s/AKfycbyuLdS2D5vjfZZsCx4PybAu9em3GSeVod4dSrKYELWG-UJDj8E/exec"; //app form
+    var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
       $("#re").css("visibility", "hidden");
@@ -385,7 +385,26 @@ b{
       var major = $("#major").val();
       var minor = $("#minor").val();
       var about = $("#about").val();
-      var pic = $("#pic").val();
+      piccheck = document.getElementById('pic').value
+      // console.log('aaaaaa')
+      // console.log(piccheck)
+      // console.log('preview')
+      // console.log(document.getElementById("picpreview").src)
+      bb = document.getElementById("picpreview").src
+      cc = bb.split("//")
+      dd = cc[1].split("/")
+      ee = "C:\\fakepath\\" + dd[3]
+      // console.log('preview2')
+      if (piccheck == "") {
+        // console.log('nulllllllllllllll')
+        var pic = ee;
+        // console.log('aaaaanulllllllllllllll')
+        // console.log(pic)
+      } else {
+        var pic = $("#pic").val();
+        // console.log('notnulllllllllllllll')
+        // console.log(pic)
+      }
       var exp = $("#exp").val();
       var ref = $("#ref").val();
       var token = $("#token").val();
@@ -484,7 +503,7 @@ b{
       });
       document.getElementById("myForm").reset();
       // document.getElementById("picpreview").reset();
-      console.log('fasfasfa')
+      // console.log('fasfasfa')
       // document.getElementById("alert").innerHTML = '';
       // document.getElementById("alert2").innerHTML = '';
       document.getElementById("picpreview").src = "uploads/asdasd.PNG";
@@ -496,242 +515,6 @@ b{
       document.getElementById("loader").style.visibility = "visible";
       // back();
       // document.getElementById("loader").style.visibility = "visible";
-    }
-    function delete_value() {
-      $("#re").css("visibility", "hidden");
-      document.getElementById("loader").style.visibility = "visible";
-      $('#mySpinner').addClass('spinner');
-      var id1 = $("#id").val();
-      var tn = $("#tn").val();
-      var name = $("#name").val();
-      var lname = $("#lname").val();
-      var dob = $("#dob").val();
-      var tel = $("#tel").val();
-      var fb = $("#fb").val();
-      var line = $("#line").val();
-      var ig = $("#ig").val();
-      var aic = $("#aic").val();
-      var ca = $("#ca").val();
-      var ei = $("#ei").val();
-      var gpa = $("#gpa").val();
-      var sp = $("#sp").val();
-      var tfp = $("#tfp").val();
-      var spack = $("#spack").val();
-      var mail = $("#mail").val();
-      var git = $("#git").val();
-      var link = $("#link").val();
-      var major = $("#major").val();
-      var minor = $("#minor").val();
-      var about = $("#about").val();
-      var pic = $("#pic").val();
-      var exp = $("#exp").val();
-      var ref = $("#ref").val();
-      var token = $("#token").val();
-      var height = $("#height").val();
-      var weight = $("#weight").val();
-      var age = $("#age").val();
-      var job = $("#job").val();
-      var sal = $("#sal").val();
-      var db = $("#db").val();
-      var os = $("#os").val();
-      var cen = $("#cen").val();
-      var job_l = $("#job_l").val();
-      var swd = $("#swd").val();
-      var dop = $("#dop").val();
-      var cs = $("#cs").val();
-      var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
-      
-      var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-      });
-    }
-    // print the returned data
-    function ctrlq(e) {
-      $("#re").html(e.result);
-      $("#re").css("visibility", "visible");
-      read_value();
-    }
-    function read_value() {
-      $("#re").css("visibility", "hidden");
-      document.getElementById("loader").style.visibility = "visible";
-      var url = script_url + "?action=read";
-      $.getJSON(url, function (json) {
-        // Set the variables from the results array
-        // CREATE DYNAMIC TABLE.
-        var table = document.createElement("table");
-        var header = table.createTHead();
-        var row = header.insertRow(0);
-        // for(var k =0;k<16;k++){
-        // }
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
-        var cell7 = row.insertCell(6);
-        var cell8 = row.insertCell(7);
-        var cell9 = row.insertCell(8);
-        var cell10 = row.insertCell(9);
-        var cell11 = row.insertCell(10);
-        var cell12 = row.insertCell(11);
-        var cell13 = row.insertCell(12);
-        var cell14 = row.insertCell(13);
-        var cell15 = row.insertCell(14);
-        var cell16 = row.insertCell(15);
-        var cell17 = row.insertCell(16);
-        var cell18 = row.insertCell(17);
-        var cell19 = row.insertCell(18);
-        var cell20 = row.insertCell(19);
-        var cell21 = row.insertCell(20);
-        var cell22 = row.insertCell(21);
-        var cell23 = row.insertCell(22);
-        var cell24 = row.insertCell(23);
-        var cell25 = row.insertCell(24);
-        var cell26 = row.insertCell(25);
-        var cell27 = row.insertCell(26);
-        var cell28 = row.insertCell(27);
-        var cell29 = row.insertCell(28);
-        var cell30 = row.insertCell(29);
-        var cell31 = row.insertCell(30);
-        var cell32 = row.insertCell(31);
-        var cell33 = row.insertCell(32);
-        var cell34 = row.insertCell(33);
-        var cell35 = row.insertCell(34);
-        var cell36 = row.insertCell(35);
-        var cell37 = row.insertCell(36);
-        var cell38 = row.insertCell(37);
-        var cell39 = row.insertCell(38);
-        cell1.innerHTML = "<b>ID</b>";
-        cell2.innerHTML = "<b>Title_Name</b>";
-        cell3.innerHTML = "<b>First_Name</b>";
-        cell4.innerHTML = "<b>Last_Name</b>";
-        cell5.innerHTML = "<b>Date_of_birth</b>";
-        cell6.innerHTML = "<b>Telephone_Number</b>";
-        cell7.innerHTML = "<b>Facebook</b>";
-        cell8.innerHTML = "<b>Line</b>";
-        cell9.innerHTML = "<b>Instagram</b>";
-        cell10.innerHTML = "<b>Address_in_ID_Card</b>";
-        cell11.innerHTML = "<b>Current_Address</b>";
-        cell12.innerHTML = "<b>Educational_institution</b>";
-        cell13.innerHTML = "<b>GPAX</b>";
-        cell14.innerHTML = "<b>Skill_programming</b>";
-        cell15.innerHTML = "<b>Tool_for_development</b>";
-        cell16.innerHTML = "<b>Software_Package</b>";
-        cell17.innerHTML = "<b>Email_Address</b>";
-        cell18.innerHTML = "<b>Github</b>";
-        cell19.innerHTML = "<b>Linkedin</b>";
-        cell20.innerHTML = "<b>Major</b>";
-        cell21.innerHTML = "<b>Minor</b>";
-        cell22.innerHTML = "<b>About_you</b>";
-        cell23.innerHTML = "<b>Picture</b>";
-        cell24.innerHTML = "<b>Experiece</b>";
-        cell25.innerHTML = "<b>Reference</b>";
-        cell26.innerHTML = "<b>Token</b>";
-        cell27.innerHTML = "<b>Height</b>";
-        cell28.innerHTML = "<b>Weight</b>";
-        cell29.innerHTML = "<b>Position</b>";
-        cell30.innerHTML = "<b>Age</b>";
-        cell31.innerHTML = "<b>Salary</b>";
-        cell32.innerHTML = "<b>Database</b>";
-        cell33.innerHTML = "<b>Operating_System</b>";
-        cell34.innerHTML = "<b>Current_enterprise</b>";
-        cell35.innerHTML = "<b>Working_position</b>";
-        cell36.innerHTML = "<b>Start_work_date</b>";
-        cell37.innerHTML = "<b>Date_of_departure</b>";
-        cell38.innerHTML = "<b>Current_salary</b>";
-        cell39.innerHTML = "<b>Portfolio</b>";
-        // ADD JSON DATA TO THE TABLE AS ROWS.
-        for (var i = 0; i < json.records.length; i++) {
-          tr = table.insertRow(-1);
-          var tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].ID;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Title_Name;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].First_Name;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Last_Name;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Date_of_birth;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Telephone_Number;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Facebook;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Line;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Instagram;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Address_in_ID_Card;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Current_Address;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Educational_institution;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].GPAX;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Skill_programming;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Tool_for_development;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Software_Package;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Email_Address;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Github;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Linkedin;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Major;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Minor;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].About_you;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Picture;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Experiece;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Reference;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Token;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Height;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Weight;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Position;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Age;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Salary;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Database;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Operating_System;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Current_enterprise;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Working_position;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Start_work_date;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Date_of_departure;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Current_salary;
-          tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Portfolio;
-        }
-        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("showData");
-        document.getElementById("loader").style.visibility = "hidden";
-        $("#re").css("visibility", "visible");
-      });
     }
   </script>
 
@@ -1083,26 +866,26 @@ b{
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <div class="example example_typeahead inputWithIcon " style="margin-left:-8px;">
-                <label><b style="color:red">* </b>Programing language : </label><br>
+                <label>Programing language : </label><br>
                 <div class="inputWithIcon bs-example">
-                  <input class="input" type="text" name="sp" id="sp"  required></input><br>
+                  <input class="input" type="text" name="sp" id="sp" ></input><br>
                   <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Software Package : </label><br>
+              <label>Software Package : </label><br>
               <div class="inputWithIcon">
                 <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
-                  onchange="return checkpack()" maxlength="40" required></input>
+                  onchange="return checkpack()" maxlength="40"></input>
                 <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Tool for development : </label><br>
+              <label>Tool for development : </label><br>
               <div class="inputWithIcon">
                 <input class="input" type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
-                  onchange="return checktool()" maxlength="40" required></input>
+                  onchange="return checktool()" maxlength="40"></input>
                 <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
@@ -1457,7 +1240,7 @@ b{
   });
   var html = '';
   html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-  html = html + '<option value="">Select </option>';
+  html = html + '<option value="0">Select </option>';
   for (var i = 0; i < dataget_os.os.length; i++) {
     html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
   }
@@ -1469,7 +1252,7 @@ b{
   function dynamicdropdown_job(listindexs) {
     var html = '';
     html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="">Select </option>';
+    html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
     }
@@ -1481,7 +1264,7 @@ b{
   function dynamicdropdown_job_l(listindexs) {
     var html = '';
     html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="">Select </option>';
+    html = html + '<option value="0">Select </option>';
     for (var i = 0; i < dataget_job.length; i++) {
       html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
     }
@@ -1495,6 +1278,7 @@ b{
   var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
   $.getJSON(urljson, function (data) {
     dataget = data.user
+    console.log(dataget[0].Position)
     getValue();
   });
 </script>
@@ -1533,15 +1317,17 @@ b{
         document.getElementById("about").value = (dataget[i].About_you);
         document.getElementById("height").value = (dataget[i].Height);
         document.getElementById("weight").value = (dataget[i].Weight);
-        document.getElementById("age").value = (dataget[i].Position);
-        document.getElementById("job").value = (dataget[i].Age);
+        document.getElementById("job").value = (dataget[i].Position);
+        document.getElementById("age").value = (dataget[i].Age);
         document.getElementById("sal").value = (dataget[i].Salary);
         document.getElementById("db").value = (dataget[i].Database);
         document.getElementById("os").value = (dataget[i].Operating_System);
         document.getElementById("cen").value = (dataget[i].Current_enterprise);
         document.getElementById("job_l").value = (dataget[i].Working_position);
-        document.getElementById("swd").value = (dataget[i].Start_work_date);
-        document.getElementById("dop").value = (dataget[i].Date_of_departure);
+        localtime2 = moment((dataget[i].Start_work_date)).format('YYYY-MM-DD')
+        document.getElementById("swd").value = (localtime2);
+        localtime3 = moment((dataget[i].Date_of_departure)).format('YYYY-MM-DD')
+        document.getElementById("dop").value = (localtime3);
         document.getElementById("cs").value = (dataget[i].Current_salary);
         splitpath = (dataget[i].Picture).split("\\");
         // console.log(splitpath[2])

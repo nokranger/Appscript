@@ -137,7 +137,7 @@ background: white;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-th, td, p, input {
+/* th, td, p, input {
         font:14px Verdana;
     }
     table, td 
@@ -165,7 +165,7 @@ tr:nth-child(even){
 
 tr:hover {
         background-color: #ddd;
-}
+} */
 input[type=text], select {
         /* width: 100%; */
         padding: 8px 20px;

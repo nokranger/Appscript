@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="css/show.css">
     <script type="text/javascript" src="js/session.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
     
     <style>
         body{
@@ -127,7 +127,6 @@ overflow-y: auto;
 
 <body onload="timeout()">
     <div class="container">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
@@ -333,14 +332,14 @@ overflow-y: auto;
             </div>
         <div class="table-wrapper-scroll-y" style=" margin:10px;">
             <!-- <p id="showData"></p> -->
-            <table id="jsonTable" style="visibility:hidden;width: 100%;">
+            <table class="table" id="jsonTable" style="visibility:hidden;width: 100%;">
                 <thead>
                     <tr>
                         <!-- The JSON downloaded from the URL above provides four attributes.-->
-                        <th>Picture</th>
-                        <th>UID</th>
-                        <th>Position</th>
-                        <th>Detail</th>
+                        <th class="table-primary">Picture</th>
+                        <th class="table-primary">UID</th>
+                        <th class="table-primary">Position</th>
+                        <th class="table-primary">Detail</th>
                     </tr>
                 </thead>
             </table>
@@ -394,7 +393,7 @@ overflow-y: auto;
                         tel = "tel:0" + dataget[i].Telephone_Number
                         document.getElementById("tel").href = tel;
                         document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
-                        console.log("tel:0" + dataget[i].Telephone_Number)
+                        // console.log("tel:0" + dataget[i].Telephone_Number)
                         document.getElementById("fb").href = face;
                         document.getElementById("line").href = line;
                         document.getElementById("ln").href = link;
@@ -514,7 +513,7 @@ overflow-y: auto;
                     json = data.user
                     // console.log('dataget')
                     // console.log(json)
-                    $('#jsonTable').css("visibility", "visible").css("border", "1px solid green");
+                    $('#jsonTable').css("visibility", "visible");
                     $('#jsonTable').append("<tbody>");
                     for (var counter = 0; counter < json.length; counter++) {
                         var splitpath = (json[counter].Picture).split("\\");
@@ -522,7 +521,7 @@ overflow-y: auto;
                         $('#jsonTable').append("<tr><td>" + '<img style="width:90px;height110px;border-radius:50%;" src="' + 'uploads/' + splitpath[2] + '">' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].ID + '</a>' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + json[counter].Position + '</a>' + "</td><td>" + '<a href="' + kk + '' + json[counter].ID + '">' + 'Viewmore...' + '</a>' + "</td></tr>");
                     }
                     $('#jsonTable').append("</tbody>");
-                    $('th').css("border", "1px solid green");
+                    // $('th').css("border", "1px solid green");
                 });
             }
         </script>
