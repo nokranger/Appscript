@@ -158,6 +158,8 @@ overflow-y: auto;
                         var token = dataget[i].Token
                         var job = dataget[i].Position
                         var sal = dataget[i].Salary
+                        
+
                         break;
                     }
                 }
@@ -200,12 +202,19 @@ overflow-y: auto;
             var port = $("#port").val();
             var status = "accept"
             var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
+            document.getElementById('ttn').value = "";
+        document.getElementById('nname').value = name;
+                        document.getElementById('llname').value = lname;
+                        document.getElementById('cur_job').value = job;
+                        document.getElementById('emaill').value = mail;
+                        document.getElementById("myform").action = "mailer_invitation.php";
             var request = jQuery.ajax({
                 crossDomain: true,
             url: url,
             method: "GET",
             dataType: "jsonp"
         });
+
         console.log('ok')
         }
     </script>
@@ -259,18 +268,16 @@ overflow-y: auto;
 </head>
 
 <body onload="timeout()">
+        <form id="myform" name="myform" action="mailer_invitation.php"  method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
+        <input type="hidden" name="ttn" id="ttn"></input>
+        <input type="hidden" name="nname" id="nname" ></input>
+        <input type="hidden" name="llname" id="llname" ></input>
+        <input type="hidden" name="cur_job" id="cur_job" ></input>
+        <input type="hidden" name="emaill" id="emaill" ></input>
     <div class="container">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
-                    <!-- <div class="d-flex justify-content-start">
-                        <div style="margin:10px;">
-                            <form onsubmit="return getValue('commands')">
-                                <b style="color:#696969">Search : </b><input type="text" name="commands" size="12"
-                                    maxlength="8" id="commands" />
-                            </form>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="col-4">
                     <div class="d-flex justify-content-end">
@@ -400,7 +407,7 @@ overflow-y: auto;
                                     <b>Tel. : </b><a id="tel" href="" style="color: white"></a><br>
                                     <b>E-mail : </b><label id="mail"></label><br>
                                     <b>About you : </b><label id="about"></label><br>
-                                    <b>Position: </b><label id="job"></label>
+                                    <b>Position : </b><label id="job"></label>
                                     <b>Current enterprise : </b><label id="cen"></label><br>
                                     <b>Working position : </b><label id="job_l"></label><br>
                                     <b>Start work date : </b><label id="swd"></label>
@@ -425,7 +432,7 @@ overflow-y: auto;
                         <div>
                             <div class="d-flex justify-content-start">
                                 <div>
-                                    <b>Programing language : </b><label id="sp"></label><br>
+                                    <br><b>Programing language : </b><label id="sp"></label><br>
                                     <b>Tool for development : </b><label id="tfp"></label><br>
                                     <b>Operating System : </b><label id="os"></label><br>
                                     <b>Software package : </b><label id="spack"></label><br>
@@ -442,7 +449,7 @@ overflow-y: auto;
                         <div>
                             <div class="d-flex justify-content-start">
                                 <div>
-                                    <label><b>Education : </b><label><br>
+                                        <br><label><b>Education : </b><label><br>
                                             <dt class="dt-tag">
                                                 <b>University : </b><label id="university"></label></dt>
                                             <dd><b>Major : </b><label id="major"></label></dd>
@@ -456,13 +463,14 @@ overflow-y: auto;
                         </div>
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-success" type="button" onclick="javascript:confirmaccept()">Accept</button>
+                                    <button class="btn-success" type="submit">Accept</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
         <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -513,7 +521,6 @@ overflow-y: auto;
                 }
             }
         </script>
-
         <script>
             var datagett = []
             var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive,c;

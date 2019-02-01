@@ -282,7 +282,7 @@
   display: block;
 }
     .img-profile {
-    width: 200px;
+    width: 170px;
     height: 200px;
     border-radius: 8px;
     margin: 10px;
@@ -310,6 +310,7 @@ b{
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
+    $("#tn").val("aa")
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
@@ -1150,13 +1151,6 @@ b{
       let file = files[i];
       formData.append('files[]', file);
     }
-    // const files2 = document.getElementById('port').files;
-    // const formData2 = new FormData();
-
-    // for (let i = 0; i < files2.length; i++) {
-    //   let file = files2[i];
-    //   formData2.append('file', file);
-    // }
     fetch(url, {
       method: 'POST',
       body: formData
