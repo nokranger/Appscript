@@ -470,7 +470,7 @@ b{
       var port = $("#port").val();
       var port = $("#status").val();
       var status = "delete"
-      var url = script_url2 + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
+      var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -522,7 +522,7 @@ b{
       var dop = $("#dop").val();
       var cs = $("#cs").val();
       var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -571,7 +571,7 @@ b{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-              <li ><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+              <li ><a href="/Appscript"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
                   </a></li>
                   <li ><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
                     </a></li>
@@ -1294,15 +1294,17 @@ b{
         document.getElementById("about").value = (dataget[i].About_you);
         document.getElementById("height").value = (dataget[i].Height);
         document.getElementById("weight").value = (dataget[i].Weight);
-        document.getElementById("age").value = (dataget[i].Position);
-        document.getElementById("job").value = (dataget[i].Age);
+        document.getElementById("job").value = (dataget[i].Position);
+        document.getElementById("age").value = (dataget[i].Age);
         document.getElementById("sal").value = (dataget[i].Salary);
         document.getElementById("db").value = (dataget[i].Database);
         document.getElementById("os").value = (dataget[i].Operating_System);
         document.getElementById("cen").value = (dataget[i].Current_enterprise);
         document.getElementById("job_l").value = (dataget[i].Working_position);
-        document.getElementById("swd").value = (dataget[i].Start_work_date);
-        document.getElementById("dop").value = (dataget[i].Date_of_departure);
+        localtime2 = moment((dataget[i].Start_work_date)).format('YYYY-MM-DD')
+        document.getElementById("swd").value = (localtime2);
+        localtime3 = moment((dataget[i].Date_of_departure)).format('YYYY-MM-DD')
+        document.getElementById("dop").value = (localtime3);
         document.getElementById("cs").value = (dataget[i].Current_salary);
         splitpath = (dataget[i].Picture).split("\\");
         // console.log(splitpath[2])

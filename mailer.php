@@ -136,7 +136,7 @@ if($email_receiver){
         echo '<script language="javascript">';
         echo 'alert("Send mail successfully")';
         echo '</script>';
-        $yourURL="insert.html";
+        $yourURL="index.html";
         echo ("<script>location.href='$yourURL'</script>");
 	}	 
 }

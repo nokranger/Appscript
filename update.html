@@ -360,6 +360,7 @@ b{
     var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
     function insert_value() {
+      // update_value()
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
@@ -423,18 +424,16 @@ b{
       var port = $("#port").val();
       var status = "update"
       var url = script_url2 + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
-      
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
         method: "GET",
         dataType: "jsonp"
       });
-      update_value()
+      // update_value()
     }
     function update_value() {
-      $("#re").css("visibility", "hidden");
-      document.getElementById("loader").style.visibility = "visible";
+      insert_value()
       var id1 = $("#id").val();
       var tn = $("#tn").val();
       var name = $("#name").val();
@@ -493,7 +492,7 @@ b{
       var dop = $("#dop").val();
       var cs = $("#cs").val();
       var port = $("#port").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=update";
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=update";
       
       var request = jQuery.ajax({
         crossDomain: true,
@@ -501,7 +500,8 @@ b{
         method: "GET",
         dataType: "jsonp"
       });
-      document.getElementById("myForm").reset();
+      // insert_value()
+      // document.getElementById("myForm").reset();
       // document.getElementById("picpreview").reset();
       // console.log('fasfasfa')
       // document.getElementById("alert").innerHTML = '';
@@ -515,6 +515,7 @@ b{
       document.getElementById("loader").style.visibility = "visible";
       // back();
       // document.getElementById("loader").style.visibility = "visible";
+      back()
     }
   </script>
 
@@ -550,7 +551,7 @@ b{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-              <li ><a href="insert.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+              <li ><a href="/Appscript"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
                   </a></li>
                   <li class="active"><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
                     </a></li>
@@ -564,7 +565,7 @@ b{
     </div><!-- /.container-fluid -->
   </nav>
   <div align="left">
-    <form id="myForm" method="POST" enctype="multipart/form-data">
+    <form form id="myForm" name="myForm" method="POST" onsubmit="javascript:update_value()" enctype="multipart/form-data">
       <div>
         <div class="container">
           <div class="row">
@@ -951,9 +952,9 @@ b{
             </div>
           </div>
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <label><b style="color:red">* </b>Github: </label><br>
+            <label>Github: </label><br>
             <div class="inputWithIcon">
-              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github" required>
+              <input class="input" type="text" name="git" id="git" placeholder="Enter your Github">
               <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
             </div>
           </div>
@@ -1055,7 +1056,7 @@ b{
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
             <div class="container-fluid" align="center">
               <!-- <p id="re"></p> -->
-              <button class="btn-primary" style="margin-right: 15px;" type="button" id="b1" value="Update" onclick="javascript:insert_value()"><i style="margin-right:5px"
+              <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px"
                   class="fa fa-edit"></i>Update</button>
               <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
                   style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
@@ -1367,9 +1368,7 @@ b{
       method: 'POST',
       body: formData
     }).then(response => {
-      // insert_value();
-      // insert_value();
-      // console.log(response);
+      // document.myForm.submit();
     });
   });
 </script>
