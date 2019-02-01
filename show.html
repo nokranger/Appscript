@@ -103,9 +103,25 @@ overflow-y: auto;
             window.location.href = 'login.html';
         }
     </script>
+    <script>
+        function exit(){
+            exit = document.getElementById("logout").value
+            // console.log(exit)
+            var confirmexit = confirm('Do you want to logout?')
+            if (exit== "logout") {
+                if(confirm){
+                    // console.log("exit")
+                            // alert("Logout successfully");
+                            Session.set("status", '0');
+                            window.location = "login.html"; // Redirecting to other page.
+                            return false;
+                }
+            }
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script>
-        
+        var a,b,cc,d = "";
         var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec";
         function insert_value() {
             set()
@@ -158,8 +174,6 @@ overflow-y: auto;
                         var token = dataget[i].Token
                         var job = dataget[i].Position
                         var sal = dataget[i].Salary
-                        
-
                         break;
                     }
                 }
@@ -201,13 +215,22 @@ overflow-y: auto;
             var cs = $("#cs").val();
             var port = $("#port").val();
             var status = "accept"
+            a =name;
+            b=lname;
+            cc=job;
+            // console.log(cc)
+            d=mail;
+            // console.log(name+lname+job+mail)
+            // document.getElementById('ttn').value = "";
+            // document.getElementById('nname').value = name;
+            // document.getElementById('llname').value = lname;
+            // document.getElementById('cur_job').value = job;
+            // document.getElementById('emaill').value = mail;
+            
             var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
-            document.getElementById('ttn').value = "";
-        document.getElementById('nname').value = name;
-                        document.getElementById('llname').value = lname;
-                        document.getElementById('cur_job').value = job;
-                        document.getElementById('emaill').value = mail;
-                        document.getElementById("myform").action = "mailer_invitation.php";
+
+            document.getElementById("myform").action = "mailer_invitation.php";
+            // document.getElementById("myform").action = "mailer_invitation.php";
             var request = jQuery.ajax({
                 crossDomain: true,
             url: url,
@@ -220,15 +243,24 @@ overflow-y: auto;
     </script>
     <script>
         function confirmaccept(){
+            console.log('confirm')
+            
             var c = confirm('Do you want to call for a job interview ?')
+            // set()
             if(c){
                 insert_value()
+
+                document.getElementById('nname').value = a
+                document.getElementById('llname').value= b
+                document.getElementById('cur_job').value= cc
+                document.getElementById('emaill').value= d
                 $(this).closest().submit()
             }
         }
     </script>
 
     <script>
+        
         var dataget;
         var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
         $.getJSON(urljson, function (data) {
@@ -268,7 +300,7 @@ overflow-y: auto;
 </head>
 
 <body onload="timeout()">
-        <form id="myform" name="myform" action="mailer_invitation.php"  method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
+        <form id="myform" name="myform"  method="POST" actions="mailer_invitation.php"  onsubmit="javascript:confirmaccept()" enctype="multipart/form-data">
         <input type="hidden" name="ttn" id="ttn"></input>
         <input type="hidden" name="nname" id="nname" ></input>
         <input type="hidden" name="llname" id="llname" ></input>
@@ -283,7 +315,7 @@ overflow-y: auto;
                     <div class="d-flex justify-content-end">
                         <div>
                             <br>
-                            <button class="btn-danger" type="button" id="logout" value="logout" onclick="logout()">Logout</button></div>
+                            <button class="btn-danger" type="button" id="logout" value="logout" onclick="exit()">Logout</button></div>
                     </div>
                 </div>
             </div>
@@ -463,7 +495,7 @@ overflow-y: auto;
                         </div>
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-success" type="submit">Accept</button>
+                                    <button class="btn-success" type="submit" onsubmit="javascript:confirmaccept()">Accept</button>
                                 </div>
                             </div>
                         </div>
@@ -509,26 +541,15 @@ overflow-y: auto;
                   });
                 });
                 </script>
-        <script>
-            function logout() {
-                x = document.getElementById("logout").value
-                if (x == "logout") {
-                    alert("Logout successfully");
-                    Session.set("status", '0');
-                    window.location = "login.html"; // Redirecting to other page.
-                    return false;
 
-                }
-            }
-        </script>
         <script>
             var datagett = []
-            var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive,c;
+            var urlf, urlg, urlln, urlline, urldrive, face, git, link, line, drive,coun;
             function set() {
                 for (var i = 0; i < dataget.length; i++) {
                     datagett[i] = dataget[i].ID.split('UID')
                     datagetsplit = 'uid' + datagett[i][1]
-                    c=i
+                    coun=i
                     if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
                         urlf = "https://www.facebook.com/";
                         urlg = "https://www.github.com/";
@@ -577,8 +598,8 @@ overflow-y: auto;
                         break;
                     }
                 }
-                document.getElementById('l_user').innerHTML = dataget[c].Position;
-                document.getElementById('l_t').href = 'show.html?id=' + dataget[c].ID
+                document.getElementById('l_user').innerHTML = dataget[coun].Position;
+                document.getElementById('l_t').href = 'show.html?id=' + dataget[coun].ID
             }
             function getURL(objN) {
                 if (objN == null) {

@@ -9,13 +9,20 @@ $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
+$tn = "";
+$name = "";
+$lname = "";
+$job = "";
+$aa = isset($_POST['ttn']) ? $_POST['ttn'] : '';
+$bb = isset($_POST['nname']) ? $_POST['nname'] : '';
+$cc = isset($_POST['llname']) ? $_POST['llname'] : '';
+$dd = isset($_POST['cur_job']) ? $_POST['cur_job'] : '';
+    $tn = $aa;
+    $name =$bb;
+    $lname =$cc;
+    $job = $dd;
+$mail_r = "anusorn.thavornporn@gmail.com";
 
-
-$tn = $_POST['tn'];
-$name = $_POST['name'];
-$lname = $_POST['lname'];
-$mail_r = "";
-$job = $_POST['job'];
 $data_in = "";
 $address_en = "333 Lao Peng Nguan Tower 1,16th Floor, Soi Choei phuang, Vibhavadee-Rangsit Rd., Chomphon, Chatuchak, Bangkok 10900(Thailand)";
 $sub_add = "333 Lao Peng Nguan Tower 1,";
@@ -56,7 +63,7 @@ $email_content = "
     <h3>Subject: $subject<h3><br>
     
 
-    Dear $tn $name $lname,<br>
+    Dear $tn $name $lname,<br><br>
     
     As a result of your application for the position of $job,<br> I would like to invite you to attend an interview on $data_in AM<br> at our office in $address_en.<br>
     
@@ -97,8 +104,8 @@ if($email_receiver){
         echo '<script language="javascript">';
         echo 'alert("Send mail successfully")';
         echo '</script>';
-        $yourURL="show.html";
-        echo ("<script>location.href='$yourURL'</script>");
+        // $yourURL="show.html";
+        // echo ("<script>location.href='$yourURL'</script>");
 	}	 
 }
 
