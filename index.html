@@ -17,6 +17,7 @@
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
     crossorigin='anonymous'>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <title>Form register</title>
   <style>
     header{
@@ -50,7 +51,7 @@
             font-size: 16px;
             resize: none;
             margin: 20px 0;
-            font-family: 'Lora', serif;
+            font-family: 'Kanit', sans-serif;
           }
       .input[type="text"] {
         width: 100%;
@@ -61,7 +62,7 @@
         padding: 8px;
         box-sizing: border-box;
         transition: 0.3s;
-        font-family: 'Lora', serif;
+        font-family: 'Kanit', sans-serif;
         
       }
       
@@ -113,7 +114,7 @@
         padding: 8px;
         box-sizing: border-box;
         transition: 0.3s;
-        font-family: 'Lora', serif;
+        font-family: 'Kanit', sans-serif;
         
       }
       
@@ -165,7 +166,7 @@
         padding: 8px;
         box-sizing: border-box;
         transition: 0.3s;
-        font-family: 'Lora', serif;
+        font-family: 'Kanit', sans-serif;
         
       }
       
@@ -217,7 +218,7 @@
         padding: 8px;
         box-sizing: border-box;
         transition: 0.3s;
-        font-family: 'Lora', serif;
+        font-family: 'Kanit', sans-serif;
         
       }
       
@@ -299,10 +300,10 @@ button{
     border: 1px solid #ccc;
     border-radius: 4px;
     /* box-sizing: border-box; */
-    font-family: 'Lora', serif;
+    font-family: 'Kanit', sans-serif;
 }
 b{
-  font-family: 'Lora', serif;
+  font-family: 'Kanit', sans-serif;
   }
   body{
   background:	#f4f5f7;
@@ -320,46 +321,54 @@ b{
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
       var id1 = $("#id").val();
-      var tn = $("#tn").val();
-      var name = $("#name").val();
-      var lname = $("#lname").val();
-      var dob = $("#dob").val();
-      var tel = $("#tel").val();
-      var fb = $("#fb").val();
-      var line = $("#line").val();
-      var ig = $("#ig").val();
-      var aic = $("#aic").val();
-      var ca = $("#ca").val();
-      var ei = $("#ei").val();
-      var gpa = $("#gpa").val();
-      var sp = $("#sp").val();
-      var tfp = $("#tfp").val();
-      var spack = $("#spack").val();
-      var mail = $("#mail").val();
-      var git = $("#git").val();
-      var link = $("#link").val();
-      var major = $("#major").val();
-      var minor = $("#minor").val();
-      var about = $("#about").val();
-      var pic = $("#pic").val();
-      var exp = $("#exp").val();
-      var ref = $("#ref").val();
-      var token = $("#token").val();
-      var height = $("#height").val();
-      var weight = $("#weight").val();
-      var age = $("#age").val();
-      var job = $("#job").val();
-      var sal = $("#sal").val();
-      var db = $("#db").val();
-      var os = $("#os").val();
-      var cen = $("#cen").val();
-      var job_l = $("#job_l").val();
-      var swd = $("#swd").val();
-      var dop = $("#dop").val();
-      var cs = $("#cs").val();
-
-      var port = "";
-      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+  var tn = $("#tn").val();  
+  var name = $("#name").val();
+  var lname = $("#lname").val();
+  var dob = $("#dob").val();
+  var height = $("#height").val();
+  var weight = $("#weight").val();
+  var age = $("#age").val();
+  var job = $("#job").val();
+  var sal = $("#sal").val();
+  var pic = $("#pic").val();
+  var token = $("#token").val();
+  var ei = $("#ei").val();
+  var de = $("#de").val();
+  var hsc = $("#hsc").val();
+  var sub_hsc = $("#sub_hsc").val();
+  var gpa = $("#gpa").val();
+  var ssd = $("#ssd").val();
+  var gd = $("#gd").val();
+  var u_ei = $("#u_ei").val();
+  var deu = $("#deu").val();
+  var fac_u = $("#fac_u").val();
+  var major_u = $("#major_u").val();
+  var u_gpa = $("#u_gpa").val();
+  var u_ssd = $("#u_ssd").val();
+  var u_gd = $("#u_gd").val();
+  var tel = $("#tel").val();
+  var mail = $("#mail").val();
+  var ref = $("#ref").val();
+  var aic = $("#aic").val();
+  var ca = $("#ca").val();
+  var sp = $("#sp").val();
+  var spack = $("#spack").val();
+  var tfp = $("#tfp").val();
+  var db = $("#db").val();
+  var os = $("#os").val();
+  var fb = $("#fb").val();
+  var line = $("#line").val();
+  var ig = $("#ig").val();
+  var git = $("#git").val();
+  var link = $("#link").val();
+  var cen = $("#cen").val();
+  var job_l = $("#job_l").val();
+  var swd = $("#swd").val();
+  var dop = $("#dop").val();
+  var cs = $("#cs").val();
+  var about = $("#about").val();
+  var exp = $("#exp").val();
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&pic=" + pic + "&token=" + token + "&ei=" +ei +"&de=" +de + "&hsc=" +hsc +"&sub_hsc=" +sub_hsc +"&gpa=" +gpa +"&ssd=" +ssd +"&gd=" +gd + "&u_ei=" +u_ei +"&deu=" +deu + "&fac_u=" +fac_u +"&major_u=" +major_u +"&u_gpa=" +u_gpa +"&u_ssd=" +u_ssd +"&u_gd=" +u_gd + "&tel=" +tel +"&mail=" +mail + "&ref=" +ref +"&aic=" +aic +"&ca=" +ca +"&sp=" +sp +"&spack=" +spack + "&tfp=" +tfp +"&db=" +db + "&os=" +os +"&fb=" +fb +"&line=" +line +"&ig=" +ig +"&git=" +git + "&link=" +link +"&cen=" +cen +"&job_l=" +job_l + "&swd=" +swd +"&dop=" +dop +"&cs=" +cs +"&about=" +about +"&exp=" +exp +"&action=insert";
       a = os;
       b = db;
       c = job;
@@ -513,7 +522,7 @@ b{
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Title Name : </label><br>
-        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Lora', serif;">
+        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Kanit', sans-serif;">
           <option value="">Select</option>
           <option value="Mr.">Mr.</option>
           <option value="Ms.">Ms.</option>
@@ -679,7 +688,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>GPA : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+          <input class="input" type="text" name="u_gpa" id="u_gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
             maxlength="4"></input>
           <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -687,14 +696,14 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Study start date : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31"></input>
+          <input class="input" type="date" name="u_ssd" id="u_ssd" max="2100-12-31"></input>
           <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Graduation day : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="date" name="gd" id="gd" max="2100-12-31"></input>
+          <input class="input" type="date" name="u_gd" id="u_gd" max="2100-12-31"></input>
           <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -928,7 +937,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Organization : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="cen" id="cen" placeholder="Enter Current enterprise"></input>
+          <input class="input" type="text" name="cen" id="cen" placeholder="Enter Organization"></input>
           <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>

@@ -23,6 +23,7 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <title>Form update</title>
   <style>
     header{
@@ -56,7 +57,7 @@
               font-size: 16px;
               resize: none;
               margin: 20px 0;
-              font-family: 'Lora', serif;
+              font-family: 'Kanit', sans-serif;
             }
         .input[type="text"] {
           width: 100%;
@@ -67,7 +68,7 @@
           padding: 8px;
           box-sizing: border-box;
           transition: 0.3s;
-          font-family: 'Lora', serif;
+          font-family: 'Kanit', sans-serif;
           
         }
         
@@ -119,7 +120,7 @@
           padding: 8px;
           box-sizing: border-box;
           transition: 0.3s;
-          font-family: 'Lora', serif;
+          font-family: 'Kanit', sans-serif;
           
         }
         
@@ -171,7 +172,7 @@
           padding: 8px;
           box-sizing: border-box;
           transition: 0.3s;
-          font-family: 'Lora', serif;
+          font-family: 'Kanit', sans-serif;
           
         }
         
@@ -223,7 +224,7 @@
           padding: 8px;
           box-sizing: border-box;
           transition: 0.3s;
-          font-family: 'Lora', serif;
+          font-family: 'Kanit', sans-serif;
           
         }
         
@@ -299,7 +300,7 @@
       font-size: 16px;
       border: none;
       cursor: pointer;
-      font-family: 'Lora', serif;
+      font-family: 'Kanit', sans-serif;
       margin:5px;
     }
     
@@ -320,7 +321,7 @@
       overflow: auto;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
-      font-family: 'Lora', serif;
+      font-family: 'Kanit', sans-serif;
     }
     
     .dropdown-content a {
@@ -341,7 +342,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     /* box-sizing: border-box; */
-    font-family: 'Lora', serif;
+    font-family: 'Kanit', sans-serif;
 }
 .img-profile {
     width: 170px;
@@ -351,7 +352,7 @@
     border: solid 2px #E0e0e0;
 }
 b{
-  font-family: 'Lora', serif;
+  font-family: 'Kanit', sans-serif;
   }
     </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -585,7 +586,7 @@ b{
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-                <b style="font-size: 20px;">Check your Information</b>
+                <b style="font-size: 20px;">Check Information</b>
                 <!-- <label id="alert"></label> -->
                 <!-- <label id="alert2"></label> -->
               </div>
@@ -650,7 +651,7 @@ b{
                   </div> -->
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Title Name : </label><br>
-              <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Lora', serif;">
+              <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Kanit', sans-serif;">
                 <option value="Mr.">Mr.</option>
                 <option value="Ms.">Ms.</option>
                 <option value="Mrs.">Mrs.</option>
@@ -659,7 +660,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>First Name : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+                <input class="input" type="text" name="name" id="name" placeholder="Enter first name" onkeypress="return isCharKey(event)"
                   onchange="return checkName()" required>
                 <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -667,7 +668,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Last Name : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+                <input class="input" type="text" name="lname" id="lname" placeholder="Enter last name" onkeypress="return isCharKey(event)"
                   onchange="return checkLname()" required>
                 <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -682,7 +683,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Height : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " onkeypress="return isNumberKey(event)"
+                <input class="input" type="text" name="height" id="height" placeholder="Enter Height " onkeypress="return isNumberKey(event)"
                   maxlength="5"></input>
                 <i class="fa fa-text-height fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -690,7 +691,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Weight : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" onkeypress="return isNumberKey(event)"
+                <input class="input" type="text" name="weight" id="weight" placeholder="Enter Weight" onkeypress="return isNumberKey(event)"
                   maxlength="5"></input>
                 <i class="fas fa-weight fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -698,7 +699,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Age : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" onkeypress="return isNumberKey(event)"
+                <input class="input" type="text" name="age" id="age" placeholder="Enter Age" onkeypress="return isNumberKey(event)"
                   maxlength="3"></input>
                 <i class="fas fa-birthday-cake fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -706,7 +707,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Position : </label><br>
               <div class="inputWithIcon">
-                <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
+                <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter Position" onkeypress="return isCharKey(event)"
                         onchange="return checkLname()" maxlength="30" ></input>
                       <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
                 <div id="mySelect_job" name="mySelect_job"></div>
@@ -715,7 +716,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Salary : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" onkeypress="return isNumberKey(event)"
+                <input class="input" type="text" name="sal" id="sal" placeholder="Enter Salary" onkeypress="return isNumberKey(event)"
                   maxlength="30"></input>
                 <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
               </div>
@@ -747,37 +748,101 @@ b{
             </div>
 
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Educational institution : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
-                  onchange="return checku()" maxlength="40"></input>
-                <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+                <label>Educational institution : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="ei" id="ei" placeholder="Enter Name of school" onkeypress="return isCharKey(event)"
+                    onchange="return checku()" maxlength="40"></input>
+                  <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Major : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
-                  onchange="return checkmajor()" maxlength="40"></input>
-                <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Type: </label><br>
+                <div id="mySelect_1" name="mySelect_1"></div>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Minor : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
-                  onchange="return checkminor()" maxlength="40"></input>
-                <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Course : </label><br>
+                <div id="mySelect_2" name="mySelect_2"></div>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>GPAX : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
-                  maxlength="4"></input>
-                <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Department : </label><br>
+                <div id="mySelect_3" name="mySelect_3"></div>
               </div>
-            </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>GPA : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+                    maxlength="4"></input>
+                  <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Study start date : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31"></input>
+                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Graduation day : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="date" name="gd" id="gd" max="2100-12-31"></input>
+                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Educational institution : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="u_ei" id="u_ei" placeholder="Enter Name of University" onkeypress="return isCharKey(event)"
+                    onchange="return checku()" maxlength="40"></input>
+                  <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Degree : </label><br>
+                <div id="mySelect_4" name="mySelect_4"></div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Faculty : </label><br>
+                <div id="mySelect_5" name="mySelect_5"></div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Major : </label><br>
+                <div id="mySelect_6" name="mySelect_6"></div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>GPA : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="u_gpa" id="u_gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+                    maxlength="4"></input>
+                  <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Study start date : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="date" name="u_ssd" id="u_ssd" max="2100-12-31"></input>
+                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Graduation day : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="date" name="u_gd" id="u_gd" max="2100-12-31"></input>
+                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        
+              </div>
 
           </div>
         </div>
@@ -807,41 +872,37 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Telephone Number : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+                <input class="input" type="tel" name="tel" id="tel" placeholder="Enter telephone number" maxlength="10" onkeypress="return isNumberKey(event)"
                   onchange="return checktel()" required></input>
                 <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Email Address : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onchange="return checkmail()"
-                  onchange="validateEmail()" required></input>
-                <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                <label><b style="color:red">* </b>Email Address : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onchange="return checkmail()"
+                    onchange="validateEmail()" required></input>
+                  <!-- <button type='button' id='validate' onclick="validateEmail()">Validate!</button> -->
+                  <!-- <h2 id='result'></h2> -->
+                  <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Address in ID Card : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="aic" id="aic" placeholder="Enter your address"></input>
-                <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label>Reference : </label><br>
+                <div class="inputWithIcon">
+                  <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"
+                    onchange="return checkref()"></input>
+                  <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label><b style="color:red">* </b>Current Address : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address" required></input>
-                <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <label>Permanent Home Address : </label><br>
+                <textarea style="margin: 10px;margin-left: -1px;" name="aic" id="aic" placeholder="Enter address"></textarea>
               </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Reference : </label><br>
-              <div class="inputWithIcon">
-                <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"
-                  onkeypress="return isCharKey(event)" onchange="return checkref()"></input>
-                <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <label>Current Address : </label><br>
+                <textarea style="margin: 10px;margin-left: -1px;" name="ca" id="ca" placeholder="Enter address"></textarea>
               </div>
-            </div>
 
           </div>
         </div>
@@ -935,35 +996,35 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Facebook : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id">
+                <input class="input" type="text" name="fb" id="fb" placeholder="Enter facebook id">
                 <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Line : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="line" id="line" placeholder="Enter your id line">
+                <input class="input" type="text" name="line" id="line" placeholder="Enter id line">
                 <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Instagram : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram">
+                <input class="input" type="text" name="ig" id="ig" placeholder="Enter Instagram">
                 <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Github: </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="git" id="git" placeholder="Enter your Github">
+                <input class="input" type="text" name="git" id="git" placeholder="Enter Github">
                 <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Linkedin: </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin">
+                <input class="input" type="text" name="link" id="link" placeholder="Enter Linkedin">
                 <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
@@ -995,16 +1056,16 @@ b{
               <br>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Current enterprise : </label><br>
+              <label>Organization : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise"></input>
+                <input class="input" type="text" name="cen" id="cen" placeholder="Enter Organization"></input>
                 <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label><b style="color:red">* </b>Working position : </label><br>
               <div class="inputWithIcon">
-                <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
+                <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter Linkedin"></input>
                       <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
                 <div id="mySelect_job_l" name="mySelect_job_l"></div>
               </div>
@@ -1024,22 +1085,22 @@ b{
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <label>Current salary : </label><br>
+              <label>Salary : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Salary"></input>
+                <input class="input" type="text" name="cs" id="cs" placeholder="Enter Salary"></input>
                 <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <label>About you : </label><br>
-              <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+              <label>Describe yourself and relevant experience : </label><br>
+              <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="Enter Describe yourself and relevant experience"
                 onchange="return checkabout()"></textarea>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <label>Experiece : </label><br>
-              <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
+              <label>Responsibilities : </label><br>
+              <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter Responsibilities"
                 onchange="return checkexp()"></textarea><br>
             </div>
           </div>
@@ -1088,7 +1149,7 @@ b{
     } else {
       // $result.text(email + " is not valid :(");
       // $result.css("color", "red");
-      alert("your " + email + " is invalid !!!!!!!!!")
+      alert("" + email + " is invalid !!!!!!!!!")
       document.getElementById('mail').value = "";
       $("#mail").focus();
     }
@@ -1192,7 +1253,7 @@ b{
     return false;
   }    
 </script>
-<script>
+<!-- <script>
   dataget_db = [];
   fetch('json/db.json')
     .then(function (response) {
@@ -1274,7 +1335,7 @@ b{
     html = html + '</select>';
     $('#mySelect_job_l').html(html)
   }
-</script>
+</script> -->
 
 <script>
   var dataget = [];
@@ -1391,5 +1452,7 @@ b{
 <script src="js/moment.js"></script>
 <script src="js/checkvalidate.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/dynamic_education.js"></script>
+<script src="js/dynamic_positon.js"></script>
 
 </html>

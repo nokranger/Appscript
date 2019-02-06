@@ -15,7 +15,7 @@
 
     function dynamicdropdown_de(listindexde) {
         var html = '';
-        html = html + '<select id="de" name="de" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_hsc(this.value);">';
+        html = html + '<select id="de" name="de" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_hsc(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_de.length; i++) {
             // if (listindexde == dataget_de[i].id) {
@@ -42,7 +42,7 @@
 
     function dynamicdropdown_hsc(listindexhsc) {
         var html = '';
-        html = html + '<select id="hsc" name="hsc" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_sub_hsc(this.value);">';
+        html = html + '<select id="hsc" name="hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_sub_hsc(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_hsc.length; i++) {
             if (listindexhsc == dataget_hsc[i].g_id) {
@@ -69,7 +69,7 @@
 
     function dynamicdropdown_sub_hsc(listindexsub_hsc) {
         var html = '';
-        html = html + '<select id="sub_hsc" name="sub_hsc" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_deu(this.value);">';
+        html = html + '<select id="sub_hsc" name="sub_hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_deu(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_sub_hsc.length; i++) {
             // console.log(dataget_sub_hsc[i].id)
@@ -98,7 +98,7 @@
 
     function dynamicdropdown_deu(listindexdeu) {
         var html = '';
-        html = html + '<select id="deu" name="deu" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_fac_u(this.value);">';
+        html = html + '<select id="deu" name="deu" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_fac_u(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_deu.length; i++) {
             // console.log(dataget_deu[i].id)
@@ -126,7 +126,7 @@
 
     function dynamicdropdown_fac_u(listindexfac_u) {
         var html = '';
-        html = html + '<select id="fac_u" name="fac_u" style="margin: 8px 0;margin-left: 1px;" onchange="javascript: dynamicdropdown_major_u(this.value);">';
+        html = html + '<select id="fac_u" name="fac_u" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_major_u(this.value);">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_fac_u.length; i++) {
             // console.log(dataget_fac_u[i].id)
@@ -155,7 +155,7 @@
 
     function dynamicdropdown_major_u(listindexmajor_u) {
         var html = '';
-        html = html + '<select id="major_u" name="major_u" style="margin: 8px 0;margin-left: 1px;"con>';
+        html = html + '<select id="major_u" name="major_u" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_major_u.length; i++) {
             // console.log(dataget_major_u[i].id)
