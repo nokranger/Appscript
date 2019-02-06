@@ -1,0 +1,2184 @@
+{
+    "major" : [
+        {
+          "id": 1,
+          "name": "Early Childhood Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 2,
+          "name": "Elementary Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 3,
+          "name": "Secondary Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 4,
+          "name": "Health and Physical Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 5,
+          "name": "Educational Technology",
+          "faculty_id": 1
+        },
+        {
+          "id": 6,
+          "name": "Art Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 7,
+          "name": "Music Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 8,
+          "name": "Business Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 9,
+          "name": "Non-Formal Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 10,
+          "name": "Counseling Psychology, Guidance and Special Education",
+          "faculty_id": 1
+        },
+        {
+          "id": 11,
+          "name": "Early Childhood Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 12,
+          "name": "Elementary Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 13,
+          "name": "Physical Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 14,
+          "name": "Health and Physical Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 15,
+          "name": "Teaching English as a Foreign Language",
+          "faculty_id": 21
+        },
+        {
+          "id": 16,
+          "name": "Mathematics Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 17,
+          "name": "Teaching Thai Language",
+          "faculty_id": 21
+        },
+        {
+          "id": 18,
+          "name": "Science Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 19,
+          "name": "Teaching Social Studies",
+          "faculty_id": 21
+        },
+        {
+          "id": 20,
+          "name": "Curriculum and Instruction",
+          "faculty_id": 21
+        },
+        {
+          "id": 21,
+          "name": "Educational Technology and Communications",
+          "faculty_id": 21
+        },
+        {
+          "id": 22,
+          "name": "Art Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 23,
+          "name": "Music Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 24,
+          "name": "Educational Administration",
+          "faculty_id": 21
+        },
+        {
+          "id": 25,
+          "name": "Supervision and Curriculum Development",
+          "faculty_id": 21
+        },
+        {
+          "id": 26,
+          "name": "Development Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 27,
+          "name": "Non-Formal Education",
+          "faculty_id": 21
+        },
+        {
+          "id": 28,
+          "name": "Educational Measurement and Evaluation",
+          "faculty_id": 21
+        },
+        {
+          "id": 29,
+          "name": "Educational Research Methodology",
+          "faculty_id": 21
+        },
+        {
+          "id": 30,
+          "name": "Educational Statistics",
+          "faculty_id": 21
+        },
+        {
+          "id": 31,
+          "name": "Educational Psychology",
+          "faculty_id": 21
+        },
+        {
+          "id": 32,
+          "name": "Higher Education Management",
+          "faculty_id": 40
+        },
+        {
+          "id": 33,
+          "name": "Early Childhood Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 34,
+          "name": "Health and Physical Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 35,
+          "name": "Educational Technology and Communications",
+          "faculty_id": 40
+        },
+        {
+          "id": 36,
+          "name": "Curriculum and Instruction",
+          "faculty_id": 40
+        },
+        {
+          "id": 37,
+          "name": "Art Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 38,
+          "name": "Educational Administration",
+          "faculty_id": 40
+        },
+        {
+          "id": 39,
+          "name": "Development Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 40,
+          "name": "Higher Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 41,
+          "name": "Non-Formal Education",
+          "faculty_id": 40
+        },
+        {
+          "id": 42,
+          "name": "Educational Measurement and Evaluation",
+          "faculty_id": 40
+        },
+        {
+          "id": 43,
+          "name": "Educational Research Methodology",
+          "faculty_id": 40
+        },
+        {
+          "id": 44,
+          "name": "Educational Psychology",
+          "faculty_id": 40
+        },
+        {
+          "id": 45,
+          "name": "Psychology",
+          "faculty_id": 2
+        },
+        {
+          "id": 46,
+          "name": "Psychological Science",
+          "faculty_id": 2
+        },
+        {
+          "id": 47,
+          "name": "Counseling Psychology",
+          "faculty_id": 22
+        },
+        {
+          "id": 48,
+          "name": "Basic and Applied Social Psychology",
+          "faculty_id": 22
+        },
+        {
+          "id": 49,
+          "name": "Development Psychology",
+          "faculty_id": 22
+        },
+        {
+          "id": 50,
+          "name": "Human Resource and Work Psychology",
+          "faculty_id": 22
+        },
+        {
+          "id": 51,
+          "name": "Applied Psychological Research",
+          "faculty_id": 22
+        },
+        {
+          "id": 52,
+          "name": "Counseling Psychology",
+          "faculty_id": 41
+        },
+        {
+          "id": 53,
+          "name": "Basic and Applied Social Psychology",
+          "faculty_id": 41
+        },
+        {
+          "id": 54,
+          "name": "Development Psychology",
+          "faculty_id": 41
+        },
+        {
+          "id": 55,
+          "name": "Human Resource and Work Psychology",
+          "faculty_id": 41
+        },
+        {
+          "id": 56,
+          "name": "Applied Psychological Research",
+          "faculty_id": 41
+        },
+        {
+          "id": 57,
+          "name": "Prosthodontics",
+          "faculty_id": 3
+        },
+        {
+          "id": 58,
+          "name": "Operative Dentistry",
+          "faculty_id": 3
+        },
+        {
+          "id": 59,
+          "name": "Endodontology",
+          "faculty_id": 3
+        },
+        {
+          "id": 60,
+          "name": "Oral Diagnostic Sciences",
+          "faculty_id": 3
+        },
+        {
+          "id": 61,
+          "name": "Oral and Maxillofacial Surgery",
+          "faculty_id": 3
+        },
+        {
+          "id": 62,
+          "name": "Oral Biology",
+          "faculty_id": 23
+        },
+        {
+          "id": 63,
+          "name": "Orthodontics",
+          "faculty_id": 23
+        },
+        {
+          "id": 64,
+          "name": "Occlusion and Orofacial Pain",
+          "faculty_id": 23
+        },
+        {
+          "id": 65,
+          "name": "Prosthodontics",
+          "faculty_id": 23
+        },
+        {
+          "id": 66,
+          "name": "Pediatric Dentistry",
+          "faculty_id": 23
+        },
+        {
+          "id": 67,
+          "name": "Operative Dentistry",
+          "faculty_id": 23
+        },
+        {
+          "id": 68,
+          "name": "Endodontology",
+          "faculty_id": 23
+        },
+        {
+          "id": 69,
+          "name": "Periodontics",
+          "faculty_id": 23
+        },
+        {
+          "id": 70,
+          "name": "Oral and Maxillofacial Radiology",
+          "faculty_id": 23
+        },
+        {
+          "id": 71,
+          "name": "Oral Medicine",
+          "faculty_id": 23
+        },
+        {
+          "id": 72,
+          "name": "Oral and Maxillofacial Surgery",
+          "faculty_id": 23
+        },
+        {
+          "id": 73,
+          "name": "Esthetic Restorative and Implant Dentistry",
+          "faculty_id": 23
+        },
+        {
+          "id": 74,
+          "name": "Oral Biology",
+          "faculty_id": 42
+        },
+        {
+          "id": 75,
+          "name": "Dental Public Health",
+          "faculty_id": 42
+        },
+        {
+          "id": 76,
+          "name": "Prosthodontics",
+          "faculty_id": 42
+        },
+        {
+          "id": 77,
+          "name": "Bachelor of Laws",
+          "faculty_id": 4
+        },
+        {
+          "id": 78,
+          "name": "Laws",
+          "faculty_id": 24
+        },
+        {
+          "id": 79,
+          "name": "Business Law",
+          "faculty_id": 24
+        },
+        {
+          "id": 80,
+          "name": "Finance and Tax Laws",
+          "faculty_id": 24
+        },
+        {
+          "id": 81,
+          "name": "Economic Law",
+          "faculty_id": 24
+        },
+        {
+          "id": 82,
+          "name": "Laws",
+          "faculty_id": 43
+        },
+        {
+          "id": 83,
+          "name": "Public Relations",
+          "faculty_id": 5
+        },
+        {
+          "id": 84,
+          "name": "Advertising",
+          "faculty_id": 5
+        },
+        {
+          "id": 85,
+          "name": "Broadcasting",
+          "faculty_id": 5
+        },
+        {
+          "id": 86,
+          "name": "Journalism",
+          "faculty_id": 5
+        },
+        {
+          "id": 87,
+          "name": "Speech Communication",
+          "faculty_id": 5
+        },
+        {
+          "id": 88,
+          "name": "Performing Arts",
+          "faculty_id": 5
+        },
+        {
+          "id": 89,
+          "name": "Motion Pictures and Still Photography",
+          "faculty_id": 5
+        },
+        {
+          "id": 90,
+          "name": "Development Communication",
+          "faculty_id": 25
+        },
+        {
+          "id": 91,
+          "name": "Advertising",
+          "faculty_id": 25
+        },
+        {
+          "id": 92,
+          "name": "Public Relations",
+          "faculty_id": 25
+        },
+        {
+          "id": 93,
+          "name": "Mass Communication",
+          "faculty_id": 25
+        },
+        {
+          "id": 94,
+          "name": "Journalism",
+          "faculty_id": 25
+        },
+        {
+          "id": 95,
+          "name": "Speech Communication",
+          "faculty_id": 25
+        },
+        {
+          "id": 96,
+          "name": "Performing Arts",
+          "faculty_id": 25
+        },
+        {
+          "id": 97,
+          "name": "Film",
+          "faculty_id": 25
+        },
+        {
+          "id": 98,
+          "name": "Strategic Communication Management",
+          "faculty_id": 25
+        },
+        {
+          "id": 99,
+          "name": "Communication Arts",
+          "faculty_id": 44
+        },
+        {
+          "id": 100,
+          "name": "Nursing Science",
+          "faculty_id": 6
+        },
+        {
+          "id": 101,
+          "name": "Nursing Administration",
+          "faculty_id": 26
+        },
+        {
+          "id": 102,
+          "name": "Mental Health and Psychiatric Nursing",
+          "faculty_id": 26
+        },
+        {
+          "id": 103,
+          "name": "Nursing Science",
+          "faculty_id": 26
+        },
+        {
+          "id": 104,
+          "name": "Nursing Science",
+          "faculty_id": 45
+        },
+        {
+          "id": 105,
+          "name": "Accounting",
+          "faculty_id": 7
+        },
+        {
+          "id": 106,
+          "name": "Entrepreneurial Management",
+          "faculty_id": 7
+        },
+        {
+          "id": 107,
+          "name": "Management Information Systems",
+          "faculty_id": 7
+        },
+        {
+          "id": 108,
+          "name": "Banking and Finance",
+          "faculty_id": 7
+        },
+        {
+          "id": 109,
+          "name": "Marketing",
+          "faculty_id": 7
+        },
+        {
+          "id": 110,
+          "name": "International Logistics Management",
+          "faculty_id": 7
+        },
+        {
+          "id": 111,
+          "name": "International Business Management",
+          "faculty_id": 7
+        },
+        {
+          "id": 112,
+          "name": "Applied Statistics",
+          "faculty_id": 7
+        },
+        {
+          "id": 113,
+          "name": "Mathematical Statistics",
+          "faculty_id": 7
+        },
+        {
+          "id": 114,
+          "name": "Information Technology for Business",
+          "faculty_id": 7
+        },
+        {
+          "id": 115,
+          "name": "Insurance",
+          "faculty_id": 7
+        },
+        {
+          "id": 116,
+          "name": "Accountancy",
+          "faculty_id": 27
+        },
+        {
+          "id": 117,
+          "name": "Business Administration",
+          "faculty_id": 27
+        },
+        {
+          "id": 118,
+          "name": "Aviation Management",
+          "faculty_id": 27
+        },
+        {
+          "id": 119,
+          "name": "Hospital and Health Care Management",
+          "faculty_id": 27
+        },
+        {
+          "id": 120,
+          "name": "Statistics",
+          "faculty_id": 27
+        },
+        {
+          "id": 121,
+          "name": "Information Technology in Business",
+          "faculty_id": 27
+        },
+        {
+          "id": 122,
+          "name": "Insurance",
+          "faculty_id": 27
+        },
+        {
+          "id": 123,
+          "name": "Finance",
+          "faculty_id": 27
+        },
+        {
+          "id": 124,
+          "name": "Business Software Development",
+          "faculty_id": 27
+        },
+        {
+          "id": 125,
+          "name": "Marketing",
+          "faculty_id": 27
+        },
+        {
+          "id": 126,
+          "name": "Corporate Governance",
+          "faculty_id": 27
+        },
+        {
+          "id": 127,
+          "name": "Financial Engineering",
+          "faculty_id": 27
+        },
+        {
+          "id": 128,
+          "name": "International Business Management",
+          "faculty_id": 27
+        },
+        {
+          "id": 129,
+          "name": "Accountancy",
+          "faculty_id": 46
+        },
+        {
+          "id": 130,
+          "name": "Management",
+          "faculty_id": 46
+        },
+        {
+          "id": 131,
+          "name": "Finance",
+          "faculty_id": 46
+        },
+        {
+          "id": 132,
+          "name": "Marketing",
+          "faculty_id": 46
+        },
+        {
+          "id": 133,
+          "name": "Information Technology in Business",
+          "faculty_id": 46
+        },
+        {
+          "id": 134,
+          "name": "Quantitative Finance",
+          "faculty_id": 46
+        },
+        {
+          "id": 135,
+          "name": "Anatomy",
+          "faculty_id": 8
+        },
+        {
+          "id": 136,
+          "name": "Psychiatry",
+          "faculty_id": 8
+        },
+        {
+          "id": 137,
+          "name": "Microbiology",
+          "faculty_id": 8
+        },
+        {
+          "id": 138,
+          "name": "Forensic Medicine",
+          "faculty_id": 8
+        },
+        {
+          "id": 139,
+          "name": "Parasitology",
+          "faculty_id": 8
+        },
+        {
+          "id": 140,
+          "name": "Pathology",
+          "faculty_id": 8
+        },
+        {
+          "id": 141,
+          "name": "Preventive and Social Medicine",
+          "faculty_id": 8
+        },
+        {
+          "id": 142,
+          "name": "Physiology",
+          "faculty_id": 8
+        },
+        {
+          "id": 143,
+          "name": "Pediatrics",
+          "faculty_id": 8
+        },
+        {
+          "id": 144,
+          "name": "Ophthalmology",
+          "faculty_id": 8
+        },
+        {
+          "id": 145,
+          "name": "Biochemistry",
+          "faculty_id": 8
+        },
+        {
+          "id": 146,
+          "name": "Pharmacology",
+          "faculty_id": 8
+        },
+        {
+          "id": 147,
+          "name": "Radiology",
+          "faculty_id": 8
+        },
+        {
+          "id": 148,
+          "name": "Anesthesiology",
+          "faculty_id": 8
+        },
+        {
+          "id": 149,
+          "name": "Laboratory Medicine",
+          "faculty_id": 8
+        },
+        {
+          "id": 150,
+          "name": "Surgery",
+          "faculty_id": 8
+        },
+        {
+          "id": 151,
+          "name": "Orthopedics",
+          "faculty_id": 8
+        },
+        {
+          "id": 152,
+          "name": "Rehabilitation Medicine",
+          "faculty_id": 8
+        },
+        {
+          "id": 153,
+          "name": "Obstetrics and Gynecology",
+          "faculty_id": 8
+        },
+        {
+          "id": 154,
+          "name": "Otolaryngology",
+          "faculty_id": 8
+        },
+        {
+          "id": 155,
+          "name": "Medicine",
+          "faculty_id": 8
+        },
+        {
+          "id": 156,
+          "name": "Mental Health",
+          "faculty_id": 28
+        },
+        {
+          "id": 157,
+          "name": "Medical Parasitology",
+          "faculty_id": 28
+        },
+        {
+          "id": 158,
+          "name": "Health Research and Management",
+          "faculty_id": 28
+        },
+        {
+          "id": 159,
+          "name": "Medical Biochemistry",
+          "faculty_id": 28
+        },
+        {
+          "id": 160,
+          "name": "Medical Imaging",
+          "faculty_id": 28
+        },
+        {
+          "id": 161,
+          "name": "Medicine",
+          "faculty_id": 28
+        },
+        {
+          "id": 162,
+          "name": "Medical Sciences",
+          "faculty_id": 28
+        },
+        {
+          "id": 163,
+          "name": "Health Development",
+          "faculty_id": 28
+        },
+        {
+          "id": 164,
+          "name": "Sports Medicine",
+          "faculty_id": 28
+        },
+        {
+          "id": 165,
+          "name": "Medical Sciences",
+          "faculty_id": 28
+        },
+        {
+          "id": 166,
+          "name": "Community Medicine",
+          "faculty_id": 47
+        },
+        {
+          "id": 167,
+          "name": "Health Research and Management",
+          "faculty_id": 47
+        },
+        {
+          "id": 168,
+          "name": "Medical Biochemistry",
+          "faculty_id": 47
+        },
+        {
+          "id": 169,
+          "name": "Medicine",
+          "faculty_id": 47
+        },
+        {
+          "id": 170,
+          "name": "Medical Sciences",
+          "faculty_id": 47
+        },
+        {
+          "id": 171,
+          "name": "Medical Sciences",
+          "faculty_id": 47
+        },
+        {
+          "id": 172,
+          "name": "Biomedical Sciences and Biotechnology",
+          "faculty_id": 47
+        },
+        {
+          "id": 173,
+          "name": "Pharmaceutical Sciences",
+          "faculty_id": 9
+        },
+        {
+          "id": 174,
+          "name": "Pharmaceutical Care",
+          "faculty_id": 9
+        },
+        {
+          "id": 175,
+          "name": "Pharmaceutics",
+          "faculty_id": 29
+        },
+        {
+          "id": 176,
+          "name": "Industrial Pharmacy",
+          "faculty_id": 29
+        },
+        {
+          "id": 177,
+          "name": "Chinical Pharmacy",
+          "faculty_id": 29
+        },
+        {
+          "id": 178,
+          "name": "Pharmaceutical Chemistry",
+          "faculty_id": 29
+        },
+        {
+          "id": 179,
+          "name": "Food Chemistry and Medical Nutrition",
+          "faculty_id": 29
+        },
+        {
+          "id": 180,
+          "name": "Pharmacognosy",
+          "faculty_id": 29
+        },
+        {
+          "id": 181,
+          "name": "Pharmaceutical Botany",
+          "faculty_id": 29
+        },
+        {
+          "id": 182,
+          "name": "Pharmacology and Toxicology",
+          "faculty_id": 29
+        },
+        {
+          "id": 183,
+          "name": "Physiology",
+          "faculty_id": 29
+        },
+        {
+          "id": 184,
+          "name": "Micriology",
+          "faculty_id": 29
+        },
+        {
+          "id": 185,
+          "name": "Pharmaceutical Technology",
+          "faculty_id": 29
+        },
+        {
+          "id": 186,
+          "name": "Cosmetic Science",
+          "faculty_id": 29
+        },
+        {
+          "id": 187,
+          "name": "Biomedical Chemistry",
+          "faculty_id": 29
+        },
+        {
+          "id": 188,
+          "name": "Social and Administrative Pharmacy",
+          "faculty_id": 29
+        },
+        {
+          "id": 189,
+          "name": "Pharmaceutics",
+          "faculty_id": 29
+        },
+        {
+          "id": 190,
+          "name": "Pharmaceutical Care",
+          "faculty_id": 29
+        },
+        {
+          "id": 191,
+          "name": "Pharmacology and Toxicology",
+          "faculty_id": 29
+        },
+        {
+          "id": 192,
+          "name": "Pharmaceutical Technology",
+          "faculty_id": 48
+        },
+        {
+          "id": 193,
+          "name": "Pharmaceutical Chemistry and Natural Products",
+          "faculty_id": 48
+        },
+        {
+          "id": 194,
+          "name": "Pharmacognosy",
+          "faculty_id": 48
+        },
+        {
+          "id": 195,
+          "name": "Biopharmaceutical Sciences",
+          "faculty_id": 48
+        },
+        {
+          "id": 196,
+          "name": "Biomedical Chemistry",
+          "faculty_id": 48
+        },
+        {
+          "id": 197,
+          "name": "Social and Administrative Pharmacy",
+          "faculty_id": 48
+        },
+        {
+          "id": 198,
+          "name": "Government",
+          "faculty_id": 10
+        },
+        {
+          "id": 199,
+          "name": "International Relations",
+          "faculty_id": 10
+        },
+        {
+          "id": 200,
+          "name": "Public Administration",
+          "faculty_id": 10
+        },
+        {
+          "id": 201,
+          "name": "Sociology and Anthropology",
+          "faculty_id": 10
+        },
+        {
+          "id": 202,
+          "name": "Government",
+          "faculty_id": 30
+        },
+        {
+          "id": 203,
+          "name": "Politics and Governance",
+          "faculty_id": 30
+        },
+        {
+          "id": 204,
+          "name": "International Relations",
+          "faculty_id": 30
+        },
+        {
+          "id": 205,
+          "name": "Public Administration",
+          "faculty_id": 30
+        },
+        {
+          "id": 206,
+          "name": "Sociology",
+          "faculty_id": 30
+        },
+        {
+          "id": 207,
+          "name": "Anthropology",
+          "faculty_id": 30
+        },
+        {
+          "id": 208,
+          "name": "International Development Studies",
+          "faculty_id": 30
+        },
+        {
+          "id": 209,
+          "name": "Political Science",
+          "faculty_id": 49
+        },
+        {
+          "id": 210,
+          "name": "Mathematics",
+          "faculty_id": 11
+        },
+        {
+          "id": 211,
+          "name": "Computer Science",
+          "faculty_id": 11
+        },
+        {
+          "id": 212,
+          "name": "Chemistry",
+          "faculty_id": 11
+        },
+        {
+          "id": 213,
+          "name": "Applied Chemistry",
+          "faculty_id": 11
+        },
+        {
+          "id": 214,
+          "name": "Biology",
+          "faculty_id": 11
+        },
+        {
+          "id": 215,
+          "name": "Zoology",
+          "faculty_id": 11
+        },
+        {
+          "id": 216,
+          "name": "Physics",
+          "faculty_id": 11
+        },
+        {
+          "id": 217,
+          "name": "Botany",
+          "faculty_id": 11
+        },
+        {
+          "id": 218,
+          "name": "Genetics",
+          "faculty_id": 11
+        },
+        {
+          "id": 219,
+          "name": "Chemical Engineering",
+          "faculty_id": 11
+        },
+        {
+          "id": 220,
+          "name": "Geology",
+          "faculty_id": 11
+        },
+        {
+          "id": 221,
+          "name": "General Science",
+          "faculty_id": 11
+        },
+        {
+          "id": 222,
+          "name": "Environmental Science",
+          "faculty_id": 11
+        },
+        {
+          "id": 223,
+          "name": "Marine Science",
+          "faculty_id": 11
+        },
+        {
+          "id": 224,
+          "name": "Biochemistry",
+          "faculty_id": 11
+        },
+        {
+          "id": 225,
+          "name": "Materials Science",
+          "faculty_id": 11
+        },
+        {
+          "id": 226,
+          "name": "Microbiology",
+          "faculty_id": 11
+        },
+        {
+          "id": 227,
+          "name": "Imaging and Printing Technology",
+          "faculty_id": 11
+        },
+        {
+          "id": 228,
+          "name": "Food Technology",
+          "faculty_id": 11
+        },
+        {
+          "id": 229,
+          "name": "Mathematics",
+          "faculty_id": 31
+        },
+        {
+          "id": 230,
+          "name": "Applied Mathematics and Computational Science",
+          "faculty_id": 31
+        },
+        {
+          "id": 231,
+          "name": "Computer Science and Information Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 232,
+          "name": "Chemistry",
+          "faculty_id": 31
+        },
+        {
+          "id": 233,
+          "name": "Zoology",
+          "faculty_id": 31
+        },
+        {
+          "id": 234,
+          "name": "Physics",
+          "faculty_id": 31
+        },
+        {
+          "id": 235,
+          "name": "Botany",
+          "faculty_id": 31
+        },
+        {
+          "id": 236,
+          "name": "Genetics",
+          "faculty_id": 31
+        },
+        {
+          "id": 237,
+          "name": "Chemical Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 238,
+          "name": "Fuel Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 239,
+          "name": "Geology",
+          "faculty_id": 31
+        },
+        {
+          "id": 240,
+          "name": "Earth Sciences",
+          "faculty_id": 31
+        },
+        {
+          "id": 241,
+          "name": "Marine Science",
+          "faculty_id": 31
+        },
+        {
+          "id": 242,
+          "name": "Biochemistry and Molecular Biology",
+          "faculty_id": 31
+        },
+        {
+          "id": 243,
+          "name": "Ceramic Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 244,
+          "name": "Applied Polymer Science and Textile Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 245,
+          "name": "Microbiology and Microbial Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 246,
+          "name": "Imaging Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 247,
+          "name": "Food Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 248,
+          "name": "Food Science and Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 249,
+          "name": "Petrochemistry and Polymer Science",
+          "faculty_id": 31
+        },
+        {
+          "id": 250,
+          "name": "Pulp and Paper Technology",
+          "faculty_id": 31
+        },
+        {
+          "id": 251,
+          "name": "Biotechnology",
+          "faculty_id": 31
+        },
+        {
+          "id": 252,
+          "name": "Metrological Science",
+          "faculty_id": 31
+        },
+        {
+          "id": 253,
+          "name": "Petroleum Geoscience",
+          "faculty_id": 31
+        },
+        {
+          "id": 254,
+          "name": "Mathematics",
+          "faculty_id": 50
+        },
+        {
+          "id": 255,
+          "name": "Applied Mathematics and Computational Science",
+          "faculty_id": 50
+        },
+        {
+          "id": 256,
+          "name": "Computer Science and Information Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 257,
+          "name": "Chemistry",
+          "faculty_id": 50
+        },
+        {
+          "id": 258,
+          "name": "Zoology",
+          "faculty_id": 50
+        },
+        {
+          "id": 259,
+          "name": "Physics",
+          "faculty_id": 50
+        },
+        {
+          "id": 260,
+          "name": "Botany",
+          "faculty_id": 50
+        },
+        {
+          "id": 261,
+          "name": "Chemical Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 262,
+          "name": "Geology",
+          "faculty_id": 50
+        },
+        {
+          "id": 263,
+          "name": "Marine Science",
+          "faculty_id": 50
+        },
+        {
+          "id": 264,
+          "name": "Biochemistry and Molecular Biology",
+          "faculty_id": 50
+        },
+        {
+          "id": 265,
+          "name": "Materials Science",
+          "faculty_id": 50
+        },
+        {
+          "id": 266,
+          "name": "Microbiology and Microbial Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 267,
+          "name": "Imaging Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 268,
+          "name": "Food Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 269,
+          "name": "Macromolecular Science",
+          "faculty_id": 50
+        },
+        {
+          "id": 270,
+          "name": "Petrochemistry",
+          "faculty_id": 50
+        },
+        {
+          "id": 271,
+          "name": "Biological Sciences",
+          "faculty_id": 50
+        },
+        {
+          "id": 272,
+          "name": "Biotechnology",
+          "faculty_id": 50
+        },
+        {
+          "id": 273,
+          "name": "Agricultural Technology",
+          "faculty_id": 50
+        },
+        {
+          "id": 274,
+          "name": "Sports and Exercise Science",
+          "faculty_id": 12
+        },
+        {
+          "id": 275,
+          "name": "Sports Science",
+          "faculty_id": 32
+        },
+        {
+          "id": 276,
+          "name": "Sports Science",
+          "faculty_id": 51
+        },
+        {
+          "id": 277,
+          "name": "Civil Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 278,
+          "name": "Electrical Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 279,
+          "name": "Mechanical Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 280,
+          "name": "Naval Architecture and Marine Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 281,
+          "name": "Automotive Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 282,
+          "name": "Industrial Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 283,
+          "name": "Chemical Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 284,
+          "name": "Georesources Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 285,
+          "name": "Petroleum Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 286,
+          "name": "Environmental Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 287,
+          "name": "Survey Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 288,
+          "name": "Metallurgical and Materials Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 289,
+          "name": "Computer Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 290,
+          "name": "Nano-Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 291,
+          "name": "Automotive Design and Manufacturing Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 292,
+          "name": "Aerospace Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 293,
+          "name": "Information and Communication Engineering",
+          "faculty_id": 13
+        },
+        {
+          "id": 294,
+          "name": "Civil Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 295,
+          "name": "Electrical Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 296,
+          "name": "Mechanical Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 297,
+          "name": "Industrial Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 298,
+          "name": "Chemical Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 299,
+          "name": "Georesources and Petroleum Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 300,
+          "name": "Environmental Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 301,
+          "name": "Survey Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 302,
+          "name": "Metallurgical and Materials Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 303,
+          "name": "Computer Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 304,
+          "name": "Nuclear Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 305,
+          "name": "Water Resources Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 306,
+          "name": "Engineering Management",
+          "faculty_id": 33
+        },
+        {
+          "id": 307,
+          "name": "Biomedical Engineering",
+          "faculty_id": 33
+        },
+        {
+          "id": 308,
+          "name": "Defense and Engineering Technology",
+          "faculty_id": 33
+        },
+        {
+          "id": 309,
+          "name": "Civil Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 310,
+          "name": "Electrical Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 311,
+          "name": "Mechanical Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 312,
+          "name": "Industrial Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 313,
+          "name": "Chemical Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 314,
+          "name": "Environmental Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 315,
+          "name": "Survey Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 316,
+          "name": "Metallurgical and Materials Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 317,
+          "name": "Computer Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 318,
+          "name": "Nuclear Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 319,
+          "name": "Water Resources Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 320,
+          "name": "Biomedical Engineering",
+          "faculty_id": 52
+        },
+        {
+          "id": 321,
+          "name": "Music",
+          "faculty_id": 14
+        },
+        {
+          "id": 322,
+          "name": "Thai Music",
+          "faculty_id": 14
+        },
+        {
+          "id": 323,
+          "name": "Western Music",
+          "faculty_id": 14
+        },
+        {
+          "id": 324,
+          "name": "Visual Arts",
+          "faculty_id": 14
+        },
+        {
+          "id": 325,
+          "name": "Dance",
+          "faculty_id": 14
+        },
+        {
+          "id": 326,
+          "name": "Creative Arts",
+          "faculty_id": 14
+        },
+        {
+          "id": 327,
+          "name": "Thai Music",
+          "faculty_id": 34
+        },
+        {
+          "id": 328,
+          "name": "Thai Dance",
+          "faculty_id": 34
+        },
+        {
+          "id": 329,
+          "name": "Creative Arts",
+          "faculty_id": 34
+        },
+        {
+          "id": 330,
+          "name": "Western Music",
+          "faculty_id": 34
+        },
+        {
+          "id": 331,
+          "name": "Thai Theater Dance",
+          "faculty_id": 53
+        },
+        {
+          "id": 332,
+          "name": "Economics",
+          "faculty_id": 15
+        },
+        {
+          "id": 333,
+          "name": "Economics",
+          "faculty_id": 35
+        },
+        {
+          "id": 334,
+          "name": "Health Economics and Health Care Management",
+          "faculty_id": 35
+        },
+        {
+          "id": 335,
+          "name": "International Economics and Finance",
+          "faculty_id": 35
+        },
+        {
+          "id": 336,
+          "name": "Business and Managerial Economics",
+          "faculty_id": 35
+        },
+        {
+          "id": 337,
+          "name": "Labour Economics and Human Resource Management",
+          "faculty_id": 35
+        },
+        {
+          "id": 338,
+          "name": "Political Economy",
+          "faculty_id": 35
+        },
+        {
+          "id": 339,
+          "name": "Economics",
+          "faculty_id": 54
+        },
+        {
+          "id": 340,
+          "name": "Architecture",
+          "faculty_id": 16
+        },
+        {
+          "id": 341,
+          "name": "Thai Architecture",
+          "faculty_id": 16
+        },
+        {
+          "id": 342,
+          "name": "Interior Architecture",
+          "faculty_id": 16
+        },
+        {
+          "id": 343,
+          "name": "Urban Architecture",
+          "faculty_id": 16
+        },
+        {
+          "id": 344,
+          "name": "Industrial Design",
+          "faculty_id": 16
+        },
+        {
+          "id": 345,
+          "name": "Communication Design",
+          "faculty_id": 16
+        },
+        {
+          "id": 346,
+          "name": "Landscape Architecture",
+          "faculty_id": 16
+        },
+        {
+          "id": 347,
+          "name": "Architectural Design",
+          "faculty_id": 16
+        },
+        {
+          "id": 348,
+          "name": "Architecture",
+          "faculty_id": 36
+        },
+        {
+          "id": 349,
+          "name": "Architectural Design",
+          "faculty_id": 36
+        },
+        {
+          "id": 350,
+          "name": "Urban Planning and Design",
+          "faculty_id": 36
+        },
+        {
+          "id": 351,
+          "name": "Industrial Design",
+          "faculty_id": 36
+        },
+        {
+          "id": 352,
+          "name": "Landscape Architecture",
+          "faculty_id": 36
+        },
+        {
+          "id": 353,
+          "name": "Architecture",
+          "faculty_id": 55
+        },
+        {
+          "id": 354,
+          "name": "Urban Planning and Design",
+          "faculty_id": 55
+        },
+        {
+          "id": 355,
+          "name": "Medical Technology",
+          "faculty_id": 17
+        },
+        {
+          "id": 356,
+          "name": "Physical Therapy",
+          "faculty_id": 17
+        },
+        {
+          "id": 357,
+          "name": "Nutrition and Dietetics",
+          "faculty_id": 17
+        },
+        {
+          "id": 358,
+          "name": "Physical Therapy",
+          "faculty_id": 37
+        },
+        {
+          "id": 359,
+          "name": "Clinical Biochemistry and Molecular Medicine",
+          "faculty_id": 37
+        },
+        {
+          "id": 360,
+          "name": "Clinical Hematology Sciences",
+          "faculty_id": 37
+        },
+        {
+          "id": 361,
+          "name": "Food and Nutrition",
+          "faculty_id": 37
+        },
+        {
+          "id": 362,
+          "name": "Molecular Science of Medical Microbiology and Immunology",
+          "faculty_id": 37
+        },
+        {
+          "id": 363,
+          "name": "Physical Therapy",
+          "faculty_id": 56
+        },
+        {
+          "id": 364,
+          "name": "Clinical Biochemistry and Molecular Medicine",
+          "faculty_id": 56
+        },
+        {
+          "id": 365,
+          "name": "Food and Nutrition",
+          "faculty_id": 56
+        },
+        {
+          "id": 366,
+          "name": "Veterinary Anatomy",
+          "faculty_id": 18
+        },
+        {
+          "id": 367,
+          "name": "Veterinary Pathology",
+          "faculty_id": 18
+        },
+        {
+          "id": 368,
+          "name": "Veterinary Pharmacology",
+          "faculty_id": 18
+        },
+        {
+          "id": 369,
+          "name": "Veterinary Surgery",
+          "faculty_id": 18
+        },
+        {
+          "id": 370,
+          "name": "Veterinary Physiology",
+          "faculty_id": 18
+        },
+        {
+          "id": 371,
+          "name": "Animal Husbandry",
+          "faculty_id": 18
+        },
+        {
+          "id": 372,
+          "name": "Obstetrics Gynaecology and Reproduction",
+          "faculty_id": 18
+        },
+        {
+          "id": 373,
+          "name": "Veterinary Medicine",
+          "faculty_id": 18
+        },
+        {
+          "id": 374,
+          "name": "Veterinary Public Health",
+          "faculty_id": 18
+        },
+        {
+          "id": 375,
+          "name": "Microbiology",
+          "faculty_id": 18
+        },
+        {
+          "id": 376,
+          "name": "Veterinary Pathobiology",
+          "faculty_id": 38
+        },
+        {
+          "id": 377,
+          "name": "Veterinary Pharmacology",
+          "faculty_id": 38
+        },
+        {
+          "id": 378,
+          "name": "Veterinary Surgery",
+          "faculty_id": 38
+        },
+        {
+          "id": 379,
+          "name": "Animal Physiology",
+          "faculty_id": 38
+        },
+        {
+          "id": 380,
+          "name": "Animal Breeding",
+          "faculty_id": 38
+        },
+        {
+          "id": 381,
+          "name": "Animal Nutrition",
+          "faculty_id": 38
+        },
+        {
+          "id": 382,
+          "name": "Theriogenology",
+          "faculty_id": 38
+        },
+        {
+          "id": 383,
+          "name": "Veterinary Medicine",
+          "faculty_id": 38
+        },
+        {
+          "id": 384,
+          "name": "Veterinary Public Health",
+          "faculty_id": 38
+        },
+        {
+          "id": 385,
+          "name": "Veterinary Biosciences",
+          "faculty_id": 38
+        },
+        {
+          "id": 386,
+          "name": "Veterinary Pathobiology",
+          "faculty_id": 57
+        },
+        {
+          "id": 387,
+          "name": "Animal Physiology",
+          "faculty_id": 57
+        },
+        {
+          "id": 388,
+          "name": "Theriogenology",
+          "faculty_id": 57
+        },
+        {
+          "id": 389,
+          "name": "Veterinary Medicine",
+          "faculty_id": 57
+        },
+        {
+          "id": 390,
+          "name": "Veterinary Public Health",
+          "faculty_id": 57
+        },
+        {
+          "id": 391,
+          "name": "Veterinary Biosciences)",
+          "faculty_id": 57
+        },
+        {
+          "id": 392,
+          "name": "Information Studies",
+          "faculty_id": 19
+        },
+        {
+          "id": 393,
+          "name": "History",
+          "faculty_id": 19
+        },
+        {
+          "id": 394,
+          "name": "Philosophy",
+          "faculty_id": 19
+        },
+        {
+          "id": 395,
+          "name": "French",
+          "faculty_id": 19
+        },
+        {
+          "id": 396,
+          "name": "German",
+          "faculty_id": 19
+        },
+        {
+          "id": 397,
+          "name": "Spanish",
+          "faculty_id": 19
+        },
+        {
+          "id": 398,
+          "name": "Italian",
+          "faculty_id": 19
+        },
+        {
+          "id": 399,
+          "name": "Japanese",
+          "faculty_id": 19
+        },
+        {
+          "id": 400,
+          "name": "Pali and Sanskrit",
+          "faculty_id": 19
+        },
+        {
+          "id": 401,
+          "name": "Chinese",
+          "faculty_id": 19
+        },
+        {
+          "id": 402,
+          "name": "Thai",
+          "faculty_id": 19
+        },
+        {
+          "id": 403,
+          "name": "English",
+          "faculty_id": 19
+        },
+        {
+          "id": 404,
+          "name": "Geography",
+          "faculty_id": 19
+        },
+        {
+          "id": 405,
+          "name": "Dramatic Arts",
+          "faculty_id": 19
+        },
+        {
+          "id": 406,
+          "name": "Language and Culture",
+          "faculty_id": 19
+        },
+        {
+          "id": 407,
+          "name": "Community Interpreting",
+          "faculty_id": 19
+        },
+        {
+          "id": 408,
+          "name": "Library and Information Science",
+          "faculty_id": 39
+        },
+        {
+          "id": 409,
+          "name": "History",
+          "faculty_id": 39
+        },
+        {
+          "id": 410,
+          "name": "Historical Studies",
+          "faculty_id": 39
+        },
+        {
+          "id": 411,
+          "name": "Philosophy",
+          "faculty_id": 39
+        },
+        {
+          "id": 412,
+          "name": "French Language and Literature",
+          "faculty_id": 39
+        },
+        {
+          "id": 413,
+          "name": "German",
+          "faculty_id": 39
+        },
+        {
+          "id": 414,
+          "name": "Japanese Literature",
+          "faculty_id": 39
+        },
+        {
+          "id": 415,
+          "name": "Japanese as a Foreign Language",
+          "faculty_id": 39
+        },
+        {
+          "id": 416,
+          "name": "Pali and Sanskrit",
+          "faculty_id": 39
+        },
+        {
+          "id": 417,
+          "name": "Chinese",
+          "faculty_id": 39
+        },
+        {
+          "id": 418,
+          "name": "Thai",
+          "faculty_id": 39
+        },
+        {
+          "id": 419,
+          "name": "Linguistics",
+          "faculty_id": 39
+        },
+        {
+          "id": 420,
+          "name": "English",
+          "faculty_id": 39
+        },
+        {
+          "id": 421,
+          "name": "Translation and Interpretation",
+          "faculty_id": 39
+        },
+        {
+          "id": 422,
+          "name": "Geography",
+          "faculty_id": 39
+        },
+        {
+          "id": 423,
+          "name": "Dramatic Arts",
+          "faculty_id": 39
+        },
+        {
+          "id": 424,
+          "name": "Comparative Literature",
+          "faculty_id": 39
+        },
+        {
+          "id": 425,
+          "name": "Thai Studies",
+          "faculty_id": 39
+        },
+        {
+          "id": 426,
+          "name": "Buddhist Sudies",
+          "faculty_id": 39
+        },
+        {
+          "id": 427,
+          "name": "History",
+          "faculty_id": 58
+        },
+        {
+          "id": 428,
+          "name": "Philosophy",
+          "faculty_id": 58
+        },
+        {
+          "id": 429,
+          "name": "French Language and Literature",
+          "faculty_id": 58
+        },
+        {
+          "id": 430,
+          "name": "German",
+          "faculty_id": 58
+        },
+        {
+          "id": 431,
+          "name": "Chinese",
+          "faculty_id": 58
+        },
+        {
+          "id": 432,
+          "name": "Thai",
+          "faculty_id": 58
+        },
+        {
+          "id": 433,
+          "name": "Linguistics",
+          "faculty_id": 58
+        },
+        {
+          "id": 434,
+          "name": "Literature and Comparative Literature",
+          "faculty_id": 58
+        },
+        {
+          "id": 435,
+          "name": "Thai Studies",
+          "faculty_id": 58
+        },
+        {
+          "id": 436,
+          "name": "Agricultural Resources Administration",
+          "faculty_id": 20
+        }
+      ]
+}

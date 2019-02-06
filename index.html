@@ -314,7 +314,7 @@ b{
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
-    var a,b,c,d = "";
+    var a, b, c, d = "";
     function insert_value() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
@@ -360,10 +360,10 @@ b{
 
       var port = "";
       var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
-      a =os;
-      b=db;
-      c=job;
-      d=job_l;
+      a = os;
+      b = db;
+      c = job;
+      d = job_l;
       document.getElementById("database").value = a
       document.getElementById("oper").value = b
       document.getElementById("cur_job").value = c
@@ -483,10 +483,10 @@ b{
       <!-- <label>ID :</label> -->
       <input type="hidden" name="id" id="id" required></input>
       <input type="hidden" name="token" id="token" required></input>
-      <input type="hidden" name="cur_job" id="cur_job" ></input>
-      <input type="hidden" name="database" id="database" ></input>
-      <input type="hidden" name="oper" id="oper" ></input>
-      <input type="hidden" name="job_lawa" id="job_lawa" ></input>
+      <input type="hidden" name="cur_job" id="cur_job"></input>
+      <input type="hidden" name="database" id="database"></input>
+      <input type="hidden" name="oper" id="oper"></input>
+      <input type="hidden" name="job_lawa" id="job_lawa"></input>
       <label type="hidden"></label>
       <!-- <label id="id" name="id"></label><br> -->
   </div>
@@ -507,7 +507,7 @@ b{
         <label><b style="color:red">* </b>Your picture </label><br>
         <div>
           <img id="picpreview" class="img-profile" src="uploads/asdasd.PNG" alt="">
-          <!-- <img id="blah" src="#" alt="your image" class="img-profile" /> -->
+          <!-- <img id="blah" src="#" alt= image" class="img-profile" /> -->
         </div>
         <input type="file" name="files[]" id="pic" multiple></input>
       </div>
@@ -523,7 +523,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label><b style="color:red">* </b>First Name : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+          <input class="input" type="text" name="name" id="name" placeholder="Enter first name" onkeypress="return isCharKey(event)"
             onchange="return checkName()" maxlength="30" required></input>
           <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -531,7 +531,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label><b style="color:red">* </b>Last Name : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+          <input class="input" type="text" name="lname" id="lname" placeholder="Enter last name" onkeypress="return isCharKey(event)"
             onchange="return checkLname()" maxlength="30" required></input>
           <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -546,7 +546,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Height : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " onkeypress="return isNumberKey(event)"
+          <input class="input" type="text" name="height" id="height" placeholder="Enter Height " onkeypress="return isNumberKey(event)"
             maxlength="5"></input>
           <i class="fa fa-text-height fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -554,7 +554,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Weight : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" onkeypress="return isNumberKey(event)"
+          <input class="input" type="text" name="weight" id="weight" placeholder="Enter Weight" onkeypress="return isNumberKey(event)"
             maxlength="5"></input>
           <i class="fas fa-weight fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -562,7 +562,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Age : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" onkeypress="return isNumberKey(event)"
+          <input class="input" type="text" name="age" id="age" placeholder="Enter Age" onkeypress="return isNumberKey(event)"
             maxlength="3"></input>
           <i class="fas fa-birthday-cake fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -570,7 +570,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label><b style="color:red">* </b>Position : </label><br>
         <div class="inputWithIcon">
-          <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
+          <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter Position" onkeypress="return isCharKey(event)"
                     onchange="return checkLname()" maxlength="30" ></input>
                   <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
           <div id="mySelect_job" name="mySelect_job"></div>
@@ -579,7 +579,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Salary : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" onkeypress="return isNumberKey(event)"
+          <input class="input" type="text" name="sal" id="sal" placeholder="Enter Salary" onkeypress="return isNumberKey(event)"
             maxlength="30"></input>
           <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
         </div>
@@ -608,39 +608,103 @@ b{
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <br>
       </div>
-
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Educational institution : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
+          <input class="input" type="text" name="ei" id="ei" placeholder="Enter Name of school" onkeypress="return isCharKey(event)"
             onchange="return checku()" maxlength="40"></input>
           <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Major : </label><br>
-        <div class="inputWithIcon">
-          <input class="input" type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
-            onchange="return checkmajor()" maxlength="40"></input>
-          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-        </div>
+        <label>Type: </label><br>
+        <div id="mySelect_1" name="mySelect_1"></div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Minor : </label><br>
-        <div class="inputWithIcon">
-          <input class="input" type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
-            onchange="return checkminor()" maxlength="40"></input>
-          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-        </div>
+        <label>Course : </label><br>
+        <div id="mySelect_2" name="mySelect_2"></div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>GPAX : </label><br>
+        <label>Department : </label><br>
+        <div id="mySelect_3" name="mySelect_3"></div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>GPA : </label><br>
         <div class="inputWithIcon">
           <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
             maxlength="4"></input>
           <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Study start date : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Graduation day : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="gd" id="gd" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Educational institution : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="u_ei" id="u_ei" placeholder="Enter Name of University" onkeypress="return isCharKey(event)"
+            onchange="return checku()" maxlength="40"></input>
+          <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Degree : </label><br>
+        <div id="mySelect_4" name="mySelect_4"></div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Faculty : </label><br>
+        <div id="mySelect_5" name="mySelect_5"></div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Major : </label><br>
+        <div id="mySelect_6" name="mySelect_6"></div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>GPA : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+            maxlength="4"></input>
+          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Study start date : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Graduation day : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="gd" id="gd" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+      </div>
+
 
     </div>
   </div>
@@ -670,8 +734,8 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label><b style="color:red">* </b>Telephone Number : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
-            onchange="return checktel()" required></input>
+          <input class="input" type="tel" name="tel" id="tel" placeholder="Enter telephone number" maxlength="10"
+            onkeypress="return isNumberKey(event)" onchange="return checktel()" required></input>
           <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -686,20 +750,6 @@ b{
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Address in ID Card : </label><br>
-        <div class="inputWithIcon">
-          <input class="input" type="text" name="aic" id="aic" placeholder="Enter your address"></input>
-          <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Current Address : </label><br>
-        <div class="inputWithIcon">
-          <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address"></input>
-          <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Reference : </label><br>
         <div class="inputWithIcon">
           <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"
@@ -707,6 +757,15 @@ b{
           <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <label>Permanent Home Address : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="aic" id="aic" placeholder="Enter address"></textarea>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <label>Current Address : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="ca" id="ca" placeholder="Enter address"></textarea>
+      </div>
+
 
     </div>
   </div>
@@ -806,7 +865,7 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Facebook : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id"></input>
+          <input class="input" type="text" name="fb" id="fb" placeholder="Enter facebook id"></input>
           <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -814,28 +873,28 @@ b{
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Line : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="line" id="line" placeholder="Enter your id line"></input>
+          <input class="input" type="text" name="line" id="line" placeholder="Enter id line"></input>
           <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Instagram : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram"></input>
+          <input class="input" type="text" name="ig" id="ig" placeholder="Enter Instagram"></input>
           <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Github: </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="git" id="git" placeholder="Enter your Github"></input>
+          <input class="input" type="text" name="git" id="git" placeholder="Enter Github"></input>
           <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Linkedin: </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin"></input>
+          <input class="input" type="text" name="link" id="link" placeholder="Enter Linkedin"></input>
           <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -867,16 +926,16 @@ b{
         <br>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Current enterprise : </label><br>
+        <label>Organization : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise"></input>
+          <input class="input" type="text" name="cen" id="cen" placeholder="Enter Current enterprise"></input>
           <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label><b style="color:red">* </b>Working position : </label><br>
         <div class="inputWithIcon">
-          <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
+          <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter Linkedin"></input>
                 <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
           <div id="mySelect_job_l" name="mySelect_job_l"></div>
         </div>
@@ -896,9 +955,9 @@ b{
         </div>
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        <label>Current salary : </label><br>
+        <label>Salary : </label><br>
         <div class="inputWithIcon">
-          <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Salary"></input>
+          <input class="input" type="text" name="cs" id="cs" placeholder="Enter Salary"></input>
           <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
         </div>
       </div>
@@ -907,14 +966,13 @@ b{
           <input type="file" name="file" id="port" multiple></input>
       </div> -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <label>About you : </label><br>
-        <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+        <label>Describe yourself and relevant experience : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="Enter Describe yourself and relevant experience"
           onchange="return checkabout()"></textarea>
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <label>Experiece : </label><br>
-        <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
-          onchange="return checkexp()"></textarea><br>
+        <label>Responsibilities : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter Responsibilities" onchange="return checkexp()"></textarea><br>
       </div>
 
 
@@ -994,90 +1052,7 @@ b{
     window.location.reload();
   }
 </script>
-<script>
-  dataget_db = [];
-  fetch('json/db.json')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (myJson) {
-      dataget_db = myJson.database
-      dataget_db.sort(function (a, b) {
-        var sort_db = a.name < b.name ? -1 : 1;
-        return sort_db
-      });
-      dynamicdropdown_db()
-    });
-</script>
-<script>
-  dataget_job = [];
-  fetch('json/position.json')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (myJson) {
-      dataget_job = myJson.job
-      dataget_job.sort(function (a, b) {
-        var sort_job = a.name < b.name ? -1 : 1;
-        return sort_job
-      });
-      dynamicdropdown_job()
-      dynamicdropdown_job_l()
-    });
-</script>
-<script>
-  function dynamicdropdown_db(listindexs) {
-    var html = '';
-    
-    html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-    html = html + '<option value="0">Select </option>';
-    for (var i = 0; i < dataget_db.length; i++) {
-      html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_db').html(html)
-  }
-</script>
-<script>
-  dataget_os = { "os": [{ "id": "1", "name": "Windows" }, { "id": "2", "name": "MacOS" }, { "id": "3", "name": "LinuxOS" }] }
-  dataget_os.os.sort(function (a, b) {
-    var sort_os = a.name < b.name ? -1 : 1;
-    return sort_os
-  });
-  var html = '';
-  html = html + '<select id="os" name="op" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-  html = html + '<option value="0">Select </option>';
-  for (var i = 0; i < dataget_os.os.length; i++) {
-    html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
-  }
-  html = html + '</select>';
-  $('#mySelect_os').html(html)
 
-</script>
-<script>
-  function dynamicdropdown_job(listindexs) {
-    var html = '';
-    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
-    html = html + '<option value="0">Select </option>';
-    for (var i = 0; i < dataget_job.length; i++) {
-      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_job').html(html)
-  }
-</script>
-<script>
-  function dynamicdropdown_job_l(listindexs) {
-    var html = '';
-    html = html + '<select id="job_l" name="job_lawa" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
-    html = html + '<option value="0">Select </option>';
-    for (var i = 0; i < dataget_job.length; i++) {
-      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_job_l').html(html)
-  }
-</script>
 
 <div class="container">
   <div class="row">
@@ -1155,7 +1130,7 @@ b{
       method: 'POST',
       body: formData
     }).then(response => {
- 
+
       document.myForm.submit();
 
     });
@@ -1184,5 +1159,7 @@ b{
 <script src="js/checkvalidate.js"></script>
 <!-- <script src="js/upload.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/dynamic_education.js"></script>
+<script src="js/dynamic_positon.js"></script>
 
 </html>

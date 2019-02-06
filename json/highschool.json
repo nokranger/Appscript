@@ -1,0 +1,90 @@
+{
+    "school": [
+        {
+            "id": "1",
+            "name": "Science - Mathematics",
+            "g_id": "1"
+        },
+        {
+            "id": "2",
+            "name": "English program",
+            "g_id": "1"
+        },
+        {
+            "id": "3",
+            "name": "Science - Mathematics - Language",
+            "g_id": "1"
+        },
+        {
+            "id": "4",
+            "name": "Mathematics - English",
+            "g_id": "1"
+        },
+        {
+            "id": "5",
+            "name": "Science",
+            "g_id": "1"
+        },
+        {
+            "id": "6",
+            "name": "Language",
+            "g_id": "1"
+        },
+        {
+            "id": "7",
+            "name": "Art - Language ",
+            "g_id": "1"
+        },
+        {
+            "id": "8",
+            "name": "Art - Society",
+            "g_id": "1"
+        },
+        {
+            "id": "9",
+            "name": "Industrial",
+            "g_id": "2"
+        },
+        {
+            "id": "10",
+            "name": "Commerce / Business Administration",
+            "g_id": "2"
+        },
+        {
+            "id": "11",
+            "name": "Fine Arts",
+            "g_id": "2"
+        },
+        {
+            "id": "12",
+            "name": "Home economics",
+            "g_id": "2"
+        },
+        {
+            "id": "13",
+            "v_id": "5",
+            "name": "Agriculture",
+            "g_id": "2"
+        },
+        {
+            "id": "14",
+            "name": "Fisheries",
+            "g_id": "2"
+        },
+        {
+            "id": "15",
+            "name": "Tourism industry",
+            "g_id": "2"
+        },
+        {
+            "id": "16",
+            "name": "Textile industry",
+            "g_id": "2"
+        },
+        {
+            "id": "17",
+            "name": "Information and Communication Technology",
+            "g_id": "2"
+        }
+    ]
+}

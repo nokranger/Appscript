@@ -1,0 +1,12 @@
+{
+    "degree_education": [
+        {
+            "id": "1",
+            "name": "Senior High School"
+        },
+        {
+            "id": "2",
+            "name": "Vocational Certificate"
+        }
+    ]
+}

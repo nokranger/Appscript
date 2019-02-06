@@ -1,0 +1,294 @@
+{
+    "faculty": [
+        {
+          "id": 1,
+          "name": "Faculty of Education",
+          "degree_id": 1
+        },
+        {
+          "id": 2,
+          "name": "Faculty of Psychology",
+          "degree_id": 1
+        },
+        {
+          "id": 3,
+          "name": "Faculty of Dentistry",
+          "degree_id": 1
+        },
+        {
+          "id": 4,
+          "name": "Faculty of Laws",
+          "degree_id": 1
+        },
+        {
+          "id": 5,
+          "name": "Faculty of Communication Arts",
+          "degree_id": 1
+        },
+        {
+          "id": 6,
+          "name": "Faculty of Nursing Science",
+          "degree_id": 1
+        },
+        {
+          "id": 7,
+          "name": "Faculty of Commerce and Accountancy",
+          "degree_id": 1
+        },
+        {
+          "id": 8,
+          "name": "Faculty of Medicine",
+          "degree_id": 1
+        },
+        {
+          "id": 9,
+          "name": "Faculty of Phamaceutical Science",
+          "degree_id": 1
+        },
+        {
+          "id": 10,
+          "name": "Faculty of Political Science",
+          "degree_id": 1
+        },
+        {
+          "id": 11,
+          "name": "Faculty of Science",
+          "degree_id": 1
+        },
+        {
+          "id": 12,
+          "name": "Faculty of Sport Science",
+          "degree_id": 1
+        },
+        {
+          "id": 13,
+          "name": "Faculty of Engineering",
+          "degree_id": 1
+        },
+        {
+          "id": 14,
+          "name": "Faculty of Fine and Applied Arts",
+          "degree_id": 1
+        },
+        {
+          "id": 15,
+          "name": "Faculty of Economics",
+          "degree_id": 1
+        },
+        {
+          "id": 16,
+          "name": "Faculty of Architecture",
+          "degree_id": 1
+        },
+        {
+          "id": 17,
+          "name": "Faculty of Allied Health Sciences",
+          "degree_id": 1
+        },
+        {
+          "id": 18,
+          "name": "Faculty of Veterinary Science",
+          "degree_id": 1
+        },
+        {
+          "id": 19,
+          "name": "Faculty of Arts",
+          "degree_id": 1
+        },
+        {
+          "id": 20,
+          "name": "Faculty of Agricultural",
+          "degree_id": 1
+        },
+        {
+          "id": 21,
+          "name": "Master of Education",
+          "degree_id": 2
+        },
+        {
+          "id": 22,
+          "name": "Master of Psychology",
+          "degree_id": 2
+        },
+        {
+          "id": 23,
+          "name": "Master of Dentistry",
+          "degree_id": 2
+        },
+        {
+          "id": 24,
+          "name": "Master of Laws",
+          "degree_id": 2
+        },
+        {
+          "id": 25,
+          "name": "Master of Communication Art",
+          "degree_id": 2
+        },
+        {
+          "id": 26,
+          "name": "Master of Nursing Science",
+          "degree_id": 2
+        },
+        {
+          "id": 27,
+          "name": "Master of Accountancy",
+          "degree_id": 2
+        },
+        {
+          "id": 28,
+          "name": "Master of Medicine",
+          "degree_id": 2
+        },
+        {
+          "id": 29,
+          "name": "Master of Science in Pharmacy",
+          "degree_id": 2
+        },
+        {
+          "id": 30,
+          "name": "Master of Political Science",
+          "degree_id": 2
+        },
+        {
+          "id": 31,
+          "name": "Master of Science",
+          "degree_id": 2
+        },
+        {
+          "id": 32,
+          "name": "Master of Sports Science",
+          "degree_id": 2
+        },
+        {
+          "id": 33,
+          "name": "Master of Engineering",
+          "degree_id": 2
+        },
+        {
+          "id": 34,
+          "name": "Master of Fine and Applied Arts",
+          "degree_id": 2
+        },
+        {
+          "id": 35,
+          "name": "Master of Economics",
+          "degree_id": 2
+        },
+        {
+          "id": 36,
+          "name": "Master of Architecture",
+          "degree_id": 2
+        },
+        {
+          "id": 37,
+          "name": "Master of Allied Health Sciences",
+          "degree_id": 2
+        },
+        {
+          "id": 38,
+          "name": "Master of Veterinary Science",
+          "degree_id": 2
+        },
+        {
+          "id": 39,
+          "name": "Master of Arts",
+          "degree_id": 2
+        },
+        {
+          "id": 40,
+          "name": "Doctor of Education",
+          "degree_id": 3
+        },
+        {
+          "id": 41,
+          "name": "Doctor of Psychology",
+          "degree_id": 3
+        },
+        {
+          "id": 42,
+          "name": "Doctor of Dental Surgery",
+          "degree_id": 3
+        },
+        {
+          "id": 43,
+          "name": "Doctor of Juridical Science",
+          "degree_id": 3
+        },
+        {
+          "id": 44,
+          "name": "Doctor of Communication Arts",
+          "degree_id": 3
+        },
+        {
+          "id": 45,
+          "name": "Doctor of Nursing Science",
+          "degree_id": 3
+        },
+        {
+          "id": 46,
+          "name": "Doctor of Accountancy",
+          "degree_id": 3
+        },
+        {
+          "id": 47,
+          "name": "Doctor of Medicine",
+          "degree_id": 3
+        },
+        {
+          "id": 48,
+          "name": "Doctor of Phamaceutical Science",
+          "degree_id": 3
+        },
+        {
+          "id": 49,
+          "name": "Doctor of Political Science",
+          "degree_id": 3
+        },
+        {
+          "id": 50,
+          "name": "Doctor of Science",
+          "degree_id": 3
+        },
+        {
+          "id": 51,
+          "name": "Doctor of Sports Science",
+          "degree_id": 3
+        },
+        {
+          "id": 52,
+          "name": "Doctor of Engineering",
+          "degree_id": 3
+        },
+        {
+          "id": 53,
+          "name": "Doctor of Fine and Applied Arts",
+          "degree_id": 3
+        },
+        {
+          "id": 54,
+          "name": "Doctor of Economics",
+          "degree_id": 3
+        },
+        {
+          "id": 55,
+          "name": "Doctor of Architecture",
+          "degree_id": 3
+        },
+        {
+          "id": 56,
+          "name": "Doctor of Allied Health Sciences",
+          "degree_id": 3
+        },
+        {
+          "id": 57,
+          "name": "Doctor of Veterinary Science",
+          "degree_id": 3
+        },
+        {
+          "id": 58,
+          "name": "Doctor of Arts",
+          "degree_id": 3
+        }
+      ]
+}

@@ -1,0 +1,58 @@
+{
+    "school": [
+        {
+            "id": "9",
+            "v_id": "1",
+            "name": "Industrial",
+            "g_id": "2"
+        },
+        {
+            "id": "10",
+            "v_id": "2",
+            "name": "Commerce / Business Administration",
+            "g_id": "2"
+        },
+        {
+            "id": "11",
+            "v_id": "3",
+            "name": "Fine Arts",
+            "g_id": "2"
+        },
+        {
+            "id": "12",
+            "v_id": "4",
+            "name": "Home economics",
+            "g_id": "2"
+        },
+        {
+            "id": "13",
+            "v_id": "5",
+            "name": "Agriculture",
+            "g_id": "2"
+        },
+        {
+            "id": "14",
+            "v_id": "6",
+            "name": "Fisheries",
+            "g_id": "2"
+        },
+        {
+            "id": "15",
+            "v_id": "7",
+            "name": "Tourism industry",
+            "g_id": "2"
+        },
+        {
+            "id": "16",
+            "v_id": "8",
+            "name": "Textile industry",
+            "g_id": "2"
+        },
+        {
+            "id": "17",
+            "v_id": "9",
+            "name": "Information and Communication Technology",
+            "g_id": "2"
+        }
+    ]
+}
