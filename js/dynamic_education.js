@@ -69,7 +69,7 @@
 
     function dynamicdropdown_sub_hsc(listindexsub_hsc) {
         var html = '';
-        html = html + '<select id="sub_hsc" name="sub_hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_deu(this.value);">';
+        html = html + '<select id="sub_hsc" name="sub_hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;">';
         html = html + '<option value="0">Select </option>';
         for (var i = 0; i < dataget_sub_hsc.length; i++) {
             // console.log(dataget_sub_hsc[i].id)

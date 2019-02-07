@@ -489,41 +489,50 @@ b{
       var name = $("#name").val();
       var lname = $("#lname").val();
       var dob = $("#dob").val();
-      var tel = $("#tel").val();
-      var fb = $("#fb").val();
-      var line = $("#line").val();
-      var ig = $("#ig").val();
-      var aic = $("#aic").val();
-      var ca = $("#ca").val();
-      var ei = $("#ei").val();
-      var gpa = $("#gpa").val();
-      var sp = $("#sp").val();
-      var tfp = $("#tfp").val();
-      var spack = $("#spack").val();
-      var mail = $("#mail").val();
-      var git = $("#git").val();
-      var link = $("#link").val();
-      var major = $("#major").val();
-      var minor = $("#minor").val();
-      var about = $("#about").val();
-      var pic = $("#pic").val();
-      var exp = $("#exp").val();
-      var ref = $("#ref").val();
-      var token = $("#token").val();
       var height = $("#height").val();
       var weight = $("#weight").val();
       var age = $("#age").val();
       var job = $("#job").val();
       var sal = $("#sal").val();
+      var pic = $("#pic").val();
+      var token = $("#token").val();
+      var ei = $("#ei").val();
+      var de = $("#de").val();
+      var hsc = $("#hsc").val();
+      var sub_hsc = $("#sub_hsc").val();
+      var gpa = $("#gpa").val();
+      var ssd = $("#ssd").val();
+      var gd = $("#gd").val();
+      var u_ei = $("#u_ei").val();
+      var deu = $("#deu").val();
+      var fac_u = $("#fac_u").val();
+      var major_u = $("#major_u").val();
+      var u_gpa = $("#u_gpa").val();
+      var u_ssd = $("#u_ssd").val();
+      var u_gd = $("#u_gd").val();
+      var tel = $("#tel").val();
+      var mail = $("#mail").val();
+      var ref = $("#ref").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var sp = $("#sp").val();
+      var spack = $("#spack").val();
+      var tfp = $("#tfp").val();
       var db = $("#db").val();
       var os = $("#os").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var git = $("#git").val();
+      var link = $("#link").val();
       var cen = $("#cen").val();
       var job_l = $("#job_l").val();
       var swd = $("#swd").val();
       var dop = $("#dop").val();
       var cs = $("#cs").val();
-      var port = $("#port").val();
-      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=delete";
+      var about = $("#about").val();
+      var exp = $("#exp").val();
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&pic=" + pic + "&token=" + token + "&ei=" + ei + "&de=" + de + "&hsc=" + hsc + "&sub_hsc=" + sub_hsc + "&gpa=" + gpa + "&ssd=" + ssd + "&gd=" + gd + "&u_ei=" + u_ei + "&deu=" + deu + "&fac_u=" + fac_u + "&major_u=" + major_u + "&u_gpa=" + u_gpa + "&u_ssd=" + u_ssd + "&u_gd=" + u_gd + "&tel=" + tel + "&mail=" + mail + "&ref=" + ref + "&aic=" + aic + "&ca=" + ca + "&sp=" + sp + "&spack=" + spack + "&tfp=" + tfp + "&db=" + db + "&os=" + os + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&git=" + git + "&link=" + link + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&about=" + about + "&exp=" + exp + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -551,7 +560,7 @@ b{
         <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
         <br>
         <h1>
-          <p style="color:white"><strong style="color:white">Application form for register</strong></p>
+          <p style="color:white"><strong style="color:white">APPLICATION FOR EMPLOYMENT</strong></p>
         </h1>
         <br>
       </header>
@@ -574,7 +583,7 @@ b{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/Appscript"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+          <li><a href="index.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
             </a></li>
           <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
             </a></li>
@@ -748,99 +757,99 @@ b{
             </div>
 
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Educational institution : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="text" name="ei" id="ei" placeholder="Enter Name of school" readonly maxlength="40"></input>
-                  <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
+              <label>Educational institution : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="ei" id="ei" placeholder="Enter Name of school" readonly
+                  maxlength="40"></input>
+                <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Type: </label><br>
-                <div id="mySelect_1" name="mySelect_1"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Type: </label><br>
+              <div id="mySelect_1" name="mySelect_1"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Course : </label><br>
+              <div id="mySelect_2" name="mySelect_2"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Department : </label><br>
+              <div id="mySelect_3" name="mySelect_3"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>GPA : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly maxlength="4"></input>
+                <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Course : </label><br>
-                <div id="mySelect_2" name="mySelect_2"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Study start date : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Department : </label><br>
-                <div id="mySelect_3" name="mySelect_3"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Graduation day : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="gd" id="gd" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>GPA : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" readonly
-                    maxlength="4"></input>
-                  <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Educational institution : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="u_ei" id="u_ei" placeholder="Enter Name of University" readonly
+                  maxlength="40"></input>
+                <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Study start date : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="date" name="ssd" id="ssd" max="2100-12-31" readonly></input>
-                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Degree : </label><br>
+              <div id="mySelect_4" name="mySelect_4"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Faculty : </label><br>
+              <div id="mySelect_5" name="mySelect_5"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Major : </label><br>
+              <div id="mySelect_6" name="mySelect_6"></div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>GPA : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="u_gpa" id="u_gpa" placeholder="Enter GPA" readonly maxlength="4"></input>
+                <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Graduation day : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="date" name="gd" id="gd" max="2100-12-31" readonly></input>
-                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Study start date : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="u_ssd" id="u_ssd" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <label>Graduation day : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="date" name="u_gd" id="u_gd" max="2100-12-31" readonly></input>
+                <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Educational institution : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="text" name="u_ei" id="u_ei" placeholder="Enter Name of University" readonly maxlength="40"></input>
-                  <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Degree : </label><br>
-                <div id="mySelect_4" name="mySelect_4"></div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Faculty : </label><br>
-                <div id="mySelect_5" name="mySelect_5"></div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Major : </label><br>
-                <div id="mySelect_6" name="mySelect_6"></div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>GPA : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="text" name="u_gpa" id="u_gpa" placeholder="Enter GPA" readonly
-                    maxlength="4"></input>
-                  <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Study start date : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="date" name="u_ssd" id="u_ssd" max="2100-12-31"readonly></input>
-                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Graduation day : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="date" name="u_gd" id="u_gd" max="2100-12-31"readonly></input>
-                  <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        
-              </div>
-              <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-        
-              </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+            </div>
 
           </div>
         </div>
@@ -869,7 +878,8 @@ b{
 
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Telephone Number : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="tel" name="tel" id="tel" placeholder="Enter telephone number" maxlength="10" readonly>
+                <input class="input" type="tel" name="tel" id="tel" placeholder="Enter telephone number" maxlength="10"
+                  readonly>
                 <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
@@ -880,20 +890,22 @@ b{
               </div>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <label>Reference : </label><br>
-                <div class="inputWithIcon">
-                  <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" readonly></input>
-                  <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
-                </div>
+              <label>Reference : </label><br>
+              <div class="inputWithIcon">
+                <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you"
+                  readonly></input>
+                <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
               </div>
-              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <label>Permanent Home Address : </label><br>
-                <textarea style="margin: 10px;margin-left: -1px;" name="aic" id="aic" placeholder="Enter address" readonly></textarea>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <label>Current Address : </label><br>
-                <textarea style="margin: 10px;margin-left: -1px;" name="ca" id="ca" placeholder="Enter address" readonly></textarea>
-              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label>Permanent Home Address : </label><br>
+              <textarea style="margin: 10px;margin-left: -1px;" name="aic" id="aic" placeholder="Enter address"
+                readonly></textarea>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label>Current Address : </label><br>
+              <textarea style="margin: 10px;margin-left: -1px;" name="ca" id="ca" placeholder="Enter address" readonly></textarea>
+            </div>
 
           </div>
         </div>
@@ -1047,8 +1059,7 @@ b{
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <label>Current enterprise : </label><br>
               <div class="inputWithIcon">
-                <input class="input" type="text" name="cen" id="cen" placeholder="Enter Current enterprise"
-                  readonly></input>
+                <input class="input" type="text" name="cen" id="cen" placeholder="Enter Current enterprise" readonly></input>
                 <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
               </div>
             </div>
@@ -1299,38 +1310,6 @@ b{
   var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
   $.getJSON(urljson, function (data) {
     dataget = data.user
-    // for (var i = 0; i < data.user.length; i++) {
-    //   dataget[i] = [];
-    //   dataget[i].time_stamp = JSON.stringify(data.user[i].time_stamp);
-    //   dataget[i].ID = JSON.stringify(data.user[i].ID);
-    //   dataget[i].Title_Name = JSON.stringify(data.user[i].Title_Name);
-    //   dataget[i].First_Name = JSON.stringify(data.user[i].First_Name);
-    //   dataget[i].Last_Name = JSON.stringify(data.user[i].Last_Name);
-    //   dataget[i].Date_of_birth = JSON.stringify(data.user[i].Date_of_birth);
-    //   dataget[i].Telephone_Number = JSON.stringify(data.user[i].Telephone_Number);
-    //   dataget[i].Facebook = JSON.stringify(data.user[i].Facebook);
-    //   dataget[i].Line = JSON.stringify(data.user[i].Line);
-    //   dataget[i].Instagram = JSON.stringify(data.user[i].Instagram);
-    //   dataget[i].Address_in_ID_Card = JSON.stringify(data.user[i].Address_in_ID_Card);
-    //   dataget[i].Current_Address = JSON.stringify(data.user[i].Current_Address);
-    //   dataget[i].Educational_institution = JSON.stringify(data.user[i].Educational_institution);
-    //   dataget[i].GPAX = JSON.stringify(data.user[i].GPAX);
-    //   dataget[i].Skill_programming = JSON.stringify(data.user[i].Skill_programming);
-    //   dataget[i].Tool_for_development = JSON.stringify(data.user[i].Tool_for_development);
-    //   dataget[i].Software_Package = JSON.stringify(data.user[i].Software_Package);
-    //   dataget[i].Email_Address = JSON.stringify(data.user[i].Email_Address);
-    //   dataget[i].Github = JSON.stringify(data.user[i].Github);
-    //   dataget[i].Linkedin = JSON.stringify(data.user[i].Linkedin);
-    //   dataget[i].Major = JSON.stringify(data.user[i].Major);
-    //   dataget[i].Minor = JSON.stringify(data.user[i].Minor);
-    //   dataget[i].About_you = JSON.stringify(data.user[i].About_you);
-    //   dataget[i].Picture = JSON.stringify(data.user[i].Picture);
-    //   dataget[i].Experiece = JSON.stringify(data.user[i].Experiece);
-    //   dataget[i].Reference = JSON.stringify(data.user[i].Reference);
-    //   dataget[i].Token = JSON.stringify(data.user[i].Token);
-
-
-    // }
     getValue();
   });
 </script>
@@ -1341,36 +1320,81 @@ b{
     document.getElementById("b1").disabled = true;
     for (var i = 0; i < dataget.length; i++) {
       if ((dataget[i].ID) == check && (dataget[i].Token) == token) {
-        // console.log((dataget[i].Token))
+        dynamicdropdown_de()
+        dynamicdropdown_hsc(dataget[i].Type)
+        dynamicdropdown_sub_hsc(dataget[i].Course)
+
+        dynamicdropdown_deu()
+        dynamicdropdown_fac_u(dataget[i].Degree)
+        dynamicdropdown_major_u(dataget[i].Faculty)
+
+
+        console.log(dataget[i].Degree)
+        console.log(dataget[i].Faculty)
+        console.log(dataget[i].Major)
+
+
+
         document.getElementById("b1").disabled = false;
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
         document.getElementById("lname").value = (dataget[i].Last_Name);
         localtime = moment((dataget[i].Date_of_birth)).format('YYYY-MM-DD')
         document.getElementById("dob").value = localtime;
-        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
-        document.getElementById("fb").value = (dataget[i].Facebook);
-        document.getElementById("line").value = (dataget[i].Line);
-        document.getElementById("ig").value = (dataget[i].Instagram);
-        document.getElementById("git").value = (dataget[i].Github);
-        document.getElementById("link").value = (dataget[i].Linkedin);
-        document.getElementById("mail").value = (dataget[i].Email_Address);
-        document.getElementById("aic").value = (dataget[i].Address_in_ID_Card);
-        document.getElementById("ca").value = (dataget[i].Current_Address);
-        document.getElementById("ei").value = (dataget[i].Educational_institution);
-        document.getElementById("major").value = (dataget[i].Major);
-        document.getElementById("minor").value = (dataget[i].Minor);
-        document.getElementById("gpa").value = (dataget[i].GPAX);
-        document.getElementById("tfp").value = (dataget[i].Tool_for_development);
-        document.getElementById("spack").value = (dataget[i].Software_Package);
-        document.getElementById("about").value = (dataget[i].About_you);
         document.getElementById("height").value = (dataget[i].Height);
         document.getElementById("weight").value = (dataget[i].Weight);
         document.getElementById("job").value = (dataget[i].Position);
         document.getElementById("age").value = (dataget[i].Age);
         document.getElementById("sal").value = (dataget[i].Salary);
+        splitpath = (dataget[i].Picture).split("\\");
+        console.log('uploads/' + splitpath[2])
+        document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
+
+
+        document.getElementById("ei").value = dataget[i].Educational_institution_s;
+        document.getElementById("de").value = dataget[i].Type;
+        document.getElementById("hsc").value = dataget[i].Course;
+        document.getElementById("sub_hsc").value = dataget[i].Department;
+        document.getElementById("gpa").value = dataget[i].GPA_s;
+        localtime4 = moment((dataget[i].Study_start_date_s)).format('YYYY-MM-DD')
+        document.getElementById("ssd").value = localtime4;
+        localtime5 = moment((dataget[i].Graduation_day_s)).format('YYYY-MM-DD')
+        document.getElementById("gd").value = localtime5;
+
+        document.getElementById("u_ei").value = dataget[i].Educational_institution_u;
+        document.getElementById("deu").value = dataget[i].Degree;
+        document.getElementById("fac_u").value = dataget[i].Faculty;
+        document.getElementById("major_u").value = dataget[i].Major;
+        console.log(dataget[i].Degree)
+        console.log(dataget[i].Faculty)
+        console.log(dataget[i].Major)
+        document.getElementById("u_gpa").value = dataget[i].GPA_u;
+        localtime6 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
+        document.getElementById("u_ssd").value = localtime6;
+        localtime7 = moment((dataget[i].Graduation_day_u)).format('YYYY-MM-DD')
+        document.getElementById("u_gd").value = localtime7;
+
+        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
+        document.getElementById("mail").value = (dataget[i].Email_Address);
+        document.getElementById("aic").value = (dataget[i].Address_in_ID_Card);
+        document.getElementById("ca").value = (dataget[i].Current_Address);
+        document.getElementById("ref").value = (dataget[i].Reference);
+
+        var elt = $('.example_typeahead > > input');
+        elt.tagsinput('add', (dataget[i].Skill_programming));
+
+        document.getElementById("tfp").value = (dataget[i].Tool_for_development);
+        document.getElementById("spack").value = (dataget[i].Software_Package);
         document.getElementById("db").value = (dataget[i].Database);
         document.getElementById("os").value = (dataget[i].Operating_System);
+
+        document.getElementById("fb").value = (dataget[i].Facebook);
+        document.getElementById("line").value = (dataget[i].Line);
+        document.getElementById("ig").value = (dataget[i].Instagram);
+        document.getElementById("git").value = (dataget[i].Github);
+        document.getElementById("link").value = (dataget[i].Linkedin);
+
+
         document.getElementById("cen").value = (dataget[i].Current_enterprise);
         document.getElementById("job_l").value = (dataget[i].Working_position);
         localtime2 = moment((dataget[i].Start_work_date)).format('YYYY-MM-DD')
@@ -1378,14 +1402,10 @@ b{
         localtime3 = moment((dataget[i].Date_of_departure)).format('YYYY-MM-DD')
         document.getElementById("dop").value = (localtime3);
         document.getElementById("cs").value = (dataget[i].Current_salary);
-        splitpath = (dataget[i].Picture).split("\\");
-        // console.log(splitpath[2])
-        document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
-        // console.log(document.getElementById("picbefore").src = 'uploads/' + splitpath[2])
+        document.getElementById("about").value = (dataget[i].About_you);
         document.getElementById("exp").value = (dataget[i].Experiece);
-        document.getElementById("ref").value = (dataget[i].Reference);
-        var elt = $('.example_typeahead > > input');
-        elt.tagsinput('add', (dataget[i].Skill_programming));
+        // $('#de').onchange();
+
 
 
       }
@@ -1394,6 +1414,195 @@ b{
     return false;
   }
 </script>
+<script>
+
+  dataget_de = [];
+  fetch('json/degree_education.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_de = myJson.degree_education
+      dataget_de.sort(function (a, b) {
+        var sort_de = a.name < b.name ? -1 : 1;
+        return sort_de
+      });
+      dynamicdropdown_de()
+    });
+</script>
+<script>
+  function dynamicdropdown_de(listindexde) {
+    var html = '';
+    html = html + '<select id="de" name="de" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_hsc(this.value);">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_de.length; i++) {
+      // if (listindexde == dataget_de[i].id) {
+      html = html + '<option value="' + dataget_de[i].id + '">' + dataget_de[i].name + '</option>'
+      // }
+    }
+    html = html + '</select>';
+    $('#mySelect_1').html(html)
+
+  }
+</script>
+<script>
+  dataget_hsc = [];
+  fetch('json/highschool.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_hsc = myJson.school
+      dataget_hsc.sort(function (a, b) {
+        var sort_hsc = a.name < b.name ? -1 : 1;
+        return sort_hsc
+      });
+      dynamicdropdown_hsc()
+    });
+</script>
+<script>
+  function dynamicdropdown_hsc(listindexhsc) {
+    var html = '';
+    html = html + '<select id="hsc" name="hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_sub_hsc(this.value);">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_hsc.length; i++) {
+      if (listindexhsc == dataget_hsc[i].g_id) {
+        html = html + '<option value="' + dataget_hsc[i].id + '">' + dataget_hsc[i].name + '</option>'
+      }
+    }
+    html = html + '</select>';
+    $('#mySelect_2').html(html)
+  }
+</script>
+<script>
+  dataget_hsc = [];
+  fetch('json/sub_highschool.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_sub_hsc = myJson.sub_high
+      dataget_sub_hsc.sort(function (a, b) {
+        var sort_sub_hsc = a.name < b.name ? -1 : 1;
+        return sort_sub_hsc
+      });
+      dynamicdropdown_sub_hsc()
+    });
+</script>
+<script>
+  function dynamicdropdown_sub_hsc(listindexsub_hsc) {
+    var html = '';
+    html = html + '<select id="sub_hsc" name="sub_hsc" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_sub_hsc.length; i++) {
+      // console.log(dataget_sub_hsc[i].id)
+      if (listindexsub_hsc == dataget_sub_hsc[i].v_id) {
+        html = html + '<option value="' + dataget_sub_hsc[i].id + '">' + dataget_sub_hsc[i].name + '</option>'
+
+      }
+    }
+    html = html + '</select>';
+    $('#mySelect_3').html(html)
+  }
+</script>
+<script>
+  dataget_deu = [];
+  fetch('json/degree_university.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_deu = myJson.degree
+      dataget_deu.sort(function (a, b) {
+        var sort_deu = a.name < b.name ? -1 : 1;
+        return sort_deu
+      });
+      dynamicdropdown_deu()
+      console.log(dataget_deu[1].name)
+
+    });
+</script>
+<script>
+  function dynamicdropdown_deu(listindexdeu) {
+    var html = '';
+    html = html + '<select id="deu" name="deu" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_fac_u(this.value);">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_deu.length; i++) {
+      // console.log(dataget_deu[i].id)
+      // if (listindexdeu == dataget_deu[i].v_id) {
+      html = html + '<option value="' + dataget_deu[i].id + '">' + dataget_deu[i].name + '</option>'
+      // }
+    }
+    html = html + '</select>';
+    $('#mySelect_4').html(html)
+  }
+</script>
+<script>
+  dataget_fac_u = [];
+  fetch('json/faculty_university.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_fac_u = myJson.faculty
+      dataget_fac_u.sort(function (a, b) {
+        var sort_fac_u = a.name < b.name ? -1 : 1;
+        return sort_fac_u
+      });
+      dynamicdropdown_fac_u()
+      console.log(dataget_fac_u[13].name)
+        
+    });
+</script>
+<script>
+  function dynamicdropdown_fac_u(listindexfac_u) {
+    var html = '';
+    html = html + '<select id="fac_u" name="fac_u" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;" onchange="javascript: dynamicdropdown_major_u(this.value);">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_fac_u.length; i++) {
+      // console.log(dataget_fac_u[i].id)
+      if (listindexfac_u == dataget_fac_u[i].degree_id) {
+        html = html + '<option value="' + dataget_fac_u[i].id + '">' + dataget_fac_u[i].name + '</option>'
+
+      }
+    }
+    html = html + '</select>';
+    $('#mySelect_5').html(html)
+  }
+</script>
+<script>
+  dataget_major_u = [];
+  fetch('json/major_university.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_major_u = myJson.major
+      dataget_major_u.sort(function (a, b) {
+        var sort_major_u = a.name < b.name ? -1 : 1;
+        return sort_major_u
+      });
+      dynamicdropdown_major_u()
+    });
+</script>
+<script>
+  function dynamicdropdown_major_u(listindexmajor_u) {
+    var html = '';
+    html = html + '<select id="major_u" name="major_u" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Kanit' + ', sans-serif;">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_major_u.length; i++) {
+      // console.log(dataget_major_u[i].id)
+      if (listindexmajor_u == dataget_major_u[i].faculty_id) {
+        html = html + '<option value="' + dataget_major_u[i].id + '">' + dataget_major_u[i].name + '</option>'
+        // document.getElementById('aaaa').value = "2222"
+      }
+    }
+    html = html + '</select>';
+
+    $('#mySelect_6').html(html)
+  }
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
@@ -1412,7 +1621,7 @@ b{
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
-<script src="js/dynamic_education.js"></script>
+<!-- <script src="js/dynamic_education.js"></script> -->
 <script src="js/dynamic_positon.js"></script>
 
 </html>

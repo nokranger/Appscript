@@ -23,11 +23,6 @@
     <script type="text/javascript" src="js/session.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
-
     <style>
         body{
     background:	#f4f5f7;
@@ -134,44 +129,17 @@ overflow-y: auto;
                     urlg = "https://www.github.com/";
                     urlln = "https://www.linkedin.com/in/";
                     urlline = "https://line.me/ti/p/~";
-                    urldrive = "https://drive.google.com/uc?id=";
                     splitpath = (dataget[i].Picture).split("\\");
-                    face = urlf + (dataget[i].Facebook)
-                    git = urlg + (dataget[i].Github);
-                    link = urlln + (dataget[i].Linkedin);
-                    line = urlline + (dataget[i].Line);
-                    drive = urldrive + (dataget[i].Picture);
-                    document.getElementById("uid").innerHTML = (dataget[i].ID);
-                    document.getElementById("tn").innerHTML = (dataget[i].Title_Name);
-                    document.getElementById("name").innerHTML = (dataget[i].First_Name);
-                    document.getElementById("lname").innerHTML = (dataget[i].Last_Name);
-                    tel = "tel:0" + dataget[i].Telephone_Number
-                    document.getElementById("tel").href = tel;
-                    document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
-                    // console.log("tel:0" + dataget[i].Telephone_Number)
-                    document.getElementById("fb").href = face;
-                    document.getElementById("line").href = line;
-                    document.getElementById("ln").href = link;
-                    document.getElementById("git").href = git;
-                    document.getElementById("gpa").innerHTML = dataget[i].GPAX;
-                    document.getElementById("sp").innerHTML = (dataget[i].Skill_programming);
-                    document.getElementById("tfp").innerHTML = (dataget[i].Tool_for_development);
-                    document.getElementById("spack").innerHTML = (dataget[i].Software_Package);
-                    document.getElementById("mail").innerHTML = (dataget[i].Email_Address);
-                    document.getElementById("pic").src = 'uploads/' + splitpath[2];
-                    document.getElementById("university").innerHTML = (dataget[i].Educational_institution);
-                    document.getElementById("major").innerHTML = (dataget[i].Major);
-                    document.getElementById("minor").innerHTML = (dataget[i].Minor);
-                    document.getElementById("ref").innerHTML = (dataget[i].Reference);
-                    document.getElementById("location").innerHTML = (dataget[i].Current_Address);
-                    document.getElementById("about").innerHTML = (dataget[i].About_you);
-                    document.getElementById("exp").innerHTML = (dataget[i].Experiece);
+                    // drive = urldrive + (dataget[i].Picture);
+
+
                     var id1 = dataget[i].ID
                     var name = dataget[i].First_Name
                     var lname = dataget[i].Last_Name
                     var tel = dataget[i].Telephone_Number
                     var mail = dataget[i].Email_Address
                     var pic = "C:\\fakepath\\" + splitpath[2]
+                    // console.log(pic)
                     var token = dataget[i].Token
                     var job = dataget[i].Position
                     var sal = dataget[i].Salary
@@ -219,14 +187,7 @@ overflow-y: auto;
             a = name;
             b = lname;
             cc = job;
-            // console.log(cc)
             d = mail;
-            // console.log(name+lname+job+mail)
-            // document.getElementById('ttn').value = "";
-            // document.getElementById('nname').value = name;
-            // document.getElementById('llname').value = lname;
-            // document.getElementById('cur_job').value = job;
-            // document.getElementById('emaill').value = mail;
 
             var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
 
@@ -444,11 +405,11 @@ overflow-y: auto;
                                         <b>E-mail : </b><label id="mail"></label><br>
                                         <b>About you : </b><label id="about"></label><br>
                                         <b>Position : </b><label id="job"></label>
-                                        <b>Current enterprise : </b><label id="cen"></label><br>
+                                        <b>Organization : </b><label id="cen"></label><br>
                                         <b>Working position : </b><label id="job_l"></label><br>
                                         <b>Start work date : </b><label id="swd"></label>
                                         <b>Date of departure : </b><label id="dop"></label><br>
-                                        <b>Current salary : </b><label id="cs"></label><br>
+                                        <b>Salary : </b><label id="cs"></label><br>
                                         <label><b>Experiece : </b></label>
                                         <label name="exp" id="exp"></label><br>
                                     </div>
@@ -470,8 +431,9 @@ overflow-y: auto;
                                     <div>
                                         <br><b>Programing language : </b><label id="sp"></label><br>
                                         <b>Tool for development : </b><label id="tfp"></label><br>
-                                        <b>Operating System : </b><label id="os"></label><br>
                                         <b>Software package : </b><label id="spack"></label><br>
+                                        <b>Operating System : </b><label id="os"></label><br>
+                                        <b>Database : </b><label id="db"></label><br>
                                         <b>Social : </b><label></label><a id="fb" href="" target="_blank" class="fa fa-facebook-official"></a><a
                                             id="ln" href="" target="_blank" class="fa fa-linkedin-square"></a><a id="git"
                                             href="" target="_blank" class="fa fa-github"></a><a id="line" href=""
@@ -488,9 +450,12 @@ overflow-y: auto;
                                         <br><label><b>Education : </b><label><br>
                                                 <dt class="dt-tag">
                                                     <b>University : </b><label id="university"></label></dt>
+                                                <dd><b>Degree : </b><label id="degree"></label></dd>
+                                                <dd><b>Faculty : </b><label id="faculty"></label></dd>
                                                 <dd><b>Major : </b><label id="major"></label></dd>
-                                                <dd><b>Minor : </b><label id="minor"></label></dd>
-                                                <b>GPAX : </b><label id="gpa"></label><br>
+                                                <b>Study Start Day : </b><label id="ssd_u"></label><b>Graduation Day :
+                                                </b><label id="gd_u"></label><br>
+                                                <b>GPA : </b><label id="gpa"></label><br>
 
                                                 <b>Location : </b><label id="location"></label><br>
                                                 <b>Reference : </b><label id="ref"></label><br>
@@ -555,6 +520,9 @@ overflow-y: auto;
                 datagetsplit = 'uid' + datagett[i][1]
                 coun = i
                 if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
+                    get_degree()
+                    get_faculty()
+                    get_major()
                     urlf = "https://www.facebook.com/";
                     urlg = "https://www.github.com/";
                     urlln = "https://www.linkedin.com/in/";
@@ -565,29 +533,53 @@ overflow-y: auto;
                     git = urlg + (dataget[i].Github);
                     link = urlln + (dataget[i].Linkedin);
                     line = urlline + (dataget[i].Line);
-                    drive = urldrive + (dataget[i].Picture);
+                    // drive = urldrive + (dataget[i].Picture);
                     document.getElementById("uid").innerHTML = (dataget[i].ID);
                     document.getElementById("tn").innerHTML = (dataget[i].Title_Name);
                     document.getElementById("name").innerHTML = (dataget[i].First_Name);
                     document.getElementById("lname").innerHTML = (dataget[i].Last_Name);
+                    document.getElementById("pic").src = 'uploads/' + splitpath[2];
+
+
+
+
+
+
                     tel = "tel:0" + dataget[i].Telephone_Number
                     document.getElementById("tel").href = tel;
                     document.getElementById("tel").innerHTML = "0" + dataget[i].Telephone_Number;
-                    // console.log("tel:0" + dataget[i].Telephone_Number)
+                    document.getElementById("mail").innerHTML = (dataget[i].Email_Address);
+                    document.getElementById("ref").innerHTML = (dataget[i].Reference);
+
+                    document.getElementById("university").innerHTML = (dataget[i].Educational_institution_u);
+                    document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree - 1].name;
+                    document.getElementById("faculty").innerHTML = dataget_fac_u[dataget[i].Faculty - 1].name;
+                    document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major - 1].name;
+
+                    // console.log(dataget_major_u[dataget[i].Major - 1].name)
+                    localtime4 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
+                    document.getElementById("ssd_u").innerHTML = localtime4;
+                    localtime5 = moment((dataget[i].Graduation_day_u)).format('YYYY-MM-DD')
+                    document.getElementById("gd_u").innerHTML = localtime5;
+                    document.getElementById("gpa").innerHTML = dataget[i].GPA_u;
+
+
+
+                    document.getElementById("sp").innerHTML = (dataget[i].Skill_programming);
+                    document.getElementById("tfp").innerHTML = (dataget[i].Tool_for_development);
+                    document.getElementById("spack").innerHTML = (dataget[i].Software_Package);
+                    document.getElementById("db").innerHTML = (dataget[i].Database);
+                    document.getElementById("os").innerHTML = (dataget[i].Operating_System);
+
                     document.getElementById("fb").href = face;
                     document.getElementById("line").href = line;
                     document.getElementById("ln").href = link;
                     document.getElementById("git").href = git;
-                    document.getElementById("gpa").innerHTML = dataget[i].GPAX;
-                    document.getElementById("sp").innerHTML = (dataget[i].Skill_programming);
-                    document.getElementById("tfp").innerHTML = (dataget[i].Tool_for_development);
-                    document.getElementById("spack").innerHTML = (dataget[i].Software_Package);
-                    document.getElementById("mail").innerHTML = (dataget[i].Email_Address);
-                    document.getElementById("pic").src = 'uploads/' + splitpath[2];
-                    document.getElementById("university").innerHTML = (dataget[i].Educational_institution);
-                    document.getElementById("major").innerHTML = (dataget[i].Major);
-                    document.getElementById("minor").innerHTML = (dataget[i].Minor);
-                    document.getElementById("ref").innerHTML = (dataget[i].Reference);
+
+
+
+
+
                     document.getElementById("location").innerHTML = (dataget[i].Current_Address);
                     document.getElementById("about").innerHTML = (dataget[i].About_you);
                     document.getElementById("exp").innerHTML = (dataget[i].Experiece);
@@ -671,6 +663,46 @@ overflow-y: auto;
                 $('#jsonTable').append("</tbody>");
                 // $('th').css("border", "1px solid green");
             });
+        }
+    </script>
+    <script>
+
+        dataget_deu = [];
+        fetch('json/degree_university.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                dataget_deu = myJson.degree
+                get_degree()
+            });
+
+        dataget_fac_u = [];
+        fetch('json/faculty_university.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                dataget_fac_u = myJson.faculty
+                get_faculty()
+            });
+        dataget_major_u = [];
+        fetch('json/major_university.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                dataget_major_u = myJson.major
+                get_major()
+            });
+        function get_degree() {
+
+        }
+        function get_faculty() {
+
+        }
+        function get_major() {
+
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>

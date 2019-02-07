@@ -436,27 +436,53 @@ b{
     function update_value() {
       insert_value()
       var id1 = $("#id").val();
-      var tn = $("#tn").val();
+      var tn = $("#tn").val();  
       var name = $("#name").val();
       var lname = $("#lname").val();
       var dob = $("#dob").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      // var pic = $("#pic").val();
+      var token = $("#token").val();
+      var ei = $("#ei").val();
+      var de = $("#de").val();
+      var hsc = $("#hsc").val();
+      var sub_hsc = $("#sub_hsc").val();
+      var gpa = $("#gpa").val();
+      var ssd = $("#ssd").val();
+      var gd = $("#gd").val();
+      var u_ei = $("#u_ei").val();
+      var deu = $("#deu").val();
+      var fac_u = $("#fac_u").val();
+      var major_u = $("#major_u").val();
+      var u_gpa = $("#u_gpa").val();
+      var u_ssd = $("#u_ssd").val();
+      var u_gd = $("#u_gd").val();
       var tel = $("#tel").val();
+      var mail = $("#mail").val();
+      var ref = $("#ref").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var sp = $("#sp").val();
+      var spack = $("#spack").val();
+      var tfp = $("#tfp").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
       var fb = $("#fb").val();
       var line = $("#line").val();
       var ig = $("#ig").val();
-      var aic = $("#aic").val();
-      var ca = $("#ca").val();
-      var ei = $("#ei").val();
-      var gpa = $("#gpa").val();
-      var sp = $("#sp").val();
-      var tfp = $("#tfp").val();
-      var spack = $("#spack").val();
-      var mail = $("#mail").val();
       var git = $("#git").val();
       var link = $("#link").val();
-      var major = $("#major").val();
-      var minor = $("#minor").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
       var about = $("#about").val();
+      var exp = $("#exp").val();
       piccheck = document.getElementById('pic').value
       // console.log('aaaaaa')
       // console.log(piccheck)
@@ -477,23 +503,7 @@ b{
         // console.log('notnulllllllllllllll')
         // console.log(pic)
       }
-      var exp = $("#exp").val();
-      var ref = $("#ref").val();
-      var token = $("#token").val();
-      var height = $("#height").val();
-      var weight = $("#weight").val();
-      var age = $("#age").val();
-      var job = $("#job").val();
-      var sal = $("#sal").val();
-      var db = $("#db").val();
-      var os = $("#os").val();
-      var cen = $("#cen").val();
-      var job_l = $("#job_l").val();
-      var swd = $("#swd").val();
-      var dop = $("#dop").val();
-      var cs = $("#cs").val();
-      var port = "";
-      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=update";
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&pic=" + pic + "&token=" + token + "&ei=" +ei +"&de=" +de + "&hsc=" +hsc +"&sub_hsc=" +sub_hsc +"&gpa=" +gpa +"&ssd=" +ssd +"&gd=" +gd + "&u_ei=" +u_ei +"&deu=" +deu + "&fac_u=" +fac_u +"&major_u=" +major_u +"&u_gpa=" +u_gpa +"&u_ssd=" +u_ssd +"&u_gd=" +u_gd + "&tel=" +tel +"&mail=" +mail + "&ref=" +ref +"&aic=" +aic +"&ca=" +ca +"&sp=" +sp +"&spack=" +spack + "&tfp=" +tfp +"&db=" +db + "&os=" +os +"&fb=" +fb +"&line=" +line +"&ig=" +ig +"&git=" +git + "&link=" +link +"&cen=" +cen +"&job_l=" +job_l + "&swd=" +swd +"&dop=" +dop +"&cs=" +cs +"&about=" +about +"&exp=" +exp + "&action=update";
 
       var request = jQuery.ajax({
         crossDomain: true,
@@ -530,7 +540,7 @@ b{
         <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
         <br>
         <h1>
-          <p style="color:white"><strong style="color:white">Application form for register</strong></p>
+          <p style="color:white"><strong style="color:white">APPLICATION FOR EMPLOYMENT</strong></p>
         </h1>
         <br>
       </header>
@@ -554,7 +564,7 @@ b{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/Appscript"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+          <li><a href="index.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
             </a></li>
           <li class="active"><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
             </a></li>
@@ -1342,7 +1352,7 @@ b{
   var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
   $.getJSON(urljson, function (data) {
     dataget = data.user
-    console.log(dataget[0].Position)
+    // console.log(dataget[0].Position)
     getValue();
   });
 </script>
@@ -1355,37 +1365,67 @@ b{
     for (var i = 0; i < dataget.length; i++) {
       if ((dataget[i].ID) == check && (dataget[i].Token) == token) {
         ses = 1;
+        dynamicdropdown_de()
+        dynamicdropdown_hsc(dataget[i].Type)
+        dynamicdropdown_sub_hsc(dataget[i].Course)
 
+        dynamicdropdown_deu()
+        dynamicdropdown_fac_u(dataget[i].Degree)
+        dynamicdropdown_major_u(dataget[i].Faculty)
         document.getElementById("b1").disabled = false;
-        // console.log((dataget[i].Token))
         document.getElementById("tn").value = (dataget[i].Title_Name);
         document.getElementById("name").value = (dataget[i].First_Name);
         document.getElementById("lname").value = (dataget[i].Last_Name);
         localtime = moment((dataget[i].Date_of_birth)).format('YYYY-MM-DD')
         document.getElementById("dob").value = localtime;
-        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
-        document.getElementById("fb").value = (dataget[i].Facebook);
-        document.getElementById("line").value = (dataget[i].Line);
-        document.getElementById("ig").value = (dataget[i].Instagram);
-        document.getElementById("git").value = (dataget[i].Github);
-        document.getElementById("link").value = (dataget[i].Linkedin);
-        document.getElementById("mail").value = (dataget[i].Email_Address);
-        document.getElementById("aic").value = (dataget[i].Address_in_ID_Card);
-        document.getElementById("ca").value = (dataget[i].Current_Address);
-        document.getElementById("ei").value = (dataget[i].Educational_institution);
-        document.getElementById("major").value = (dataget[i].Major);
-        document.getElementById("minor").value = (dataget[i].Minor);
-        document.getElementById("gpa").value = (dataget[i].GPAX);
-        document.getElementById("tfp").value = (dataget[i].Tool_for_development);
-        document.getElementById("spack").value = (dataget[i].Software_Package);
-        document.getElementById("about").value = (dataget[i].About_you);
         document.getElementById("height").value = (dataget[i].Height);
         document.getElementById("weight").value = (dataget[i].Weight);
         document.getElementById("job").value = (dataget[i].Position);
         document.getElementById("age").value = (dataget[i].Age);
         document.getElementById("sal").value = (dataget[i].Salary);
+        splitpath = (dataget[i].Picture).split("\\");
+        document.getElementById("picpreview").src = 'uploads/' + splitpath[2];
+
+        document.getElementById("ei").value = dataget[i].Educational_institution_s;
+        document.getElementById("de").value = dataget[i].Type;
+        document.getElementById("hsc").value = dataget[i].Course;
+        document.getElementById("sub_hsc").value = dataget[i].Department;
+        document.getElementById("gpa").value = dataget[i].GPA_s;
+        localtime4 = moment((dataget[i].Study_start_date_s)).format('YYYY-MM-DD')
+        document.getElementById("ssd").value = localtime4;
+        localtime5 = moment((dataget[i].Graduation_day_s)).format('YYYY-MM-DD')
+        document.getElementById("gd").value = localtime5;
+
+        document.getElementById("u_ei").value = dataget[i].Educational_institution_u;
+        document.getElementById("deu").value = dataget[i].Degree;
+        document.getElementById("fac_u").value = dataget[i].Faculty;
+        document.getElementById("major_u").value = dataget[i].Major;
+        document.getElementById("u_gpa").value = dataget[i].GPA_u;
+        localtime6 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
+        document.getElementById("u_ssd").value = localtime6;
+        localtime7 = moment((dataget[i].Graduation_day_u)).format('YYYY-MM-DD')
+        document.getElementById("u_gd").value = localtime7;
+
+        document.getElementById("tel").value = "0" + dataget[i].Telephone_Number;
+        document.getElementById("mail").value = (dataget[i].Email_Address);
+        document.getElementById("aic").value = (dataget[i].Address_in_ID_Card);
+        document.getElementById("ca").value = (dataget[i].Current_Address);
+        document.getElementById("ref").value = (dataget[i].Reference);
+
+        var elt = $('.example_typeahead > > input');
+          elt.tagsinput('add', (dataget[i].Skill_programming));
+
+        document.getElementById("tfp").value = (dataget[i].Tool_for_development);
+        document.getElementById("spack").value = (dataget[i].Software_Package);
         document.getElementById("db").value = (dataget[i].Database);
         document.getElementById("os").value = (dataget[i].Operating_System);
+
+        document.getElementById("fb").value = (dataget[i].Facebook);
+        document.getElementById("line").value = (dataget[i].Line);
+        document.getElementById("ig").value = (dataget[i].Instagram);
+        document.getElementById("git").value = (dataget[i].Github);
+        document.getElementById("link").value = (dataget[i].Linkedin);
+
         document.getElementById("cen").value = (dataget[i].Current_enterprise);
         document.getElementById("job_l").value = (dataget[i].Working_position);
         localtime2 = moment((dataget[i].Start_work_date)).format('YYYY-MM-DD')
@@ -1393,25 +1433,9 @@ b{
         localtime3 = moment((dataget[i].Date_of_departure)).format('YYYY-MM-DD')
         document.getElementById("dop").value = (localtime3);
         document.getElementById("cs").value = (dataget[i].Current_salary);
-        splitpath = (dataget[i].Picture).split("\\");
-        // console.log(splitpath[2])
-        document.getElementById("picpreview").src = 'uploads/' + splitpath[2];
-        // console.log(document.getElementById("picpreview").src = 'uploads/' + splitpath[2])
-        document.getElementById("exp").value = (dataget[i].Experiece);
-        document.getElementById("ref").value = (dataget[i].Reference);
-        // document.getElementById("alert2").style.visibility = 'hidden';
-        // document.getElementById("alert").innerHTML = 'Your id and token is correct';
-        // document.getElementById("alert").style.color = "green";
-        var elt = $('.example_typeahead > > input');
-        elt.tagsinput('add', (dataget[i].Skill_programming));
+        document.getElementById("about").value = (dataget[i].About_you);
+        document.getElementById("exp").value = (dataget[i].Experiece);    
       }
-      // else{
-      //   if (check != '' && token != '' || ((dataget[i].ID) == check && (dataget[i].Token) == token)){
-      //     // document.getElementById("alert").style.visibility = 'hidden';
-      //       document.getElementById("alert2").innerHTML = 'Your id and token is incorrect';
-      //       document.getElementById("alert2").style.color = "red";
-      //   }
-      // }
     }
     return false;
   }
