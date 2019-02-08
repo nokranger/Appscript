@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="css/edit.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/index.css">
+  
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,294 +22,294 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
   <title>Form register</title>
   <style>
-    header{
-      background:
-    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
-    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
-    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
-      background:
-    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
-    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
-    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
-          }
-    footer{
-      background:
-    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
-    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
-    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
-      background:
-    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
-    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
-    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
-          }
-    textarea {
-            width: 60%;
-            height: 150px;
-            padding: 12px 20px;
-            box-sizing: border-box;
-            /* border: 2px solid #ccc; */
-            border-radius: 4px;
-            /* background-color: #f8f8f8; */
-            font-size: 16px;
-            resize: none;
-            margin: 20px 0;
-            font-family: 'Kanit', sans-serif;
-          }
-      .input[type="text"] {
-        width: 100%;
-        /* border: 2px solid #aaa; */
-        border-radius: 4px;
-        margin: 8px 0;
-        outline: none;
-        padding: 8px;
-        box-sizing: border-box;
-        transition: 0.3s;
-        font-family: 'Kanit', sans-serif;
-        
-      }
-      
-      .input[type="text"]:focus {
-        border-color: dodgerBlue;
-        box-shadow: 0 0 8px 0 dodgerBlue;
-      }
-      
-      .inputWithIcon .input[type="text"] {
-        padding-left: 40px;
-      }
-      
-      .inputWithIcon {
-        position: relative;
-      }
-      
-      .inputWithIcon i {
-        position: absolute;
-        left: 0;
-        top: 8px;
-        padding: 9px 8px;
-        color: #aaa;
-        transition: 0.3s;
-      }
-      
-      .inputWithIcon .input[type="text"]:focus + i {
-        color: dodgerBlue;
-      }
-      
-      .inputWithIcon.inputIconBg i {
-        background-color: #aaa;
-        color: #fff;
-        padding: 9px 4px;
-        border-radius: 4px 0 0 4px;
-      }
-      
-      .inputWithIcon.inputIconBg .input[type="text"]:focus + i {
-        color: #fff;
-        background-color: dodgerBlue;
-      }
-      /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
-
-            .input[type="tel"] {
-        width: 100%;
-        /* border: 2px solid #aaa; */
-        border-radius: 4px;
-        margin: 8px 0;
-        outline: none;
-        padding: 8px;
-        box-sizing: border-box;
-        transition: 0.3s;
-        font-family: 'Kanit', sans-serif;
-        
-      }
-      
-      .input[type="tel"]:focus {
-        border-color: dodgerBlue;
-        box-shadow: 0 0 8px 0 dodgerBlue;
-      }
-      
-      .inputWithIcon .input[type="tel"] {
-        padding-left: 40px;
-      }
-      
-      .inputWithIcon {
-        position: relative;
-      }
-      
-      .inputWithIcon i {
-        position: absolute;
-        left: 0;
-        top: 8px;
-        padding: 9px 8px;
-        color: #aaa;
-        transition: 0.3s;
-      }
-      
-      .inputWithIcon .input[type="tel"]:focus + i {
-        color: dodgerBlue;
-      }
-      
-      .inputWithIcon.inputIconBg i {
-        background-color: #aaa;
-        color: #fff;
-        padding: 9px 4px;
-        border-radius: 4px 0 0 4px;
-      }
-      
-      .inputWithIcon.inputIconBg .input[type="tel"]:focus + i {
-        color: #fff;
-        background-color: dodgerBlue;
-      }
-      /*bbbbbbbbbbbbbbbbbb*/
-
-      .input[type="email"] {
-        width: 100%;
-        /* border: 2px solid #aaa; */
-        border-radius: 4px;
-        margin: 8px 0;
-        outline: none;
-        padding: 8px;
-        box-sizing: border-box;
-        transition: 0.3s;
-        font-family: 'Kanit', sans-serif;
-        
-      }
-      
-      .input[type="email"]:focus {
-        border-color: dodgerBlue;
-        box-shadow: 0 0 8px 0 dodgerBlue;
-      }
-      
-      .inputWithIcon .input[type="email"] {
-        padding-left: 40px;
-      }
-      
-      .inputWithIcon {
-        position: relative;
-      }
-      
-      .inputWithIcon i {
-        position: absolute;
-        left: 0;
-        top: 8px;
-        padding: 9px 8px;
-        color: #aaa;
-        transition: 0.3s;
-      }
-      
-      .inputWithIcon .input[type="email"]:focus + i {
-        color: dodgerBlue;
-      }
-      
-      .inputWithIcon.inputIconBg i {
-        background-color: #aaa;
-        color: #fff;
-        padding: 9px 4px;
-        border-radius: 4px 0 0 4px;
-      }
-      
-      .inputWithIcon.inputIconBg .input[type="email"]:focus + i {
-        color: #fff;
-        background-color: dodgerBlue;
-      }
-      /*cccccccccc*/
-
-      .input[type="date"] {
-        width: 100%;
-        /* border: 2px solid #aaa; */
-        border-radius: 4px;
-        margin: 8px 0;
-        outline: none;
-        padding: 8px;
-        box-sizing: border-box;
-        transition: 0.3s;
-        font-family: 'Kanit', sans-serif;
-        
-      }
-      
-      .input[type="date"]:focus {
-        border-color: dodgerBlue;
-        box-shadow: 0 0 8px 0 dodgerBlue;
-      }
-      
-      .inputWithIcon .input[type="date"] {
-        padding-left: 40px;
-      }
-      
-      .inputWithIcon {
-        position: relative;
-      }
-      
-      .inputWithIcon i {
-        position: absolute;
-        left: 0;
-        top: 8px;
-        padding: 9px 8px;
-        color: #aaa;
-        transition: 0.3s;
-      }
-      
-      .inputWithIcon .input[type="date"]:focus + i {
-        color: dodgerBlue;
-      }
-      
-      .inputWithIcon.inputIconBg i {
-        background-color: #aaa;
-        color: #fff;
-        padding: 9px 4px;
-        border-radius: 4px 0 0 4px;
-      }
-      
-      .inputWithIcon.inputIconBg .input[type="date"]:focus + i {
-        color: #fff;
-        background-color: dodgerBlue;
-      }
-        </style>
-  <style>
-    .dropdown-menu{
-      display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-    }
-    .dropdown-menu a{
-      color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-    }
-    .dropdown-menu a:hover {
-      background-color: #c2c2a3;
-    }
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-    .img-profile {
-    width: 170px;
-    height: 200px;
-    border-radius: 8px;
-    margin: 10px;
-    border: solid 2px #E0e0e0;
-}
-.img-profile::before{
-  background-color: white;
-}
-button{
-    margin:10px;
-    padding: 8px 20px;
-    /* margin: 8px 0; */
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    /* box-sizing: border-box; */
-    font-family: 'Kanit', sans-serif;
-}
-b{
-  font-family: 'Kanit', sans-serif;
-  }
   body{
   background:	#f4f5f7;
-          }
+        }
+header{
+    background:
+  -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+  -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+  -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+    background:
+  linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+  linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+  linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+        }
+  footer{
+    background:
+  -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+  -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+  -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+    background:
+  linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+  linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+  linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+        }
+  textarea {
+          width: 60%;
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          /* border: 2px solid #ccc; */
+          border-radius: 4px;
+          /* background-color: #f8f8f8; */
+          font-size: 16px;
+          resize: none;
+          margin: 20px 0;
+          font-family: 'Kanit', sans-serif;
+        }
+    .input[type="text"] {
+      width: 100%;
+      /* border: 2px solid #aaa; */
+      border-radius: 4px;
+      margin: 8px 0;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: 0.3s;
+      font-family: 'Kanit', sans-serif;
+      
+    }
+    
+    .input[type="text"]:focus {
+      border-color: dodgerBlue;
+      box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+    .inputWithIcon .input[type="text"] {
+      padding-left: 40px;
+    }
+    
+    .inputWithIcon {
+      position: relative;
+    }
+    
+    .inputWithIcon i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: #aaa;
+      transition: 0.3s;
+    }
+    
+    .inputWithIcon .input[type="text"]:focus + i {
+      color: dodgerBlue;
+    }
+    
+    .inputWithIcon.inputIconBg i {
+      background-color: #aaa;
+      color: #fff;
+      padding: 9px 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .inputWithIcon.inputIconBg .input[type="text"]:focus + i {
+      color: #fff;
+      background-color: dodgerBlue;
+    }
+    /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+          .input[type="tel"] {
+      width: 100%;
+      /* border: 2px solid #aaa; */
+      border-radius: 4px;
+      margin: 8px 0;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: 0.3s;
+      font-family: 'Kanit', sans-serif;
+      
+    }
+    
+    .input[type="tel"]:focus {
+      border-color: dodgerBlue;
+      box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+    .inputWithIcon .input[type="tel"] {
+      padding-left: 40px;
+    }
+    
+    .inputWithIcon {
+      position: relative;
+    }
+    
+    .inputWithIcon i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: #aaa;
+      transition: 0.3s;
+    }
+    
+    .inputWithIcon .input[type="tel"]:focus + i {
+      color: dodgerBlue;
+    }
+    
+    .inputWithIcon.inputIconBg i {
+      background-color: #aaa;
+      color: #fff;
+      padding: 9px 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .inputWithIcon.inputIconBg .input[type="tel"]:focus + i {
+      color: #fff;
+      background-color: dodgerBlue;
+    }
+    /*bbbbbbbbbbbbbbbbbb*/
+
+    .input[type="email"] {
+      width: 100%;
+      /* border: 2px solid #aaa; */
+      border-radius: 4px;
+      margin: 8px 0;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: 0.3s;
+      font-family: 'Kanit', sans-serif;
+      
+    }
+    
+    .input[type="email"]:focus {
+      border-color: dodgerBlue;
+      box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+    .inputWithIcon .input[type="email"] {
+      padding-left: 40px;
+    }
+    
+    .inputWithIcon {
+      position: relative;
+    }
+    
+    .inputWithIcon i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: #aaa;
+      transition: 0.3s;
+    }
+    
+    .inputWithIcon .input[type="email"]:focus + i {
+      color: dodgerBlue;
+    }
+    
+    .inputWithIcon.inputIconBg i {
+      background-color: #aaa;
+      color: #fff;
+      padding: 9px 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .inputWithIcon.inputIconBg .input[type="email"]:focus + i {
+      color: #fff;
+      background-color: dodgerBlue;
+    }
+    /*cccccccccc*/
+
+    .input[type="date"] {
+      width: 100%;
+      /* border: 2px solid #aaa; */
+      border-radius: 4px;
+      margin: 8px 0;
+      outline: none;
+      padding: 8px;
+      box-sizing: border-box;
+      transition: 0.3s;
+      font-family: 'Kanit', sans-serif;
+      
+    }
+    
+    .input[type="date"]:focus {
+      border-color: dodgerBlue;
+      box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+    .inputWithIcon .input[type="date"] {
+      padding-left: 40px;
+    }
+    
+    .inputWithIcon {
+      position: relative;
+    }
+    
+    .inputWithIcon i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: #aaa;
+      transition: 0.3s;
+    }
+    
+    .inputWithIcon .input[type="date"]:focus + i {
+      color: dodgerBlue;
+    }
+    
+    .inputWithIcon.inputIconBg i {
+      background-color: #aaa;
+      color: #fff;
+      padding: 9px 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .inputWithIcon.inputIconBg .input[type="date"]:focus + i {
+      color: #fff;
+      background-color: dodgerBlue;
+    }
+    .dropdown-menu{
+        display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+      }
+      .dropdown-menu a{
+        color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+      }
+      .dropdown-menu a:hover {
+        background-color: #c2c2a3;
+      }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+      .img-profile {
+      width: 170px;
+      height: 200px;
+      border-radius: 8px;
+      margin: 10px;
+      border: solid 2px #E0e0e0;
+  }
+  .img-profile::before{
+    background-color: white;
+  }
+  button{
+      margin:10px;
+      padding: 8px 20px;
+      /* margin: 8px 0; */
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      /* box-sizing: border-box; */
+      font-family: 'Kanit', sans-serif;
+  }
+  b{
+    font-family: 'Kanit', sans-serif;
+    }
+
+            
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
@@ -928,7 +930,7 @@ b{
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
-          <b style="font-size: 20px;">Work Experiece</b>
+          <b style="font-size: 20px;">Work Experience</b>
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
