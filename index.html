@@ -317,8 +317,84 @@ header{
     var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
     var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
     // Make an AJAX call to Google Script
-    var a, b, c, d = "";
+    var a, b, c, d,e,f,g,h,i,j = "";
+    var data_type,data_course,data_department,data_degree,data_faculty,data_major = []
+    var count_type = 0;
+    var count_course = 0;
+    var count_department = 0;
+    var count_degree = 0;
+    var count_faculty = 0;
+    var count_major = 0;
+    console.log(count_course)
+    fetch('json/degree_education.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_type = myJson.degree_education
+          console.log(data_type)
+        });
+    fetch('json/highschool.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_course = myJson.school
+          console.log(data_course)
+        });
+    fetch('json/sub_highschool.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_department = myJson.sub_high
+          console.log(data_department)
+        });
+    fetch('json/degree_university.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_degree = myJson.degree
+          console.log(data_degree)
+        });
+    fetch('json/faculty_university.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_faculty = myJson.faculty
+          console.log(data_faculty)
+        });
+    fetch('json/major_university.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+          data_major = myJson.major
+          console.log(data_major)
+        });
+    
+    
+    
+    
+    var aa= 2
+    var bb= 2
+    var cc = 2
+    console.log(aa)
+    console.log(bb)
+    console.log(cc)
+        if (aa == 1) {
+          //  block of code to be executed if condition1 is true
+          console.log('aa')
+        } else if (aa && bb && cc > 1) {
+          //  block of code to be executed if the condition1 is false and condition2 is true
+          console.log('aa > 1')
+        }
+
+
     function insert_value() {
+
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
@@ -375,10 +451,119 @@ header{
       b = db;
       c = job;
       d = job_l;
-      document.getElementById("database").value = a
-      document.getElementById("oper").value = b
+
+      document.getElementById("oper").value = a
+      document.getElementById("database").value = b
       document.getElementById("cur_job").value = c
       document.getElementById("job_lawa").value = d
+      
+      count_type = de;
+      count_course = hsc;
+      count_department = sub_hsc;
+      count_degree = deu;
+      count_faculty = fac_u;
+      count_major = major_u;
+      // console.log(count_type )
+      // console.log(count_course)
+      // console.log(count_department)
+      // console.log(count_degree)
+      // console.log(count_faculty)
+      // console.log(count_major)
+      if(count_type != 0){
+        document.getElementById("type_de").value = data_type[count_type - 1].name
+        // console.log('ok done1')
+        // console.log(document.getElementById("type_de").value)
+      }
+      if(count_course != 0){
+        document.getElementById("hscc").value = data_course[count_course - 1].name
+        // console.log('ok done2')
+        // console.log(data_course[count_course - 1].name)
+      }
+      if(count_department != 0){
+        document.getElementById("sub_hscc").value = data_department[count_department - 1].name
+        // console.log('ok done3')
+        // console.log(document.getElementById("sub_hscc").value)
+      }
+      if(count_degree != 0){
+        document.getElementById("deuu").value = data_degree[count_degree - 1].name
+        // console.log('ok done4')
+        // console.log(document.getElementById("deuu").value)
+      }
+      if(count_faculty != 0){
+        document.getElementById("faculty_u").value = data_faculty[count_faculty - 1].name
+        // console.log('ok done5')
+        // console.log(document.getElementById("faculty_u").value)
+      }
+      if(count_major != 0){
+        document.getElementById("major_uu").value = data_major[count_major - 1].name
+        // console.log('ok done6')
+        // console.log(document.getElementById("major_uu").value)
+      }
+      // else if(count_type == 1){
+      //   document.getElementById("type_de").value = data_type[count_type].name
+      //   console.log('ok done12')
+      //   console.log(document.getElementById("type_de").value)
+      // }
+      // }if(count_course == 1){
+      //   document.getElementById("hscc").value = data_course[count_course].name
+      //   console.log('ok done2')
+
+      // }if(count_department == 1){
+      //   document.getElementById("sub_hscc").value = data_department[count_department].name
+      //   console.log('ok done3')
+
+      // }if(count_degree == 1){
+      //   document.getElementById("deuu").value = data_degree[count_degree].name
+      //   console.log('ok done4')
+
+      // }if(count_faculty== 1){
+      //   document.getElementById("faculty_u").value = data_faculty[count_faculty].name
+      //   console.log('ok done5')
+
+      // }if(count_major== 1){
+      //   document.getElementById("major_uu").value = data_major[count_major].name
+      //   console.log('ok done6')
+      // }
+      // if(count_type > 1){
+      //   document.getElementById("type_de").value = data_type[count_type - 1].name
+      //   console.log('ok done no data 11')
+      // }
+      // if(count_type == 1){
+      //   document.getElementById("type_de").value = data_type[count_type].name
+      //   console.log('ok done no data 111')
+      // }
+      // if(count_course > 1){
+      //   document.getElementById("hscc").value = data_course[count_course - 1].name
+      //   console.log('ok done no data 12')
+
+      // }if(count_department > 1){
+      //   document.getElementById("sub_hscc").value = data_department[count_department - 1].name
+      //   console.log('ok done no data 13')
+
+      // }if(count_degree > 1){
+      //   document.getElementById("deuu").value = data_degree[count_degree - 1].name
+      //   console.log('ok done no data 14')
+      // }
+      // if(count_degree == 1 || count_degree == 0){
+      //   document.getElementById("deuu").value = data_degree[count_degree].name
+      // }
+      // if(count_faculty > 1){
+      //   document.getElementById("faculty_u").value = data_faculty[count_faculty - 1].name
+      //   console.log('ok done no data 15')
+
+      // }if(count_major > 1){
+      //   document.getElementById("major_uu").value = data_major[count_major - 1].name
+      //   console.log('ok done no data 16')
+
+      // }
+
+      // console.log(document.getElementById("type_de").value)
+      // console.log(document.getElementById("hscc").value)
+      // console.log(document.getElementById("sub_hscc").value)
+      // console.log(document.getElementById("deuu").value)
+      // console.log(document.getElementById("faculty_u").value)
+      // console.log(document.getElementById("major_uu").value)
+
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -387,6 +572,7 @@ header{
       });
       insert_value_2()
     }
+
     function insert_value_2() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
@@ -490,6 +676,7 @@ header{
   </nav>
   <div align="left">
     <!-- //class="container-bg" -->
+    
     <form id="myForm" name="myForm" action="mailer.php" method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
       <!-- <label>ID :</label> -->
       <input type="hidden" name="id" id="id" required></input>
@@ -498,6 +685,12 @@ header{
       <input type="hidden" name="database" id="database"></input>
       <input type="hidden" name="oper" id="oper"></input>
       <input type="hidden" name="job_lawa" id="job_lawa"></input>
+      <input type="hidden" name="type_de" id="type_de"></input>
+      <input type="hidden" name="hscc" id="hscc"></input>
+      <input type="hidden" name="sub_hscc" id="sub_hscc"></input>
+      <input type="hidden" name="deuu" id="deuu"></input>
+      <input type="hidden" name="faculty_u" id="faculty_u"></input>
+      <input type="hidden" name="major_uu" id="major_uu"></input>
       <label type="hidden"></label>
       <!-- <label id="id" name="id"></label><br> -->
   </div>
@@ -1151,6 +1344,7 @@ header{
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
   }
+  
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

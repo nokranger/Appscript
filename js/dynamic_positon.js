@@ -6,6 +6,7 @@
     })
     .then(function (myJson) {
       dataget_db = myJson.database
+      l = dataget_db
       dataget_db.sort(function (a, b) {
         var sort_db = a.name < b.name ? -1 : 1;
         return sort_db
