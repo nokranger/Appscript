@@ -5,6 +5,7 @@
   <!-- Include CSS File Here -->
   <!-- Include JS File Here -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <meta name="google" content="notranslate" />
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
@@ -21,8 +22,6 @@
     integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
   <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
-
-
   <style>
     input[type="text"] {
       width: 100%;
@@ -249,7 +248,7 @@
             </a></li>
           <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete
             </a></li>
-          <li class="active"><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
+          <li class="active"><a href="login_admin.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
             </a></li>
 
           </li>
@@ -272,7 +271,7 @@
 
         <h2 style="color:white">Login</h2>
         <div align="left">
-          <form id="form_id" method="post" name="myform">
+          <form id="form_id" action="login.php" method="post" name="myform">
             <label style="color:white">User Name :</label>
             <div class="inputWithIcon">
               <input type="text" name="username" id="username" />
@@ -286,7 +285,7 @@
               <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
             </div>
 
-            <input type="submit" value="Login" id="submit" onclick="validate()" />
+            <input type="submit" value="Login" id="submit" />
           </form>
         </div>
       </div>
@@ -294,48 +293,34 @@
 
     </div>
   </div>
-  <div align="center">
-    <footer style="position: fixed;left: 0;bottom: 0;width: 100%;">
-      <br>
-      <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
-        (Thailand) Co.,Ltd All rights reserved</p>
-      <br>
-    </footer>
+    <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <br>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <br>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <br>
+                  </div>
+          </div>
+        </div>
+      </div>
+      <div align="center">
+        <footer>
+          <br>
+          <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
+            (Thailand) Co.,Ltd All rights reserved</p>
+          <br>
+        </footer>
+      </div>
   </div>
 </body>
-
-<script>
-  var attempt = 3; // Variable to count number of attempts.
-  // Below function Executes on click of login button.
-  function validate() {
-    fetch('json/user.json')
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        if (username == myJson[0].user && password == myJson[0].password) {
-          alert("Login successfully");
-          Session.set("status", '1');
-          // alert(Session.get("name"));
-          window.location = "show.html"; // Redirecting to other page.
-          return false;
-        }
-        else {
-          attempt--;// Decrementing by one.
-          alert("You have left " + attempt + " attempt;");
-          // Disabling fields after 3 attempts.
-          if (attempt == 0) {
-            document.getElementById("username").disabled = true;
-            document.getElementById("password").disabled = true;
-            document.getElementById("submit").disabled = true;
-            return false;
-          }
-        }
-      });
-  }
-</script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

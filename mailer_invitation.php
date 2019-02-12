@@ -30,9 +30,9 @@ $sub_add2 = "16th Floor,";
 $sub_add3 = "Soi Choei phuang,";
 $sub_add4 = "Vibhavadee-Rangsit Rd.,";
 $sub_add5 = "Chomphon, Chatuchak, Bangkok 10900(Thailand)";
-$name_manager = "";
+$name_manager = "Taksinaporn Vongswadi";
 $tel_manager = "02-2723228";
-$mail_manager = "";
+$mail_manager = "tvachara@ecs.co.th";
 
 
 $gmail_username = "appecs.ecs@gmail.com"; // gmail ที่ใช้ส่ง

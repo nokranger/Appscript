@@ -26,7 +26,7 @@ margin: 8px 0;
 border: none;
 border-radius: 4px;
 cursor: pointer;
-max-width: 60%;
+max-width: 100%;
 font-family: 'Kanit', sans-serif;
 }
 input[type=button] {
@@ -37,7 +37,7 @@ margin: 8px 0;
 border: none;
 border-radius: 4px;
 cursor: pointer;
-max-width: 60%;
+max-width: 100%;
 }
 input[type=text], select {
 padding: 7px 20px;
@@ -47,13 +47,13 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 margin-left:10px; 
-max-width: 60%;
+max-width: 100%;
 }
 label{
 margin-left: 10px;
 font-family: 'Kanit', sans-serif;
 size: 20px;
-max-width: 60%;
+max-width: 100%;
 }
 input[type=date]{
 padding: 7px 20px;
@@ -63,7 +63,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 margin-left:10px; 
-max-width: 60%;
+max-width: 100%;
 }
 input[type=tel]{
 padding: 7px 20px;
@@ -73,7 +73,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 margin-left:10px; 
-max-width: 60%;
+max-width: 100%;
 }
 input[type=email]{
 padding: 7px 20px;
@@ -83,7 +83,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 margin-left:10px; 
-max-width: 60%;
+max-width: 100%;
 }
 input[type=file]{
   padding: 7px 20px;

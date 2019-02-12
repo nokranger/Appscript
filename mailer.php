@@ -174,8 +174,8 @@ if($email_receiver){
         echo '<script language="javascript">';
         echo 'alert("Send mail successfully")';
         echo '</script>';
-        echo 'ok done';
-        echo 'aa',$de , 'bb',$deu ,  'cc',$hsc , 'dd',$sub_hsc,$fac_u,$major_u;
+        // echo 'ok done';
+        // echo 'aa',$de , 'bb',$deu ,  'cc',$hsc , 'dd',$sub_hsc,$fac_u,$major_u;
         $yourURL="index.html";
         echo ("<script>location.href='$yourURL'</script>");
 	}	 

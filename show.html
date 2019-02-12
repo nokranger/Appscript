@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Show</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap_1.css">
     <!-- <link rel="stylesheet" href="css/social.css"> -->
@@ -30,7 +31,7 @@
 
     <script>
         if (Session.get("status") != 1) {
-            window.location.href = 'login.html';
+            window.location.href = 'login_admin.html';
         }
     </script>
     <script>
@@ -43,7 +44,7 @@
                     // console.log("exit")
                     // alert("Logout successfully");
                     Session.set("status", '0');
-                    window.location = "login.html"; // Redirecting to other page.
+                    window.location = "login_admin.html"; // Redirecting to other page.
                     return false;
                 }
             }
@@ -134,12 +135,12 @@
                 dataType: "jsonp"
             });
 
-            console.log('ok')
+            // console.log('ok')
         }
     </script>
     <script>
         function confirmaccept() {
-            console.log('confirm')
+            // console.log('confirm')
 
             var c = confirm('Do you want to call for a job interview ?')
             // set()
@@ -169,7 +170,7 @@
     </script>
     <script>
         function timeout() {
-            setTimeout(function () { window.location = "login.html"; }, 900000);
+            setTimeout(function () { window.location = "login_admin.html"; }, 900000);
             return hello()
         }
     </script>
@@ -398,7 +399,7 @@
                             </div>
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-success" type="submit" onsubmit="javascript:confirmaccept()" id="accept"><i style="margin-right:5px"
+                                    <button class="btn-success" type="submit" id="accept"><i style="margin-right:5px"
                                         class="fa fa-check"></i>Accept</button>
                                     <button class="btn-danger" type="button" onclick="javascript:getpic()" id="pdffile"><i style="margin-right:5px"
                                         class="fa fa-file-pdf-o"></i>Load PDF file</button>
@@ -460,6 +461,7 @@
                 datagett[i] = dataget[i].ID.split('UID')
                 datagetsplit = 'uid' + datagett[i][1]
                 coun = i
+                countpdf = i;
                 if ((dataget[i].ID) == getURL('id') || datagetsplit == getURL('id')) {
                     document.getElementById("accept").disabled = false;
                     document.getElementById("pdffile").disabled = false;
@@ -495,9 +497,25 @@
                     document.getElementById("ref").innerHTML = (dataget[i].Reference);
 
                     document.getElementById("university").innerHTML = (dataget[i].Educational_institution_u);
-                    document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree - 1].name;
-                    document.getElementById("faculty").innerHTML = dataget_fac_u[dataget[i].Faculty - 1].name;
-                    document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major - 1].name;
+                    // console.log(dataget[i].Degree)
+                    if(dataget[i].Degree != 0){
+                        document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree - 1].name;
+                    }else{
+                        // console.log('data=0')
+                        document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree].name;
+                    }
+                    if(dataget[i].Faculty != 0 ){
+                        document.getElementById("faculty").innerHTML = dataget_fac_u[dataget[i].Faculty - 1].name;
+                    }else{
+                        document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major].name;
+                    }
+                    if(dataget[i].Major!= 0){
+                        document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major - 1].name;
+                    }else{
+                        document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major].name;
+                    }
+                    
+                    
 
                     // console.log(dataget_major_u[dataget[i].Major - 1].name)
                     localtime4 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
@@ -534,7 +552,8 @@
                     document.getElementById("swd").innerHTML = localtime2;
                     document.getElementById("dop").innerHTML = localtime3;
                     document.getElementById("cs").innerHTML = (dataget[i].Current_salary);
-                    countpdf = i;
+                    
+                    
                     break;
                 }
             }
@@ -686,7 +705,7 @@
               .then(dataUrl => {
                 imgECS = dataUrl
                 encodeim2()
-                console.log('load logo done')
+                // console.log('load logo done')
               })
             }
   
@@ -702,14 +721,17 @@
                 reader.onerror = reject
                 reader.readAsDataURL(blob)
               }))
-              // console.log(dataget[1].Picture)
+            //   console.log(dataget[1].Picture)
               splitpath = (dataget[countpdf].Picture).split("\\");
+            //   console.log(dataget[countpdf].Picture)
+            //   console.log(countpdf)
               
               picprofile  = 'uploads/'+ splitpath[2]
+            //   console.log(picprofile)
             toDataURL(picprofile )
               .then(dataUrl => {
                 imgECS2 = dataUrl
-                console.log('load picture profile done')
+                // console.log('load picture profile done')
                 loadpdf()
               })
             }
@@ -718,7 +740,7 @@
     
             function loadpdf(){
               var doc = new jsPDF()
-              console.log('load dataget and convert to pdf done')
+            //   console.log('load dataget and convert to pdf done')
               // console.log()
               doc.setFontSize(12)
               ecs = "Enterprise Computing Services (Thailand) Co ,.Ltd."
@@ -767,15 +789,27 @@
               doc.text("Educational Background",10,160)
               doc.setFontType('default')
               doc.text("    Higher Education Level",10,170)
-              
-              doc.text("    Degree : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + '('+dataget_major_u[dataget[countpdf].Major - 1].name+')',10,175)
-              doc.text("    Institue : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + " of " + dataget[countpdf].Educational_institution_u,10,180)
+              if(dataget[countpdf].Major != 0){
+                doc.text("    Degree : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + '('+dataget_major_u[dataget[countpdf].Major - 1].name+')',10,175)
+              }else{
+                doc.text("    Degree : "+ dataget_fac_u[dataget[countpdf].Faculty].name + '('+dataget_major_u[dataget[countpdf].Major].name+')',10,175)
+              }
+              if(dataget[countpdf].Faculty !=0){
+                doc.text("    Institue : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + " of " + dataget[countpdf].Educational_institution_u,10,180)
+              }else{
+                doc.text("    Institue : "+ dataget_fac_u[dataget[countpdf].Faculty].name + " of " + dataget[countpdf].Educational_institution_u,10,180)
+              }
               doc.text("    GPA : "+ dataget[countpdf].GPA_u,10,185)
               localtime7 = moment((dataget[countpdf].Graduation_day_u)).format('YYYY-MM-DD')
               doc.text("    Date of graduation : "+ localtime7,10,190)
               doc.text("    Upper Secondary Level",10,200)
+              if(dataget[countpdf].Course != 0){
+                doc.text("    Program : "+ dataget_high[dataget[countpdf].Course - 1].name,10,210)
+              }else{
+                doc.text("    Program : "+ dataget_high[dataget[countpdf].Course].name,10,210)
+              }
               doc.text("    Institue : "+ dataget[countpdf].Educational_institution_s,10,205)
-              doc.text("    Program : "+ dataget_high[dataget[countpdf].Course - 1].name,10,210)
+              
               doc.text("    GPA : "+ dataget[countpdf].GPA_s,10,215)
               localtime8 = moment((dataget[countpdf].Study_start_date_s)).format('YYYY-MM-DD')
               doc.text("    Date of graduation : "+ localtime8,10,220)

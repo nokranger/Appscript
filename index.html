@@ -4,6 +4,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="css/edit.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/index.css">
@@ -11,7 +12,7 @@
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href="css/multiple-select.css" rel="stylesheet" />
+  <!-- <link href="css/multiple-select.css" rel="stylesheet" /> -->
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
   <link rel="stylesheet" href="assets/app.css">
@@ -45,8 +46,11 @@ header{
   linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
   linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
         }
+        select{
+          width: 100%;
+        }
   textarea {
-          width: 60%;
+          width: 100%;
           height: 150px;
           padding: 12px 20px;
           box-sizing: border-box;
@@ -70,7 +74,6 @@ header{
       font-family: 'Kanit', sans-serif;
       
     }
-    
     .input[type="text"]:focus {
       border-color: dodgerBlue;
       box-shadow: 0 0 8px 0 dodgerBlue;
@@ -325,14 +328,14 @@ header{
     var count_degree = 0;
     var count_faculty = 0;
     var count_major = 0;
-    console.log(count_course)
+    // console.log(count_course)
     fetch('json/degree_education.json')
         .then(function (response) {
             return response.json();
         })
         .then(function (myJson) {
           data_type = myJson.degree_education
-          console.log(data_type)
+          // console.log(data_type)
         });
     fetch('json/highschool.json')
         .then(function (response) {
@@ -340,7 +343,7 @@ header{
         })
         .then(function (myJson) {
           data_course = myJson.school
-          console.log(data_course)
+          // console.log(data_course)
         });
     fetch('json/sub_highschool.json')
         .then(function (response) {
@@ -348,7 +351,7 @@ header{
         })
         .then(function (myJson) {
           data_department = myJson.sub_high
-          console.log(data_department)
+          // console.log(data_department)
         });
     fetch('json/degree_university.json')
         .then(function (response) {
@@ -356,7 +359,7 @@ header{
         })
         .then(function (myJson) {
           data_degree = myJson.degree
-          console.log(data_degree)
+          // console.log(data_degree)
         });
     fetch('json/faculty_university.json')
         .then(function (response) {
@@ -364,7 +367,7 @@ header{
         })
         .then(function (myJson) {
           data_faculty = myJson.faculty
-          console.log(data_faculty)
+          // console.log(data_faculty)
         });
     fetch('json/major_university.json')
         .then(function (response) {
@@ -372,26 +375,8 @@ header{
         })
         .then(function (myJson) {
           data_major = myJson.major
-          console.log(data_major)
+          // console.log(data_major)
         });
-    
-    
-    
-    
-    var aa= 2
-    var bb= 2
-    var cc = 2
-    console.log(aa)
-    console.log(bb)
-    console.log(cc)
-        if (aa == 1) {
-          //  block of code to be executed if condition1 is true
-          console.log('aa')
-        } else if (aa && bb && cc > 1) {
-          //  block of code to be executed if the condition1 is false and condition2 is true
-          console.log('aa > 1')
-        }
-
 
     function insert_value() {
 
@@ -473,96 +458,44 @@ header{
         document.getElementById("type_de").value = data_type[count_type - 1].name
         // console.log('ok done1')
         // console.log(document.getElementById("type_de").value)
+      }else{
+        // document.getElementById("type_de").value = data_type[count_type].name
       }
       if(count_course != 0){
         document.getElementById("hscc").value = data_course[count_course - 1].name
         // console.log('ok done2')
         // console.log(data_course[count_course - 1].name)
+      }else{
+        // document.getElementById("hscc").value = data_course[count_course].name
       }
       if(count_department != 0){
         document.getElementById("sub_hscc").value = data_department[count_department - 1].name
         // console.log('ok done3')
         // console.log(document.getElementById("sub_hscc").value)
+      }else{
+        // document.getElementById("sub_hscc").value = data_department[count_department].name
       }
       if(count_degree != 0){
         document.getElementById("deuu").value = data_degree[count_degree - 1].name
         // console.log('ok done4')
         // console.log(document.getElementById("deuu").value)
+      }else{
+        // document.getElementById("deuu").value = data_degree[count_degree].name
       }
       if(count_faculty != 0){
         document.getElementById("faculty_u").value = data_faculty[count_faculty - 1].name
         // console.log('ok done5')
         // console.log(document.getElementById("faculty_u").value)
+      }else{
+        // document.getElementById("faculty_u").value = data_faculty[count_faculty].name
       }
       if(count_major != 0){
         document.getElementById("major_uu").value = data_major[count_major - 1].name
         // console.log('ok done6')
         // console.log(document.getElementById("major_uu").value)
+      }else{
+        // document.getElementById("major_uu").value = data_major[count_major].name
       }
-      // else if(count_type == 1){
-      //   document.getElementById("type_de").value = data_type[count_type].name
-      //   console.log('ok done12')
-      //   console.log(document.getElementById("type_de").value)
-      // }
-      // }if(count_course == 1){
-      //   document.getElementById("hscc").value = data_course[count_course].name
-      //   console.log('ok done2')
-
-      // }if(count_department == 1){
-      //   document.getElementById("sub_hscc").value = data_department[count_department].name
-      //   console.log('ok done3')
-
-      // }if(count_degree == 1){
-      //   document.getElementById("deuu").value = data_degree[count_degree].name
-      //   console.log('ok done4')
-
-      // }if(count_faculty== 1){
-      //   document.getElementById("faculty_u").value = data_faculty[count_faculty].name
-      //   console.log('ok done5')
-
-      // }if(count_major== 1){
-      //   document.getElementById("major_uu").value = data_major[count_major].name
-      //   console.log('ok done6')
-      // }
-      // if(count_type > 1){
-      //   document.getElementById("type_de").value = data_type[count_type - 1].name
-      //   console.log('ok done no data 11')
-      // }
-      // if(count_type == 1){
-      //   document.getElementById("type_de").value = data_type[count_type].name
-      //   console.log('ok done no data 111')
-      // }
-      // if(count_course > 1){
-      //   document.getElementById("hscc").value = data_course[count_course - 1].name
-      //   console.log('ok done no data 12')
-
-      // }if(count_department > 1){
-      //   document.getElementById("sub_hscc").value = data_department[count_department - 1].name
-      //   console.log('ok done no data 13')
-
-      // }if(count_degree > 1){
-      //   document.getElementById("deuu").value = data_degree[count_degree - 1].name
-      //   console.log('ok done no data 14')
-      // }
-      // if(count_degree == 1 || count_degree == 0){
-      //   document.getElementById("deuu").value = data_degree[count_degree].name
-      // }
-      // if(count_faculty > 1){
-      //   document.getElementById("faculty_u").value = data_faculty[count_faculty - 1].name
-      //   console.log('ok done no data 15')
-
-      // }if(count_major > 1){
-      //   document.getElementById("major_uu").value = data_major[count_major - 1].name
-      //   console.log('ok done no data 16')
-
-      // }
-
-      // console.log(document.getElementById("type_de").value)
-      // console.log(document.getElementById("hscc").value)
-      // console.log(document.getElementById("sub_hscc").value)
-      // console.log(document.getElementById("deuu").value)
-      // console.log(document.getElementById("faculty_u").value)
-      // console.log(document.getElementById("major_uu").value)
 
       var request = jQuery.ajax({
         crossDomain: true,
@@ -667,7 +600,7 @@ header{
             </a></li>
           <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete
             </a></li>
-          <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
+          <li><a href="login_admin.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
             </a></li>
           </li>
         </ul>
@@ -717,8 +650,8 @@ header{
       </div>
       <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
         <label>Title Name : </label><br>
-        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Kanit', sans-serif;">
-          <option value="">Select</option>
+        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Kanit', sans-serif;width:100%;">
+          <option value="0">Select </option>
           <option value="Mr.">Mr.</option>
           <option value="Ms.">Ms.</option>
           <option value="Mrs.">Mrs.</option>

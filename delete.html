@@ -4,6 +4,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="css/edit.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
@@ -64,7 +65,7 @@
       piccheck = document.getElementById("picbefore").src
       // console.log(piccheck)
       rr = piccheck.split("//")
-      console.log(rr)
+      // console.log(rr)
       r2 = rr[1].split("/")
       // console.log(r2)
       // console.log('aaaaaa')
@@ -180,6 +181,7 @@
 
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
+      back()
     }
   </script>
 
@@ -222,7 +224,7 @@
             </a></li>
           <li class="active"><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete
             </a></li>
-          <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
+          <li><a href="login_admin.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
             </a></li>
           </li>
         </ul>
@@ -263,13 +265,16 @@
               <div class="inputWithIcon">
                 <input class="input" type="text" name="token" id="token" maxlength="5" required></input>
                 <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
-                <button class="btn-info" type="button" onclick="getValue()"><i style="margin-right:5px" class="fa fa-check"></i>Check</button>
+                
               </div>
 
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
               <!-- <label style="color: white">T</label><br>
               <button type="button" onclick="back()">Reset id</button> -->
+              
+              <br>
+              <button class="btn-info" type="button" onclick="getValue()"><i style="margin:4px;" class="fa fa-check"></i>Check</button>
             </div>
           </div>
         </div>
@@ -306,6 +311,7 @@
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4"><label>Title Name : </label><br>
               <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;" readonly>
+                <option value="0">Select </option>
                 <option value="Mr.">Mr.</option>
                 <option value="Ms.">Ms.</option>
                 <option value="Mrs.">Mrs.</option>
@@ -962,9 +968,9 @@
         dynamicdropdown_major_u(dataget[i].Faculty)
 
 
-        console.log(dataget[i].Degree)
-        console.log(dataget[i].Faculty)
-        console.log(dataget[i].Major)
+        // console.log(dataget[i].Degree)
+        // console.log(dataget[i].Faculty)
+        // console.log(dataget[i].Major)
 
 
 
@@ -980,7 +986,7 @@
         document.getElementById("age").value = (dataget[i].Age);
         document.getElementById("sal").value = (dataget[i].Salary);
         splitpath = (dataget[i].Picture).split("\\");
-        console.log('uploads/' + splitpath[2])
+        // console.log('uploads/' + splitpath[2])
         document.getElementById("picbefore").src = 'uploads/' + splitpath[2];
 
 
@@ -998,9 +1004,9 @@
         document.getElementById("deu").value = dataget[i].Degree;
         document.getElementById("fac_u").value = dataget[i].Faculty;
         document.getElementById("major_u").value = dataget[i].Major;
-        console.log(dataget[i].Degree)
-        console.log(dataget[i].Faculty)
-        console.log(dataget[i].Major)
+        // console.log(dataget[i].Degree)
+        // console.log(dataget[i].Faculty)
+        // console.log(dataget[i].Major)
         document.getElementById("u_gpa").value = dataget[i].GPA_u;
         localtime6 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
         document.getElementById("u_ssd").value = localtime6;
@@ -1151,7 +1157,7 @@
         return sort_deu
       });
       dynamicdropdown_deu()
-      console.log(dataget_deu[1].name)
+      // console.log(dataget_deu[1].name)
 
     });
 </script>
@@ -1183,7 +1189,7 @@
         return sort_fac_u
       });
       dynamicdropdown_fac_u()
-      console.log(dataget_fac_u[13].name)
+      // console.log(dataget_fac_u[13].name)
         
     });
 </script>
