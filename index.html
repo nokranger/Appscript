@@ -380,9 +380,9 @@ header{
 
     function insert_value() {
 
-      $("#re").css("visibility", "hidden");
-      document.getElementById("loader").style.visibility = "visible";
-      $('#mySpinner').addClass('spinner');
+      // $("#re").css("visibility", "hidden");
+      // document.getElementById("loader").style.visibility = "visible";
+      // $('#mySpinner').addClass('spinner');
       var id1 = $("#id").val();
       var tn = $("#tn").val();  
       var name = $("#name").val();
@@ -393,7 +393,7 @@ header{
       var age = $("#age").val();
       var job = $("#job").val();
       var sal = $("#sal").val();
-      var pic = $("#pic").val();
+      var pic = "C:\\fakepath\\" + id1 + name  + ".jpg";
       var token = $("#token").val();
       var ei = $("#ei").val();
       var de = $("#de").val();
@@ -459,44 +459,44 @@ header{
         // console.log('ok done1')
         // console.log(document.getElementById("type_de").value)
       }else{
-        // document.getElementById("type_de").value = data_type[count_type].name
+        document.getElementById("type_de").value = "";
       }
       if(count_course != 0){
         document.getElementById("hscc").value = data_course[count_course - 1].name
         // console.log('ok done2')
         // console.log(data_course[count_course - 1].name)
       }else{
-        // document.getElementById("hscc").value = data_course[count_course].name
+        document.getElementById("hscc").value = "";
       }
       if(count_department != 0){
         document.getElementById("sub_hscc").value = data_department[count_department - 1].name
         // console.log('ok done3')
         // console.log(document.getElementById("sub_hscc").value)
       }else{
-        // document.getElementById("sub_hscc").value = data_department[count_department].name
+        document.getElementById("sub_hscc").value = "";
       }
       if(count_degree != 0){
         document.getElementById("deuu").value = data_degree[count_degree - 1].name
         // console.log('ok done4')
         // console.log(document.getElementById("deuu").value)
       }else{
-        // document.getElementById("deuu").value = data_degree[count_degree].name
+        document.getElementById("deuu").value = "";
       }
       if(count_faculty != 0){
         document.getElementById("faculty_u").value = data_faculty[count_faculty - 1].name
         // console.log('ok done5')
         // console.log(document.getElementById("faculty_u").value)
       }else{
-        // document.getElementById("faculty_u").value = data_faculty[count_faculty].name
+        document.getElementById("faculty_u").value = "";
       }
       if(count_major != 0){
         document.getElementById("major_uu").value = data_major[count_major - 1].name
         // console.log('ok done6')
         // console.log(document.getElementById("major_uu").value)
       }else{
-        // document.getElementById("major_uu").value = data_major[count_major].name
+        document.getElementById("major_uu").value = "";
       }
-
+      
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -532,7 +532,7 @@ header{
       var major = $("#major").val();
       var minor = $("#minor").val();
       var about = $("#about").val();
-      var pic = $("#pic").val();
+      var pic = "C:\\fakepath\\" + id1 + name + ".jpg";
       var exp = $("#exp").val();
       var ref = $("#ref").val();
       var token = $("#token").val();
@@ -1262,6 +1262,8 @@ header{
     for (let i = 0; i < files.length; i++) {
       let file = files[i];
       formData.append('files[]', file);
+      formData.append('id',document.getElementById('id').value)
+      formData.append('name',document.getElementById('name').value)
     }
     fetch(url, {
       method: 'POST',

@@ -480,7 +480,12 @@
                     line = urlline + (dataget[i].Line);
                     // drive = urldrive + (dataget[i].Picture);
                     document.getElementById("uid").innerHTML = (dataget[i].ID);
-                    document.getElementById("tn").innerHTML = (dataget[i].Title_Name);
+                    if(dataget[i].Title_Name == 0){
+                        document.getElementById("tn").innerHTML = "";
+                    }else{
+                        document.getElementById("tn").innerHTML = (dataget[i].Title_Name);
+                    }
+                    
                     document.getElementById("name").innerHTML = (dataget[i].First_Name);
                     document.getElementById("lname").innerHTML = (dataget[i].Last_Name);
                     document.getElementById("pic").src = 'uploads/' + splitpath[2];
@@ -502,26 +507,35 @@
                         document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree - 1].name;
                     }else{
                         // console.log('data=0')
-                        document.getElementById("degree").innerHTML = dataget_deu[dataget[i].Degree].name;
+                        document.getElementById("degree").innerHTML = "";
                     }
                     if(dataget[i].Faculty != 0 ){
                         document.getElementById("faculty").innerHTML = dataget_fac_u[dataget[i].Faculty - 1].name;
                     }else{
-                        document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major].name;
+                        document.getElementById("faculty").innerHTML = "";
                     }
                     if(dataget[i].Major!= 0){
                         document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major - 1].name;
                     }else{
-                        document.getElementById("major").innerHTML = dataget_major_u[dataget[i].Major].name;
+                        document.getElementById("major").innerHTML = "";
                     }
                     
                     
 
                     // console.log(dataget_major_u[dataget[i].Major - 1].name)
                     localtime4 = moment((dataget[i].Study_start_date_u)).format('YYYY-MM-DD')
-                    document.getElementById("ssd_u").innerHTML = localtime4;
+                    if(localtime4 == 'Invalid date'){
+                        document.getElementById("ssd_u").innerHTML = "";
+                    }else{
+                        document.getElementById("ssd_u").innerHTML = localtime4;
+                    }
+                    
                     localtime5 = moment((dataget[i].Graduation_day_u)).format('YYYY-MM-DD')
-                    document.getElementById("gd_u").innerHTML = localtime5;
+                    if(localtime5 == 'Invalid date'){
+                        document.getElementById("gd_u").innerHTML = "";
+                    }else{
+                        document.getElementById("gd_u").innerHTML = localtime5;
+                    }
                     document.getElementById("gpa").innerHTML = dataget[i].GPA_u;
 
 
@@ -529,8 +543,18 @@
                     document.getElementById("sp").innerHTML = (dataget[i].Skill_programming);
                     document.getElementById("tfp").innerHTML = (dataget[i].Tool_for_development);
                     document.getElementById("spack").innerHTML = (dataget[i].Software_Package);
-                    document.getElementById("db").innerHTML = (dataget[i].Database);
-                    document.getElementById("os").innerHTML = (dataget[i].Operating_System);
+                    if(dataget[i].Database == 0){
+                        document.getElementById("db").innerHTML = "";
+                    }else{
+                        document.getElementById("db").innerHTML = (dataget[i].Database);
+                    }
+                    if(dataget[i].Operating_System == 0){
+                        document.getElementById("os").innerHTML = "";
+                    }else{
+                        document.getElementById("os").innerHTML = (dataget[i].Operating_System);
+                    }
+                    
+                    
 
                     document.getElementById("fb").href = face;
                     document.getElementById("line").href = line;
@@ -545,12 +569,30 @@
                     document.getElementById("about").innerHTML = (dataget[i].About_you);
                     document.getElementById("exp").innerHTML = (dataget[i].Experiece);
                     document.getElementById("cen").innerHTML = (dataget[i].Current_enterprise);
-                    document.getElementById("job").innerHTML = (dataget[i].Position);
-                    document.getElementById("job_l").innerHTML = (dataget[i].Working_position);
+                    if(dataget[i].Position == 0){
+                        document.getElementById("job").innerHTML = "";
+                    }else{
+                        document.getElementById("job").innerHTML = (dataget[i].Position);
+                    }
+                    if(dataget[i].Working_position == 0){
+                        document.getElementById("job_l").innerHTML = "";
+                    }else{
+                        document.getElementById("job_l").innerHTML = (dataget[i].Working_position);
+                    }
+                    
                     localtime2 = moment((dataget[i].Start_work_date)).format('YYYY-MM-DD')
                     localtime3 = moment((dataget[i].Date_of_departure)).format('YYYY-MM-DD')
-                    document.getElementById("swd").innerHTML = localtime2;
-                    document.getElementById("dop").innerHTML = localtime3;
+                    if(localtime2 == 'Invalid date'){
+                        document.getElementById("swd").innerHTML = "";
+                    }else{
+                        document.getElementById("swd").innerHTML = localtime2;
+                    }
+                    if(localtime3 == 'Invalid date'){
+                        document.getElementById("dop").innerHTML = "";
+                    }else{
+                        document.getElementById("dop").innerHTML = localtime3;
+                    }
+
                     document.getElementById("cs").innerHTML = (dataget[i].Current_salary);
                     
                     
@@ -771,12 +813,22 @@
               doc.setFontType('bold')
               doc.text("Application",10,95)
               doc.setFontType('default')
-              doc.text("    Position to apply : "+ dataget[countpdf].Position,10,105)
+              if(dataget[countpdf].Position == 0){
+                doc.text("    Position to apply : "+ "",10,105)
+              }else{
+                doc.text("    Position to apply : "+ dataget[countpdf].Position,10,105)
+              }
+
               doc.text("    Expected Compensation : "+ dataget[countpdf].Salary,10,110)
               doc.setFontType('bold')
               doc.text("Personal Data",10,120)
               doc.setFontType('default')
-              doc.text("    Name : "+ dataget[countpdf].Title_Name + dataget[countpdf].First_Name +  " Last : " + dataget[countpdf].Last_Name,10,130)
+              if(dataget[countpdf].Title_Name == 0){
+                doc.text("    Name : "+ "" + dataget[countpdf].First_Name +  " Last : " + dataget[countpdf].Last_Name,10,130)
+              }else{
+                doc.text("    Name : "+ dataget[countpdf].Title_Name + dataget[countpdf].First_Name +  " Last : " + dataget[countpdf].Last_Name,10,130)
+              }
+              
               doc.text("    Nickname : ",90,130)
               doc.text("    Age : " + dataget[countpdf].Age,130,130)
               doc.text("    Weight : " + dataget[countpdf].Weight + " kg.",10,135)
@@ -792,12 +844,12 @@
               if(dataget[countpdf].Major != 0){
                 doc.text("    Degree : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + '('+dataget_major_u[dataget[countpdf].Major - 1].name+')',10,175)
               }else{
-                doc.text("    Degree : "+ dataget_fac_u[dataget[countpdf].Faculty].name + '('+dataget_major_u[dataget[countpdf].Major].name+')',10,175)
+                doc.text("    Degree : "+ "" + '('+""+')',10,175)
               }
               if(dataget[countpdf].Faculty !=0){
                 doc.text("    Institue : "+ dataget_fac_u[dataget[countpdf].Faculty - 1].name + " of " + dataget[countpdf].Educational_institution_u,10,180)
               }else{
-                doc.text("    Institue : "+ dataget_fac_u[dataget[countpdf].Faculty].name + " of " + dataget[countpdf].Educational_institution_u,10,180)
+                doc.text("    Institue : "+ "" + " of " + dataget[countpdf].Educational_institution_u,10,180)
               }
               doc.text("    GPA : "+ dataget[countpdf].GPA_u,10,185)
               localtime7 = moment((dataget[countpdf].Graduation_day_u)).format('YYYY-MM-DD')
@@ -806,7 +858,7 @@
               if(dataget[countpdf].Course != 0){
                 doc.text("    Program : "+ dataget_high[dataget[countpdf].Course - 1].name,10,210)
               }else{
-                doc.text("    Program : "+ dataget_high[dataget[countpdf].Course].name,10,210)
+                doc.text("    Program : "+ "",10,210)
               }
               doc.text("    Institue : "+ dataget[countpdf].Educational_institution_s,10,205)
               
@@ -818,21 +870,48 @@
               doc.setFontType('default')
               doc.text("    Programming Language : "+ dataget[countpdf].Skill_programming,10,240)
               doc.text("    Tool for development : "+ dataget[countpdf].Tool_for_development,110,240)
-              doc.text("    Database : "+ dataget[countpdf].Database,10,245)
-              doc.text("    Operating System : "+ dataget[countpdf].Operating_System,110,245)
+              if(dataget[countpdf].Database == 0){
+                doc.text("    Database : "+ "",10,245)
+              }else{
+                doc.text("    Database : "+ dataget[countpdf].Database,10,245)
+              } 
+              if(dataget[countpdf].Operating_System == 0){
+                doc.text("    Operating System : "+ "",110,245)   
+              }else{
+                doc.text("    Operating System : "+ dataget[countpdf].Operating_System,110,245)
+              }
+              
               doc.setFontType('bold')
               doc.text("Work Experience",10,255)
               doc.setFontType('default')
               doc.text("    Organization : "+ dataget[countpdf].Current_enterprise,10,265)
-              doc.text("    Working position : "+ dataget[countpdf].Working_position,90,265)
+              if(dataget[countpdf].Working_position == 0){
+                doc.text("    Working position : "+ "",90,265)
+              }else{
+                doc.text("    Working position : "+ dataget[countpdf].Working_position,90,265)
+              }
+              
               doc.text("    Salary : "+ dataget[countpdf].Current_salary,170,265)
               localtime9 = moment((dataget[countpdf].Start_work_date)).format('YYYY-MM-DD')
-              doc.text("    Start work date : "+ localtime9,10,270)
+              if(localtime9 == 'Invalid date'){
+                doc.text("    Start work date : "+ "",10,270)
+              }else{
+                doc.text("    Start work date : "+ localtime9,10,270)
+              }
+              
               localtime10 = moment((dataget[countpdf].Date_of_departure)).format('YYYY-MM-DD')
-              doc.text("    Date of departure : "+ localtime10,110,270)
+              if(localtime10 == 'Invalid date'){
+                doc.text("    Date of departure : "+ "",110,270)
+              }else{
+                doc.text("    Date of departure : "+ localtime10,110,270)
+              }
+              
               doc.text("    Describe yourself : "+ dataget[countpdf].About_you,10,275)
               doc.text("    Responsibilities : "+ dataget[countpdf].Experiece,10,280)
-              localtime11 = moment((dataget[countpdf].Start_work_date)).format('YYYY-MM-DD')
+              
+              var dat = new Date();
+              localtime11 = moment((dat)).format('YYYY-MM-DD')
+            //   console.log(localtime11)
               doc.text("Date : "+ localtime11,165,290)
               doc.save(dataget[countpdf].ID+dataget[countpdf].First_Name + '.pdf')
               }
