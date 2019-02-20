@@ -1117,8 +1117,8 @@ display: block;
                 <!-- <p id="re"></p> -->
                 <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Update"><i style="margin-right:5px"
                     class="fa fa-edit"></i>Update</button>
-                <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
-                    style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
+                <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancel" onclick="back()"><i
+                    style="margin-right:5px" class="fa fa-remove"></i>Cancel</button><br><br>
                 <div id="loader" hidden></div>
               </div>
             </div>
@@ -1194,22 +1194,22 @@ display: block;
   }
 </script>
 <div class="container">
-  <div class="row">
-    <div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <br>
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div align="center">
-  <footer>
-    <br>
-    <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
-      (Thailand) Co.,Ltd All rights reserved</p>
-    <br>
-  </footer>
-</div>
+  <div align="center">
+    <footer>
+      <br>
+      <p style="color:white"> <a href="enter.ecsecs@gmail.com"></a>Copyright ©2018 Enterprise Computing Services
+        (Thailand) Co.,Ltd All rights reserved</p>
+      <br>
+    </footer>
+  </div>
 <script>
   function getRandomID(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -1249,90 +1249,6 @@ display: block;
     return false;
   }    
 </script>
-<!-- <script>
-  dataget_db = [];
-  fetch('json/db.json')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (myJson) {
-      dataget_db = myJson.database
-      dataget_db.sort(function (a, b) {
-        var sort_db = a.name < b.name ? -1 : 1;
-        return sort_db
-      });
-      dynamicdropdown_db()
-    });
-</script>
-<script>
-  dataget_job = [];
-  fetch('json/position.json')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (myJson) {
-      dataget_job = myJson.job
-      dataget_job.sort(function (a, b) {
-        var sort_job = a.name < b.name ? -1 : 1;
-        return sort_job
-      });
-      dynamicdropdown_job()
-      dynamicdropdown_job_l()
-    });
-</script>
-<script>
-  function dynamicdropdown_db(listindexs) {
-    var html = '';
-    html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-    html = html + '<option value="">Select </option>';
-    for (var i = 0; i < dataget_db.length; i++) {
-      html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_db').html(html)
-  }
-</script>
-<script>
-  dataget_os = { "os": [{ "id": "1", "name": "Windows" }, { "id": "2", "name": "MacOS" }, { "id": "3", "name": "LinuxOS" }] }
-  dataget_os.os.sort(function (a, b) {
-    var sort_os = a.name < b.name ? -1 : 1;
-    return sort_os
-  });
-  var html = '';
-  html = html + '<select id="os" name="os" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
-  html = html + '<option value="0">Select </option>';
-  for (var i = 0; i < dataget_os.os.length; i++) {
-    html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
-  }
-  html = html + '</select>';
-  $('#mySelect_os').html(html)
-
-</script>
-<script>
-  function dynamicdropdown_job(listindexs) {
-    var html = '';
-    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="0">Select </option>';
-    for (var i = 0; i < dataget_job.length; i++) {
-      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_job').html(html)
-  }
-</script>
-<script>
-  function dynamicdropdown_job_l(listindexs) {
-    var html = '';
-    html = html + '<select id="job_l" name="job_l" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;" required>';
-    html = html + '<option value="0">Select </option>';
-    for (var i = 0; i < dataget_job.length; i++) {
-      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
-    }
-    html = html + '</select>';
-    $('#mySelect_job_l').html(html)
-  }
-</script> -->
-
 <script>
   var dataget = [];
   var urljson = "https://script.googleusercontent.com/macros/echo?user_content_key=YqyDZdxWEJS-1VD3HmJyFI9BvM0A5G0iphXgnOTUPULhWNs15odVCFd5sYNaDSHk2eRS8CMAEH7Dz4211F5C_if3ieXETnZMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnESenDeG1a2U5A9HgblmFIqgY1h708_S0WEz0UAVMSP1MOyWK_cu-E6ACoz3t86BEnltYe52Wkzn&lib=Mih9OC5pj5Vkn2Axmh0oYykMWxYDvAMv8";
